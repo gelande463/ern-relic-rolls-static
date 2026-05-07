@@ -1,0 +1,63 @@
+{
+  "generatedAt": "2026-05-07T14:12:32.420Z",
+  "sourceDir": "web_app",
+  "outputDir": "xserver_static_site",
+  "files": [
+    {
+      "path": "xserver_static_site/.nojekyll",
+      "size": 0
+    },
+    {
+      "path": "xserver_static_site/app.js",
+      "size": 51211
+    },
+    {
+      "path": "xserver_static_site/assets/ern_icon.ico",
+      "size": 247461
+    },
+    {
+      "path": "xserver_static_site/assets/favicon.ico",
+      "size": 220083
+    },
+    {
+      "path": "xserver_static_site/assets/favicon.png",
+      "size": 120792
+    },
+    {
+      "path": "xserver_static_site/assets/kofi_dark.png",
+      "size": 5543
+    },
+    {
+      "path": "xserver_static_site/data/ern_data_summary.json",
+      "size": 4151
+    },
+    {
+      "path": "xserver_static_site/data/ern_effects_export.json",
+      "size": 631854
+    },
+    {
+      "path": "xserver_static_site/data/ern_effects_flat.csv",
+      "size": 167374
+    },
+    {
+      "path": "xserver_static_site/data/selected_relics.txt",
+      "size": 1009
+    },
+    {
+      "path": "xserver_static_site/index.html",
+      "size": 726
+    },
+    {
+      "path": "xserver_static_site/README_DEPLOY.md",
+      "size": 432
+    },
+    {
+      "path": "xserver_static_site/robots.txt",
+      "size": 23
+    },
+    {
+      "path": "xserver_static_site/styles.css",
+      "size": 12809
+    }
+  ]
+}

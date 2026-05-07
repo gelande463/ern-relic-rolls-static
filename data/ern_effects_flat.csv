@@ -1,0 +1,1313 @@
+﻿mode,english,ja_JP,group,id,cat,loc,cursed
+base_game,Arcane +1,神秘＋１,7000700,7000700,1000,7000700,
+base_game,Arcane +2,神秘＋２,7000700,7000701,1000,7000701,
+base_game,Arcane +3,神秘＋３,7000700,7000702,1000,7000702,
+base_game,Attack power increased for each Night Invader defeated,夜の侵入者を倒す度、攻撃力上昇,100,7060200,100,7060200,
+base_game,Attack power increased for each evergaol prisoner defeated,封牢の囚を倒す度、攻撃力上昇,100,7060000,100,7060000,
+base_game,Attack power up when facing frostbite-afflicted enemy,凍傷状態の敵に対する攻撃を強化,7260400,7260400,100,7260400,
+base_game,Attack power up when facing poison-afflicted enemy,毒状態の敵に対する攻撃を強化,7260300,7260000,100,7260000,
+base_game,Attack power up when facing scarlet rot-afflicted enemy,腐敗状態の敵に対する攻撃を強化,7260300,7260300,100,7260300,
+base_game,Bewitching Branches in possession at start of expedition,出撃時に「誘惑の枝」を持つ,7122000,7122000,100,7122000,
+base_game,Changes compatible armament's skill to Blood Blade at start of expedition,出撃時の武器の戦技を「血の刃」にする ※適用可能な武器種のみ,300,7123700,100,7123700,
+base_game,Changes compatible armament's skill to Chilling Mist at start of expedition,出撃時の武器の戦技を「冷気の霧」にする ※適用可能な武器種のみ,300,7123900,100,7123900,
+base_game,Changes compatible armament's skill to Determination at start of expedition,出撃時の武器の戦技を「デターミネーション」にする ※適用可能な武器種のみ,300,7124600,100,7124600,
+base_game,Changes compatible armament's skill to Endure at start of expedition,出撃時の武器の戦技を「我慢」にする ※適用可能な武器種のみ,300,7124300,100,7124300,
+base_game,Changes compatible armament's skill to Eruption at start of expedition,出撃時の武器の戦技を「溶岩噴火」にする ※適用可能な武器種のみ,300,7123000,100,7123000,
+base_game,Changes compatible armament's skill to Flaming Strike at start of expedition,出撃時の武器の戦技を「炎撃」にする ※適用可能な武器種のみ,300,7122900,100,7122900,
+base_game,Changes compatible armament's skill to Glintblade Phalanx at start of expedition,出撃時の武器の戦技を「輝剣の円陣」にする ※適用可能な武器種のみ,300,7122700,100,7122700,
+base_game,Changes compatible armament's skill to Gravitas at start of expedition,出撃時の武器の戦技を「グラビタス」にする ※適用可能な武器種のみ,300,7122800,100,7122800,
+base_game,Changes compatible armament's skill to Hoarfrost Stomp at start of expedition,出撃時の武器の戦技を「霜踏み」にする ※適用可能な武器種のみ,300,7124000,100,7124000,
+base_game,Changes compatible armament's skill to Lightning Slash at start of expedition,出撃時の武器の戦技を「雷撃斬」にする ※適用可能な武器種のみ,300,7123200,100,7123200,
+base_game,Changes compatible armament's skill to Poison Moth Flight at start of expedition,出撃時の武器の戦技を「毒蛾は二度舞う」にする ※適用可能な武器種のみ,300,7123600,100,7123600,
+base_game,Changes compatible armament's skill to Poisonous Mist at start of expedition,出撃時の武器の戦技を「毒の霧」にする ※適用可能な武器種のみ,300,7123500,100,7123500,
+base_game,Changes compatible armament's skill to Prayerful Strike at start of expedition,出撃時の武器の戦技を「祈りの一撃」にする ※適用可能な武器種のみ,300,7123400,100,7123400,
+base_game,Changes compatible armament's skill to Quickstep at start of expedition,出撃時の武器の戦技を「クイックステップ」にする ※適用可能な武器種のみ,300,7124400,100,7124400,
+base_game,Changes compatible armament's skill to Rain of Arrows at start of expedition,出撃時の武器の戦技を「アローレイン」にする ※適用可能な武器種のみ,300,7124700,100,7124700,
+base_game,Changes compatible armament's skill to Sacred Blade at start of expedition,出撃時の武器の戦技を「聖なる刃」にする ※適用可能な武器種のみ,300,7123300,100,7123300,
+base_game,Changes compatible armament's skill to Seppuku at start of expedition,出撃時の武器の戦技を「切腹」にする ※適用可能な武器種のみ,300,7123800,100,7123800,
+base_game,Changes compatible armament's skill to Storm Stomp at start of expedition,出撃時の武器の戦技を「嵐脚」にする ※適用可能な武器種のみ,300,7124500,100,7124500,
+base_game,Changes compatible armament's skill to Thunderbolt at start of expedition,出撃時の武器の戦技を「落雷」にする ※適用可能な武器種のみ,300,7123100,100,7123100,
+base_game,Changes compatible armament's skill to White Shadow's Lure at start of expedition,出撃時の武器の戦技を「白い影の誘い」にする ※適用可能な武器種のみ,300,7124100,100,7124100,
+base_game,Character Skill Cooldown Reduction +1,スキルクールタイム軽減＋１,7000800,7000800,1000,7000800,
+base_game,Character Skill Cooldown Reduction +2,スキルクールタイム軽減＋２,7000800,7000801,1000,7000801,
+base_game,Character Skill Cooldown Reduction +3,スキルクールタイム軽減＋３,7000800,7000802,1000,7000802,
+base_game,Critical Hit Boosts Stamina Recovery Speed,致命の一撃で、スタミナ回復速度上昇,7035100,7035100,100,7035100,
+base_game,Critical Hits Earn Runes,致命の一撃で、ルーンを取得,7031900,7031900,101,7031900,
+base_game,Critical hits fill more of the Art gauge,致命の一撃で、アーツゲージ増加,7030800,7030800,100,7030800,
+base_game,Crystal Darts in possession at start of expedition,出撃時に「結晶投げ矢」を持つ,7121600,7121600,100,7121600,
+base_game,Defeating enemies fills more of the Art gauge,敵を倒した時、アーツゲージ増加,7090000,7090000,100,7090000,
+base_game,Defeating enemies near Totem Stela restores HP,トーテム・ステラの周囲で敵を倒した時、ＨＰ回復,900,7090300,1,7090300,
+base_game,Defeating enemies restores HP for allies but not for self,敵を倒した時、自身を除く周囲の味方のＨＰを回復,7090100,7090100,100,7090100,
+base_game,Dexterity +1,技量＋１,7000400,7000400,1000,7000400,
+base_game,Dexterity +2,技量＋２,7000400,7000401,1000,7000401,
+base_game,Dexterity +3,技量＋３,7000400,7000402,1000,7000402,
+base_game,Draw enemy attention while guarding,ガード中、敵に狙われやすくなる,7030700,7030700,100,7030700,
+base_game,Endurance +1,持久力＋１,7000200,7000200,1000,7000200,
+base_game,Endurance +2,持久力＋２,7000200,7000201,1000,7000201,
+base_game,Endurance +3,持久力＋３,7000200,7000202,1000,7000202,
+base_game,FP Restoration upon Axe Attacks,斧の攻撃でＦＰ回復,7350000,7351000,10,7351000,
+base_game,FP Restoration upon Bow Attacks,弓の攻撃でＦＰ回復,7350000,7352400,10,7352400,
+base_game,FP Restoration upon Claw Attacks,爪の攻撃でＦＰ回復,7350000,7352100,10,7352100,
+base_game,FP Restoration upon Colossal Sword Attacks,特大剣の攻撃でＦＰ回復,7350000,7350300,10,7350300,
+base_game,FP Restoration upon Colossal Weapon Attacks,特大武器の攻撃でＦＰ回復,7350000,7352300,10,7352300,
+base_game,FP Restoration upon Curved Greatsword Attacks,大曲剣の攻撃でＦＰ回復,7350000,7350500,10,7350500,
+base_game,FP Restoration upon Curved Sword Attacks,曲剣の攻撃でＦＰ回復,7350000,7350400,10,7350400,
+base_game,FP Restoration upon Dagger Attacks,短剣の攻撃でＦＰ回復,7350000,7350000,10,7350000,
+base_game,FP Restoration upon Fist Attacks,拳の攻撃でＦＰ回復,7350000,7352000,10,7352000,
+base_game,FP Restoration upon Flail Attacks,フレイルの攻撃でＦＰ回復,7350000,7351400,10,7351400,
+base_game,FP Restoration upon Great Hammer Attacks,大槌の攻撃でＦＰ回復,7350000,7351300,10,7351300,
+base_game,FP Restoration upon Great Spear Attacks,大槍の攻撃でＦＰ回復,7350000,7351700,10,7351700,
+base_game,FP Restoration upon Greataxe Attacks,大斧の攻撃でＦＰ回復,7350000,7351100,10,7351100,
+base_game,FP Restoration upon Greatsword Attacks,大剣の攻撃でＦＰ回復,7350000,7350200,10,7350200,
+base_game,FP Restoration upon Halberd Attacks,斧槍の攻撃でＦＰ回復,7350000,7351800,10,7351800,
+base_game,FP Restoration upon Hammer Attacks,槌の攻撃でＦＰ回復,7350000,7351200,10,7351200,
+base_game,FP Restoration upon Heavy Thrusting Sword Attacks,重刺剣の攻撃でＦＰ回復,7350000,7350900,10,7350900,
+base_game,FP Restoration upon Katana Attacks,刀の攻撃でＦＰ回復,7350000,7350600,10,7350600,
+base_game,FP Restoration upon Reaper Attacks,鎌の攻撃でＦＰ回復,7350000,7351900,10,7351900,
+base_game,FP Restoration upon Spear Attacks,槍の攻撃でＦＰ回復,7350000,7351500,10,7351500,
+base_game,FP Restoration upon Straight Sword Attacks,直剣の攻撃でＦＰ回復,7350000,7350100,10,7350100,
+base_game,FP Restoration upon Thrusting Sword Attacks,刺剣の攻撃でＦＰ回復,7350000,7350800,10,7350800,
+base_game,FP Restoration upon Twinblade Attacks,両刃剣の攻撃でＦＰ回復,7350000,7350700,10,7350700,
+base_game,FP Restoration upon Whip Attacks,鞭の攻撃でＦＰ回復,7350000,7352200,10,7352200,
+base_game,Faith +1,信仰＋１,7000600,7000600,1000,7000600,
+base_game,Faith +2,信仰＋２,7000600,7000601,1000,7000601,
+base_game,Faith +3,信仰＋３,7000600,7000602,1000,7000602,
+base_game,Fire Attack Power Up,炎攻撃力上昇,100,7001600,1000,7001600,
+base_game,Fire Attack Power Up +1,炎攻撃力上昇＋１,100,7001601,1000,7001601,
+base_game,Fire Attack Power Up +2,炎攻撃力上昇＋２,100,7001602,1000,7001602,
+base_game,Fire Damage Negation Up,炎カット率上昇,7002700,7002700,1000,7002700,
+base_game,Fire Grease in possession at start of expedition,出撃時に「火脂」を持つ,7122200,7122200,100,7122200,
+base_game,Fire Pots in possession at start of expedition,出撃時に「火炎壺」を持つ,7121100,7121100,100,7121100,
+base_game,Flask Also Heals Allies,聖杯瓶の回復を、周囲の味方に分配,7010200,7010200,100,7010200,
+base_game,Glintstone Scraps in possession at start of expedition,出撃時に「屑輝石」を持つ,7121800,7121800,100,7121800,
+base_game,Gravity Stone Chunks in possession at start of expedition,出撃時に「塊の重力石」を持つ,7121900,7121900,100,7121900,
+base_game,Guard counter is given a boost based on current HP,ガードカウンターに、自身の現在ＨＰの一部を加える,100,7150000,100,7150000,
+base_game,HP Recovery From Successful Guarding,ガード成功時、ＨＰ回復,7036100,7036100,1,8650000,
+base_game,HP Restoration upon Axe Attacks,斧の攻撃でＨＰ回復,7340000,7341000,10,7341000,
+base_game,HP Restoration upon Bow Attacks,弓の攻撃でＨＰ回復,7340000,7342400,10,7342400,
+base_game,HP Restoration upon Claw Attacks,爪の攻撃でＨＰ回復,7340000,7342100,10,7342100,
+base_game,HP Restoration upon Colossal Sword Attacks,特大剣の攻撃でＨＰ回復,7340000,7340300,10,7340300,
+base_game,HP Restoration upon Colossal Weapon Attacks,特大武器の攻撃でＨＰ回復,7340000,7342300,10,7342300,
+base_game,HP Restoration upon Curved Greatsword Attacks,大曲剣の攻撃でＨＰ回復,7340000,7340500,10,7340500,
+base_game,HP Restoration upon Curved Sword Attacks,曲剣の攻撃でＨＰ回復,7340000,7340400,10,7340400,
+base_game,HP Restoration upon Dagger Attacks,短剣の攻撃でＨＰ回復,7340000,7340000,10,7340000,
+base_game,HP Restoration upon Fist Attacks,拳の攻撃でＨＰ回復,7340000,7342000,10,7342000,
+base_game,HP Restoration upon Flail Attacks,フレイルの攻撃でＨＰ回復,7340000,7341400,10,7341400,
+base_game,HP Restoration upon Great Hammer Attacks,大槌の攻撃でＨＰ回復,7340000,7341300,10,7341300,
+base_game,HP Restoration upon Great Spear Attacks,大槍の攻撃でＨＰ回復,7340000,7341700,10,7341700,
+base_game,HP Restoration upon Greataxe Attacks,大斧の攻撃でＨＰ回復,7340000,7341100,10,7341100,
+base_game,HP Restoration upon Greatsword Attacks,大剣の攻撃でＨＰ回復,7340000,7340200,10,7340200,
+base_game,HP Restoration upon Halberd Attacks,斧槍の攻撃でＨＰ回復,7340000,7341800,10,7341800,
+base_game,HP Restoration upon Hammer Attacks,槌の攻撃でＨＰ回復,7340000,7341200,10,7341200,
+base_game,HP Restoration upon Heavy Thrusting Sword Attacks,重刺剣の攻撃でＨＰ回復,7340000,7340900,10,7340900,
+base_game,HP Restoration upon Katana Attacks,刀の攻撃でＨＰ回復,7340000,7340600,10,7340600,
+base_game,HP Restoration upon Reaper Attacks,鎌の攻撃でＨＰ回復,7340000,7341900,10,7341900,
+base_game,HP Restoration upon Spear Attacks,槍の攻撃でＨＰ回復,7340000,7341500,10,7341500,
+base_game,HP Restoration upon Straight Sword Attacks,直剣の攻撃でＨＰ回復,7340000,7340100,10,7340100,
+base_game,HP Restoration upon Thrusting Counterattack,刺突カウンター発生時、ＨＰ回復,7160000,7160000,100,7160000,
+base_game,HP Restoration upon Thrusting Sword Attacks,刺剣の攻撃でＨＰ回復,7340000,7340800,10,7340800,
+base_game,HP Restoration upon Twinblade Attacks,両刃剣の攻撃でＨＰ回復,7340000,7340700,10,7340700,
+base_game,HP Restoration upon Whip Attacks,鞭の攻撃でＨＰ回復,7340000,7342200,10,7342200,
+base_game,"HP restored when using medicinal boluses, etc.",苔薬などのアイテム使用でＨＰ回復,7030200,7030200,100,7030200,
+base_game,Holy Attack Power Up,聖攻撃力上昇,100,7001800,1000,7001800,
+base_game,Holy Attack Power Up +1,聖攻撃力上昇＋１,100,7001801,1000,7001801,
+base_game,Holy Attack Power Up +2,聖攻撃力上昇＋２,100,7001802,1000,7001802,
+base_game,Holy Damage Negation Up,聖カット率上昇,7002900,7002900,1000,7002900,
+base_game,Holy Grease in possession at start of expedition,出撃時に「聖脂」を持つ,7122500,7122500,100,7122500,
+base_game,Holy Water Pots in possession at start of expedition,出撃時に「聖水壺」を持つ,7121400,7121400,100,7121400,
+base_game,Improved Attack Power with 3+ Axes Equipped,斧の武器種を３つ以上装備していると攻撃力上昇,100,7081000,10,7081000,
+base_game,Improved Attack Power with 3+ Bows Equipped,弓の武器種を３つ以上装備していると攻撃力上昇,100,7082400,10,7082400,
+base_game,Improved Attack Power with 3+ Claws Equipped,爪の武器種を３つ以上装備していると攻撃力上昇,100,7082100,10,7082100,
+base_game,Improved Attack Power with 3+ Colossal Swords Equipped,特大剣の武器種を３つ以上装備していると攻撃力上昇,100,7080300,10,7080300,
+base_game,Improved Attack Power with 3+ Colossal Weapons Equipped,特大武器の武器種を３つ以上装備していると攻撃力上昇,100,7082300,10,7082300,
+base_game,Improved Attack Power with 3+ Curved Greatswords Equipped,大曲剣の武器種を３つ以上装備していると攻撃力上昇,100,7080500,10,7080500,
+base_game,Improved Attack Power with 3+ Curved Swords Equipped,曲剣の武器種を３つ以上装備していると攻撃力上昇,100,7080400,10,7080400,
+base_game,Improved Attack Power with 3+ Daggers Equipped,短剣の武器種を３つ以上装備していると攻撃力上昇,100,7080000,10,7080000,
+base_game,Improved Attack Power with 3+ Fists Equipped,拳の武器種を３つ以上装備していると攻撃力上昇,100,7082000,10,7082000,
+base_game,Improved Attack Power with 3+ Flails Equipped,フレイルの武器種を３つ以上装備していると攻撃力上昇,100,7081400,10,7081400,
+base_game,Improved Attack Power with 3+ Great Hammers Equipped,大槌の武器種を３つ以上装備していると攻撃力上昇,100,7081300,10,7081300,
+base_game,Improved Attack Power with 3+ Great Spears Equipped,大槍の武器種を３つ以上装備していると攻撃力上昇,100,7081700,10,7081700,
+base_game,Improved Attack Power with 3+ Greataxes Equipped,大斧の武器種を３つ以上装備していると攻撃力上昇,100,7081100,10,7081100,
+base_game,Improved Attack Power with 3+ Greatswords Equipped,大剣の武器種を３つ以上装備していると攻撃力上昇,100,7080200,10,7080200,
+base_game,Improved Attack Power with 3+ Halberds Equipped,斧槍の武器種を３つ以上装備していると攻撃力上昇,100,7081800,10,7081800,
+base_game,Improved Attack Power with 3+ Hammers Equipped,槌の武器種を３つ以上装備していると攻撃力上昇,100,7081200,10,7081200,
+base_game,Improved Attack Power with 3+ Heavy Thrusting Swords Equipped,重刺剣の武器種を３つ以上装備していると攻撃力上昇,100,7080900,10,7080900,
+base_game,Improved Attack Power with 3+ Katana Equipped,刀の武器種を３つ以上装備していると攻撃力上昇,100,7080600,10,7080600,
+base_game,Improved Attack Power with 3+ Reapers Equipped,鎌の武器種を３つ以上装備していると攻撃力上昇,100,7081900,10,7081900,
+base_game,Improved Attack Power with 3+ Spears Equipped,槍の武器種を３つ以上装備していると攻撃力上昇,100,7081500,10,7081500,
+base_game,Improved Attack Power with 3+ Straight Swords Equipped,直剣の武器種を３つ以上装備していると攻撃力上昇,100,7080100,10,7080100,
+base_game,Improved Attack Power with 3+ Thrusting Swords Equipped,刺剣の武器種を３つ以上装備していると攻撃力上昇,100,7080800,10,7080800,
+base_game,Improved Attack Power with 3+ Twinblades Equipped,両刃剣の武器種を３つ以上装備していると攻撃力上昇,100,7080700,10,7080700,
+base_game,Improved Attack Power with 3+ Whips Equipped,鞭の武器種を３つ以上装備していると攻撃力上昇,100,7082200,10,7082200,
+base_game,Improved Axe Attack Power,斧の攻撃力上昇,100,7331000,10,7331000,
+base_game,Improved Bestial Incantations,獣の祈祷を強化,800,7044400,100,7044400,
+base_game,Improved Blood Loss Resistance,出血耐性上昇,7003100,7003100,1000,7003100,
+base_game,Improved Bow Attack Power,弓の攻撃力上昇,100,7332400,10,7332400,
+base_game,Improved Carian Sword Sorcery,カーリアの剣の魔術を強化,800,7043300,100,7043300,
+base_game,Improved Claw Attack Power,爪の攻撃力上昇,100,7332100,10,7332100,
+base_game,Improved Colossal Sword Attack Power,特大剣の攻撃力上昇,100,7330300,10,7330300,
+base_game,Improved Colossal Weapon Attack Power,特大武器の攻撃力上昇,100,7332300,10,7332300,
+base_game,Improved Critical Hits,致命の一撃強化,100,7040200,100,7040200,
+base_game,Improved Crystalian sorcery,結晶人の魔術を強化,800,7043600,100,7043600,
+base_game,Improved Curved Greatsword Attack Power,大曲剣の攻撃力上昇,100,7330500,10,7330500,
+base_game,Improved Curved Sword Attack Power,曲剣の攻撃力上昇,100,7330400,10,7330400,
+base_game,Improved Dagger Attack Power,短剣の攻撃力上昇,100,7330000,10,7330000,
+base_game,Improved Damage Negation at Low HP,ＨＰ低下時、カット率上昇,7012300,7012300,100,7012300,
+base_game,Improved Death Blight Resistance,抗死耐性上昇,7003300,7003300,1000,7003300,
+base_game,Improved Dragon Communion Incantations,竜餐の祈祷を強化,800,7044600,100,7044600,
+base_game,Improved Dragon Cult Incantations,王都古竜信仰の祈祷を強化,800,7044100,100,7044100,
+base_game,Improved Fist Attack Power,拳の攻撃力上昇,100,7332000,10,7332000,
+base_game,Improved Flail Attack Power,フレイルの攻撃力上昇,100,7331400,10,7331400,
+base_game,Improved Frenzied Flame Incantations,狂い火の祈祷を強化,800,7044500,100,7044500,
+base_game,Improved Frost Resistance,冷気耐性上昇,7003500,7003500,1000,7003500,
+base_game,Improved Fundamentalist Incantations,黄金律原理主義の祈祷を強化,800,7044000,100,7044000,
+base_game,Improved Giants' Flame Incantations,巨人の火の祈祷を強化,800,7044200,100,7044200,
+base_game,Improved Glintblade Sorcery,輝剣の魔術を強化,800,7043400,100,7043400,
+base_game,Improved Glintstone and Gravity Stone Damage,輝石、重力石アイテムの攻撃力上昇,7040500,7040500,100,7040500,
+base_game,Improved Godslayer Incantations,神狩りの祈祷を強化,800,7044300,100,7044300,
+base_game,Improved Gravity Sorcery,重力の魔術を強化,800,7043700,100,7043700,
+base_game,Improved Great Hammer Attack Power,大槌の攻撃力上昇,100,7331300,10,7331300,
+base_game,Improved Great Spear Attack Power,大槍の攻撃力上昇,100,7331700,10,7331700,
+base_game,Improved Greataxe Attack Power,大斧の攻撃力上昇,100,7331100,10,7331100,
+base_game,Improved Greatsword Attack Power,大剣の攻撃力上昇,100,7330200,10,7330200,
+base_game,Improved Guard Counters,ガードカウンター強化,100,7040100,100,7040100,
+base_game,Improved Halberd Attack Power,斧槍の攻撃力上昇,100,7331800,10,7331800,
+base_game,Improved Hammer Attack Power,槌の攻撃力上昇,100,7331200,10,7331200,
+base_game,Improved Heavy Thrusting Sword Attack Power,重刺剣の攻撃力上昇,100,7330900,10,7330900,
+base_game,Improved Initial Standard Attack,通常攻撃の１段目強化,100,7040000,100,7040000,
+base_game,Improved Invisibility Sorcery,不可視の魔術を強化,800,7043500,100,7043500,
+base_game,Improved Katana Attack Power,刀の攻撃力上昇,100,7330600,10,7330600,
+base_game,Improved Madness Resistance,発狂耐性上昇,7003600,7003600,1000,7003600,
+base_game,Improved Perfuming Arts,調香術強化,7043100,7043100,100,8400000,
+base_game,Improved Poise & Damage Negation When Knocked Back by Damage,ダメージで吹き飛ばされた時、強靭度とカット率上昇,7240000,7240000,100,7240000,
+base_game,Improved Poise Near Totem Stela,トーテム・ステラの周囲で、強靭度上昇,900,7030000,1,7030000,
+base_game,Improved Poison Resistance,毒耐性上昇,7003000,7003000,1000,7003000,
+base_game,Improved Reaper Attack Power,鎌の攻撃力上昇,100,7331900,10,7331900,
+base_game,Improved Roar & Breath Attacks,咆哮とブレス強化,100,7043000,100,8380000,
+base_game,Improved Rot Resistance,腐敗耐性上昇,7003400,7003400,1000,7003400,
+base_game,Improved Sleep Resistance,睡眠耐性上昇,7003200,7003200,1000,7003200,
+base_game,Improved Spear Attack Power,槍の攻撃力上昇,100,7331500,10,7331500,
+base_game,Improved Stance-Breaking when Two-Handing,両手持ちの、体勢を崩す力上昇,100,7006000,100,8300100,
+base_game,Improved Stance-Breaking when Wielding Two Armaments,二刀持ちの、体勢を崩す力上昇,100,7006100,100,8310100,
+base_game,Improved Stonedigger Sorcery,石掘りの魔術を強化,800,7043200,100,7043200,
+base_game,Improved Straight Sword Attack Power,直剣の攻撃力上昇,100,7330100,10,7330100,
+base_game,Improved Thorn Sorcery,茨の魔術を強化,800,7043800,100,7043800,
+base_game,Improved Throwing Knife Damage,投擲ナイフの攻撃力上昇,7040400,7040400,100,7040400,
+base_game,Improved Throwing Pot Damage,投擲壺の攻撃力上昇,7040300,7040300,100,7040300,
+base_game,Improved Thrusting Sword Attack Power,刺剣の攻撃力上昇,100,7330800,10,7330800,
+base_game,Improved Twinblade Attack Power,両刃剣の攻撃力上昇,100,7330700,10,7330700,
+base_game,Improved Whip Attack Power,鞭の攻撃力上昇,100,7332200,10,7332200,
+base_game,Increased rune acquisition for self and allies,自身と味方の取得ルーン増加,7110000,7110000,100,7110000,
+base_game,Intelligence +1,知力＋１,7000500,7000500,1000,7000500,
+base_game,Intelligence +2,知力＋２,7000500,7000501,1000,7000501,
+base_game,Intelligence +3,知力＋３,7000500,7000502,1000,7000502,
+base_game,Items confer effect to all nearby allies,アイテムの効果が周囲の味方にも発動,7050100,7050100,100,7050100,
+base_game,Lightning Attack Power Up,雷攻撃力上昇,100,7001700,1000,7001700,
+base_game,Lightning Attack Power Up +1,雷攻撃力上昇＋１,100,7001701,1000,7001701,
+base_game,Lightning Attack Power Up +2,雷攻撃力上昇＋２,100,7001702,1000,7001702,
+base_game,Lightning Damage Negation Up,雷カット率上昇,7002800,7002800,1000,7002800,
+base_game,Lightning Grease in possession at start of expedition,出撃時に「雷脂」を持つ,7122400,7122400,100,7122400,
+base_game,Lightning Pots in possession at start of expedition,出撃時に「雷壺」を持つ,7121300,7121300,100,7121300,
+base_game,Magic Attack Power Up,魔力攻撃力上昇,100,7001500,1000,7001500,
+base_game,Magic Attack Power Up +1,魔力攻撃力上昇＋１,100,7001501,1000,7001501,
+base_game,Magic Attack Power Up +2,魔力攻撃力上昇＋２,100,7001502,1000,7001502,
+base_game,Magic Damage Negation Up,魔力カット率上昇,7002600,7002600,1000,7002600,
+base_game,Magic Grease in possession at start of expedition,出撃時に「魔力脂」を持つ,7122300,7122300,100,7122300,
+base_game,Magic Pots in possession at start of expedition,出撃時に「魔力壺」を持つ,7121200,7121200,100,7121200,
+base_game,Max FP Up with 3+ Sacred Seals Equipped,聖印の武器種を３つ以上装備していると最大ＦＰ上昇,7082500,7082600,10,7082600,
+base_game,Max FP Up with 3+ Staves Equipped,杖の武器種を３つ以上装備していると最大ＦＰ上昇,7082500,7082500,10,7082500,
+base_game,Max FP increased for each Sorcerer's Rise unlocked,魔術師塔の仕掛けが解除される度、最大ＦＰ上昇,7060100,7060100,100,7060100,
+base_game,Max HP Up with 3+ Greatshields Equipped,大盾の武器種を３つ以上装備していると最大ＨＰ上昇,7082700,7082900,10,7082900,
+base_game,Max HP Up with 3+ Medium Shields Equipped,中盾の武器種を３つ以上装備していると最大ＨＰ上昇,7082700,7082800,10,7082800,
+base_game,Max HP Up with 3+ Small Shields Equipped,小盾の武器種を３つ以上装備していると最大ＨＰ上昇,7082700,7082700,10,7082700,
+base_game,Mind +1,精神力＋１,7000100,7000100,1000,7000100,
+base_game,Mind +2,精神力＋２,7000100,7000101,1000,7000101,
+base_game,Mind +3,精神力＋３,7000100,7000102,1000,7000102,
+base_game,Partial HP Restoration upon Post-Damage Attacks,ダメージを受けた直後、攻撃によりＨＰの一部を回復,7005600,7005600,100,7005600,
+base_game,Physical Attack Up,物理攻撃力上昇,100,7001400,1000,7001400,
+base_game,Physical Attack Up +1,物理攻撃力上昇＋１,100,7001401,1000,7001401,
+base_game,Physical Attack Up +2,物理攻撃力上昇＋２,100,7001402,1000,7001402,
+base_game,Physical attack power increases after using grease items,脂アイテム使用時、追加で物理攻撃力上昇,100,7030900,100,7030900,
+base_game,Poise +1,強靭度＋１,7001000,7001000,1000,7001000,
+base_game,Poise +2,強靭度＋２,7001000,7001001,1000,7001001,
+base_game,Poise +3,強靭度＋３,7001000,7001002,1000,7001002,
+base_game,Poisonbone Darts in possession at start of expedition,出撃時に「骨の毒投げ矢」を持つ,7121500,7121500,100,7121500,
+base_game,"Raised stamina recovery for nearby allies, but not for self",自身を除く、周囲の味方のスタミナ回復速度上昇,7050000,7050000,100,7050000,
+base_game,Rune discount for shop purchases while on expedition,出撃中、ショップでの購入に必要なルーンが割引,7230000,7230000,100,7230000,
+base_game,Shield Grease in possession at start of expedition,出撃時に「盾脂」を持つ,7122600,7122600,100,7122600,
+base_game,Slowly restore HP for self and nearby allies when HP is low,ＨＰ低下時、周囲の味方を含めＨＰをゆっくりと回復,7012200,7012200,100,7012200,
+base_game,Small Pouch in possession at start of expedition,出撃時に「小さなポーチ」を持つ,7121000,7121000,100,7121000,
+base_game,Stamina Recovery upon Landing Attacks,攻撃命中時、スタミナ回復,7100100,7100100,100,7100100,
+base_game,Starlight Shards in possession at start of expedition,出撃時に「星光の欠片」を持つ,7126000,7126000,100,7126000,
+base_game,Starting armament deals fire damage,出撃時の武器に炎攻撃力を付加,200,7120100,100,7120100,
+base_game,Starting armament deals holy damage,出撃時の武器に聖攻撃力を付加,200,7120300,100,7120300,
+base_game,Starting armament deals lightning damage,出撃時の武器に雷攻撃力を付加,200,7120200,100,7120200,
+base_game,Starting armament deals magic damage,出撃時の武器に魔力攻撃力を付加,200,7120000,100,7120000,
+base_game,Starting armament inflicts blood loss,出撃時の武器に出血の状態異常を付加,200,7120600,100,7120600,
+base_game,Starting armament inflicts frost,出撃時の武器に冷気の状態異常を付加,200,7120400,100,7120400,
+base_game,Starting armament inflicts poison,出撃時の武器に毒の状態異常を付加,200,7120500,100,7120500,
+base_game,Stonesword Key in possession at start of expedition,出撃時に「石剣の鍵」を持つ,7120900,7120900,100,7120900,
+base_game,Strength +1,筋力＋１,7000300,7000300,1000,7000300,
+base_game,Strength +2,筋力＋２,7000300,7000301,1000,7000301,
+base_game,Strength +3,筋力＋３,7000300,7000302,1000,7000302,
+base_game,Successful guarding fills more of the Art gauge,ガード成功時、アーツゲージ増加,7030600,7030600,100,7030600,
+base_game,Taking attacks improves attack power,攻撃を受けると攻撃力上昇,100,7032200,100,7032200,
+base_game,Throwing Daggers in possession at start of expedition,出撃時に「スローイングダガー」を持つ,7121700,7121700,100,7121700,
+base_game,Treasure marked upon map,埋もれ宝の位置を地図に表示,7070000,7070000,100,7070000,
+base_game,Ultimate Art Auto Charge +1,アーツゲージ自然蓄積＋１,7000900,7000900,1000,7000900,
+base_game,Ultimate Art Auto Charge +2,アーツゲージ自然蓄積＋２,7000900,7000901,1000,7000901,
+base_game,Ultimate Art Auto Charge +3,アーツゲージ自然蓄積＋３,7000900,7000902,1000,7000902,
+base_game,Vigor +1,生命力＋１,7000000,7000000,1000,7000000,
+base_game,Vigor +2,生命力＋２,7000000,7000001,1000,7000001,
+base_game,Vigor +3,生命力＋３,7000000,7000002,1000,7000002,
+base_game,Wraith Calling Bell in possession at start of expedition,出撃時に「呪霊喚びの鈴」を持つ,7122100,7122100,100,7122100,
+base_game,[Duchess] Become difficult to spot and silence footsteps after landing critical from behind,【レディ】背後からの致命の一撃後 自身の姿を見え難くし、足音を消す,900,7031800,1,7031800,
+base_game,[Duchess] Defeating enemies while Art is active ups attack power,【レディ】アーツ発動中、敵撃破で攻撃力上昇,900,7032700,1,7032700,
+base_game,[Duchess] Improved Character Skill Attack Power,【レディ】スキルのダメージ上昇,900,7290000,1,7290000,
+base_game,[Duchess] Reprise events upon nearby enemies by landing the final blow of a chain attack with dagger,【レディ】短剣による連撃の最終攻撃命中時 周囲の敵に、直近の出来事を再演,900,7010700,1,7010700,
+base_game,[Executor] Character Skill Boosts Attack but Attacking Drains HP,【執行者】スキル中の攻撃力上昇、攻撃時にＨＰ減少,900,7034400,1,7034400,
+base_game,[Executor] Roaring restores HP while Art is active,【執行者】アーツ発動中、咆哮でＨＰ回復,900,7011700,1,7011700,
+base_game,"[Executor] While Character Skill is active, unlocking use of cursed sword restores HP",【執行者】スキル中、妖刀が解放状態になるとＨＰ回復,900,7034500,1,7034500,
+base_game,[Guardian] Creates whirlwind when charging halberd attacks,【守護者】斧槍タメ攻撃時、つむじ風が発生,900,7011600,1,7011600,
+base_game,[Guardian] Increased duration for Character Skill,【守護者】スキルの持続時間延長,900,7011000,1,7011000,
+base_game,[Guardian] Slowly restores nearby allies' HP while Art is active,【守護者】アーツ発動時、周囲の味方ＨＰを徐々に回復,900,7012000,1,7012000,
+base_game,[Guardian] Successful guards send out shockwaves while ability is active,【守護者】アビリティ発動中 ガード成功時、衝撃波が発生,900,7033400,1,7033400,
+base_game,[Ironeye] +1 additional Character Skill use,【鉄の目】スキルの使用回数＋１,900,7270100,1,7270100,
+base_game,[Ironeye] Art Charge Activation Adds Poison Effect,【鉄の目】アーツのタメ発動時、毒の状態異常を付加,900,7034600,1,7034600,
+base_game,[Ironeye] Boosts thrusting counterattacks after executing Art,【鉄の目】アーツ発動後、刺突カウンター強化,900,7034700,1,7034700,
+base_game,[Ironeye] Extends duration of weak point,【鉄の目】弱点の持続時間を延長させる,900,7280000,1,7280000,
+base_game,[Raider] Damage taken while using Character Skill improves attack power and stamina,【無頼漢】スキル中に攻撃を受けると 攻撃力と最大スタミナ上昇,900,7031300,1,7031300,
+base_game,[Raider] Duration of Ultimate Art extended,【無頼漢】アーツの効果時間延長,900,7310000,1,7310000,
+base_game,[Recluse] Activating Ultimate Art raises Max HP,【隠者】アーツ発動時、最大ＨＰ上昇,900,7034100,1,7034100,
+base_game,[Recluse] Collecting affinity residue activates Terra Magica,【隠者】属性痕を集めた時、「魔術の地」が発動,900,7032800,1,7032800,
+base_game,[Recluse] Suffer blood loss and increase attack power upon Art activation,【隠者】アーツ発動時 自身が出血状態になり、攻撃力上昇,900,7032900,1,7032900,
+base_game,[Revenant] Expend own HP to fully heal nearby allies when activating Art,【復讐者】アーツ発動時 自身のＨＰと引き換えに周囲の味方のＨＰを全回復,900,7010900,1,7010900,
+base_game,[Revenant] Power up while fighting alongside family,【復讐者】ファミリーと共闘中の間、自身を強化,900,7220000,1,7220000,
+base_game,[Revenant] Strengthens family and allies when Ultimate Art is activated,【復讐者】アーツ発動時、ファミリーと味方を強化,900,7031200,1,7031200,
+base_game,[Revenant] Trigger ghostflame explosion during Ultimate Art activation,【復讐者】アーツ発動時、霊炎の爆発を発生,900,7011200,1,7011200,
+base_game,[Wylder] +1 additional Character Skill use,【追跡者】スキルの使用回数＋１,900,7033200,1,7033200,
+base_game,[Wylder] Art activation spreads fire in area,【追跡者】アーツ発動時、周囲を延焼,900,7010500,1,7010500,
+base_game,[Wylder] Art gauge greatly filled when ability is activated,【追跡者】アビリティ発動時、アーツゲージ増加,900,7032400,1,7032400,
+base_game,[Wylder] Standard attacks enhanced with fiery follow-ups when using Character Skill (greatsword only),【追跡者】スキル使用時、通常攻撃で 炎を纏った追撃を行う（大剣のみ）,900,7020000,1,7020000,
+deep_night,Acid Spraymist in possession at start of expedition,出撃時に「酸の噴霧」を持つ,6624000,6624500,100,6624500,false
+deep_night,Arcane increased for each great enemy defeated at a Ruin,遺跡の強敵を倒す度、神秘上昇,6060500,6060500,100,6060500,false
+deep_night,Attack power up when facing frostbite-afflicted enemy,凍傷状態の敵に対する攻撃を強化,7260400,7260400,100,7260400,false
+deep_night,Attack power up when facing frostbite-afflicted enemy +1,凍傷状態の敵に対する攻撃を強化＋１,7260400,6260400,100,6260400,true
+deep_night,Attack power up when facing frostbite-afflicted enemy +2,凍傷状態の敵に対する攻撃を強化＋２,7260400,6260401,100,6260401,true
+deep_night,Attack power up when facing poison-afflicted enemy,毒状態の敵に対する攻撃を強化,7260300,7260000,100,7260000,false
+deep_night,Attack power up when facing poison-afflicted enemy +1,毒状態の敵に対する攻撃を強化＋１,7260300,6260000,100,6260000,true
+deep_night,Attack power up when facing poison-afflicted enemy +2,毒状態の敵に対する攻撃を強化＋２,7260300,6260001,100,6260001,true
+deep_night,Attack power up when facing scarlet rot-afflicted enemy,腐敗状態の敵に対する攻撃を強化,7260300,7260300,100,7260300,false
+deep_night,Attack power up when facing scarlet rot-afflicted enemy +1,腐敗状態の敵に対する攻撃を強化＋１,7260300,6260300,100,6260300,true
+deep_night,Attack power up when facing scarlet rot-afflicted enemy +2,腐敗状態の敵に対する攻撃を強化＋２,7260300,6260301,100,6260301,true
+deep_night,Bloodboil Aromatic in possession at start of expedition,出撃時に「狂熱の香薬」を持つ,6624000,6624300,100,6624300,false
+deep_night,Cerulean Crystal Tear in possession at start of expedition,出撃時に「青色の結晶雫」を持つ,6621000,6621200,100,6621200,false
+deep_night,Cerulean Hidden Tear in possession at start of expedition,出撃時に「青色の秘雫」を持つ,6621000,6622600,100,6622600,false
+deep_night,Crimson Bubbletear in possession at start of expedition,出撃時に「緋色の泡雫」を持つ,6621000,6621400,100,6621400,false
+deep_night,Crimson Crystal Tear in possession at start of expedition,出撃時に「緋色の結晶雫」を持つ,6621000,6621100,100,6621100,false
+deep_night,Crimsonburst Crystal Tear in possession at start of expedition,出撃時に「緋湧きの結晶雫」を持つ,6621000,6621600,100,6621600,false
+deep_night,Crimsonspill Crystal Tear in possession at start of expedition,出撃時に「緋溢れの結晶雫」を持つ,6621000,6621000,100,6621000,false
+deep_night,Crimsonwhorl Bubbletear in possession at start of expedition,出撃時に「緋色渦の泡雫」を持つ,6621000,6622500,100,6622500,false
+deep_night,Critical Hit Boosts Stamina Recovery Speed,致命の一撃で、スタミナ回復速度上昇,7035100,7035100,100,7035100,false
+deep_night,Critical Hit Boosts Stamina Recovery Speed +1,致命の一撃で、スタミナ回復速度上昇＋１,7035100,6035100,100,6035100,false
+deep_night,Critical Hits Earn Runes,致命の一撃で、ルーンを取得,7031900,7031900,101,7031900,false
+deep_night,Critical hits fill more of the Art gauge,致命の一撃で、アーツゲージ増加,7030800,7030800,100,7030800,false
+deep_night,Critical hits fill more of the Art gauge +1,致命の一撃で、アーツゲージ増加＋１,7030800,6030800,100,6030800,true
+deep_night,Defeating enemies fills more of the Art gauge,敵を倒した時、アーツゲージ増加,7090000,7090000,100,7090000,false
+deep_night,Defeating enemies fills more of the Art gauge +1,敵を倒した時、アーツゲージ増加＋１,7090000,6090000,100,6090000,true
+deep_night,Defeating enemies restores HP for allies but not for self,敵を倒した時、自身を除く周囲の味方のＨＰを回復,7090100,7090100,100,7090100,false
+deep_night,Dormant Power Helps Discover Axes,潜在する力から、斧を見つけやすくなる,6630000,6631000,100,6631000,false
+deep_night,Dormant Power Helps Discover Ballistas,潜在する力から、バリスタを見つけやすくなる,6630000,6632600,100,6632600,false
+deep_night,Dormant Power Helps Discover Bows,潜在する力から、弓を見つけやすくなる,6630000,6632300,100,6632300,false
+deep_night,Dormant Power Helps Discover Claws,潜在する力から、爪を見つけやすくなる,6630000,6632000,100,6632000,false
+deep_night,Dormant Power Helps Discover Colossal Swords,潜在する力から、特大剣を見つけやすくなる,6630000,6630300,100,6630300,false
+deep_night,Dormant Power Helps Discover Colossal Weapons,潜在する力から、特大武器を見つけやすくなる,6630000,6632200,100,6632200,false
+deep_night,Dormant Power Helps Discover Crossbows,潜在する力から、クロスボウを見つけやすくなる,6630000,6632500,100,6632500,false
+deep_night,Dormant Power Helps Discover Curved Greatswords,潜在する力から、大曲剣を見つけやすくなる,6630000,6630500,100,6630500,false
+deep_night,Dormant Power Helps Discover Curved Swords,潜在する力から、曲剣を見つけやすくなる,6630000,6630400,100,6630400,false
+deep_night,Dormant Power Helps Discover Daggers,潜在する力から、短剣を見つけやすくなる,6630000,6630000,100,6630000,false
+deep_night,Dormant Power Helps Discover Fists,潜在する力から、拳を見つけやすくなる,6630000,6631900,100,6631900,false
+deep_night,Dormant Power Helps Discover Flails,潜在する力から、フレイルを見つけやすくなる,6630000,6631400,100,6631400,false
+deep_night,Dormant Power Helps Discover Great Hammers,潜在する力から、大槌を見つけやすくなる,6630000,6631300,100,6631300,false
+deep_night,Dormant Power Helps Discover Great Spears,潜在する力から、大槍を見つけやすくなる,6630000,6631600,100,6631600,false
+deep_night,Dormant Power Helps Discover Greataxes,潜在する力から、大斧を見つけやすくなる,6630000,6631100,100,6631100,false
+deep_night,Dormant Power Helps Discover Greatbows,潜在する力から、大弓を見つけやすくなる,6630000,6632400,100,6632400,false
+deep_night,Dormant Power Helps Discover Greatshields,潜在する力から、大盾を見つけやすくなる,6630000,6632900,100,6632900,false
+deep_night,Dormant Power Helps Discover Greatswords,潜在する力から、大剣を見つけやすくなる,6630000,6630200,100,6630200,false
+deep_night,Dormant Power Helps Discover Halberds,潜在する力から、斧槍を見つけやすくなる,6630000,6631700,100,6631700,false
+deep_night,Dormant Power Helps Discover Hammers,潜在する力から、槌を見つけやすくなる,6630000,6631200,100,6631200,false
+deep_night,Dormant Power Helps Discover Heavy Thrusting Swords,潜在する力から、重刺剣を見つけやすくなる,6630000,6630900,100,6630900,false
+deep_night,Dormant Power Helps Discover Katana,潜在する力から、刀を見つけやすくなる,6630000,6630600,100,6630600,false
+deep_night,Dormant Power Helps Discover Medium Shields,潜在する力から、中盾を見つけやすくなる,6630000,6632800,100,6632800,false
+deep_night,Dormant Power Helps Discover Reapers,潜在する力から、鎌を見つけやすくなる,6630000,6631800,100,6631800,false
+deep_night,Dormant Power Helps Discover Sacred Seals,潜在する力から、聖印を見つけやすくなる,6630000,6633100,100,6633100,false
+deep_night,Dormant Power Helps Discover Small Shields,潜在する力から、小盾を見つけやすくなる,6630000,6632700,100,6632700,false
+deep_night,Dormant Power Helps Discover Spears,潜在する力から、槍を見つけやすくなる,6630000,6631500,100,6631500,false
+deep_night,Dormant Power Helps Discover Staves,潜在する力から、杖を見つけやすくなる,6630000,6633000,100,6633000,false
+deep_night,Dormant Power Helps Discover Straight Swords,潜在する力から、直剣を見つけやすくなる,6630000,6630100,100,6630100,false
+deep_night,Dormant Power Helps Discover Thrusting Swords,潜在する力から、刺剣を見つけやすくなる,6630000,6630800,100,6630800,false
+deep_night,Dormant Power Helps Discover Twinblades,潜在する力から、両刃剣を見つけやすくなる,6630000,6630700,100,6630700,false
+deep_night,Dormant Power Helps Discover Whips,潜在する力から、鞭を見つけやすくなる,6630000,6632100,100,6632100,false
+deep_night,Draw enemy attention while guarding,ガード中、敵に狙われやすくなる,7030700,7030700,100,7030700,false
+deep_night,FP Restoration upon Axe Attacks,斧の攻撃でＦＰ回復,7350000,7351000,10,7351000,false
+deep_night,FP Restoration upon Bow Attacks,弓の攻撃でＦＰ回復,7350000,7352400,10,7352400,false
+deep_night,FP Restoration upon Claw Attacks,爪の攻撃でＦＰ回復,7350000,7352100,10,7352100,false
+deep_night,FP Restoration upon Colossal Sword Attacks,特大剣の攻撃でＦＰ回復,7350000,7350300,10,7350300,false
+deep_night,FP Restoration upon Colossal Weapon Attacks,特大武器の攻撃でＦＰ回復,7350000,7352300,10,7352300,false
+deep_night,FP Restoration upon Curved Greatsword Attacks,大曲剣の攻撃でＦＰ回復,7350000,7350500,10,7350500,false
+deep_night,FP Restoration upon Curved Sword Attacks,曲剣の攻撃でＦＰ回復,7350000,7350400,10,7350400,false
+deep_night,FP Restoration upon Dagger Attacks,短剣の攻撃でＦＰ回復,7350000,7350000,10,7350000,false
+deep_night,FP Restoration upon Fist Attacks,拳の攻撃でＦＰ回復,7350000,7352000,10,7352000,false
+deep_night,FP Restoration upon Flail Attacks,フレイルの攻撃でＦＰ回復,7350000,7351400,10,7351400,false
+deep_night,FP Restoration upon Great Hammer Attacks,大槌の攻撃でＦＰ回復,7350000,7351300,10,7351300,false
+deep_night,FP Restoration upon Great Spear Attacks,大槍の攻撃でＦＰ回復,7350000,7351700,10,7351700,false
+deep_night,FP Restoration upon Greataxe Attacks,大斧の攻撃でＦＰ回復,7350000,7351100,10,7351100,false
+deep_night,FP Restoration upon Greatsword Attacks,大剣の攻撃でＦＰ回復,7350000,7350200,10,7350200,false
+deep_night,FP Restoration upon Halberd Attacks,斧槍の攻撃でＦＰ回復,7350000,7351800,10,7351800,false
+deep_night,FP Restoration upon Hammer Attacks,槌の攻撃でＦＰ回復,7350000,7351200,10,7351200,false
+deep_night,FP Restoration upon Heavy Thrusting Sword Attacks,重刺剣の攻撃でＦＰ回復,7350000,7350900,10,7350900,false
+deep_night,FP Restoration upon Katana Attacks,刀の攻撃でＦＰ回復,7350000,7350600,10,7350600,false
+deep_night,FP Restoration upon Reaper Attacks,鎌の攻撃でＦＰ回復,7350000,7351900,10,7351900,false
+deep_night,FP Restoration upon Spear Attacks,槍の攻撃でＦＰ回復,7350000,7351500,10,7351500,false
+deep_night,FP Restoration upon Straight Sword Attacks,直剣の攻撃でＦＰ回復,7350000,7350100,10,7350100,false
+deep_night,FP Restoration upon Thrusting Sword Attacks,刺剣の攻撃でＦＰ回復,7350000,7350800,10,7350800,false
+deep_night,FP Restoration upon Twinblade Attacks,両刃剣の攻撃でＦＰ回復,7350000,7350700,10,7350700,false
+deep_night,FP Restoration upon Whip Attacks,鞭の攻撃でＦＰ回復,7350000,7352200,10,7352200,false
+deep_night,Fire Attack Power Up +2,炎攻撃力上昇＋２,100,7001602,1000,7001602,false
+deep_night,Fire Attack Power Up +3,炎攻撃力上昇＋３,100,6001600,1000,6001600,true
+deep_night,Fire Attack Power Up +4,炎攻撃力上昇＋４,100,6001601,1000,6001601,true
+deep_night,Fire Damage Negation Up,炎カット率上昇,7002700,7002700,1000,7002700,false
+deep_night,Flame-Shrouding Cracked Tear in possession at start of expedition,出撃時に「炎纏いの割れ雫」を持つ,6621000,6622800,100,6622800,false
+deep_night,Flask Also Heals Allies,聖杯瓶の回復を、周囲の味方に分配,7010200,7010200,100,7010200,false
+deep_night,Greenburst Crystal Tear in possession at start of expedition,出撃時に「緑湧きの結晶雫」を持つ,6621000,6621700,100,6621700,false
+deep_night,Greenspill Crystal Tear in possession at start of expedition,出撃時に「緑溢れの結晶雫」を持つ,6621000,6623200,100,6623200,false
+deep_night,Guard counter is given a boost based on current HP,ガードカウンターに、自身の現在ＨＰの一部を加える,100,7150000,100,7150000,false
+deep_night,HP Recovery From Successful Guarding,ガード成功時、ＨＰ回復,7036100,7036100,1,8650000,false
+deep_night,HP Restoration upon Axe Attacks,斧の攻撃でＨＰ回復,7340000,7341000,10,7341000,false
+deep_night,HP Restoration upon Bow Attacks,弓の攻撃でＨＰ回復,7340000,7342400,10,7342400,false
+deep_night,HP Restoration upon Claw Attacks,爪の攻撃でＨＰ回復,7340000,7342100,10,7342100,false
+deep_night,HP Restoration upon Colossal Sword Attacks,特大剣の攻撃でＨＰ回復,7340000,7340300,10,7340300,false
+deep_night,HP Restoration upon Colossal Weapon Attacks,特大武器の攻撃でＨＰ回復,7340000,7342300,10,7342300,false
+deep_night,HP Restoration upon Curved Greatsword Attacks,大曲剣の攻撃でＨＰ回復,7340000,7340500,10,7340500,false
+deep_night,HP Restoration upon Curved Sword Attacks,曲剣の攻撃でＨＰ回復,7340000,7340400,10,7340400,false
+deep_night,HP Restoration upon Dagger Attacks,短剣の攻撃でＨＰ回復,7340000,7340000,10,7340000,false
+deep_night,HP Restoration upon Fist Attacks,拳の攻撃でＨＰ回復,7340000,7342000,10,7342000,false
+deep_night,HP Restoration upon Flail Attacks,フレイルの攻撃でＨＰ回復,7340000,7341400,10,7341400,false
+deep_night,HP Restoration upon Great Hammer Attacks,大槌の攻撃でＨＰ回復,7340000,7341300,10,7341300,false
+deep_night,HP Restoration upon Great Spear Attacks,大槍の攻撃でＨＰ回復,7340000,7341700,10,7341700,false
+deep_night,HP Restoration upon Greataxe Attacks,大斧の攻撃でＨＰ回復,7340000,7341100,10,7341100,false
+deep_night,HP Restoration upon Greatsword Attacks,大剣の攻撃でＨＰ回復,7340000,7340200,10,7340200,false
+deep_night,HP Restoration upon Halberd Attacks,斧槍の攻撃でＨＰ回復,7340000,7341800,10,7341800,false
+deep_night,HP Restoration upon Hammer Attacks,槌の攻撃でＨＰ回復,7340000,7341200,10,7341200,false
+deep_night,HP Restoration upon Heavy Thrusting Sword Attacks,重刺剣の攻撃でＨＰ回復,7340000,7340900,10,7340900,false
+deep_night,HP Restoration upon Katana Attacks,刀の攻撃でＨＰ回復,7340000,7340600,10,7340600,false
+deep_night,HP Restoration upon Reaper Attacks,鎌の攻撃でＨＰ回復,7340000,7341900,10,7341900,false
+deep_night,HP Restoration upon Spear Attacks,槍の攻撃でＨＰ回復,7340000,7341500,10,7341500,false
+deep_night,HP Restoration upon Straight Sword Attacks,直剣の攻撃でＨＰ回復,7340000,7340100,10,7340100,false
+deep_night,HP Restoration upon Thrusting Counterattack,刺突カウンター発生時、ＨＰ回復,7160000,7160000,100,7160000,false
+deep_night,HP Restoration upon Thrusting Counterattack +1,刺突カウンター発生時、ＨＰ回復＋１,7160000,6160000,100,6160000,true
+deep_night,HP Restoration upon Thrusting Sword Attacks,刺剣の攻撃でＨＰ回復,7340000,7340800,10,7340800,false
+deep_night,HP Restoration upon Twinblade Attacks,両刃剣の攻撃でＨＰ回復,7340000,7340700,10,7340700,false
+deep_night,HP Restoration upon Whip Attacks,鞭の攻撃でＨＰ回復,7340000,7342200,10,7342200,false
+deep_night,"HP restored when using medicinal boluses, etc.",苔薬などのアイテム使用でＨＰ回復,7030200,7030200,100,7030200,false
+deep_night,"HP restored when using medicinal boluses, etc. +1",苔薬などのアイテム使用でＨＰ回復＋１,7030200,6030200,100,6030200,false
+deep_night,Holy Attack Power Up +2,聖攻撃力上昇＋２,100,7001802,1000,7001802,false
+deep_night,Holy Attack Power Up +3,聖攻撃力上昇＋３,100,6001800,1000,6001800,true
+deep_night,Holy Attack Power Up +4,聖攻撃力上昇＋４,100,6001801,1000,6001801,true
+deep_night,Holy Damage Negation Up,聖カット率上昇,7002900,7002900,1000,7002900,false
+deep_night,Holy-Shrouding Cracked Tear in possession at start of expedition,出撃時に「聖纏いの割れ雫」を持つ,6621000,6623100,100,6623100,false
+deep_night,Improved Affinity Attack Power,属性攻撃力上昇,100,6610800,1000,6610800,false
+deep_night,Improved Affinity Attack Power +1,属性攻撃力上昇＋１,100,6610801,1000,6610801,true
+deep_night,Improved Affinity Attack Power +2,属性攻撃力上昇＋２,100,6610802,1000,6610802,true
+deep_night,Improved Affinity Damage Negation,属性カット率上昇,6611100,6611100,1000,6611100,false
+deep_night,Improved Affinity Damage Negation +1,属性カット率上昇＋１,6611100,6611101,1000,6611101,true
+deep_night,Improved Affinity Damage Negation +2,属性カット率上昇＋２,6611100,6611102,1000,6611102,true
+deep_night,Improved Attack Power with 3+ Axes Equipped,斧の武器種を３つ以上装備していると攻撃力上昇,100,7081000,10,7081000,false
+deep_night,Improved Attack Power with 3+ Bows Equipped,弓の武器種を３つ以上装備していると攻撃力上昇,100,7082400,10,7082400,false
+deep_night,Improved Attack Power with 3+ Claws Equipped,爪の武器種を３つ以上装備していると攻撃力上昇,100,7082100,10,7082100,false
+deep_night,Improved Attack Power with 3+ Colossal Swords Equipped,特大剣の武器種を３つ以上装備していると攻撃力上昇,100,7080300,10,7080300,false
+deep_night,Improved Attack Power with 3+ Colossal Weapons Equipped,特大武器の武器種を３つ以上装備していると攻撃力上昇,100,7082300,10,7082300,false
+deep_night,Improved Attack Power with 3+ Curved Greatswords Equipped,大曲剣の武器種を３つ以上装備していると攻撃力上昇,100,7080500,10,7080500,false
+deep_night,Improved Attack Power with 3+ Curved Swords Equipped,曲剣の武器種を３つ以上装備していると攻撃力上昇,100,7080400,10,7080400,false
+deep_night,Improved Attack Power with 3+ Daggers Equipped,短剣の武器種を３つ以上装備していると攻撃力上昇,100,7080000,10,7080000,false
+deep_night,Improved Attack Power with 3+ Fists Equipped,拳の武器種を３つ以上装備していると攻撃力上昇,100,7082000,10,7082000,false
+deep_night,Improved Attack Power with 3+ Flails Equipped,フレイルの武器種を３つ以上装備していると攻撃力上昇,100,7081400,10,7081400,false
+deep_night,Improved Attack Power with 3+ Great Hammers Equipped,大槌の武器種を３つ以上装備していると攻撃力上昇,100,7081300,10,7081300,false
+deep_night,Improved Attack Power with 3+ Great Spears Equipped,大槍の武器種を３つ以上装備していると攻撃力上昇,100,7081700,10,7081700,false
+deep_night,Improved Attack Power with 3+ Greataxes Equipped,大斧の武器種を３つ以上装備していると攻撃力上昇,100,7081100,10,7081100,false
+deep_night,Improved Attack Power with 3+ Greatswords Equipped,大剣の武器種を３つ以上装備していると攻撃力上昇,100,7080200,10,7080200,false
+deep_night,Improved Attack Power with 3+ Halberds Equipped,斧槍の武器種を３つ以上装備していると攻撃力上昇,100,7081800,10,7081800,false
+deep_night,Improved Attack Power with 3+ Hammers Equipped,槌の武器種を３つ以上装備していると攻撃力上昇,100,7081200,10,7081200,false
+deep_night,Improved Attack Power with 3+ Heavy Thrusting Swords Equipped,重刺剣の武器種を３つ以上装備していると攻撃力上昇,100,7080900,10,7080900,false
+deep_night,Improved Attack Power with 3+ Katana Equipped,刀の武器種を３つ以上装備していると攻撃力上昇,100,7080600,10,7080600,false
+deep_night,Improved Attack Power with 3+ Reapers Equipped,鎌の武器種を３つ以上装備していると攻撃力上昇,100,7081900,10,7081900,false
+deep_night,Improved Attack Power with 3+ Spears Equipped,槍の武器種を３つ以上装備していると攻撃力上昇,100,7081500,10,7081500,false
+deep_night,Improved Attack Power with 3+ Straight Swords Equipped,直剣の武器種を３つ以上装備していると攻撃力上昇,100,7080100,10,7080100,false
+deep_night,Improved Attack Power with 3+ Thrusting Swords Equipped,刺剣の武器種を３つ以上装備していると攻撃力上昇,100,7080800,10,7080800,false
+deep_night,Improved Attack Power with 3+ Twinblades Equipped,両刃剣の武器種を３つ以上装備していると攻撃力上昇,100,7080700,10,7080700,false
+deep_night,Improved Attack Power with 3+ Whips Equipped,鞭の武器種を３つ以上装備していると攻撃力上昇,100,7082200,10,7082200,false
+deep_night,Improved Axe Attack Power,斧の攻撃力上昇,100,7331000,10,7331000,false
+deep_night,Improved Bestial Incantations,獣の祈祷を強化,800,7044400,100,7044400,false
+deep_night,Improved Blood Loss Resistance,出血耐性上昇,7003100,7003100,1000,7003100,false
+deep_night,Improved Blood Loss Resistance +1,出血耐性上昇＋１,7003100,6003100,1000,6003100,false
+deep_night,Improved Bow Attack Power,弓の攻撃力上昇,100,7332400,10,7332400,false
+deep_night,Improved Carian Sword Sorcery,カーリアの剣の魔術を強化,800,7043300,100,7043300,false
+deep_night,Improved Claw Attack Power,爪の攻撃力上昇,100,7332100,10,7332100,false
+deep_night,Improved Colossal Sword Attack Power,特大剣の攻撃力上昇,100,7330300,10,7330300,false
+deep_night,Improved Colossal Weapon Attack Power,特大武器の攻撃力上昇,100,7332300,10,7332300,false
+deep_night,Improved Critical Hits,致命の一撃強化,100,7040200,100,7040200,false
+deep_night,Improved Crystalian sorcery,結晶人の魔術を強化,800,7043600,100,7043600,false
+deep_night,Improved Curved Greatsword Attack Power,大曲剣の攻撃力上昇,100,7330500,10,7330500,false
+deep_night,Improved Curved Sword Attack Power,曲剣の攻撃力上昇,100,7330400,10,7330400,false
+deep_night,Improved Dagger Attack Power,短剣の攻撃力上昇,100,7330000,10,7330000,false
+deep_night,Improved Damage Negation at Low HP,ＨＰ低下時、カット率上昇,7012300,7012300,100,7012300,false
+deep_night,Improved Death Blight Resistance,抗死耐性上昇,7003300,7003300,1000,7003300,false
+deep_night,Improved Death Blight Resistance +1,抗死耐性上昇＋１,7003300,6003300,1000,6003300,false
+deep_night,Improved Dragon Communion Incantations,竜餐の祈祷を強化,800,7044600,100,7044600,false
+deep_night,Improved Dragon Cult Incantations,王都古竜信仰の祈祷を強化,800,7044100,100,7044100,false
+deep_night,Improved Fire Damage Negation +1,炎カット率上昇＋１,7002700,6002700,1000,6002700,true
+deep_night,Improved Fire Damage Negation +2,炎カット率上昇＋２,7002700,6002701,1000,6002701,true
+deep_night,Improved Fist Attack Power,拳の攻撃力上昇,100,7332000,10,7332000,false
+deep_night,Improved Flail Attack Power,フレイルの攻撃力上昇,100,7331400,10,7331400,false
+deep_night,Improved Flask HP Restoration,聖杯瓶の回復量上昇,6611400,6611400,100,6611400,false
+deep_night,Improved Frenzied Flame Incantations,狂い火の祈祷を強化,800,7044500,100,7044500,false
+deep_night,Improved Frost Resistance,冷気耐性上昇,7003500,7003500,1000,7003500,false
+deep_night,Improved Frost Resistance +1,冷気耐性上昇＋１,7003500,6003500,1000,6003500,false
+deep_night,Improved Fundamentalist Incantations,黄金律原理主義の祈祷を強化,800,7044000,100,7044000,false
+deep_night,Improved Giants' Flame Incantations,巨人の火の祈祷を強化,800,7044200,100,7044200,false
+deep_night,Improved Glintblade Sorcery,輝剣の魔術を強化,800,7043400,100,7043400,false
+deep_night,Improved Glintstone and Gravity Stone Damage,輝石、重力石アイテムの攻撃力上昇,7040500,7040500,100,7040500,false
+deep_night,Improved Glintstone and Gravity Stone Damage +1,輝石、重力石アイテムの攻撃力上昇＋１,7040500,6040500,100,6040500,false
+deep_night,Improved Godslayer Incantations,神狩りの祈祷を強化,800,7044300,100,7044300,false
+deep_night,Improved Gravity Sorcery,重力の魔術を強化,800,7043700,100,7043700,false
+deep_night,Improved Great Hammer Attack Power,大槌の攻撃力上昇,100,7331300,10,7331300,false
+deep_night,Improved Great Spear Attack Power,大槍の攻撃力上昇,100,7331700,10,7331700,false
+deep_night,Improved Greataxe Attack Power,大斧の攻撃力上昇,100,7331100,10,7331100,false
+deep_night,Improved Greatsword Attack Power,大剣の攻撃力上昇,100,7330200,10,7330200,false
+deep_night,Improved Guard Counters,ガードカウンター強化,100,7040100,100,7040100,false
+deep_night,Improved Guard Counters +1,ガードカウンター強化＋１,100,6040100,100,6040100,true
+deep_night,Improved Guard Counters +2,ガードカウンター強化＋２,100,6040101,100,6040101,true
+deep_night,Improved Halberd Attack Power,斧槍の攻撃力上昇,100,7331800,10,7331800,false
+deep_night,Improved Hammer Attack Power,槌の攻撃力上昇,100,7331200,10,7331200,false
+deep_night,Improved Heavy Thrusting Sword Attack Power,重刺剣の攻撃力上昇,100,7330900,10,7330900,false
+deep_night,Improved Holy Damage Negation +1,聖カット率上昇＋１,7002900,6002900,1000,6002900,true
+deep_night,Improved Holy Damage Negation +2,聖カット率上昇＋２,7002900,6002901,1000,6002901,true
+deep_night,Improved Incantations,祈祷強化,100,6611300,100,6611300,false
+deep_night,Improved Incantations +1,祈祷強化＋１,100,6611301,100,6611301,true
+deep_night,Improved Incantations +2,祈祷強化＋２,100,6611302,100,6611302,true
+deep_night,Improved Initial Standard Attack,通常攻撃の１段目強化,100,7040000,100,7040000,false
+deep_night,Improved Invisibility Sorcery,不可視の魔術を強化,800,7043500,100,7043500,false
+deep_night,Improved Katana Attack Power,刀の攻撃力上昇,100,7330600,10,7330600,false
+deep_night,Improved Lightning Damage Negation +1,雷カット率上昇＋１,7002800,6002800,1000,6002800,true
+deep_night,Improved Lightning Damage Negation +2,雷カット率上昇＋２,7002800,6002801,1000,6002801,true
+deep_night,Improved Madness Resistance,発狂耐性上昇,7003600,7003600,1000,7003600,false
+deep_night,Improved Madness Resistance +1,発狂耐性上昇＋１,7003600,6003600,1000,6003600,false
+deep_night,Improved Magic Damage Negation +1,魔力カット率上昇＋１,700,6002600,1000,6002600,true
+deep_night,Improved Magic Damage Negation +2,魔力カット率上昇＋２,7002600,6002601,1000,6002601,true
+deep_night,Improved Perfuming Arts,調香術強化,7043100,7043100,100,8400000,false
+deep_night,Improved Perfuming Arts +1,調香術強化＋１,7043100,6043100,100,6043100,false
+deep_night,Improved Physical Damage Negation +1,物理カット率上昇＋１,7006200,6611001,1000,6611001,true
+deep_night,Improved Physical Damage Negation +2,物理カット率上昇＋２,7006200,6611002,1000,6611002,true
+deep_night,Improved Poise & Damage Negation When Knocked Back by Damage,ダメージで吹き飛ばされた時、強靭度とカット率上昇,7240000,7240000,100,7240000,false
+deep_night,Improved Poison Resistance,毒耐性上昇,7003000,7003000,1000,7003000,false
+deep_night,Improved Poison Resistance +1,毒耐性上昇＋１,7003000,6003000,1000,6003000,false
+deep_night,Improved Reaper Attack Power,鎌の攻撃力上昇,100,7331900,10,7331900,false
+deep_night,Improved Rot Resistance,腐敗耐性上昇,7003400,7003400,1000,7003400,false
+deep_night,Improved Rot Resistance +1,腐敗耐性上昇＋１,7003400,6003400,1000,6003400,false
+deep_night,Improved Sleep Resistance,睡眠耐性上昇,7003200,7003200,1000,7003200,false
+deep_night,Improved Sleep Resistance +1,睡眠耐性上昇＋１,7003200,6003200,1000,6003200,false
+deep_night,Improved Sorceries,魔術強化,100,6611200,100,6611200,false
+deep_night,Improved Sorceries +1,魔術強化＋１,100,6611201,100,6611201,true
+deep_night,Improved Sorceries +2,魔術強化＋２,100,6611202,100,6611202,true
+deep_night,Improved Spear Attack Power,槍の攻撃力上昇,100,7331500,10,7331500,false
+deep_night,Improved Stonedigger Sorcery,石掘りの魔術を強化,800,7043200,100,7043200,false
+deep_night,Improved Straight Sword Attack Power,直剣の攻撃力上昇,100,7330100,10,7330100,false
+deep_night,Improved Thorn Sorcery,茨の魔術を強化,800,7043800,100,7043800,false
+deep_night,Improved Throwing Knife Damage,投擲ナイフの攻撃力上昇,7040400,7040400,100,7040400,false
+deep_night,Improved Throwing Knife Damage +1,投擲ナイフの攻撃力上昇＋１,7040400,6040400,100,6040400,false
+deep_night,Improved Throwing Pot Damage,投擲壺の攻撃力上昇,7040300,7040300,100,7040300,false
+deep_night,Improved Throwing Pot Damage +1,投擲壺の攻撃力上昇＋１,7040300,6040300,100,6040300,false
+deep_night,Improved Thrusting Sword Attack Power,刺剣の攻撃力上昇,100,7330800,10,7330800,false
+deep_night,Improved Twinblade Attack Power,両刃剣の攻撃力上昇,100,7330700,10,7330700,false
+deep_night,Improved Whip Attack Power,鞭の攻撃力上昇,100,7332200,10,7332200,false
+deep_night,Increased Maximum FP,最大ＦＰ上昇,6610500,6610500,1000,6610500,true
+deep_night,Increased Maximum HP,最大ＨＰ上昇,6610400,6610400,1000,6610400,true
+deep_night,Increased Maximum Stamina,最大スタミナ上昇,6610600,6610600,1000,6610600,true
+deep_night,Increased rune acquisition for self and allies,自身と味方の取得ルーン増加,7110000,7110000,100,7110000,false
+deep_night,Ironjar Aromatic in possession at start of expedition,出撃時に「鉄壺の香薬」を持つ,6624000,6624200,100,6624200,false
+deep_night,Items confer effect to all nearby allies,アイテムの効果が周囲の味方にも発動,7050100,7050100,100,7050100,false
+deep_night,Leaden Hardtear in possession at start of expedition,出撃時に「鉛色の硬雫」を持つ,6621000,6622300,100,6622300,false
+deep_night,Lightning Attack Power Up +2,雷攻撃力上昇＋２,100,7001702,1000,7001702,false
+deep_night,Lightning Attack Power Up +3,雷攻撃力上昇＋３,100,6001700,1000,6001700,true
+deep_night,Lightning Attack Power Up +4,雷攻撃力上昇＋４,100,6001701,1000,6001701,true
+deep_night,Lightning Damage Negation Up,雷カット率上昇,7002800,7002800,1000,7002800,false
+deep_night,Lightning-Shrouding Cracked Tear in possession at start of expedition,出撃時に「雷纏いの割れ雫」を持つ,6621000,6623000,100,6623000,false
+deep_night,Madness in Vicinity Improves Attack Power,周囲で発狂状態の発生時、攻撃力上昇,100,6600100,100,6600100,false
+deep_night,Madness in Vicinity Improves Attack Power +1,周囲で発狂状態の発生時、攻撃力上昇＋１,100,6600101,100,6600101,true
+deep_night,Magic Attack Power Up +2,魔力攻撃力上昇＋２,100,7001502,1000,7001502,false
+deep_night,Magic Attack Power Up +3,魔力攻撃力上昇＋３,100,6001500,1000,6001500,true
+deep_night,Magic Attack Power Up +4,魔力攻撃力上昇＋４,100,6001501,1000,6001501,true
+deep_night,Magic Damage Negation Up,魔力カット率上昇,7002600,7002600,1000,7002600,false
+deep_night,Magic-Shrouding Cracked Tear in possession at start of expedition,出撃時に「魔力纏いの割れ雫」を持つ,6621000,6622900,100,6622900,false
+deep_night,Max FP Up with 3+ Sacred Seals Equipped,聖印の武器種を３つ以上装備していると最大ＦＰ上昇,7082500,7082600,10,7082600,false
+deep_night,Max FP Up with 3+ Staves Equipped,杖の武器種を３つ以上装備していると最大ＦＰ上昇,7082500,7082500,10,7082500,false
+deep_night,Max HP Up with 3+ Greatshields Equipped,大盾の武器種を３つ以上装備していると最大ＨＰ上昇,7082700,7082900,10,7082900,false
+deep_night,Max HP Up with 3+ Medium Shields Equipped,中盾の武器種を３つ以上装備していると最大ＨＰ上昇,7082700,7082800,10,7082800,false
+deep_night,Max HP Up with 3+ Small Shields Equipped,小盾の武器種を３つ以上装備していると最大ＨＰ上昇,7082700,7082700,10,7082700,false
+deep_night,Max HP increased for each great enemy defeated at a Great Church.,大教会の強敵を倒す度、最大ＨＰ上昇,6060300,6060300,100,6060300,false
+deep_night,Max stamina increased for each great enemy defeated at a Great Encampment,大野営地の強敵を倒す度、最大スタミナ上昇,6060600,6060600,100,6060600,false
+deep_night,Opaline Bubbletear in possession at start of expedition,出撃時に「真珠色の泡雫」を持つ,6621000,6621500,100,6621500,false
+deep_night,Opaline Hardtear in possession at start of expedition,出撃時に「真珠色の硬雫」を持つ,6621000,6621800,100,6621800,false
+deep_night,Partial HP Restoration upon Post-Damage Attacks,ダメージを受けた直後、攻撃によりＨＰの一部を回復,7005600,7005600,100,7005600,false
+deep_night,Partial HP Restoration upon Post-Damage Attacks +1,ダメージを受けた直後、攻撃によりＨＰの一部を回復＋１,7005600,6005600,100,6005600,true
+deep_night,Partial HP Restoration upon Post-Damage Attacks +2,ダメージを受けた直後、攻撃によりＨＰの一部を回復＋２,7005600,6005601,100,6005601,true
+deep_night,Physical Attack Up +2,物理攻撃力上昇＋２,100,7001402,1000,7001402,false
+deep_night,Physical Attack Up +3,物理攻撃力上昇＋３,100,6001400,1000,7001403,true
+deep_night,Physical Attack Up +4,物理攻撃力上昇＋４,100,6001401,1000,6001400,true
+deep_night,Physical attack power increases after using grease items,脂アイテム使用時、追加で物理攻撃力上昇,100,7030900,100,7030900,false
+deep_night,Physical attack power increases after using grease items +1,脂アイテム使用時、追加で物理攻撃力上昇＋１,100,6030900,100,6030900,true
+deep_night,Physical attack power increases after using grease items +2,脂アイテム使用時、追加で物理攻撃力上昇＋２,100,6030901,100,6030901,true
+deep_night,Poise +3,強靭度＋３,7001000,7001002,1000,7001002,false
+deep_night,Poison Spraymist in possession at start of expedition,出撃時に「毒の噴霧」を持つ,6624000,6624400,100,6624400,false
+deep_night,"Raised stamina recovery for nearby allies, but not for self",自身を除く、周囲の味方のスタミナ回復速度上昇,7050000,7050000,100,7050000,false
+deep_night,Reduced FP Consumption,消費ＦＰ軽減,6610700,6610700,1000,6610700,false
+deep_night,Rune discount for shop purchases while on expedition,出撃中、ショップでの購入に必要なルーンが割引,7230000,7230000,100,7230000,false
+deep_night,Runes and Item Discovery increased for each great enemy defeated at a Fort,小砦の強敵を倒す度、取得ルーン増加、発見力上昇,6060400,6060400,100,6060400,false
+deep_night,Ruptured Crystal Tear in possession at start of expedition,出撃時に「破裂した結晶雫」を持つ,6621000,6622200,100,6622200,false
+deep_night,Sleep in Vicinity Improves Attack Power,周囲で睡眠状態の発生時、攻撃力上昇,100,6600000,100,6600000,false
+deep_night,Sleep in Vicinity Improves Attack Power +1,周囲で睡眠状態の発生時、攻撃力上昇＋１,100,6600001,100,6600001,true
+deep_night,Slowly restore HP for self and nearby allies when HP is low,ＨＰ低下時、周囲の味方を含めＨＰをゆっくりと回復,7012200,7012200,100,7012200,false
+deep_night,Small Pouch in possession at start of expedition,出撃時に「小さなポーチ」を持つ,7121000,7121000,100,7121000,false
+deep_night,Spark Aromatic in possession at start of expedition,出撃時に「火花の香り」を持つ,6624000,6624100,100,6624100,false
+deep_night,Speckled Hardtear in possession at start of expedition,出撃時に「斑彩色の硬雫」を持つ,6621000,6621300,100,6621300,false
+deep_night,Spiked Cracked Tear in possession at start of expedition,出撃時に「大棘の割れ雫」を持つ,6621000,6622000,100,6622000,false
+deep_night,Stamina Recovery upon Landing Attacks,攻撃命中時、スタミナ回復,7100100,7100100,100,7100100,false
+deep_night,Stonebarb Cracked Tear in possession at start of expedition,出撃時に「岩棘の割れ雫」を持つ,6621000,6622700,100,6622700,false
+deep_night,Stonesword Key in possession at start of expedition,出撃時に「石剣の鍵」を持つ,7120900,7120900,100,7120900,false
+deep_night,Successful guarding fills more of the Art gauge,ガード成功時、アーツゲージ増加,7030600,7030600,100,7030600,false
+deep_night,Successful guarding fills more of the Art gauge +1,ガード成功時、アーツゲージ増加＋１,7030600,6030600,100,6030600,true
+deep_night,Thorny Cracked Tear in possession at start of expedition,出撃時に「連棘の割れ雫」を持つ,6621000,6621900,100,6621900,false
+deep_night,Treasure marked upon map,埋もれ宝の位置を地図に表示,7070000,7070000,100,7070000,false
+deep_night,Twiggy Cracked Tear in possession at start of expedition,出撃時に「細枝の割れ雫」を持つ,6621000,6622400,100,6622400,false
+deep_night,Uplifting Aromatic in possession at start of expedition,出撃時に「高揚の香り」を持つ,6624000,6624000,100,6624000,false
+deep_night,Windy Crystal Tear in possession at start of expedition,出撃時に「風の結晶雫」を持つ,6621000,6622100,100,6622100,false
+deep_night,"[Duchess] Improved Mind and Faith, Reduced Intelligence",【レディ】精神力／信仰上昇、知力低下,900,6643100,1,6643100,false
+deep_night,"[Duchess] Improved Vigor and Strength, Reduced Mind",【レディ】生命力／筋力上昇、精神力低下,900,6643000,1,6643000,false
+deep_night,[Duchess] Use Character Skill for Brief Invulnerability,【レディ】スキル使用時、僅かに無敵,900,6500300,1,6500300,false
+deep_night,"[Executor] Improved Dexterity and Arcane, Reduced Vigor",【執行者】技量／神秘上昇、生命力低下,900,6647100,1,6647100,false
+deep_night,"[Executor] Improved Vigor and Endurance, Reduced Arcane",【執行者】生命力／持久力上昇、神秘低下,900,6647000,1,6647000,false
+deep_night,[Executor] Slowly Restore HP upon Ability Activation,【執行者】アビリティ発動時、ＨＰをゆっくりと回復,900,6500700,1,6500700,false
+deep_night,[Guardian] Character Skill Boosts Damage Negation of Nearby Allies,【守護者】スキル使用時、周囲の味方のカット率上昇,900,6500100,1,6500100,false
+deep_night,"[Guardian] Improved Mind and Faith, Reduced Vigor",【守護者】精神力／信仰上昇、生命力低下,900,6641100,1,6641100,false
+deep_night,"[Guardian] Improved Strength and Dexterity, Reduced Vigor",【守護者】筋力／技量上昇、生命力低下,900,6641000,1,6641000,false
+deep_night,[Ironeye] Character Skill Inflicts Heavy Poison Damage on Poisoned Enemies,【鉄の目】スキルに毒の状態異常を付加して 毒状態の敵に大ダメージ,900,6500200,1,6500200,false
+deep_night,"[Ironeye] Improved Arcane, Reduced Dexterity",【鉄の目】神秘上昇、技量低下,900,6642000,1,6642000,false
+deep_night,"[Ironeye] Improved Vigor and Strength, Reduced Dexterity",【鉄の目】生命力／筋力上昇、技量低下,900,6642100,1,6642100,false
+deep_night,[Raider] Hit With Character Skill to Reduce Enemy Attack Power,【無頼漢】スキル命中時、敵の攻撃力低下,900,6500400,1,6500400,false
+deep_night,"[Raider] Improved Arcane, Reduced Vigor",【無頼漢】神秘上昇、生命力低下,900,6644100,1,6644100,false
+deep_night,"[Raider] Improved Mind and Intelligence, Reduced Vigor and Endurance",【無頼漢】精神力／知力上昇、生命力／持久力低下,900,6644000,1,6644000,false
+deep_night,[Recluse] Collect Affinity Residues to Negate Affinity,【隠者】属性痕を集めた時、対応する属性カット率上昇,900,6500600,1,6500600,false
+deep_night,"[Recluse] Improved Intelligence and Faith, Reduced Mind",【隠者】知力／信仰上昇、精神力低下,900,6646100,1,6646100,false
+deep_night,"[Recluse] Improved Vigor, Endurance, and Dexterity, Reduced Intelligence and Faith",【隠者】生命力／持久力／技量上昇、知力／信仰低下,900,6646000,1,6646000,false
+deep_night,"[Revenant] Improved Strength, Reduced Faith",【復讐者】筋力上昇、信仰低下,900,6645100,1,6645100,false
+deep_night,"[Revenant] Improved Vigor and Endurance, Reduced Mind",【復讐者】生命力／持久力上昇、精神力低下,900,6645000,1,6645000,false
+deep_night,[Revenant] Increased Max FP upon Ability Activation,【復讐者】アビリティ発動時、最大ＦＰ上昇,900,6500500,1,6500500,false
+deep_night,[Wylder] Character Skill inflicts Blood Loss,【追跡者】スキルに、出血の状態異常を付加,900,6500000,1,6500000,false
+deep_night,"[Wylder] Improved Intelligence and Faith, Reduced Strength and Dexterity",【追跡者】知力／信仰上昇、筋力／技量低下,900,6640100,1,6640100,false
+deep_night,"[Wylder] Improved Mind, Reduced Vigor",【追跡者】精神力上昇、生命力低下,900,6640000,1,6640000,false
+base_tfh_dlc,Arcane +1,神秘＋１,7000700,7000700,1000,7000700,
+base_tfh_dlc,Arcane +2,神秘＋２,7000700,7000701,1000,7000701,
+base_tfh_dlc,Arcane +3,神秘＋３,7000700,7000702,1000,7000702,
+base_tfh_dlc,Attack power increased for each Night Invader defeated,夜の侵入者を倒す度、攻撃力上昇,100,7060200,100,7060200,
+base_tfh_dlc,Attack power increased for each evergaol prisoner defeated,封牢の囚を倒す度、攻撃力上昇,100,7060000,100,7060000,
+base_tfh_dlc,Attack power up when facing frostbite-afflicted enemy,凍傷状態の敵に対する攻撃を強化,7260400,7260400,100,7260400,
+base_tfh_dlc,Attack power up when facing poison-afflicted enemy,毒状態の敵に対する攻撃を強化,7260300,7260000,100,7260000,
+base_tfh_dlc,Attack power up when facing scarlet rot-afflicted enemy,腐敗状態の敵に対する攻撃を強化,7260300,7260300,100,7260300,
+base_tfh_dlc,Bewitching Branches in possession at start of expedition,出撃時に「誘惑の枝」を持つ,7122000,7122000,100,7122000,
+base_tfh_dlc,Changes compatible armament's incantation to Beast Claw at start of expedition,出撃時の武器の祈祷を「獣爪」にする ※適用可能な武器種のみ,300,7370900,100,7370900,
+base_tfh_dlc,Changes compatible armament's incantation to Dragonfire at start of expedition,出撃時の武器の祈祷を「竜炎」にする ※適用可能な武器種のみ,300,7371500,100,7371500,
+base_tfh_dlc,Changes compatible armament's incantation to Lightning Spear at start of expedition,出撃時の武器の祈祷を「雷の槍」にする ※適用可能な武器種のみ,300,7370400,100,7370400,
+base_tfh_dlc,"Changes compatible armament's incantation to O, Flame! at start of expedition",出撃時の武器の祈祷を「火よ！」にする ※適用可能な武器種のみ,300,7370600,100,7370600,
+base_tfh_dlc,Changes compatible armament's incantation to Wrath of Gold at start of expedition,出撃時の武器の祈祷を「黄金の怒り」にする ※適用可能な武器種のみ,300,7370300,100,7370300,
+base_tfh_dlc,Changes compatible armament's skill to Blood Blade at start of expedition,出撃時の武器の戦技を「血の刃」にする ※適用可能な武器種のみ,300,7123700,100,7123700,
+base_tfh_dlc,Changes compatible armament's skill to Chilling Mist at start of expedition,出撃時の武器の戦技を「冷気の霧」にする ※適用可能な武器種のみ,300,7123900,100,7123900,
+base_tfh_dlc,Changes compatible armament's skill to Determination at start of expedition,出撃時の武器の戦技を「デターミネーション」にする ※適用可能な武器種のみ,300,7124600,100,7124600,
+base_tfh_dlc,Changes compatible armament's skill to Endure at start of expedition,出撃時の武器の戦技を「我慢」にする ※適用可能な武器種のみ,300,7124300,100,7124300,
+base_tfh_dlc,Changes compatible armament's skill to Eruption at start of expedition,出撃時の武器の戦技を「溶岩噴火」にする ※適用可能な武器種のみ,300,7123000,100,7123000,
+base_tfh_dlc,Changes compatible armament's skill to Flaming Strike at start of expedition,出撃時の武器の戦技を「炎撃」にする ※適用可能な武器種のみ,300,7122900,100,7122900,
+base_tfh_dlc,Changes compatible armament's skill to Glintblade Phalanx at start of expedition,出撃時の武器の戦技を「輝剣の円陣」にする ※適用可能な武器種のみ,300,7122700,100,7122700,
+base_tfh_dlc,Changes compatible armament's skill to Gravitas at start of expedition,出撃時の武器の戦技を「グラビタス」にする ※適用可能な武器種のみ,300,7122800,100,7122800,
+base_tfh_dlc,Changes compatible armament's skill to Hoarfrost Stomp at start of expedition,出撃時の武器の戦技を「霜踏み」にする ※適用可能な武器種のみ,300,7124000,100,7124000,
+base_tfh_dlc,Changes compatible armament's skill to Lightning Slash at start of expedition,出撃時の武器の戦技を「雷撃斬」にする ※適用可能な武器種のみ,300,7123200,100,7123200,
+base_tfh_dlc,Changes compatible armament's skill to Poison Moth Flight at start of expedition,出撃時の武器の戦技を「毒蛾は二度舞う」にする ※適用可能な武器種のみ,300,7123600,100,7123600,
+base_tfh_dlc,Changes compatible armament's skill to Poisonous Mist at start of expedition,出撃時の武器の戦技を「毒の霧」にする ※適用可能な武器種のみ,300,7123500,100,7123500,
+base_tfh_dlc,Changes compatible armament's skill to Prayerful Strike at start of expedition,出撃時の武器の戦技を「祈りの一撃」にする ※適用可能な武器種のみ,300,7123400,100,7123400,
+base_tfh_dlc,Changes compatible armament's skill to Quickstep at start of expedition,出撃時の武器の戦技を「クイックステップ」にする ※適用可能な武器種のみ,300,7124400,100,7124400,
+base_tfh_dlc,Changes compatible armament's skill to Rain of Arrows at start of expedition,出撃時の武器の戦技を「アローレイン」にする ※適用可能な武器種のみ,300,7124700,100,7124700,
+base_tfh_dlc,Changes compatible armament's skill to Sacred Blade at start of expedition,出撃時の武器の戦技を「聖なる刃」にする ※適用可能な武器種のみ,300,7123300,100,7123300,
+base_tfh_dlc,Changes compatible armament's skill to Seppuku at start of expedition,出撃時の武器の戦技を「切腹」にする ※適用可能な武器種のみ,300,7123800,100,7123800,
+base_tfh_dlc,Changes compatible armament's skill to Storm Stomp at start of expedition,出撃時の武器の戦技を「嵐脚」にする ※適用可能な武器種のみ,300,7124500,100,7124500,
+base_tfh_dlc,Changes compatible armament's skill to Thunderbolt at start of expedition,出撃時の武器の戦技を「落雷」にする ※適用可能な武器種のみ,300,7123100,100,7123100,
+base_tfh_dlc,Changes compatible armament's skill to White Shadow's Lure at start of expedition,出撃時の武器の戦技を「白い影の誘い」にする ※適用可能な武器種のみ,300,7124100,100,7124100,
+base_tfh_dlc,Changes compatible armament's sorcery to Briars of Punishment at start of expedition,出撃時の武器の魔術を「罰の茨」にする ※適用可能な武器種のみ,300,7362100,100,7362100,
+base_tfh_dlc,Changes compatible armament's sorcery to Carian Greatsword at start of expedition,出撃時の武器の魔術を「カーリアの大剣」にする ※適用可能な武器種のみ,300,7360900,100,7360900,
+base_tfh_dlc,Changes compatible armament's sorcery to Magic Glintblade at start of expedition,出撃時の武器の魔術を「魔術の輝剣」にする ※適用可能な武器種のみ,300,7360600,100,7360600,
+base_tfh_dlc,Changes compatible armament's sorcery to Magma Shot at start of expedition,出撃時の武器の魔術を「溶岩弾」にする ※適用可能な武器種のみ,300,7361300,100,7361300,
+base_tfh_dlc,Changes compatible armament's sorcery to Night Shard at start of expedition,出撃時の武器の魔術を「夜のつぶて」にする ※適用可能な武器種のみ,300,7361200,100,7361200,
+base_tfh_dlc,Character Skill Cooldown Reduction +1,スキルクールタイム軽減＋１,7000800,7000800,1000,7000800,
+base_tfh_dlc,Character Skill Cooldown Reduction +2,スキルクールタイム軽減＋２,7000800,7000801,1000,7000801,
+base_tfh_dlc,Character Skill Cooldown Reduction +3,スキルクールタイム軽減＋３,7000800,7000802,1000,7000802,
+base_tfh_dlc,Critical Hit Boosts Stamina Recovery Speed,致命の一撃で、スタミナ回復速度上昇,7035100,7035100,100,7035100,
+base_tfh_dlc,Critical Hits Earn Runes,致命の一撃で、ルーンを取得,7031900,7031900,101,7031900,
+base_tfh_dlc,Critical hits fill more of the Art gauge,致命の一撃で、アーツゲージ増加,7030800,7030800,100,7030800,
+base_tfh_dlc,Crystal Darts in possession at start of expedition,出撃時に「結晶投げ矢」を持つ,7121600,7121600,100,7121600,
+base_tfh_dlc,Defeating enemies fills more of the Art gauge,敵を倒した時、アーツゲージ増加,7090000,7090000,100,7090000,
+base_tfh_dlc,Defeating enemies near Totem Stela restores HP,トーテム・ステラの周囲で敵を倒した時、ＨＰ回復,900,7090300,1,7090300,
+base_tfh_dlc,Defeating enemies restores HP for allies but not for self,敵を倒した時、自身を除く周囲の味方のＨＰを回復,7090100,7090100,100,7090100,
+base_tfh_dlc,Dexterity +1,技量＋１,7000400,7000400,1000,7000400,
+base_tfh_dlc,Dexterity +2,技量＋２,7000400,7000401,1000,7000401,
+base_tfh_dlc,Dexterity +3,技量＋３,7000400,7000402,1000,7000402,
+base_tfh_dlc,Dormant Power Helps Discover Axes,潜在する力から、斧を見つけやすくなる,6630000,6631000,100,6631000,
+base_tfh_dlc,Dormant Power Helps Discover Ballistas,潜在する力から、バリスタを見つけやすくなる,6630000,6632600,100,6632600,
+base_tfh_dlc,Dormant Power Helps Discover Bows,潜在する力から、弓を見つけやすくなる,6630000,6632300,100,6632300,
+base_tfh_dlc,Dormant Power Helps Discover Claws,潜在する力から、爪を見つけやすくなる,6630000,6632000,100,6632000,
+base_tfh_dlc,Dormant Power Helps Discover Colossal Swords,潜在する力から、特大剣を見つけやすくなる,6630000,6630300,100,6630300,
+base_tfh_dlc,Dormant Power Helps Discover Colossal Weapons,潜在する力から、特大武器を見つけやすくなる,6630000,6632200,100,6632200,
+base_tfh_dlc,Dormant Power Helps Discover Crossbows,潜在する力から、クロスボウを見つけやすくなる,6630000,6632500,100,6632500,
+base_tfh_dlc,Dormant Power Helps Discover Curved Greatswords,潜在する力から、大曲剣を見つけやすくなる,6630000,6630500,100,6630500,
+base_tfh_dlc,Dormant Power Helps Discover Curved Swords,潜在する力から、曲剣を見つけやすくなる,6630000,6630400,100,6630400,
+base_tfh_dlc,Dormant Power Helps Discover Daggers,潜在する力から、短剣を見つけやすくなる,6630000,6630000,100,6630000,
+base_tfh_dlc,Dormant Power Helps Discover Fists,潜在する力から、拳を見つけやすくなる,6630000,6631900,100,6631900,
+base_tfh_dlc,Dormant Power Helps Discover Flails,潜在する力から、フレイルを見つけやすくなる,6630000,6631400,100,6631400,
+base_tfh_dlc,Dormant Power Helps Discover Great Hammers,潜在する力から、大槌を見つけやすくなる,6630000,6631300,100,6631300,
+base_tfh_dlc,Dormant Power Helps Discover Great Spears,潜在する力から、大槍を見つけやすくなる,6630000,6631600,100,6631600,
+base_tfh_dlc,Dormant Power Helps Discover Greataxes,潜在する力から、大斧を見つけやすくなる,6630000,6631100,100,6631100,
+base_tfh_dlc,Dormant Power Helps Discover Greatbows,潜在する力から、大弓を見つけやすくなる,6630000,6632400,100,6632400,
+base_tfh_dlc,Dormant Power Helps Discover Greatshields,潜在する力から、大盾を見つけやすくなる,6630000,6632900,100,6632900,
+base_tfh_dlc,Dormant Power Helps Discover Greatswords,潜在する力から、大剣を見つけやすくなる,6630000,6630200,100,6630200,
+base_tfh_dlc,Dormant Power Helps Discover Halberds,潜在する力から、斧槍を見つけやすくなる,6630000,6631700,100,6631700,
+base_tfh_dlc,Dormant Power Helps Discover Hammers,潜在する力から、槌を見つけやすくなる,6630000,6631200,100,6631200,
+base_tfh_dlc,Dormant Power Helps Discover Heavy Thrusting Swords,潜在する力から、重刺剣を見つけやすくなる,6630000,6630900,100,6630900,
+base_tfh_dlc,Dormant Power Helps Discover Katana,潜在する力から、刀を見つけやすくなる,6630000,6630600,100,6630600,
+base_tfh_dlc,Dormant Power Helps Discover Medium Shields,潜在する力から、中盾を見つけやすくなる,6630000,6632800,100,6632800,
+base_tfh_dlc,Dormant Power Helps Discover Reapers,潜在する力から、鎌を見つけやすくなる,6630000,6631800,100,6631800,
+base_tfh_dlc,Dormant Power Helps Discover Sacred Seals,潜在する力から、聖印を見つけやすくなる,6630000,6633100,100,6633100,
+base_tfh_dlc,Dormant Power Helps Discover Small Shields,潜在する力から、小盾を見つけやすくなる,6630000,6632700,100,6632700,
+base_tfh_dlc,Dormant Power Helps Discover Spears,潜在する力から、槍を見つけやすくなる,6630000,6631500,100,6631500,
+base_tfh_dlc,Dormant Power Helps Discover Staves,潜在する力から、杖を見つけやすくなる,6630000,6633000,100,6633000,
+base_tfh_dlc,Dormant Power Helps Discover Straight Swords,潜在する力から、直剣を見つけやすくなる,6630000,6630100,100,6630100,
+base_tfh_dlc,Dormant Power Helps Discover Thrusting Swords,潜在する力から、刺剣を見つけやすくなる,6630000,6630800,100,6630800,
+base_tfh_dlc,Dormant Power Helps Discover Twinblades,潜在する力から、両刃剣を見つけやすくなる,6630000,6630700,100,6630700,
+base_tfh_dlc,Dormant Power Helps Discover Whips,潜在する力から、鞭を見つけやすくなる,6630000,6632100,100,6632100,
+base_tfh_dlc,Draw enemy attention while guarding,ガード中、敵に狙われやすくなる,7030700,7030700,100,7030700,
+base_tfh_dlc,Endurance +1,持久力＋１,7000200,7000200,1000,7000200,
+base_tfh_dlc,Endurance +2,持久力＋２,7000200,7000201,1000,7000201,
+base_tfh_dlc,Endurance +3,持久力＋３,7000200,7000202,1000,7000202,
+base_tfh_dlc,FP Restoration upon Axe Attacks,斧の攻撃でＦＰ回復,7350000,7351000,10,7351000,
+base_tfh_dlc,FP Restoration upon Bow Attacks,弓の攻撃でＦＰ回復,7350000,7352400,10,7352400,
+base_tfh_dlc,FP Restoration upon Claw Attacks,爪の攻撃でＦＰ回復,7350000,7352100,10,7352100,
+base_tfh_dlc,FP Restoration upon Colossal Sword Attacks,特大剣の攻撃でＦＰ回復,7350000,7350300,10,7350300,
+base_tfh_dlc,FP Restoration upon Colossal Weapon Attacks,特大武器の攻撃でＦＰ回復,7350000,7352300,10,7352300,
+base_tfh_dlc,FP Restoration upon Curved Greatsword Attacks,大曲剣の攻撃でＦＰ回復,7350000,7350500,10,7350500,
+base_tfh_dlc,FP Restoration upon Curved Sword Attacks,曲剣の攻撃でＦＰ回復,7350000,7350400,10,7350400,
+base_tfh_dlc,FP Restoration upon Dagger Attacks,短剣の攻撃でＦＰ回復,7350000,7350000,10,7350000,
+base_tfh_dlc,FP Restoration upon Fist Attacks,拳の攻撃でＦＰ回復,7350000,7352000,10,7352000,
+base_tfh_dlc,FP Restoration upon Flail Attacks,フレイルの攻撃でＦＰ回復,7350000,7351400,10,7351400,
+base_tfh_dlc,FP Restoration upon Great Hammer Attacks,大槌の攻撃でＦＰ回復,7350000,7351300,10,7351300,
+base_tfh_dlc,FP Restoration upon Great Spear Attacks,大槍の攻撃でＦＰ回復,7350000,7351700,10,7351700,
+base_tfh_dlc,FP Restoration upon Greataxe Attacks,大斧の攻撃でＦＰ回復,7350000,7351100,10,7351100,
+base_tfh_dlc,FP Restoration upon Greatsword Attacks,大剣の攻撃でＦＰ回復,7350000,7350200,10,7350200,
+base_tfh_dlc,FP Restoration upon Halberd Attacks,斧槍の攻撃でＦＰ回復,7350000,7351800,10,7351800,
+base_tfh_dlc,FP Restoration upon Hammer Attacks,槌の攻撃でＦＰ回復,7350000,7351200,10,7351200,
+base_tfh_dlc,FP Restoration upon Heavy Thrusting Sword Attacks,重刺剣の攻撃でＦＰ回復,7350000,7350900,10,7350900,
+base_tfh_dlc,FP Restoration upon Katana Attacks,刀の攻撃でＦＰ回復,7350000,7350600,10,7350600,
+base_tfh_dlc,FP Restoration upon Reaper Attacks,鎌の攻撃でＦＰ回復,7350000,7351900,10,7351900,
+base_tfh_dlc,FP Restoration upon Spear Attacks,槍の攻撃でＦＰ回復,7350000,7351500,10,7351500,
+base_tfh_dlc,FP Restoration upon Straight Sword Attacks,直剣の攻撃でＦＰ回復,7350000,7350100,10,7350100,
+base_tfh_dlc,FP Restoration upon Thrusting Sword Attacks,刺剣の攻撃でＦＰ回復,7350000,7350800,10,7350800,
+base_tfh_dlc,FP Restoration upon Twinblade Attacks,両刃剣の攻撃でＦＰ回復,7350000,7350700,10,7350700,
+base_tfh_dlc,FP Restoration upon Whip Attacks,鞭の攻撃でＦＰ回復,7350000,7352200,10,7352200,
+base_tfh_dlc,Faith +1,信仰＋１,7000600,7000600,1000,7000600,
+base_tfh_dlc,Faith +2,信仰＋２,7000600,7000601,1000,7000601,
+base_tfh_dlc,Faith +3,信仰＋３,7000600,7000602,1000,7000602,
+base_tfh_dlc,Fire Attack Power Up,炎攻撃力上昇,100,7001600,1000,7001600,
+base_tfh_dlc,Fire Attack Power Up +1,炎攻撃力上昇＋１,100,7001601,1000,7001601,
+base_tfh_dlc,Fire Attack Power Up +2,炎攻撃力上昇＋２,100,7001602,1000,7001602,
+base_tfh_dlc,Fire Damage Negation Up,炎カット率上昇,7002700,7002700,1000,7002700,
+base_tfh_dlc,Fire Grease in possession at start of expedition,出撃時に「火脂」を持つ,7122200,7122200,100,7122200,
+base_tfh_dlc,Fire Pots in possession at start of expedition,出撃時に「火炎壺」を持つ,7121100,7121100,100,7121100,
+base_tfh_dlc,Flask Also Heals Allies,聖杯瓶の回復を、周囲の味方に分配,7010200,7010200,100,7010200,
+base_tfh_dlc,Glintstone Scraps in possession at start of expedition,出撃時に「屑輝石」を持つ,7121800,7121800,100,7121800,
+base_tfh_dlc,Gravity Stone Chunks in possession at start of expedition,出撃時に「塊の重力石」を持つ,7121900,7121900,100,7121900,
+base_tfh_dlc,Guard counter is given a boost based on current HP,ガードカウンターに、自身の現在ＨＰの一部を加える,100,7150000,100,7150000,
+base_tfh_dlc,HP Recovery From Successful Guarding,ガード成功時、ＨＰ回復,7036100,7036100,1,8650000,
+base_tfh_dlc,HP Restoration upon Axe Attacks,斧の攻撃でＨＰ回復,7340000,7341000,10,7341000,
+base_tfh_dlc,HP Restoration upon Bow Attacks,弓の攻撃でＨＰ回復,7340000,7342400,10,7342400,
+base_tfh_dlc,HP Restoration upon Claw Attacks,爪の攻撃でＨＰ回復,7340000,7342100,10,7342100,
+base_tfh_dlc,HP Restoration upon Colossal Sword Attacks,特大剣の攻撃でＨＰ回復,7340000,7340300,10,7340300,
+base_tfh_dlc,HP Restoration upon Colossal Weapon Attacks,特大武器の攻撃でＨＰ回復,7340000,7342300,10,7342300,
+base_tfh_dlc,HP Restoration upon Curved Greatsword Attacks,大曲剣の攻撃でＨＰ回復,7340000,7340500,10,7340500,
+base_tfh_dlc,HP Restoration upon Curved Sword Attacks,曲剣の攻撃でＨＰ回復,7340000,7340400,10,7340400,
+base_tfh_dlc,HP Restoration upon Dagger Attacks,短剣の攻撃でＨＰ回復,7340000,7340000,10,7340000,
+base_tfh_dlc,HP Restoration upon Fist Attacks,拳の攻撃でＨＰ回復,7340000,7342000,10,7342000,
+base_tfh_dlc,HP Restoration upon Flail Attacks,フレイルの攻撃でＨＰ回復,7340000,7341400,10,7341400,
+base_tfh_dlc,HP Restoration upon Great Hammer Attacks,大槌の攻撃でＨＰ回復,7340000,7341300,10,7341300,
+base_tfh_dlc,HP Restoration upon Great Spear Attacks,大槍の攻撃でＨＰ回復,7340000,7341700,10,7341700,
+base_tfh_dlc,HP Restoration upon Greataxe Attacks,大斧の攻撃でＨＰ回復,7340000,7341100,10,7341100,
+base_tfh_dlc,HP Restoration upon Greatsword Attacks,大剣の攻撃でＨＰ回復,7340000,7340200,10,7340200,
+base_tfh_dlc,HP Restoration upon Halberd Attacks,斧槍の攻撃でＨＰ回復,7340000,7341800,10,7341800,
+base_tfh_dlc,HP Restoration upon Hammer Attacks,槌の攻撃でＨＰ回復,7340000,7341200,10,7341200,
+base_tfh_dlc,HP Restoration upon Heavy Thrusting Sword Attacks,重刺剣の攻撃でＨＰ回復,7340000,7340900,10,7340900,
+base_tfh_dlc,HP Restoration upon Katana Attacks,刀の攻撃でＨＰ回復,7340000,7340600,10,7340600,
+base_tfh_dlc,HP Restoration upon Reaper Attacks,鎌の攻撃でＨＰ回復,7340000,7341900,10,7341900,
+base_tfh_dlc,HP Restoration upon Spear Attacks,槍の攻撃でＨＰ回復,7340000,7341500,10,7341500,
+base_tfh_dlc,HP Restoration upon Straight Sword Attacks,直剣の攻撃でＨＰ回復,7340000,7340100,10,7340100,
+base_tfh_dlc,HP Restoration upon Thrusting Counterattack,刺突カウンター発生時、ＨＰ回復,7160000,7160000,100,7160000,
+base_tfh_dlc,HP Restoration upon Thrusting Sword Attacks,刺剣の攻撃でＨＰ回復,7340000,7340800,10,7340800,
+base_tfh_dlc,HP Restoration upon Twinblade Attacks,両刃剣の攻撃でＨＰ回復,7340000,7340700,10,7340700,
+base_tfh_dlc,HP Restoration upon Whip Attacks,鞭の攻撃でＨＰ回復,7340000,7342200,10,7342200,
+base_tfh_dlc,"HP restored when using medicinal boluses, etc.",苔薬などのアイテム使用でＨＰ回復,7030200,7030200,100,7030200,
+base_tfh_dlc,Holy Attack Power Up,聖攻撃力上昇,100,7001800,1000,7001800,
+base_tfh_dlc,Holy Attack Power Up +1,聖攻撃力上昇＋１,100,7001801,1000,7001801,
+base_tfh_dlc,Holy Attack Power Up +2,聖攻撃力上昇＋２,100,7001802,1000,7001802,
+base_tfh_dlc,Holy Damage Negation Up,聖カット率上昇,7002900,7002900,1000,7002900,
+base_tfh_dlc,Holy Grease in possession at start of expedition,出撃時に「聖脂」を持つ,7122500,7122500,100,7122500,
+base_tfh_dlc,Holy Water Pots in possession at start of expedition,出撃時に「聖水壺」を持つ,7121400,7121400,100,7121400,
+base_tfh_dlc,Improved Attack Power with 3+ Axes Equipped,斧の武器種を３つ以上装備していると攻撃力上昇,100,7081000,10,7081000,
+base_tfh_dlc,Improved Attack Power with 3+ Bows Equipped,弓の武器種を３つ以上装備していると攻撃力上昇,100,7082400,10,7082400,
+base_tfh_dlc,Improved Attack Power with 3+ Claws Equipped,爪の武器種を３つ以上装備していると攻撃力上昇,100,7082100,10,7082100,
+base_tfh_dlc,Improved Attack Power with 3+ Colossal Swords Equipped,特大剣の武器種を３つ以上装備していると攻撃力上昇,100,7080300,10,7080300,
+base_tfh_dlc,Improved Attack Power with 3+ Colossal Weapons Equipped,特大武器の武器種を３つ以上装備していると攻撃力上昇,100,7082300,10,7082300,
+base_tfh_dlc,Improved Attack Power with 3+ Curved Greatswords Equipped,大曲剣の武器種を３つ以上装備していると攻撃力上昇,100,7080500,10,7080500,
+base_tfh_dlc,Improved Attack Power with 3+ Curved Swords Equipped,曲剣の武器種を３つ以上装備していると攻撃力上昇,100,7080400,10,7080400,
+base_tfh_dlc,Improved Attack Power with 3+ Daggers Equipped,短剣の武器種を３つ以上装備していると攻撃力上昇,100,7080000,10,7080000,
+base_tfh_dlc,Improved Attack Power with 3+ Fists Equipped,拳の武器種を３つ以上装備していると攻撃力上昇,100,7082000,10,7082000,
+base_tfh_dlc,Improved Attack Power with 3+ Flails Equipped,フレイルの武器種を３つ以上装備していると攻撃力上昇,100,7081400,10,7081400,
+base_tfh_dlc,Improved Attack Power with 3+ Great Hammers Equipped,大槌の武器種を３つ以上装備していると攻撃力上昇,100,7081300,10,7081300,
+base_tfh_dlc,Improved Attack Power with 3+ Great Spears Equipped,大槍の武器種を３つ以上装備していると攻撃力上昇,100,7081700,10,7081700,
+base_tfh_dlc,Improved Attack Power with 3+ Greataxes Equipped,大斧の武器種を３つ以上装備していると攻撃力上昇,100,7081100,10,7081100,
+base_tfh_dlc,Improved Attack Power with 3+ Greatswords Equipped,大剣の武器種を３つ以上装備していると攻撃力上昇,100,7080200,10,7080200,
+base_tfh_dlc,Improved Attack Power with 3+ Halberds Equipped,斧槍の武器種を３つ以上装備していると攻撃力上昇,100,7081800,10,7081800,
+base_tfh_dlc,Improved Attack Power with 3+ Hammers Equipped,槌の武器種を３つ以上装備していると攻撃力上昇,100,7081200,10,7081200,
+base_tfh_dlc,Improved Attack Power with 3+ Heavy Thrusting Swords Equipped,重刺剣の武器種を３つ以上装備していると攻撃力上昇,100,7080900,10,7080900,
+base_tfh_dlc,Improved Attack Power with 3+ Katana Equipped,刀の武器種を３つ以上装備していると攻撃力上昇,100,7080600,10,7080600,
+base_tfh_dlc,Improved Attack Power with 3+ Reapers Equipped,鎌の武器種を３つ以上装備していると攻撃力上昇,100,7081900,10,7081900,
+base_tfh_dlc,Improved Attack Power with 3+ Spears Equipped,槍の武器種を３つ以上装備していると攻撃力上昇,100,7081500,10,7081500,
+base_tfh_dlc,Improved Attack Power with 3+ Straight Swords Equipped,直剣の武器種を３つ以上装備していると攻撃力上昇,100,7080100,10,7080100,
+base_tfh_dlc,Improved Attack Power with 3+ Thrusting Swords Equipped,刺剣の武器種を３つ以上装備していると攻撃力上昇,100,7080800,10,7080800,
+base_tfh_dlc,Improved Attack Power with 3+ Twinblades Equipped,両刃剣の武器種を３つ以上装備していると攻撃力上昇,100,7080700,10,7080700,
+base_tfh_dlc,Improved Attack Power with 3+ Whips Equipped,鞭の武器種を３つ以上装備していると攻撃力上昇,100,7082200,10,7082200,
+base_tfh_dlc,Improved Axe Attack Power,斧の攻撃力上昇,100,7331000,10,7331000,
+base_tfh_dlc,Improved Bestial Incantations,獣の祈祷を強化,800,7044400,100,7044400,
+base_tfh_dlc,Improved Blood Loss Resistance,出血耐性上昇,7003100,7003100,1000,7003100,
+base_tfh_dlc,Improved Bow Attack Power,弓の攻撃力上昇,100,7332400,10,7332400,
+base_tfh_dlc,Improved Carian Sword Sorcery,カーリアの剣の魔術を強化,800,7043300,100,7043300,
+base_tfh_dlc,Improved Claw Attack Power,爪の攻撃力上昇,100,7332100,10,7332100,
+base_tfh_dlc,Improved Colossal Sword Attack Power,特大剣の攻撃力上昇,100,7330300,10,7330300,
+base_tfh_dlc,Improved Colossal Weapon Attack Power,特大武器の攻撃力上昇,100,7332300,10,7332300,
+base_tfh_dlc,Improved Critical Hits,致命の一撃強化,100,7040200,100,7040200,
+base_tfh_dlc,Improved Crystalian sorcery,結晶人の魔術を強化,800,7043600,100,7043600,
+base_tfh_dlc,Improved Curved Greatsword Attack Power,大曲剣の攻撃力上昇,100,7330500,10,7330500,
+base_tfh_dlc,Improved Curved Sword Attack Power,曲剣の攻撃力上昇,100,7330400,10,7330400,
+base_tfh_dlc,Improved Dagger Attack Power,短剣の攻撃力上昇,100,7330000,10,7330000,
+base_tfh_dlc,Improved Damage Negation at Low HP,ＨＰ低下時、カット率上昇,7012300,7012300,100,7012300,
+base_tfh_dlc,Improved Death Blight Resistance,抗死耐性上昇,7003300,7003300,1000,7003300,
+base_tfh_dlc,Improved Dragon Communion Incantations,竜餐の祈祷を強化,800,7044600,100,7044600,
+base_tfh_dlc,Improved Dragon Cult Incantations,王都古竜信仰の祈祷を強化,800,7044100,100,7044100,
+base_tfh_dlc,Improved Fist Attack Power,拳の攻撃力上昇,100,7332000,10,7332000,
+base_tfh_dlc,Improved Flail Attack Power,フレイルの攻撃力上昇,100,7331400,10,7331400,
+base_tfh_dlc,Improved Frenzied Flame Incantations,狂い火の祈祷を強化,800,7044500,100,7044500,
+base_tfh_dlc,Improved Frost Resistance,冷気耐性上昇,7003500,7003500,1000,7003500,
+base_tfh_dlc,Improved Fundamentalist Incantations,黄金律原理主義の祈祷を強化,800,7044000,100,7044000,
+base_tfh_dlc,Improved Giants' Flame Incantations,巨人の火の祈祷を強化,800,7044200,100,7044200,
+base_tfh_dlc,Improved Glintblade Sorcery,輝剣の魔術を強化,800,7043400,100,7043400,
+base_tfh_dlc,Improved Glintstone and Gravity Stone Damage,輝石、重力石アイテムの攻撃力上昇,7040500,7040500,100,7040500,
+base_tfh_dlc,Improved Godslayer Incantations,神狩りの祈祷を強化,800,7044300,100,7044300,
+base_tfh_dlc,Improved Gravity Sorcery,重力の魔術を強化,800,7043700,100,7043700,
+base_tfh_dlc,Improved Great Hammer Attack Power,大槌の攻撃力上昇,100,7331300,10,7331300,
+base_tfh_dlc,Improved Great Spear Attack Power,大槍の攻撃力上昇,100,7331700,10,7331700,
+base_tfh_dlc,Improved Greataxe Attack Power,大斧の攻撃力上昇,100,7331100,10,7331100,
+base_tfh_dlc,Improved Greatsword Attack Power,大剣の攻撃力上昇,100,7330200,10,7330200,
+base_tfh_dlc,Improved Guard Counters,ガードカウンター強化,100,7040100,100,7040100,
+base_tfh_dlc,Improved Halberd Attack Power,斧槍の攻撃力上昇,100,7331800,10,7331800,
+base_tfh_dlc,Improved Hammer Attack Power,槌の攻撃力上昇,100,7331200,10,7331200,
+base_tfh_dlc,Improved Heavy Thrusting Sword Attack Power,重刺剣の攻撃力上昇,100,7330900,10,7330900,
+base_tfh_dlc,Improved Initial Standard Attack,通常攻撃の１段目強化,100,7040000,100,7040000,
+base_tfh_dlc,Improved Invisibility Sorcery,不可視の魔術を強化,800,7043500,100,7043500,
+base_tfh_dlc,Improved Katana Attack Power,刀の攻撃力上昇,100,7330600,10,7330600,
+base_tfh_dlc,Improved Madness Resistance,発狂耐性上昇,7003600,7003600,1000,7003600,
+base_tfh_dlc,Improved Perfuming Arts,調香術強化,7043100,7043100,100,8400000,
+base_tfh_dlc,Improved Poise & Damage Negation When Knocked Back by Damage,ダメージで吹き飛ばされた時、強靭度とカット率上昇,7240000,7240000,100,7240000,
+base_tfh_dlc,Improved Poise Near Totem Stela,トーテム・ステラの周囲で、強靭度上昇,900,7030000,1,7030000,
+base_tfh_dlc,Improved Poison Resistance,毒耐性上昇,7003000,7003000,1000,7003000,
+base_tfh_dlc,Improved Reaper Attack Power,鎌の攻撃力上昇,100,7331900,10,7331900,
+base_tfh_dlc,Improved Roar & Breath Attacks,咆哮とブレス強化,100,7043000,100,8380000,
+base_tfh_dlc,Improved Rot Resistance,腐敗耐性上昇,7003400,7003400,1000,7003400,
+base_tfh_dlc,Improved Sleep Resistance,睡眠耐性上昇,7003200,7003200,1000,7003200,
+base_tfh_dlc,Improved Spear Attack Power,槍の攻撃力上昇,100,7331500,10,7331500,
+base_tfh_dlc,Improved Stance-Breaking when Two-Handing,両手持ちの、体勢を崩す力上昇,100,7006000,100,8300100,
+base_tfh_dlc,Improved Stance-Breaking when Wielding Two Armaments,二刀持ちの、体勢を崩す力上昇,100,7006100,100,8310100,
+base_tfh_dlc,Improved Stonedigger Sorcery,石掘りの魔術を強化,800,7043200,100,7043200,
+base_tfh_dlc,Improved Straight Sword Attack Power,直剣の攻撃力上昇,100,7330100,10,7330100,
+base_tfh_dlc,Improved Thorn Sorcery,茨の魔術を強化,800,7043800,100,7043800,
+base_tfh_dlc,Improved Throwing Knife Damage,投擲ナイフの攻撃力上昇,7040400,7040400,100,7040400,
+base_tfh_dlc,Improved Throwing Pot Damage,投擲壺の攻撃力上昇,7040300,7040300,100,7040300,
+base_tfh_dlc,Improved Thrusting Sword Attack Power,刺剣の攻撃力上昇,100,7330800,10,7330800,
+base_tfh_dlc,Improved Twinblade Attack Power,両刃剣の攻撃力上昇,100,7330700,10,7330700,
+base_tfh_dlc,Improved Whip Attack Power,鞭の攻撃力上昇,100,7332200,10,7332200,
+base_tfh_dlc,Increased rune acquisition for self and allies,自身と味方の取得ルーン増加,7110000,7110000,100,7110000,
+base_tfh_dlc,Intelligence +1,知力＋１,7000500,7000500,1000,7000500,
+base_tfh_dlc,Intelligence +2,知力＋２,7000500,7000501,1000,7000501,
+base_tfh_dlc,Intelligence +3,知力＋３,7000500,7000502,1000,7000502,
+base_tfh_dlc,Items confer effect to all nearby allies,アイテムの効果が周囲の味方にも発動,7050100,7050100,100,7050100,
+base_tfh_dlc,Lightning Attack Power Up,雷攻撃力上昇,100,7001700,1000,7001700,
+base_tfh_dlc,Lightning Attack Power Up +1,雷攻撃力上昇＋１,100,7001701,1000,7001701,
+base_tfh_dlc,Lightning Attack Power Up +2,雷攻撃力上昇＋２,100,7001702,1000,7001702,
+base_tfh_dlc,Lightning Damage Negation Up,雷カット率上昇,7002800,7002800,1000,7002800,
+base_tfh_dlc,Lightning Grease in possession at start of expedition,出撃時に「雷脂」を持つ,7122400,7122400,100,7122400,
+base_tfh_dlc,Lightning Pots in possession at start of expedition,出撃時に「雷壺」を持つ,7121300,7121300,100,7121300,
+base_tfh_dlc,Magic Attack Power Up,魔力攻撃力上昇,100,7001500,1000,7001500,
+base_tfh_dlc,Magic Attack Power Up +1,魔力攻撃力上昇＋１,100,7001501,1000,7001501,
+base_tfh_dlc,Magic Attack Power Up +2,魔力攻撃力上昇＋２,100,7001502,1000,7001502,
+base_tfh_dlc,Magic Damage Negation Up,魔力カット率上昇,7002600,7002600,1000,7002600,
+base_tfh_dlc,Magic Grease in possession at start of expedition,出撃時に「魔力脂」を持つ,7122300,7122300,100,7122300,
+base_tfh_dlc,Magic Pots in possession at start of expedition,出撃時に「魔力壺」を持つ,7121200,7121200,100,7121200,
+base_tfh_dlc,Max FP Up with 3+ Sacred Seals Equipped,聖印の武器種を３つ以上装備していると最大ＦＰ上昇,7082500,7082600,10,7082600,
+base_tfh_dlc,Max FP Up with 3+ Staves Equipped,杖の武器種を３つ以上装備していると最大ＦＰ上昇,7082500,7082500,10,7082500,
+base_tfh_dlc,Max FP increased for each Sorcerer's Rise unlocked,魔術師塔の仕掛けが解除される度、最大ＦＰ上昇,7060100,7060100,100,7060100,
+base_tfh_dlc,Max HP Up with 3+ Greatshields Equipped,大盾の武器種を３つ以上装備していると最大ＨＰ上昇,7082700,7082900,10,7082900,
+base_tfh_dlc,Max HP Up with 3+ Medium Shields Equipped,中盾の武器種を３つ以上装備していると最大ＨＰ上昇,7082700,7082800,10,7082800,
+base_tfh_dlc,Max HP Up with 3+ Small Shields Equipped,小盾の武器種を３つ以上装備していると最大ＨＰ上昇,7082700,7082700,10,7082700,
+base_tfh_dlc,Mind +1,精神力＋１,7000100,7000100,1000,7000100,
+base_tfh_dlc,Mind +2,精神力＋２,7000100,7000101,1000,7000101,
+base_tfh_dlc,Mind +3,精神力＋３,7000100,7000102,1000,7000102,
+base_tfh_dlc,Partial HP Restoration upon Post-Damage Attacks,ダメージを受けた直後、攻撃によりＨＰの一部を回復,7005600,7005600,100,7005600,
+base_tfh_dlc,Physical Attack Up,物理攻撃力上昇,100,7001400,1000,7001400,
+base_tfh_dlc,Physical Attack Up +1,物理攻撃力上昇＋１,100,7001401,1000,7001401,
+base_tfh_dlc,Physical Attack Up +2,物理攻撃力上昇＋２,100,7001402,1000,7001402,
+base_tfh_dlc,Physical attack power increases after using grease items,脂アイテム使用時、追加で物理攻撃力上昇,100,7030900,100,7030900,
+base_tfh_dlc,Poise +1,強靭度＋１,7001000,7001000,1000,7001000,
+base_tfh_dlc,Poise +2,強靭度＋２,7001000,7001001,1000,7001001,
+base_tfh_dlc,Poise +3,強靭度＋３,7001000,7001002,1000,7001002,
+base_tfh_dlc,Poisonbone Darts in possession at start of expedition,出撃時に「骨の毒投げ矢」を持つ,7121500,7121500,100,7121500,
+base_tfh_dlc,"Raised stamina recovery for nearby allies, but not for self",自身を除く、周囲の味方のスタミナ回復速度上昇,7050000,7050000,100,7050000,
+base_tfh_dlc,Rune discount for shop purchases while on expedition,出撃中、ショップでの購入に必要なルーンが割引,7230000,7230000,100,7230000,
+base_tfh_dlc,Shield Grease in possession at start of expedition,出撃時に「盾脂」を持つ,7122600,7122600,100,7122600,
+base_tfh_dlc,Slowly restore HP for self and nearby allies when HP is low,ＨＰ低下時、周囲の味方を含めＨＰをゆっくりと回復,7012200,7012200,100,7012200,
+base_tfh_dlc,Small Pouch in possession at start of expedition,出撃時に「小さなポーチ」を持つ,7121000,7121000,100,7121000,
+base_tfh_dlc,Stamina Recovery upon Landing Attacks,攻撃命中時、スタミナ回復,7100100,7100100,100,7100100,
+base_tfh_dlc,Starlight Shards in possession at start of expedition,出撃時に「星光の欠片」を持つ,7126000,7126000,100,7126000,
+base_tfh_dlc,Starting armament deals fire damage,出撃時の武器に炎攻撃力を付加,200,7120100,100,7120100,
+base_tfh_dlc,Starting armament deals holy damage,出撃時の武器に聖攻撃力を付加,200,7120300,100,7120300,
+base_tfh_dlc,Starting armament deals lightning damage,出撃時の武器に雷攻撃力を付加,200,7120200,100,7120200,
+base_tfh_dlc,Starting armament deals magic damage,出撃時の武器に魔力攻撃力を付加,200,7120000,100,7120000,
+base_tfh_dlc,Starting armament inflicts blood loss,出撃時の武器に出血の状態異常を付加,200,7120600,100,7120600,
+base_tfh_dlc,Starting armament inflicts frost,出撃時の武器に冷気の状態異常を付加,200,7120400,100,7120400,
+base_tfh_dlc,Starting armament inflicts poison,出撃時の武器に毒の状態異常を付加,200,7120500,100,7120500,
+base_tfh_dlc,Stonesword Key in possession at start of expedition,出撃時に「石剣の鍵」を持つ,7120900,7120900,100,7120900,
+base_tfh_dlc,Strength +1,筋力＋１,7000300,7000300,1000,7000300,
+base_tfh_dlc,Strength +2,筋力＋２,7000300,7000301,1000,7000301,
+base_tfh_dlc,Strength +3,筋力＋３,7000300,7000302,1000,7000302,
+base_tfh_dlc,Successful guarding fills more of the Art gauge,ガード成功時、アーツゲージ増加,7030600,7030600,100,7030600,
+base_tfh_dlc,Taking attacks improves attack power,攻撃を受けると攻撃力上昇,100,7032200,100,7032200,
+base_tfh_dlc,Throwing Daggers in possession at start of expedition,出撃時に「スローイングダガー」を持つ,7121700,7121700,100,7121700,
+base_tfh_dlc,Treasure marked upon map,埋もれ宝の位置を地図に表示,7070000,7070000,100,7070000,
+base_tfh_dlc,Ultimate Art Auto Charge +1,アーツゲージ自然蓄積＋１,7000900,7000900,1000,7000900,
+base_tfh_dlc,Ultimate Art Auto Charge +2,アーツゲージ自然蓄積＋２,7000900,7000901,1000,7000901,
+base_tfh_dlc,Ultimate Art Auto Charge +3,アーツゲージ自然蓄積＋３,7000900,7000902,1000,7000902,
+base_tfh_dlc,Vigor +1,生命力＋１,7000000,7000000,1000,7000000,
+base_tfh_dlc,Vigor +2,生命力＋２,7000000,7000001,1000,7000001,
+base_tfh_dlc,Vigor +3,生命力＋３,7000000,7000002,1000,7000002,
+base_tfh_dlc,Wraith Calling Bell in possession at start of expedition,出撃時に「呪霊喚びの鈴」を持つ,7122100,7122100,100,7122100,
+base_tfh_dlc,[Duchess] Become difficult to spot and silence footsteps after landing critical from behind,【レディ】背後からの致命の一撃後 自身の姿を見え難くし、足音を消す,900,7031800,1,7031800,
+base_tfh_dlc,[Duchess] Defeating enemies while Art is active ups attack power,【レディ】アーツ発動中、敵撃破で攻撃力上昇,900,7032700,1,7032700,
+base_tfh_dlc,[Duchess] Improved Character Skill Attack Power,【レディ】スキルのダメージ上昇,900,7290000,1,7290000,
+base_tfh_dlc,[Duchess] Reprise events upon nearby enemies by landing the final blow of a chain attack with dagger,【レディ】短剣による連撃の最終攻撃命中時 周囲の敵に、直近の出来事を再演,900,7010700,1,7010700,
+base_tfh_dlc,[Executor] Character Skill Boosts Attack but Attacking Drains HP,【執行者】スキル中の攻撃力上昇、攻撃時にＨＰ減少,900,7034400,1,7034400,
+base_tfh_dlc,[Executor] Roaring restores HP while Art is active,【執行者】アーツ発動中、咆哮でＨＰ回復,900,7011700,1,7011700,
+base_tfh_dlc,"[Executor] While Character Skill is active, unlocking use of cursed sword restores HP",【執行者】スキル中、妖刀が解放状態になるとＨＰ回復,900,7034500,1,7034500,
+base_tfh_dlc,[Guardian] Creates whirlwind when charging halberd attacks,【守護者】斧槍タメ攻撃時、つむじ風が発生,900,7011600,1,7011600,
+base_tfh_dlc,[Guardian] Increased duration for Character Skill,【守護者】スキルの持続時間延長,900,7011000,1,7011000,
+base_tfh_dlc,[Guardian] Slowly restores nearby allies' HP while Art is active,【守護者】アーツ発動時、周囲の味方ＨＰを徐々に回復,900,7012000,1,7012000,
+base_tfh_dlc,[Guardian] Successful guards send out shockwaves while ability is active,【守護者】アビリティ発動中 ガード成功時、衝撃波が発生,900,7033400,1,7033400,
+base_tfh_dlc,[Ironeye] +1 additional Character Skill use,【鉄の目】スキルの使用回数＋１,900,7270100,1,7270100,
+base_tfh_dlc,[Ironeye] Art Charge Activation Adds Poison Effect,【鉄の目】アーツのタメ発動時、毒の状態異常を付加,900,7034600,1,7034600,
+base_tfh_dlc,[Ironeye] Boosts thrusting counterattacks after executing Art,【鉄の目】アーツ発動後、刺突カウンター強化,900,7034700,1,7034700,
+base_tfh_dlc,[Ironeye] Extends duration of weak point,【鉄の目】弱点の持続時間を延長させる,900,7280000,1,7280000,
+base_tfh_dlc,[Raider] Damage taken while using Character Skill improves attack power and stamina,【無頼漢】スキル中に攻撃を受けると 攻撃力と最大スタミナ上昇,900,7031300,1,7031300,
+base_tfh_dlc,[Raider] Duration of Ultimate Art extended,【無頼漢】アーツの効果時間延長,900,7310000,1,7310000,
+base_tfh_dlc,[Recluse] Activating Ultimate Art raises Max HP,【隠者】アーツ発動時、最大ＨＰ上昇,900,7034100,1,7034100,
+base_tfh_dlc,[Recluse] Collecting affinity residue activates Terra Magica,【隠者】属性痕を集めた時、「魔術の地」が発動,900,7032800,1,7032800,
+base_tfh_dlc,[Recluse] Suffer blood loss and increase attack power upon Art activation,【隠者】アーツ発動時 自身が出血状態になり、攻撃力上昇,900,7032900,1,7032900,
+base_tfh_dlc,[Revenant] Expend own HP to fully heal nearby allies when activating Art,【復讐者】アーツ発動時 自身のＨＰと引き換えに周囲の味方のＨＰを全回復,900,7010900,1,7010900,
+base_tfh_dlc,[Revenant] Power up while fighting alongside family,【復讐者】ファミリーと共闘中の間、自身を強化,900,7220000,1,7220000,
+base_tfh_dlc,[Revenant] Strengthens family and allies when Ultimate Art is activated,【復讐者】アーツ発動時、ファミリーと味方を強化,900,7031200,1,7031200,
+base_tfh_dlc,[Revenant] Trigger ghostflame explosion during Ultimate Art activation,【復讐者】アーツ発動時、霊炎の爆発を発生,900,7011200,1,7011200,
+base_tfh_dlc,[Scholar] Allies targeted by Character Skill gain boosted attack,【学者】スキル使用時、対象に含まれた味方の攻撃力上昇,900,7036300,1,7036300,
+base_tfh_dlc,[Scholar] Continuous damage inflicted on targets threaded by Ultimate Art,【学者】アーツでリンクした敵対象に、継続ダメージ,900,7036400,1,7036400,
+base_tfh_dlc,[Scholar] Earn runes for each additional specimen acquired with Character Skill,【学者】スキルによる標本が増える度、ルーンを取得,900,7036500,1,7036500,
+base_tfh_dlc,[Scholar] Prevent slowing of Character Skill progress,【学者】スキルの進捗率の低下を抑制,900,7036200,1,7036200,
+base_tfh_dlc,[Undertaker] Activating Ultimate Art increases attack power,【葬儀屋】アーツ発動時、攻撃力上昇,900,7036800,1,7036800,
+base_tfh_dlc,[Undertaker] Attack power increased by landing the final blow of a chain attack,【葬儀屋】連撃の最終攻撃命中時、攻撃力上昇,900,7036900,1,7036900,
+base_tfh_dlc,[Undertaker] Contact with allies restores their HP while Ultimate Art is activated,【葬儀屋】アーツ発動時、触れた味方のＨＰ回復,900,7037300,1,7037300,
+base_tfh_dlc,[Undertaker] Physical attacks boosted while assist effect from incantation is active for self,【葬儀屋】祈祷を使用して、自身に補助効果発生時 物理攻撃力上昇,900,7037000,1,7037000,
+base_tfh_dlc,[Wylder] +1 additional Character Skill use,【追跡者】スキルの使用回数＋１,900,7033200,1,7033200,
+base_tfh_dlc,[Wylder] Art activation spreads fire in area,【追跡者】アーツ発動時、周囲を延焼,900,7010500,1,7010500,
+base_tfh_dlc,[Wylder] Art gauge greatly filled when ability is activated,【追跡者】アビリティ発動時、アーツゲージ増加,900,7032400,1,7032400,
+base_tfh_dlc,[Wylder] Standard attacks enhanced with fiery follow-ups when using Character Skill (greatsword only),【追跡者】スキル使用時、通常攻撃で 炎を纏った追撃を行う（大剣のみ）,900,7020000,1,7020000,
+deep_tfh_dlc,Acid Spraymist in possession at start of expedition,出撃時に「酸の噴霧」を持つ,6624000,6624500,100,6624500,false
+deep_tfh_dlc,Arcane increased for each great enemy defeated at a Ruin,遺跡の強敵を倒す度、神秘上昇,6060500,6060500,100,6060500,false
+deep_tfh_dlc,Attack power up when facing frostbite-afflicted enemy,凍傷状態の敵に対する攻撃を強化,7260400,7260400,100,7260400,false
+deep_tfh_dlc,Attack power up when facing frostbite-afflicted enemy +1,凍傷状態の敵に対する攻撃を強化＋１,7260400,6260400,100,6260400,true
+deep_tfh_dlc,Attack power up when facing frostbite-afflicted enemy +2,凍傷状態の敵に対する攻撃を強化＋２,7260400,6260401,100,6260401,true
+deep_tfh_dlc,Attack power up when facing poison-afflicted enemy,毒状態の敵に対する攻撃を強化,7260300,7260000,100,7260000,false
+deep_tfh_dlc,Attack power up when facing poison-afflicted enemy +1,毒状態の敵に対する攻撃を強化＋１,7260300,6260000,100,6260000,true
+deep_tfh_dlc,Attack power up when facing poison-afflicted enemy +2,毒状態の敵に対する攻撃を強化＋２,7260300,6260001,100,6260001,true
+deep_tfh_dlc,Attack power up when facing scarlet rot-afflicted enemy,腐敗状態の敵に対する攻撃を強化,7260300,7260300,100,7260300,false
+deep_tfh_dlc,Attack power up when facing scarlet rot-afflicted enemy +1,腐敗状態の敵に対する攻撃を強化＋１,7260300,6260300,100,6260300,true
+deep_tfh_dlc,Attack power up when facing scarlet rot-afflicted enemy +2,腐敗状態の敵に対する攻撃を強化＋２,7260300,6260301,100,6260301,true
+deep_tfh_dlc,Bloodboil Aromatic in possession at start of expedition,出撃時に「狂熱の香薬」を持つ,6624000,6624300,100,6624300,false
+deep_tfh_dlc,Cerulean Crystal Tear in possession at start of expedition,出撃時に「青色の結晶雫」を持つ,6621000,6621200,100,6621200,false
+deep_tfh_dlc,Cerulean Hidden Tear in possession at start of expedition,出撃時に「青色の秘雫」を持つ,6621000,6622600,100,6622600,false
+deep_tfh_dlc,Crimson Bubbletear in possession at start of expedition,出撃時に「緋色の泡雫」を持つ,6621000,6621400,100,6621400,false
+deep_tfh_dlc,Crimson Crystal Tear in possession at start of expedition,出撃時に「緋色の結晶雫」を持つ,6621000,6621100,100,6621100,false
+deep_tfh_dlc,Crimsonburst Crystal Tear in possession at start of expedition,出撃時に「緋湧きの結晶雫」を持つ,6621000,6621600,100,6621600,false
+deep_tfh_dlc,Crimsonspill Crystal Tear in possession at start of expedition,出撃時に「緋溢れの結晶雫」を持つ,6621000,6621000,100,6621000,false
+deep_tfh_dlc,Crimsonwhorl Bubbletear in possession at start of expedition,出撃時に「緋色渦の泡雫」を持つ,6621000,6622500,100,6622500,false
+deep_tfh_dlc,Critical Hit Boosts Stamina Recovery Speed,致命の一撃で、スタミナ回復速度上昇,7035100,7035100,100,7035100,false
+deep_tfh_dlc,Critical Hit Boosts Stamina Recovery Speed +1,致命の一撃で、スタミナ回復速度上昇＋１,7035100,6035100,100,6035100,false
+deep_tfh_dlc,Critical Hits Earn Runes,致命の一撃で、ルーンを取得,7031900,7031900,101,7031900,false
+deep_tfh_dlc,Critical hits fill more of the Art gauge,致命の一撃で、アーツゲージ増加,7030800,7030800,100,7030800,false
+deep_tfh_dlc,Critical hits fill more of the Art gauge +1,致命の一撃で、アーツゲージ増加＋１,7030800,6030800,100,6030800,true
+deep_tfh_dlc,Defeating enemies fills more of the Art gauge,敵を倒した時、アーツゲージ増加,7090000,7090000,100,7090000,false
+deep_tfh_dlc,Defeating enemies fills more of the Art gauge +1,敵を倒した時、アーツゲージ増加＋１,7090000,6090000,100,6090000,true
+deep_tfh_dlc,Defeating enemies restores HP for allies but not for self,敵を倒した時、自身を除く周囲の味方のＨＰを回復,7090100,7090100,100,7090100,false
+deep_tfh_dlc,Dormant Power Helps Discover Axes,潜在する力から、斧を見つけやすくなる,6630000,6631000,100,6631000,false
+deep_tfh_dlc,Dormant Power Helps Discover Ballistas,潜在する力から、バリスタを見つけやすくなる,6630000,6632600,100,6632600,false
+deep_tfh_dlc,Dormant Power Helps Discover Bows,潜在する力から、弓を見つけやすくなる,6630000,6632300,100,6632300,false
+deep_tfh_dlc,Dormant Power Helps Discover Claws,潜在する力から、爪を見つけやすくなる,6630000,6632000,100,6632000,false
+deep_tfh_dlc,Dormant Power Helps Discover Colossal Swords,潜在する力から、特大剣を見つけやすくなる,6630000,6630300,100,6630300,false
+deep_tfh_dlc,Dormant Power Helps Discover Colossal Weapons,潜在する力から、特大武器を見つけやすくなる,6630000,6632200,100,6632200,false
+deep_tfh_dlc,Dormant Power Helps Discover Crossbows,潜在する力から、クロスボウを見つけやすくなる,6630000,6632500,100,6632500,false
+deep_tfh_dlc,Dormant Power Helps Discover Curved Greatswords,潜在する力から、大曲剣を見つけやすくなる,6630000,6630500,100,6630500,false
+deep_tfh_dlc,Dormant Power Helps Discover Curved Swords,潜在する力から、曲剣を見つけやすくなる,6630000,6630400,100,6630400,false
+deep_tfh_dlc,Dormant Power Helps Discover Daggers,潜在する力から、短剣を見つけやすくなる,6630000,6630000,100,6630000,false
+deep_tfh_dlc,Dormant Power Helps Discover Fists,潜在する力から、拳を見つけやすくなる,6630000,6631900,100,6631900,false
+deep_tfh_dlc,Dormant Power Helps Discover Flails,潜在する力から、フレイルを見つけやすくなる,6630000,6631400,100,6631400,false
+deep_tfh_dlc,Dormant Power Helps Discover Great Hammers,潜在する力から、大槌を見つけやすくなる,6630000,6631300,100,6631300,false
+deep_tfh_dlc,Dormant Power Helps Discover Great Spears,潜在する力から、大槍を見つけやすくなる,6630000,6631600,100,6631600,false
+deep_tfh_dlc,Dormant Power Helps Discover Greataxes,潜在する力から、大斧を見つけやすくなる,6630000,6631100,100,6631100,false
+deep_tfh_dlc,Dormant Power Helps Discover Greatbows,潜在する力から、大弓を見つけやすくなる,6630000,6632400,100,6632400,false
+deep_tfh_dlc,Dormant Power Helps Discover Greatshields,潜在する力から、大盾を見つけやすくなる,6630000,6632900,100,6632900,false
+deep_tfh_dlc,Dormant Power Helps Discover Greatswords,潜在する力から、大剣を見つけやすくなる,6630000,6630200,100,6630200,false
+deep_tfh_dlc,Dormant Power Helps Discover Halberds,潜在する力から、斧槍を見つけやすくなる,6630000,6631700,100,6631700,false
+deep_tfh_dlc,Dormant Power Helps Discover Hammers,潜在する力から、槌を見つけやすくなる,6630000,6631200,100,6631200,false
+deep_tfh_dlc,Dormant Power Helps Discover Heavy Thrusting Swords,潜在する力から、重刺剣を見つけやすくなる,6630000,6630900,100,6630900,false
+deep_tfh_dlc,Dormant Power Helps Discover Katana,潜在する力から、刀を見つけやすくなる,6630000,6630600,100,6630600,false
+deep_tfh_dlc,Dormant Power Helps Discover Medium Shields,潜在する力から、中盾を見つけやすくなる,6630000,6632800,100,6632800,false
+deep_tfh_dlc,Dormant Power Helps Discover Reapers,潜在する力から、鎌を見つけやすくなる,6630000,6631800,100,6631800,false
+deep_tfh_dlc,Dormant Power Helps Discover Sacred Seals,潜在する力から、聖印を見つけやすくなる,6630000,6633100,100,6633100,false
+deep_tfh_dlc,Dormant Power Helps Discover Small Shields,潜在する力から、小盾を見つけやすくなる,6630000,6632700,100,6632700,false
+deep_tfh_dlc,Dormant Power Helps Discover Spears,潜在する力から、槍を見つけやすくなる,6630000,6631500,100,6631500,false
+deep_tfh_dlc,Dormant Power Helps Discover Staves,潜在する力から、杖を見つけやすくなる,6630000,6633000,100,6633000,false
+deep_tfh_dlc,Dormant Power Helps Discover Straight Swords,潜在する力から、直剣を見つけやすくなる,6630000,6630100,100,6630100,false
+deep_tfh_dlc,Dormant Power Helps Discover Thrusting Swords,潜在する力から、刺剣を見つけやすくなる,6630000,6630800,100,6630800,false
+deep_tfh_dlc,Dormant Power Helps Discover Twinblades,潜在する力から、両刃剣を見つけやすくなる,6630000,6630700,100,6630700,false
+deep_tfh_dlc,Dormant Power Helps Discover Whips,潜在する力から、鞭を見つけやすくなる,6630000,6632100,100,6632100,false
+deep_tfh_dlc,Draw enemy attention while guarding,ガード中、敵に狙われやすくなる,7030700,7030700,100,7030700,false
+deep_tfh_dlc,FP Restoration upon Axe Attacks,斧の攻撃でＦＰ回復,7350000,7351000,10,7351000,false
+deep_tfh_dlc,FP Restoration upon Bow Attacks,弓の攻撃でＦＰ回復,7350000,7352400,10,7352400,false
+deep_tfh_dlc,FP Restoration upon Claw Attacks,爪の攻撃でＦＰ回復,7350000,7352100,10,7352100,false
+deep_tfh_dlc,FP Restoration upon Colossal Sword Attacks,特大剣の攻撃でＦＰ回復,7350000,7350300,10,7350300,false
+deep_tfh_dlc,FP Restoration upon Colossal Weapon Attacks,特大武器の攻撃でＦＰ回復,7350000,7352300,10,7352300,false
+deep_tfh_dlc,FP Restoration upon Curved Greatsword Attacks,大曲剣の攻撃でＦＰ回復,7350000,7350500,10,7350500,false
+deep_tfh_dlc,FP Restoration upon Curved Sword Attacks,曲剣の攻撃でＦＰ回復,7350000,7350400,10,7350400,false
+deep_tfh_dlc,FP Restoration upon Dagger Attacks,短剣の攻撃でＦＰ回復,7350000,7350000,10,7350000,false
+deep_tfh_dlc,FP Restoration upon Fist Attacks,拳の攻撃でＦＰ回復,7350000,7352000,10,7352000,false
+deep_tfh_dlc,FP Restoration upon Flail Attacks,フレイルの攻撃でＦＰ回復,7350000,7351400,10,7351400,false
+deep_tfh_dlc,FP Restoration upon Great Hammer Attacks,大槌の攻撃でＦＰ回復,7350000,7351300,10,7351300,false
+deep_tfh_dlc,FP Restoration upon Great Spear Attacks,大槍の攻撃でＦＰ回復,7350000,7351700,10,7351700,false
+deep_tfh_dlc,FP Restoration upon Greataxe Attacks,大斧の攻撃でＦＰ回復,7350000,7351100,10,7351100,false
+deep_tfh_dlc,FP Restoration upon Greatsword Attacks,大剣の攻撃でＦＰ回復,7350000,7350200,10,7350200,false
+deep_tfh_dlc,FP Restoration upon Halberd Attacks,斧槍の攻撃でＦＰ回復,7350000,7351800,10,7351800,false
+deep_tfh_dlc,FP Restoration upon Hammer Attacks,槌の攻撃でＦＰ回復,7350000,7351200,10,7351200,false
+deep_tfh_dlc,FP Restoration upon Heavy Thrusting Sword Attacks,重刺剣の攻撃でＦＰ回復,7350000,7350900,10,7350900,false
+deep_tfh_dlc,FP Restoration upon Katana Attacks,刀の攻撃でＦＰ回復,7350000,7350600,10,7350600,false
+deep_tfh_dlc,FP Restoration upon Reaper Attacks,鎌の攻撃でＦＰ回復,7350000,7351900,10,7351900,false
+deep_tfh_dlc,FP Restoration upon Spear Attacks,槍の攻撃でＦＰ回復,7350000,7351500,10,7351500,false
+deep_tfh_dlc,FP Restoration upon Straight Sword Attacks,直剣の攻撃でＦＰ回復,7350000,7350100,10,7350100,false
+deep_tfh_dlc,FP Restoration upon Thrusting Sword Attacks,刺剣の攻撃でＦＰ回復,7350000,7350800,10,7350800,false
+deep_tfh_dlc,FP Restoration upon Twinblade Attacks,両刃剣の攻撃でＦＰ回復,7350000,7350700,10,7350700,false
+deep_tfh_dlc,FP Restoration upon Whip Attacks,鞭の攻撃でＦＰ回復,7350000,7352200,10,7352200,false
+deep_tfh_dlc,Fire Attack Power Up +2,炎攻撃力上昇＋２,100,7001602,1000,7001602,false
+deep_tfh_dlc,Fire Attack Power Up +3,炎攻撃力上昇＋３,100,6001600,1000,6001600,true
+deep_tfh_dlc,Fire Attack Power Up +4,炎攻撃力上昇＋４,100,6001601,1000,6001601,true
+deep_tfh_dlc,Fire Damage Negation Up,炎カット率上昇,7002700,7002700,1000,7002700,false
+deep_tfh_dlc,Flame-Shrouding Cracked Tear in possession at start of expedition,出撃時に「炎纏いの割れ雫」を持つ,6621000,6622800,100,6622800,false
+deep_tfh_dlc,Flask Also Heals Allies,聖杯瓶の回復を、周囲の味方に分配,7010200,7010200,100,7010200,false
+deep_tfh_dlc,Greenburst Crystal Tear in possession at start of expedition,出撃時に「緑湧きの結晶雫」を持つ,6621000,6621700,100,6621700,false
+deep_tfh_dlc,Greenspill Crystal Tear in possession at start of expedition,出撃時に「緑溢れの結晶雫」を持つ,6621000,6623200,100,6623200,false
+deep_tfh_dlc,Guard counter is given a boost based on current HP,ガードカウンターに、自身の現在ＨＰの一部を加える,100,7150000,100,7150000,false
+deep_tfh_dlc,HP Recovery From Successful Guarding,ガード成功時、ＨＰ回復,7036100,7036100,1,8650000,false
+deep_tfh_dlc,HP Restoration upon Axe Attacks,斧の攻撃でＨＰ回復,7340000,7341000,10,7341000,false
+deep_tfh_dlc,HP Restoration upon Bow Attacks,弓の攻撃でＨＰ回復,7340000,7342400,10,7342400,false
+deep_tfh_dlc,HP Restoration upon Claw Attacks,爪の攻撃でＨＰ回復,7340000,7342100,10,7342100,false
+deep_tfh_dlc,HP Restoration upon Colossal Sword Attacks,特大剣の攻撃でＨＰ回復,7340000,7340300,10,7340300,false
+deep_tfh_dlc,HP Restoration upon Colossal Weapon Attacks,特大武器の攻撃でＨＰ回復,7340000,7342300,10,7342300,false
+deep_tfh_dlc,HP Restoration upon Curved Greatsword Attacks,大曲剣の攻撃でＨＰ回復,7340000,7340500,10,7340500,false
+deep_tfh_dlc,HP Restoration upon Curved Sword Attacks,曲剣の攻撃でＨＰ回復,7340000,7340400,10,7340400,false
+deep_tfh_dlc,HP Restoration upon Dagger Attacks,短剣の攻撃でＨＰ回復,7340000,7340000,10,7340000,false
+deep_tfh_dlc,HP Restoration upon Fist Attacks,拳の攻撃でＨＰ回復,7340000,7342000,10,7342000,false
+deep_tfh_dlc,HP Restoration upon Flail Attacks,フレイルの攻撃でＨＰ回復,7340000,7341400,10,7341400,false
+deep_tfh_dlc,HP Restoration upon Great Hammer Attacks,大槌の攻撃でＨＰ回復,7340000,7341300,10,7341300,false
+deep_tfh_dlc,HP Restoration upon Great Spear Attacks,大槍の攻撃でＨＰ回復,7340000,7341700,10,7341700,false
+deep_tfh_dlc,HP Restoration upon Greataxe Attacks,大斧の攻撃でＨＰ回復,7340000,7341100,10,7341100,false
+deep_tfh_dlc,HP Restoration upon Greatsword Attacks,大剣の攻撃でＨＰ回復,7340000,7340200,10,7340200,false
+deep_tfh_dlc,HP Restoration upon Halberd Attacks,斧槍の攻撃でＨＰ回復,7340000,7341800,10,7341800,false
+deep_tfh_dlc,HP Restoration upon Hammer Attacks,槌の攻撃でＨＰ回復,7340000,7341200,10,7341200,false
+deep_tfh_dlc,HP Restoration upon Heavy Thrusting Sword Attacks,重刺剣の攻撃でＨＰ回復,7340000,7340900,10,7340900,false
+deep_tfh_dlc,HP Restoration upon Katana Attacks,刀の攻撃でＨＰ回復,7340000,7340600,10,7340600,false
+deep_tfh_dlc,HP Restoration upon Reaper Attacks,鎌の攻撃でＨＰ回復,7340000,7341900,10,7341900,false
+deep_tfh_dlc,HP Restoration upon Spear Attacks,槍の攻撃でＨＰ回復,7340000,7341500,10,7341500,false
+deep_tfh_dlc,HP Restoration upon Straight Sword Attacks,直剣の攻撃でＨＰ回復,7340000,7340100,10,7340100,false
+deep_tfh_dlc,HP Restoration upon Thrusting Counterattack,刺突カウンター発生時、ＨＰ回復,7160000,7160000,100,7160000,false
+deep_tfh_dlc,HP Restoration upon Thrusting Counterattack +1,刺突カウンター発生時、ＨＰ回復＋１,7160000,6160000,100,6160000,true
+deep_tfh_dlc,HP Restoration upon Thrusting Sword Attacks,刺剣の攻撃でＨＰ回復,7340000,7340800,10,7340800,false
+deep_tfh_dlc,HP Restoration upon Twinblade Attacks,両刃剣の攻撃でＨＰ回復,7340000,7340700,10,7340700,false
+deep_tfh_dlc,HP Restoration upon Whip Attacks,鞭の攻撃でＨＰ回復,7340000,7342200,10,7342200,false
+deep_tfh_dlc,"HP restored when using medicinal boluses, etc.",苔薬などのアイテム使用でＨＰ回復,7030200,7030200,100,7030200,false
+deep_tfh_dlc,"HP restored when using medicinal boluses, etc. +1",苔薬などのアイテム使用でＨＰ回復＋１,7030200,6030200,100,6030200,false
+deep_tfh_dlc,Holy Attack Power Up +2,聖攻撃力上昇＋２,100,7001802,1000,7001802,false
+deep_tfh_dlc,Holy Attack Power Up +3,聖攻撃力上昇＋３,100,6001800,1000,6001800,true
+deep_tfh_dlc,Holy Attack Power Up +4,聖攻撃力上昇＋４,100,6001801,1000,6001801,true
+deep_tfh_dlc,Holy Damage Negation Up,聖カット率上昇,7002900,7002900,1000,7002900,false
+deep_tfh_dlc,Holy-Shrouding Cracked Tear in possession at start of expedition,出撃時に「聖纏いの割れ雫」を持つ,6621000,6623100,100,6623100,false
+deep_tfh_dlc,Improved Affinity Attack Power,属性攻撃力上昇,100,6610800,1000,6610800,false
+deep_tfh_dlc,Improved Affinity Attack Power +1,属性攻撃力上昇＋１,100,6610801,1000,6610801,true
+deep_tfh_dlc,Improved Affinity Attack Power +2,属性攻撃力上昇＋２,100,6610802,1000,6610802,true
+deep_tfh_dlc,Improved Affinity Damage Negation,属性カット率上昇,6611100,6611100,1000,6611100,false
+deep_tfh_dlc,Improved Affinity Damage Negation +1,属性カット率上昇＋１,6611100,6611101,1000,6611101,true
+deep_tfh_dlc,Improved Affinity Damage Negation +2,属性カット率上昇＋２,6611100,6611102,1000,6611102,true
+deep_tfh_dlc,Improved Attack Power with 3+ Axes Equipped,斧の武器種を３つ以上装備していると攻撃力上昇,100,7081000,10,7081000,false
+deep_tfh_dlc,Improved Attack Power with 3+ Bows Equipped,弓の武器種を３つ以上装備していると攻撃力上昇,100,7082400,10,7082400,false
+deep_tfh_dlc,Improved Attack Power with 3+ Claws Equipped,爪の武器種を３つ以上装備していると攻撃力上昇,100,7082100,10,7082100,false
+deep_tfh_dlc,Improved Attack Power with 3+ Colossal Swords Equipped,特大剣の武器種を３つ以上装備していると攻撃力上昇,100,7080300,10,7080300,false
+deep_tfh_dlc,Improved Attack Power with 3+ Colossal Weapons Equipped,特大武器の武器種を３つ以上装備していると攻撃力上昇,100,7082300,10,7082300,false
+deep_tfh_dlc,Improved Attack Power with 3+ Curved Greatswords Equipped,大曲剣の武器種を３つ以上装備していると攻撃力上昇,100,7080500,10,7080500,false
+deep_tfh_dlc,Improved Attack Power with 3+ Curved Swords Equipped,曲剣の武器種を３つ以上装備していると攻撃力上昇,100,7080400,10,7080400,false
+deep_tfh_dlc,Improved Attack Power with 3+ Daggers Equipped,短剣の武器種を３つ以上装備していると攻撃力上昇,100,7080000,10,7080000,false
+deep_tfh_dlc,Improved Attack Power with 3+ Fists Equipped,拳の武器種を３つ以上装備していると攻撃力上昇,100,7082000,10,7082000,false
+deep_tfh_dlc,Improved Attack Power with 3+ Flails Equipped,フレイルの武器種を３つ以上装備していると攻撃力上昇,100,7081400,10,7081400,false
+deep_tfh_dlc,Improved Attack Power with 3+ Great Hammers Equipped,大槌の武器種を３つ以上装備していると攻撃力上昇,100,7081300,10,7081300,false
+deep_tfh_dlc,Improved Attack Power with 3+ Great Spears Equipped,大槍の武器種を３つ以上装備していると攻撃力上昇,100,7081700,10,7081700,false
+deep_tfh_dlc,Improved Attack Power with 3+ Greataxes Equipped,大斧の武器種を３つ以上装備していると攻撃力上昇,100,7081100,10,7081100,false
+deep_tfh_dlc,Improved Attack Power with 3+ Greatswords Equipped,大剣の武器種を３つ以上装備していると攻撃力上昇,100,7080200,10,7080200,false
+deep_tfh_dlc,Improved Attack Power with 3+ Halberds Equipped,斧槍の武器種を３つ以上装備していると攻撃力上昇,100,7081800,10,7081800,false
+deep_tfh_dlc,Improved Attack Power with 3+ Hammers Equipped,槌の武器種を３つ以上装備していると攻撃力上昇,100,7081200,10,7081200,false
+deep_tfh_dlc,Improved Attack Power with 3+ Heavy Thrusting Swords Equipped,重刺剣の武器種を３つ以上装備していると攻撃力上昇,100,7080900,10,7080900,false
+deep_tfh_dlc,Improved Attack Power with 3+ Katana Equipped,刀の武器種を３つ以上装備していると攻撃力上昇,100,7080600,10,7080600,false
+deep_tfh_dlc,Improved Attack Power with 3+ Reapers Equipped,鎌の武器種を３つ以上装備していると攻撃力上昇,100,7081900,10,7081900,false
+deep_tfh_dlc,Improved Attack Power with 3+ Spears Equipped,槍の武器種を３つ以上装備していると攻撃力上昇,100,7081500,10,7081500,false
+deep_tfh_dlc,Improved Attack Power with 3+ Straight Swords Equipped,直剣の武器種を３つ以上装備していると攻撃力上昇,100,7080100,10,7080100,false
+deep_tfh_dlc,Improved Attack Power with 3+ Thrusting Swords Equipped,刺剣の武器種を３つ以上装備していると攻撃力上昇,100,7080800,10,7080800,false
+deep_tfh_dlc,Improved Attack Power with 3+ Twinblades Equipped,両刃剣の武器種を３つ以上装備していると攻撃力上昇,100,7080700,10,7080700,false
+deep_tfh_dlc,Improved Attack Power with 3+ Whips Equipped,鞭の武器種を３つ以上装備していると攻撃力上昇,100,7082200,10,7082200,false
+deep_tfh_dlc,Improved Axe Attack Power,斧の攻撃力上昇,100,7331000,10,7331000,false
+deep_tfh_dlc,Improved Bestial Incantations,獣の祈祷を強化,800,7044400,100,7044400,false
+deep_tfh_dlc,Improved Blood Loss Resistance,出血耐性上昇,7003100,7003100,1000,7003100,false
+deep_tfh_dlc,Improved Blood Loss Resistance +1,出血耐性上昇＋１,7003100,6003100,1000,6003100,false
+deep_tfh_dlc,Improved Bow Attack Power,弓の攻撃力上昇,100,7332400,10,7332400,false
+deep_tfh_dlc,Improved Carian Sword Sorcery,カーリアの剣の魔術を強化,800,7043300,100,7043300,false
+deep_tfh_dlc,Improved Claw Attack Power,爪の攻撃力上昇,100,7332100,10,7332100,false
+deep_tfh_dlc,Improved Colossal Sword Attack Power,特大剣の攻撃力上昇,100,7330300,10,7330300,false
+deep_tfh_dlc,Improved Colossal Weapon Attack Power,特大武器の攻撃力上昇,100,7332300,10,7332300,false
+deep_tfh_dlc,Improved Critical Hits,致命の一撃強化,100,7040200,100,7040200,false
+deep_tfh_dlc,Improved Crystalian sorcery,結晶人の魔術を強化,800,7043600,100,7043600,false
+deep_tfh_dlc,Improved Curved Greatsword Attack Power,大曲剣の攻撃力上昇,100,7330500,10,7330500,false
+deep_tfh_dlc,Improved Curved Sword Attack Power,曲剣の攻撃力上昇,100,7330400,10,7330400,false
+deep_tfh_dlc,Improved Dagger Attack Power,短剣の攻撃力上昇,100,7330000,10,7330000,false
+deep_tfh_dlc,Improved Damage Negation at Low HP,ＨＰ低下時、カット率上昇,7012300,7012300,100,7012300,false
+deep_tfh_dlc,Improved Death Blight Resistance,抗死耐性上昇,7003300,7003300,1000,7003300,false
+deep_tfh_dlc,Improved Death Blight Resistance +1,抗死耐性上昇＋１,7003300,6003300,1000,6003300,false
+deep_tfh_dlc,Improved Dragon Communion Incantations,竜餐の祈祷を強化,800,7044600,100,7044600,false
+deep_tfh_dlc,Improved Dragon Cult Incantations,王都古竜信仰の祈祷を強化,800,7044100,100,7044100,false
+deep_tfh_dlc,Improved Fire Damage Negation +1,炎カット率上昇＋１,7002700,6002700,1000,6002700,true
+deep_tfh_dlc,Improved Fire Damage Negation +2,炎カット率上昇＋２,7002700,6002701,1000,6002701,true
+deep_tfh_dlc,Improved Fist Attack Power,拳の攻撃力上昇,100,7332000,10,7332000,false
+deep_tfh_dlc,Improved Flail Attack Power,フレイルの攻撃力上昇,100,7331400,10,7331400,false
+deep_tfh_dlc,Improved Flask HP Restoration,聖杯瓶の回復量上昇,6611400,6611400,100,6611400,false
+deep_tfh_dlc,Improved Frenzied Flame Incantations,狂い火の祈祷を強化,800,7044500,100,7044500,false
+deep_tfh_dlc,Improved Frost Resistance,冷気耐性上昇,7003500,7003500,1000,7003500,false
+deep_tfh_dlc,Improved Frost Resistance +1,冷気耐性上昇＋１,7003500,6003500,1000,6003500,false
+deep_tfh_dlc,Improved Fundamentalist Incantations,黄金律原理主義の祈祷を強化,800,7044000,100,7044000,false
+deep_tfh_dlc,Improved Giants' Flame Incantations,巨人の火の祈祷を強化,800,7044200,100,7044200,false
+deep_tfh_dlc,Improved Glintblade Sorcery,輝剣の魔術を強化,800,7043400,100,7043400,false
+deep_tfh_dlc,Improved Glintstone and Gravity Stone Damage,輝石、重力石アイテムの攻撃力上昇,7040500,7040500,100,7040500,false
+deep_tfh_dlc,Improved Glintstone and Gravity Stone Damage +1,輝石、重力石アイテムの攻撃力上昇＋１,7040500,6040500,100,6040500,false
+deep_tfh_dlc,Improved Godslayer Incantations,神狩りの祈祷を強化,800,7044300,100,7044300,false
+deep_tfh_dlc,Improved Gravity Sorcery,重力の魔術を強化,800,7043700,100,7043700,false
+deep_tfh_dlc,Improved Great Hammer Attack Power,大槌の攻撃力上昇,100,7331300,10,7331300,false
+deep_tfh_dlc,Improved Great Spear Attack Power,大槍の攻撃力上昇,100,7331700,10,7331700,false
+deep_tfh_dlc,Improved Greataxe Attack Power,大斧の攻撃力上昇,100,7331100,10,7331100,false
+deep_tfh_dlc,Improved Greatsword Attack Power,大剣の攻撃力上昇,100,7330200,10,7330200,false
+deep_tfh_dlc,Improved Guard Counters,ガードカウンター強化,100,7040100,100,7040100,false
+deep_tfh_dlc,Improved Guard Counters +1,ガードカウンター強化＋１,100,6040100,100,6040100,true
+deep_tfh_dlc,Improved Guard Counters +2,ガードカウンター強化＋２,100,6040101,100,6040101,true
+deep_tfh_dlc,Improved Halberd Attack Power,斧槍の攻撃力上昇,100,7331800,10,7331800,false
+deep_tfh_dlc,Improved Hammer Attack Power,槌の攻撃力上昇,100,7331200,10,7331200,false
+deep_tfh_dlc,Improved Heavy Thrusting Sword Attack Power,重刺剣の攻撃力上昇,100,7330900,10,7330900,false
+deep_tfh_dlc,Improved Holy Damage Negation +1,聖カット率上昇＋１,7002900,6002900,1000,6002900,true
+deep_tfh_dlc,Improved Holy Damage Negation +2,聖カット率上昇＋２,7002900,6002901,1000,6002901,true
+deep_tfh_dlc,Improved Incantations,祈祷強化,100,6611300,100,6611300,false
+deep_tfh_dlc,Improved Incantations +1,祈祷強化＋１,100,6611301,100,6611301,true
+deep_tfh_dlc,Improved Incantations +2,祈祷強化＋２,100,6611302,100,6611302,true
+deep_tfh_dlc,Improved Initial Standard Attack,通常攻撃の１段目強化,100,7040000,100,7040000,false
+deep_tfh_dlc,Improved Invisibility Sorcery,不可視の魔術を強化,800,7043500,100,7043500,false
+deep_tfh_dlc,Improved Katana Attack Power,刀の攻撃力上昇,100,7330600,10,7330600,false
+deep_tfh_dlc,Improved Lightning Damage Negation +1,雷カット率上昇＋１,7002800,6002800,1000,6002800,true
+deep_tfh_dlc,Improved Lightning Damage Negation +2,雷カット率上昇＋２,7002800,6002801,1000,6002801,true
+deep_tfh_dlc,Improved Madness Resistance,発狂耐性上昇,7003600,7003600,1000,7003600,false
+deep_tfh_dlc,Improved Madness Resistance +1,発狂耐性上昇＋１,7003600,6003600,1000,6003600,false
+deep_tfh_dlc,Improved Magic Damage Negation +1,魔力カット率上昇＋１,700,6002600,1000,6002600,true
+deep_tfh_dlc,Improved Magic Damage Negation +2,魔力カット率上昇＋２,7002600,6002601,1000,6002601,true
+deep_tfh_dlc,Improved Perfuming Arts,調香術強化,7043100,7043100,100,8400000,false
+deep_tfh_dlc,Improved Perfuming Arts +1,調香術強化＋１,7043100,6043100,100,6043100,false
+deep_tfh_dlc,Improved Physical Damage Negation +1,物理カット率上昇＋１,7006200,6611001,1000,6611001,true
+deep_tfh_dlc,Improved Physical Damage Negation +2,物理カット率上昇＋２,7006200,6611002,1000,6611002,true
+deep_tfh_dlc,Improved Poise & Damage Negation When Knocked Back by Damage,ダメージで吹き飛ばされた時、強靭度とカット率上昇,7240000,7240000,100,7240000,false
+deep_tfh_dlc,Improved Poison Resistance,毒耐性上昇,7003000,7003000,1000,7003000,false
+deep_tfh_dlc,Improved Poison Resistance +1,毒耐性上昇＋１,7003000,6003000,1000,6003000,false
+deep_tfh_dlc,Improved Reaper Attack Power,鎌の攻撃力上昇,100,7331900,10,7331900,false
+deep_tfh_dlc,Improved Rot Resistance,腐敗耐性上昇,7003400,7003400,1000,7003400,false
+deep_tfh_dlc,Improved Rot Resistance +1,腐敗耐性上昇＋１,7003400,6003400,1000,6003400,false
+deep_tfh_dlc,Improved Sleep Resistance,睡眠耐性上昇,7003200,7003200,1000,7003200,false
+deep_tfh_dlc,Improved Sleep Resistance +1,睡眠耐性上昇＋１,7003200,6003200,1000,6003200,false
+deep_tfh_dlc,Improved Sorceries,魔術強化,100,6611200,100,6611200,false
+deep_tfh_dlc,Improved Sorceries +1,魔術強化＋１,100,6611201,100,6611201,true
+deep_tfh_dlc,Improved Sorceries +2,魔術強化＋２,100,6611202,100,6611202,true
+deep_tfh_dlc,Improved Spear Attack Power,槍の攻撃力上昇,100,7331500,10,7331500,false
+deep_tfh_dlc,Improved Stonedigger Sorcery,石掘りの魔術を強化,800,7043200,100,7043200,false
+deep_tfh_dlc,Improved Straight Sword Attack Power,直剣の攻撃力上昇,100,7330100,10,7330100,false
+deep_tfh_dlc,Improved Thorn Sorcery,茨の魔術を強化,800,7043800,100,7043800,false
+deep_tfh_dlc,Improved Throwing Knife Damage,投擲ナイフの攻撃力上昇,7040400,7040400,100,7040400,false
+deep_tfh_dlc,Improved Throwing Knife Damage +1,投擲ナイフの攻撃力上昇＋１,7040400,6040400,100,6040400,false
+deep_tfh_dlc,Improved Throwing Pot Damage,投擲壺の攻撃力上昇,7040300,7040300,100,7040300,false
+deep_tfh_dlc,Improved Throwing Pot Damage +1,投擲壺の攻撃力上昇＋１,7040300,6040300,100,6040300,false
+deep_tfh_dlc,Improved Thrusting Sword Attack Power,刺剣の攻撃力上昇,100,7330800,10,7330800,false
+deep_tfh_dlc,Improved Twinblade Attack Power,両刃剣の攻撃力上昇,100,7330700,10,7330700,false
+deep_tfh_dlc,Improved Whip Attack Power,鞭の攻撃力上昇,100,7332200,10,7332200,false
+deep_tfh_dlc,Increased Maximum FP,最大ＦＰ上昇,6610500,6610500,1000,6610500,true
+deep_tfh_dlc,Increased Maximum HP,最大ＨＰ上昇,6610400,6610400,1000,6610400,true
+deep_tfh_dlc,Increased Maximum Stamina,最大スタミナ上昇,6610600,6610600,1000,6610600,true
+deep_tfh_dlc,Increased rune acquisition for self and allies,自身と味方の取得ルーン増加,7110000,7110000,100,7110000,false
+deep_tfh_dlc,Ironjar Aromatic in possession at start of expedition,出撃時に「鉄壺の香薬」を持つ,6624000,6624200,100,6624200,false
+deep_tfh_dlc,Items confer effect to all nearby allies,アイテムの効果が周囲の味方にも発動,7050100,7050100,100,7050100,false
+deep_tfh_dlc,Leaden Hardtear in possession at start of expedition,出撃時に「鉛色の硬雫」を持つ,6621000,6622300,100,6622300,false
+deep_tfh_dlc,Lightning Attack Power Up +2,雷攻撃力上昇＋２,100,7001702,1000,7001702,false
+deep_tfh_dlc,Lightning Attack Power Up +3,雷攻撃力上昇＋３,100,6001700,1000,6001700,true
+deep_tfh_dlc,Lightning Attack Power Up +4,雷攻撃力上昇＋４,100,6001701,1000,6001701,true
+deep_tfh_dlc,Lightning Damage Negation Up,雷カット率上昇,7002800,7002800,1000,7002800,false
+deep_tfh_dlc,Lightning-Shrouding Cracked Tear in possession at start of expedition,出撃時に「雷纏いの割れ雫」を持つ,6621000,6623000,100,6623000,false
+deep_tfh_dlc,Madness in Vicinity Improves Attack Power,周囲で発狂状態の発生時、攻撃力上昇,100,6600100,100,6600100,false
+deep_tfh_dlc,Madness in Vicinity Improves Attack Power +1,周囲で発狂状態の発生時、攻撃力上昇＋１,100,6600101,100,6600101,true
+deep_tfh_dlc,Magic Attack Power Up +2,魔力攻撃力上昇＋２,100,7001502,1000,7001502,false
+deep_tfh_dlc,Magic Attack Power Up +3,魔力攻撃力上昇＋３,100,6001500,1000,6001500,true
+deep_tfh_dlc,Magic Attack Power Up +4,魔力攻撃力上昇＋４,100,6001501,1000,6001501,true
+deep_tfh_dlc,Magic Damage Negation Up,魔力カット率上昇,7002600,7002600,1000,7002600,false
+deep_tfh_dlc,Magic-Shrouding Cracked Tear in possession at start of expedition,出撃時に「魔力纏いの割れ雫」を持つ,6621000,6622900,100,6622900,false
+deep_tfh_dlc,Max FP Up with 3+ Sacred Seals Equipped,聖印の武器種を３つ以上装備していると最大ＦＰ上昇,7082500,7082600,10,7082600,false
+deep_tfh_dlc,Max FP Up with 3+ Staves Equipped,杖の武器種を３つ以上装備していると最大ＦＰ上昇,7082500,7082500,10,7082500,false
+deep_tfh_dlc,Max HP Up with 3+ Greatshields Equipped,大盾の武器種を３つ以上装備していると最大ＨＰ上昇,7082700,7082900,10,7082900,false
+deep_tfh_dlc,Max HP Up with 3+ Medium Shields Equipped,中盾の武器種を３つ以上装備していると最大ＨＰ上昇,7082700,7082800,10,7082800,false
+deep_tfh_dlc,Max HP Up with 3+ Small Shields Equipped,小盾の武器種を３つ以上装備していると最大ＨＰ上昇,7082700,7082700,10,7082700,false
+deep_tfh_dlc,Max HP increased for each great enemy defeated at a Great Church.,大教会の強敵を倒す度、最大ＨＰ上昇,6060300,6060300,100,6060300,false
+deep_tfh_dlc,Max stamina increased for each great enemy defeated at a Great Encampment,大野営地の強敵を倒す度、最大スタミナ上昇,6060600,6060600,100,6060600,false
+deep_tfh_dlc,Opaline Bubbletear in possession at start of expedition,出撃時に「真珠色の泡雫」を持つ,6621000,6621500,100,6621500,false
+deep_tfh_dlc,Opaline Hardtear in possession at start of expedition,出撃時に「真珠色の硬雫」を持つ,6621000,6621800,100,6621800,false
+deep_tfh_dlc,Partial HP Restoration upon Post-Damage Attacks,ダメージを受けた直後、攻撃によりＨＰの一部を回復,7005600,7005600,100,7005600,false
+deep_tfh_dlc,Partial HP Restoration upon Post-Damage Attacks +1,ダメージを受けた直後、攻撃によりＨＰの一部を回復＋１,7005600,6005600,100,6005600,true
+deep_tfh_dlc,Partial HP Restoration upon Post-Damage Attacks +2,ダメージを受けた直後、攻撃によりＨＰの一部を回復＋２,7005600,6005601,100,6005601,true
+deep_tfh_dlc,Physical Attack Up +2,物理攻撃力上昇＋２,100,7001402,1000,7001402,false
+deep_tfh_dlc,Physical Attack Up +3,物理攻撃力上昇＋３,100,6001400,1000,7001403,true
+deep_tfh_dlc,Physical Attack Up +4,物理攻撃力上昇＋４,100,6001401,1000,6001400,true
+deep_tfh_dlc,Physical attack power increases after using grease items,脂アイテム使用時、追加で物理攻撃力上昇,100,7030900,100,7030900,false
+deep_tfh_dlc,Physical attack power increases after using grease items +1,脂アイテム使用時、追加で物理攻撃力上昇＋１,100,6030900,100,6030900,true
+deep_tfh_dlc,Physical attack power increases after using grease items +2,脂アイテム使用時、追加で物理攻撃力上昇＋２,100,6030901,100,6030901,true
+deep_tfh_dlc,Poise +3,強靭度＋３,7001000,7001002,1000,7001002,false
+deep_tfh_dlc,Poison Spraymist in possession at start of expedition,出撃時に「毒の噴霧」を持つ,6624000,6624400,100,6624400,false
+deep_tfh_dlc,"Raised stamina recovery for nearby allies, but not for self",自身を除く、周囲の味方のスタミナ回復速度上昇,7050000,7050000,100,7050000,false
+deep_tfh_dlc,Reduced FP Consumption,消費ＦＰ軽減,6610700,6610700,1000,6610700,false
+deep_tfh_dlc,Rune discount for shop purchases while on expedition,出撃中、ショップでの購入に必要なルーンが割引,7230000,7230000,100,7230000,false
+deep_tfh_dlc,Runes and Item Discovery increased for each great enemy defeated at a Fort,小砦の強敵を倒す度、取得ルーン増加、発見力上昇,6060400,6060400,100,6060400,false
+deep_tfh_dlc,Ruptured Crystal Tear in possession at start of expedition,出撃時に「破裂した結晶雫」を持つ,6621000,6622200,100,6622200,false
+deep_tfh_dlc,Sleep in Vicinity Improves Attack Power,周囲で睡眠状態の発生時、攻撃力上昇,100,6600000,100,6600000,false
+deep_tfh_dlc,Sleep in Vicinity Improves Attack Power +1,周囲で睡眠状態の発生時、攻撃力上昇＋１,100,6600001,100,6600001,true
+deep_tfh_dlc,Slowly restore HP for self and nearby allies when HP is low,ＨＰ低下時、周囲の味方を含めＨＰをゆっくりと回復,7012200,7012200,100,7012200,false
+deep_tfh_dlc,Small Pouch in possession at start of expedition,出撃時に「小さなポーチ」を持つ,7121000,7121000,100,7121000,false
+deep_tfh_dlc,Spark Aromatic in possession at start of expedition,出撃時に「火花の香り」を持つ,6624000,6624100,100,6624100,false
+deep_tfh_dlc,Speckled Hardtear in possession at start of expedition,出撃時に「斑彩色の硬雫」を持つ,6621000,6621300,100,6621300,false
+deep_tfh_dlc,Spiked Cracked Tear in possession at start of expedition,出撃時に「大棘の割れ雫」を持つ,6621000,6622000,100,6622000,false
+deep_tfh_dlc,Stamina Recovery upon Landing Attacks,攻撃命中時、スタミナ回復,7100100,7100100,100,7100100,false
+deep_tfh_dlc,Stonebarb Cracked Tear in possession at start of expedition,出撃時に「岩棘の割れ雫」を持つ,6621000,6622700,100,6622700,false
+deep_tfh_dlc,Stonesword Key in possession at start of expedition,出撃時に「石剣の鍵」を持つ,7120900,7120900,100,7120900,false
+deep_tfh_dlc,Successful guarding fills more of the Art gauge,ガード成功時、アーツゲージ増加,7030600,7030600,100,7030600,false
+deep_tfh_dlc,Successful guarding fills more of the Art gauge +1,ガード成功時、アーツゲージ増加＋１,7030600,6030600,100,6030600,true
+deep_tfh_dlc,Thorny Cracked Tear in possession at start of expedition,出撃時に「連棘の割れ雫」を持つ,6621000,6621900,100,6621900,false
+deep_tfh_dlc,Treasure marked upon map,埋もれ宝の位置を地図に表示,7070000,7070000,100,7070000,false
+deep_tfh_dlc,Twiggy Cracked Tear in possession at start of expedition,出撃時に「細枝の割れ雫」を持つ,6621000,6622400,100,6622400,false
+deep_tfh_dlc,Uplifting Aromatic in possession at start of expedition,出撃時に「高揚の香り」を持つ,6624000,6624000,100,6624000,false
+deep_tfh_dlc,Windy Crystal Tear in possession at start of expedition,出撃時に「風の結晶雫」を持つ,6621000,6622100,100,6622100,false
+deep_tfh_dlc,"[Duchess] Improved Mind and Faith, Reduced Intelligence",【レディ】精神力／信仰上昇、知力低下,900,6643100,1,6643100,false
+deep_tfh_dlc,"[Duchess] Improved Vigor and Strength, Reduced Mind",【レディ】生命力／筋力上昇、精神力低下,900,6643000,1,6643000,false
+deep_tfh_dlc,[Duchess] Use Character Skill for Brief Invulnerability,【レディ】スキル使用時、僅かに無敵,900,6500300,1,6500300,false
+deep_tfh_dlc,"[Executor] Improved Dexterity and Arcane, Reduced Vigor",【執行者】技量／神秘上昇、生命力低下,900,6647100,1,6647100,false
+deep_tfh_dlc,"[Executor] Improved Vigor and Endurance, Reduced Arcane",【執行者】生命力／持久力上昇、神秘低下,900,6647000,1,6647000,false
+deep_tfh_dlc,[Executor] Slowly Restore HP upon Ability Activation,【執行者】アビリティ発動時、ＨＰをゆっくりと回復,900,6500700,1,6500700,false
+deep_tfh_dlc,[Guardian] Character Skill Boosts Damage Negation of Nearby Allies,【守護者】スキル使用時、周囲の味方のカット率上昇,900,6500100,1,6500100,false
+deep_tfh_dlc,"[Guardian] Improved Mind and Faith, Reduced Vigor",【守護者】精神力／信仰上昇、生命力低下,900,6641100,1,6641100,false
+deep_tfh_dlc,"[Guardian] Improved Strength and Dexterity, Reduced Vigor",【守護者】筋力／技量上昇、生命力低下,900,6641000,1,6641000,false
+deep_tfh_dlc,[Ironeye] Character Skill Inflicts Heavy Poison Damage on Poisoned Enemies,【鉄の目】スキルに毒の状態異常を付加して 毒状態の敵に大ダメージ,900,6500200,1,6500200,false
+deep_tfh_dlc,"[Ironeye] Improved Arcane, Reduced Dexterity",【鉄の目】神秘上昇、技量低下,900,6642000,1,6642000,false
+deep_tfh_dlc,"[Ironeye] Improved Vigor and Strength, Reduced Dexterity",【鉄の目】生命力／筋力上昇、技量低下,900,6642100,1,6642100,false
+deep_tfh_dlc,[Raider] Hit With Character Skill to Reduce Enemy Attack Power,【無頼漢】スキル命中時、敵の攻撃力低下,900,6500400,1,6500400,false
+deep_tfh_dlc,"[Raider] Improved Arcane, Reduced Vigor",【無頼漢】神秘上昇、生命力低下,900,6644100,1,6644100,false
+deep_tfh_dlc,"[Raider] Improved Mind and Intelligence, Reduced Vigor and Endurance",【無頼漢】精神力／知力上昇、生命力／持久力低下,900,6644000,1,6644000,false
+deep_tfh_dlc,[Recluse] Collect Affinity Residues to Negate Affinity,【隠者】属性痕を集めた時、対応する属性カット率上昇,900,6500600,1,6500600,false
+deep_tfh_dlc,"[Recluse] Improved Intelligence and Faith, Reduced Mind",【隠者】知力／信仰上昇、精神力低下,900,6646100,1,6646100,false
+deep_tfh_dlc,"[Recluse] Improved Vigor, Endurance, and Dexterity, Reduced Intelligence and Faith",【隠者】生命力／持久力／技量上昇、知力／信仰低下,900,6646000,1,6646000,false
+deep_tfh_dlc,"[Revenant] Improved Strength, Reduced Faith",【復讐者】筋力上昇、信仰低下,900,6645100,1,6645100,false
+deep_tfh_dlc,"[Revenant] Improved Vigor and Endurance, Reduced Mind",【復讐者】生命力／持久力上昇、精神力低下,900,6645000,1,6645000,false
+deep_tfh_dlc,[Revenant] Increased Max FP upon Ability Activation,【復讐者】アビリティ発動時、最大ＦＰ上昇,900,6500500,1,6500500,false
+deep_tfh_dlc,"[Scholar] Improved Endurance and Dexterity, Reduced Intelligence and Arcane",【学者】持久力／技量上昇、知力／神秘低下,900,6647300,1,6647300,false
+deep_tfh_dlc,"[Scholar] Improved Mind, Reduced Vigor",【学者】精神力上昇、生命力低下,900,6647200,1,6647200,false
+deep_tfh_dlc,[Scholar] Reduced FP consumption when using Character Skill on self,【学者】スキルを自身に使用時、ＦＰ消費軽減,900,6500800,1,6500800,false
+deep_tfh_dlc,[Undertaker] Executing Art readies Character Skill,【葬儀屋】アーツ発動後、スキル再使用可能,900,6500900,1,6500900,false
+deep_tfh_dlc,"[Undertaker] Improved Dexterity, Reduced Vigor and Faith",【葬儀屋】技量上昇、生命力／信仰低下,900,6647400,1,6647400,false
+deep_tfh_dlc,"[Undertaker] Improved Mind and Faith, Reduced Strength",【葬儀屋】精神力／信仰上昇、筋力低下,900,6647500,1,6647500,false
+deep_tfh_dlc,[Wylder] Character Skill inflicts Blood Loss,【追跡者】スキルに、出血の状態異常を付加,900,6500000,1,6500000,false
+deep_tfh_dlc,"[Wylder] Improved Intelligence and Faith, Reduced Strength and Dexterity",【追跡者】知力／信仰上昇、筋力／技量低下,900,6640100,1,6640100,false
+deep_tfh_dlc,"[Wylder] Improved Mind, Reduced Vigor",【追跡者】精神力上昇、生命力低下,900,6640000,1,6640000,false
+debuff,All Resistances Down,すべての状態異常耐性低下,6850200,6850200,9000000,8762000,
+debuff,Continuous HP Loss,ＨＰ持続減少,6850500,6850500,900000080,8766000,
+debuff,Lower Attack When Below Max HP,ＨＰ最大未満時、攻撃力低下,6851200,6851200,900000170,8810000,
+debuff,Near Death Reduces Max HP,瀕死時、最大ＨＰ低下,6851700,6851700,900000300,8831200,
+debuff,Poison Buildup When Below Max HP,ＨＰ最大未満時、毒が蓄積,6851300,6851300,900000190,8810300,
+debuff,Reduced Damage Negation After Evading,回避直後、カット率低下,6850700,6850700,900000120,8800100,
+debuff,Reduced Damage Negation for Flask Usages,聖杯瓶使用時、カット率低下,6850900,6850900,900000140,8801000,
+debuff,Reduced Dexterity and Faith,技量と信仰が低下,6830100,6830100,6830100,6830100,
+debuff,Reduced Faith and Strength,信仰と筋力が低下,6830300,6830300,6830300,6830300,
+debuff,Reduced Flask HP Restoration,聖杯瓶の回復量低下,6840100,6840100,6840100,6840100,
+debuff,Reduced Intelligence and Dexterity,知力と技量が低下,6830200,6830200,6830200,6830200,
+debuff,Reduced Rune Acquisition,取得ルーン減少,6840000,6840000,6840000,6840000,
+debuff,Reduced Strength and Intelligence,筋力と知力が低下,6830000,6830000,6830000,6830000,
+debuff,Reduced Vigor and Arcane,生命力と神秘が低下,6830400,6830400,6830400,6830400,
+debuff,Repeated Evasions Lower Damage Negation,回避連続時、カット率低下,6850800,6850800,900000130,8800200,
+debuff,Rot Buildup When Below Max HP,ＨＰ最大未満時、腐敗が蓄積,6851400,6851400,900000200,8810400,
+debuff,Taking Damage Causes Blood Loss Buildup,被ダメージ時、出血を蓄積,6820300,6820300,6820300,6820300,
+debuff,Taking Damage Causes Death Buildup,被ダメージ時、死を蓄積,6820600,6820600,6820600,6820600,
+debuff,Taking Damage Causes Frost Buildup,被ダメージ時、冷気を蓄積,6820200,6820200,6820200,6820200,
+debuff,Taking Damage Causes Madness Buildup,被ダメージ時、発狂を蓄積,6820400,6820400,6820400,6820400,
+debuff,Taking Damage Causes Poison Buildup,被ダメージ時、毒を蓄積,6820000,6820000,6820000,6820000,
+debuff,Taking Damage Causes Rot Buildup,被ダメージ時、腐敗を蓄積,6820100,6820100,6820100,6820100,
+debuff,Taking Damage Causes Sleep Buildup,被ダメージ時、睡眠を蓄積,6820500,6820500,6820500,6820500,
+debuff,Ultimate Art Charging Impaired,アーツゲージ蓄積鈍化,6840200,6840200,6840200,6840200,
