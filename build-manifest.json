@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08T12:53:51.855Z",
+  "generatedAt": "2026-05-08T14:28:47.534Z",
   "sourceDir": "web_app",
   "outputDir": "xserver_static_site",
   "files": [
@@ -25,7 +25,7 @@
     },
     {
       "path": "xserver_static_site/assets/favicon.png",
-      "size": 120792
+      "size": 76399
     },
     {
       "path": "xserver_static_site/assets/kofi_dark.png",
