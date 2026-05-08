@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08T14:28:47.534Z",
+  "generatedAt": "2026-05-08T14:45:38.550Z",
   "sourceDir": "web_app",
   "outputDir": "xserver_static_site",
   "files": [
@@ -13,7 +13,7 @@
     },
     {
       "path": "xserver_static_site/app.js",
-      "size": 59060
+      "size": 60481
     },
     {
       "path": "xserver_static_site/assets/ern_icon.ico",
@@ -30,6 +30,46 @@
     {
       "path": "xserver_static_site/assets/kofi_dark.png",
       "size": 5543
+    },
+    {
+      "path": "xserver_static_site/assets/nightfarers/duchess.svg",
+      "size": 1035
+    },
+    {
+      "path": "xserver_static_site/assets/nightfarers/executor.svg",
+      "size": 1640
+    },
+    {
+      "path": "xserver_static_site/assets/nightfarers/guardian.svg",
+      "size": 820
+    },
+    {
+      "path": "xserver_static_site/assets/nightfarers/ironeye.svg",
+      "size": 1432
+    },
+    {
+      "path": "xserver_static_site/assets/nightfarers/raider.svg",
+      "size": 2018
+    },
+    {
+      "path": "xserver_static_site/assets/nightfarers/recluse.svg",
+      "size": 1325
+    },
+    {
+      "path": "xserver_static_site/assets/nightfarers/revenant.svg",
+      "size": 1372
+    },
+    {
+      "path": "xserver_static_site/assets/nightfarers/scholar.svg",
+      "size": 4876
+    },
+    {
+      "path": "xserver_static_site/assets/nightfarers/undertaker.svg",
+      "size": 954
+    },
+    {
+      "path": "xserver_static_site/assets/nightfarers/wylder.svg",
+      "size": 1539
     },
     {
       "path": "xserver_static_site/contact.html",
@@ -73,7 +113,7 @@
     },
     {
       "path": "xserver_static_site/styles.css",
-      "size": 17918
+      "size": 19029
     }
   ]
 }

@@ -56,6 +56,19 @@
 
   const COLOR_ORDER = ["red", "blue", "yellow", "green"];
 
+  const NIGHTFARERS = [
+    { key: "wylder", name: "Wylder", file: "wylder.svg" },
+    { key: "guardian", name: "Guardian", file: "guardian.svg" },
+    { key: "ironeye", name: "Ironeye", file: "ironeye.svg" },
+    { key: "duchess", name: "Duchess", file: "duchess.svg" },
+    { key: "raider", name: "Raider", file: "raider.svg" },
+    { key: "recluse", name: "Recluse", file: "recluse.svg" },
+    { key: "executor", name: "Executor", file: "executor.svg" },
+    { key: "revenant", name: "Revenant", file: "revenant.svg" },
+    { key: "undertaker", name: "Undertaker", file: "undertaker.svg" },
+    { key: "scholar", name: "Scholar", file: "scholar.svg" },
+  ];
+
   const PAGE_COPY = {
     ja_JP: {
       documentTitle: "ナイトレイン遺物検索 | Nightreign Relic Consultor",
@@ -427,6 +440,7 @@
           </div>
           <div class="tool-panel-body">
             <div class="form-grid">
+              ${renderNightfarerIcons()}
               <div class="form-row">
                 <label>色</label>
                 ${renderColorPicker("register", state.register.color)}
@@ -496,6 +510,7 @@
         <div class="tool-panel-body">
           <p class="center-label">-絞り込み条件-</p>
           <div class="form-grid">
+            ${renderNightfarerIcons()}
             <div class="form-row">
               <label>色</label>
               ${renderColorPicker("search", state.search.color)}
@@ -539,6 +554,24 @@
         <div class="form-grid">
           <input class="search-input" type="search" value="${attr(query)}" data-action="search-debuff-query" data-slot="${slot}" placeholder="${enabled ? "Required" : "---"}" ${enabled ? "" : "disabled"}>
           ${renderDebuffSelect(`search-debuff-${slot}`, "search-debuff", slot, selected, options, !enabled, enabled)}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderNightfarerIcons() {
+    const labelText = state.locale === "ja_JP" ? "登場人物:" : "Characters:";
+    return `
+      <div class="form-row nightfarer-row">
+        <label>${esc(labelText)}</label>
+        <div class="nightfarer-list" role="list" aria-label="${attr(labelText)}">
+          ${NIGHTFARERS.map(
+            (nightfarer) => `
+              <span class="nightfarer-chip ${attr(nightfarer.key)}" role="listitem" title="${attr(nightfarer.name)}">
+                <img src="./assets/nightfarers/${attr(nightfarer.file)}" alt="${attr(nightfarer.name)}">
+              </span>
+            `
+          ).join("")}
         </div>
       </div>
     `;

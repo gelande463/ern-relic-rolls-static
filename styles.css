@@ -485,6 +485,63 @@ input:disabled {
   gap: 6px;
 }
 
+.nightfarer-row {
+  align-items: start;
+  grid-template-columns: 72px minmax(0, 1fr);
+}
+
+.nightfarer-row > label {
+  padding-top: 6px;
+}
+
+.nightfarer-list {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.nightfarer-chip {
+  width: 32px;
+  height: 32px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: #242334;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.nightfarer-chip img {
+  width: 25px;
+  height: 25px;
+  display: block;
+  object-fit: contain;
+}
+
+.nightfarer-chip.wylder,
+.nightfarer-chip.executor {
+  border-color: rgba(201, 112, 68, 0.86);
+}
+
+.nightfarer-chip.guardian,
+.nightfarer-chip.revenant,
+.nightfarer-chip.scholar {
+  border-color: rgba(145, 178, 214, 0.82);
+}
+
+.nightfarer-chip.ironeye,
+.nightfarer-chip.duchess,
+.nightfarer-chip.raider {
+  border-color: rgba(168, 143, 215, 0.82);
+}
+
+.nightfarer-chip.recluse,
+.nightfarer-chip.undertaker {
+  border-color: rgba(132, 192, 150, 0.82);
+}
+
 .select-wrap {
   position: relative;
   min-width: 0;
@@ -1102,6 +1159,10 @@ input:disabled {
   .form-row {
     grid-template-columns: 48px minmax(0, 1fr);
     gap: 7px;
+  }
+
+  .nightfarer-row {
+    grid-template-columns: 72px minmax(0, 1fr);
   }
 
   .danger-button {
