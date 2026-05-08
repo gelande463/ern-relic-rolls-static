@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08T11:49:26.141Z",
+  "generatedAt": "2026-05-08T12:20:44.377Z",
   "sourceDir": "web_app",
   "outputDir": "xserver_static_site",
   "files": [
@@ -9,11 +9,11 @@
     },
     {
       "path": "xserver_static_site/about.html",
-      "size": 3624
+      "size": 3612
     },
     {
       "path": "xserver_static_site/app.js",
-      "size": 51211
+      "size": 55425
     },
     {
       "path": "xserver_static_site/assets/ern_icon.ico",
@@ -33,7 +33,7 @@
     },
     {
       "path": "xserver_static_site/contact.html",
-      "size": 2935
+      "size": 2859
     },
     {
       "path": "xserver_static_site/data/ern_data_summary.json",
@@ -53,11 +53,11 @@
     },
     {
       "path": "xserver_static_site/index.html",
-      "size": 2709
+      "size": 2845
     },
     {
       "path": "xserver_static_site/privacy-policy.html",
-      "size": 5143
+      "size": 5067
     },
     {
       "path": "xserver_static_site/README_DEPLOY.md",
@@ -73,7 +73,7 @@
     },
     {
       "path": "xserver_static_site/styles.css",
-      "size": 16475
+      "size": 16573
     }
   ]
 }

@@ -6,6 +6,7 @@
   const STORAGE_KEY = "ern-relic-rolls-web-state-v1";
   const MAX_TABLE_ROWS = 240;
   const MAX_COMBO_RESULTS = 300;
+  const RESULT_PAGE_SIZE = 50;
 
   const MODE_LABELS = {
     base_game: "Base Relics",
@@ -35,6 +36,21 @@
 
   const COLOR_ORDER = ["red", "blue", "yellow", "green"];
 
+  const PAGE_COPY = {
+    ja_JP: {
+      documentTitle: "ナイトレイン遺物検索 | Nightreign Relic Consultor",
+      kicker: "ナイトレイン非公式ファンツール",
+      title: "ナイトレイン遺物検索",
+      description: "エルデンリング ナイトレインの遺物効果、ロール候補、組み合わせを確認できる非公式ツールです。",
+    },
+    en_US: {
+      documentTitle: "Nightreign Relic Consultor",
+      kicker: "Unofficial Nightreign fan tool",
+      title: "Nightreign Relic Consultor",
+      description: "Check relic effects, sample rolls, and useful combinations for Elden Ring Nightreign.",
+    },
+  };
+
   const initialState = {
     data: null,
     effectsByMode: {},
@@ -63,6 +79,10 @@
       query: "",
       scope: "saved",
       color: "all",
+    },
+    ui: {
+      showGeneratedResults: false,
+      generatedVisibleCount: RESULT_PAGE_SIZE,
     },
     toast: "",
   };
@@ -183,6 +203,7 @@
   }
 
   function render() {
+    updatePageCopy();
     const focus = captureFocus();
     persist();
     app.innerHTML = `
@@ -226,6 +247,23 @@
     }
   }
 
+  function updatePageCopy() {
+    const copy = PAGE_COPY[state.locale] || PAGE_COPY.en_US;
+    document.title = copy.documentTitle;
+
+    const kicker = document.getElementById("hero-kicker");
+    const title = document.getElementById("hero-title");
+    const description = document.getElementById("hero-description");
+
+    if (kicker) kicker.textContent = copy.kicker;
+    if (title) title.textContent = copy.title;
+    if (description) description.textContent = copy.description;
+  }
+
+  function appTitle() {
+    return state.locale === "ja_JP" ? "ナイトレイン遺物検索" : "Nightreign Relic Consultor";
+  }
+
   function renderTopbar() {
     const modes = Object.keys(MODE_LABELS)
       .map((mode) => option(mode, MODE_LABELS[mode], mode === state.mode))
@@ -239,7 +277,7 @@
         <div class="title-lockup">
           <img src="./assets/favicon.png" alt="">
           <div class="title-text">
-            <h1>ERN Valid Relic Rolls</h1>
+            <h1>${esc(appTitle())}</h1>
             <span>${esc(MODE_LABELS[state.mode])} / ${esc(LANG_LABELS[state.locale])}</span>
           </div>
         </div>
@@ -351,7 +389,8 @@
   }
 
   function renderSearchView() {
-    const results = generateRollResults(state.search, MAX_COMBO_RESULTS);
+    const hasConditions = hasSearchConditions();
+    const results = hasConditions ? generateRollResults(state.search, MAX_COMBO_RESULTS) : { items: [], truncated: false };
     return `
       <section class="tool-panel">
         <div class="tool-panel-body">
@@ -545,7 +584,30 @@
     `;
   }
 
+  function hasSearchConditions() {
+    return (
+      state.search.color !== "all" ||
+      state.search.effects.some(Boolean) ||
+      state.search.debuffs.some(Boolean) ||
+      state.search.queries.some((query) => query.trim()) ||
+      state.search.debuffQueries.some((query) => query.trim())
+    );
+  }
+
+  function resetGeneratedResultsView() {
+    state.ui.showGeneratedResults = false;
+    state.ui.generatedVisibleCount = RESULT_PAGE_SIZE;
+  }
+
   function renderGeneratedResults(result) {
+    if (!hasSearchConditions()) {
+      return `
+        <div class="status-box">
+          条件未指定のため、ロール候補一覧は非表示です。まずは色または効果を1つ選んでください。
+        </div>
+      `;
+    }
+
     if (result.reason) {
       return `<div class="status-box invalid">${esc(result.reason)}</div>`;
     }
@@ -558,10 +620,36 @@
       ? `${result.items.length}件以上の有効ロールがあります。条件を追加すると絞り込めます。`
       : `${result.items.length}件の有効ロールがあります。`;
 
+    if (!state.ui.showGeneratedResults) {
+      return `
+        <div class="status-box valid">${esc(summary)}</div>
+        <div class="result-actions">
+          <button class="secondary-button result-toggle-button" type="button" data-action="toggle-generated-results">
+            ロール候補を表示
+          </button>
+        </div>
+      `;
+    }
+
+    const visibleItems = result.items.slice(0, state.ui.generatedVisibleCount);
+    const hasMoreItems = visibleItems.length < result.items.length;
+    const visibleSummary =
+      result.truncated || hasMoreItems
+        ? `${summary}現在${visibleItems.length}件を表示しています。`
+        : summary;
+
     return `
-      <div class="status-box valid">${esc(summary)}</div>
+      <div class="status-box valid">${esc(visibleSummary)}</div>
+      <div class="result-actions">
+        ${
+          hasMoreItems
+            ? `<button class="secondary-button" type="button" data-action="show-more-generated-results">さらに50件表示</button>`
+            : ""
+        }
+        <button class="secondary-button" type="button" data-action="toggle-generated-results">ロール候補を閉じる</button>
+      </div>
       <div class="result-list" style="margin-top: 8px;">
-        ${result.items.map(renderGeneratedCard).join("")}
+        ${visibleItems.map(renderGeneratedCard).join("")}
       </div>
     `;
   }
@@ -723,17 +811,35 @@
     }
 
     const action = target.dataset.action;
+    if (action === "toggle-generated-results") {
+      state.ui.showGeneratedResults = !state.ui.showGeneratedResults;
+      if (state.ui.showGeneratedResults) {
+        state.ui.generatedVisibleCount = RESULT_PAGE_SIZE;
+      }
+      render();
+      return;
+    }
+
+    if (action === "show-more-generated-results") {
+      state.ui.showGeneratedResults = true;
+      state.ui.generatedVisibleCount += RESULT_PAGE_SIZE;
+      render();
+      return;
+    }
+
     if (action === "register-color") {
       state.register.color = target.dataset.color;
       render();
     } else if (action === "search-color") {
       state.search.color = target.dataset.color;
+      resetGeneratedResultsView();
       render();
     } else if (action === "reset-register") {
       resetRegister();
       render();
     } else if (action === "reset-search") {
       state.search = structuredCloneWithoutMaps(initialState.search);
+      resetGeneratedResultsView();
       render();
     } else if (action === "save-register") {
       saveCurrentRelic();
@@ -782,6 +888,7 @@
     if (action === "mode") {
       state.mode = target.value;
       sanitizeSelections();
+      resetGeneratedResultsView();
       render();
     } else if (action === "locale") {
       state.locale = target.value;
@@ -798,9 +905,11 @@
       state.search.effects[slot] = target.value || null;
       pruneInvalidEffects(state.search, false);
       clearInactiveSearchDebuffs();
+      resetGeneratedResultsView();
       render();
     } else if (action === "search-debuff") {
       state.search.debuffs[slot] = target.value || null;
+      resetGeneratedResultsView();
       render();
     } else if (action === "list-scope") {
       state.list.scope = target.value;
@@ -1255,6 +1364,12 @@
     state.search.debuffs = normalizeTriple(state.search.debuffs);
     state.search.queries = normalizeTriple(state.search.queries, "");
     state.search.debuffQueries = normalizeTriple(state.search.debuffQueries, "");
+    state.ui = {
+      showGeneratedResults: Boolean(state.ui?.showGeneratedResults),
+      generatedVisibleCount: Number.isFinite(Number(state.ui?.generatedVisibleCount))
+        ? Math.max(RESULT_PAGE_SIZE, Number(state.ui.generatedVisibleCount))
+        : RESULT_PAGE_SIZE,
+    };
   }
 
   function normalizeTriple(value, fallback = null) {
