@@ -200,6 +200,77 @@ input:disabled {
   min-height: auto;
 }
 
+.usage-guide {
+  max-width: 1080px;
+  margin: 0 auto 14px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(18, 22, 34, 0.92);
+  box-shadow: var(--shadow);
+}
+
+.usage-guide-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.usage-guide h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+.usage-guide-close {
+  width: 32px;
+  height: 32px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.usage-guide-close:hover,
+.usage-guide-close:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  outline: none;
+}
+
+.usage-guide-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.usage-guide-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.usage-guide-checkbox input {
+  width: 16px;
+  height: 16px;
+}
+
 .content-page {
   width: min(100%, 860px);
   min-height: calc(100vh - 210px);
@@ -977,6 +1048,16 @@ input:disabled {
 
   .content-card {
     padding: 16px;
+  }
+
+  .usage-guide {
+    margin: 0 0 12px;
+    padding: 14px;
+  }
+
+  .usage-guide-list {
+    font-size: 14px;
+    line-height: 1.65;
   }
 
   .result-actions {

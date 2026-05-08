@@ -4,6 +4,7 @@
   const DATA_URL = "./data/ern_effects_export.json";
   const SAMPLE_URL = "./data/selected_relics.txt";
   const STORAGE_KEY = "ern-relic-rolls-web-state-v1";
+  const GUIDE_HIDDEN_KEY = "nightreignrelic.hideUsageGuide";
   const MAX_TABLE_ROWS = 240;
   const MAX_COMBO_RESULTS = 300;
   const RESULT_PAGE_SIZE = 50;
@@ -13,6 +14,25 @@
     deep_night: "Deep Relics",
     base_tfh_dlc: "Base TFH DLC",
     deep_tfh_dlc: "Deep TFH DLC",
+  };
+
+  const RELIC_SET_LABELS = {
+    ja_JP: {
+      "Base Relics": "通常遺物",
+      "Deep Relics": "深層遺物",
+      "Base relics": "通常遺物",
+      "Deep relics": "深層遺物",
+      "Base TFH DLC": "通常遺物・DLC含む",
+      "Deep TFH DLC": "深層遺物・DLC含む",
+    },
+    en_US: {
+      "Base Relics": "Base relics",
+      "Deep Relics": "Deep relics",
+      "Base relics": "Base relics",
+      "Deep relics": "Deep relics",
+      "Base TFH DLC": "Base TFH DLC",
+      "Deep TFH DLC": "Deep TFH DLC",
+    },
   };
 
   const LANG_LABELS = {
@@ -51,6 +71,29 @@
     },
   };
 
+  const GUIDE_COPY = {
+    ja_JP: {
+      title: "使い方",
+      items: [
+        "名前またはキーワードで、利用可能なすべての遺物効果を選択、検索できます。",
+        "無効な組み合わせや入手不可能な組み合わせは、除外され絞り込むことが可能。",
+        "遺物効果1〜3を選択して神遺物パターンを絞り込むことが可能。",
+      ],
+      hideNext: "次回から表示しない",
+      closeLabel: "使い方を閉じる",
+    },
+    en_US: {
+      title: "How to use",
+      items: [
+        "Search and select all available relic effects by name or keyword.",
+        "Invalid or unobtainable combinations are excluded so you can narrow down valid rolls.",
+        "Select relic effects 1–3 to filter possible god-roll relic patterns.",
+      ],
+      hideNext: "Do not show again",
+      closeLabel: "Close usage guide",
+    },
+  };
+
   const initialState = {
     data: null,
     effectsByMode: {},
@@ -83,6 +126,7 @@
     ui: {
       showGeneratedResults: false,
       generatedVisibleCount: RESULT_PAGE_SIZE,
+      usageGuideClosed: false,
     },
     toast: "",
   };
@@ -208,6 +252,7 @@
     persist();
     app.innerHTML = `
       ${renderTopbar()}
+      ${renderUsageGuide()}
       ${renderTabs()}
       <section id="view-list" class="view ${state.activeTab === "list" ? "active" : ""}">
         ${renderListView()}
@@ -264,9 +309,34 @@
     return state.locale === "ja_JP" ? "ナイトレイン遺物検索" : "Nightreign Relic Consultor";
   }
 
+  function relicSetLabel(labelText) {
+    const labels = RELIC_SET_LABELS[state.locale] || RELIC_SET_LABELS.en_US;
+    return labels[labelText] || labelText;
+  }
+
+  function modeLabel(mode) {
+    return relicSetLabel(MODE_LABELS[mode] || mode);
+  }
+
+  function guideCopy() {
+    return GUIDE_COPY[state.locale] || GUIDE_COPY.en_US;
+  }
+
+  function isUsageGuideHidden() {
+    return localStorage.getItem(GUIDE_HIDDEN_KEY) === "true";
+  }
+
+  function hideUsageGuidePermanently() {
+    localStorage.setItem(GUIDE_HIDDEN_KEY, "true");
+  }
+
+  function showUsageGuideAgain() {
+    localStorage.removeItem(GUIDE_HIDDEN_KEY);
+  }
+
   function renderTopbar() {
     const modes = Object.keys(MODE_LABELS)
-      .map((mode) => option(mode, MODE_LABELS[mode], mode === state.mode))
+      .map((mode) => option(mode, modeLabel(mode), mode === state.mode))
       .join("");
     const locales = Object.keys(LANG_LABELS)
       .map((locale) => option(locale, LANG_LABELS[locale], locale === state.locale))
@@ -278,7 +348,7 @@
           <img src="./assets/favicon.png" alt="">
           <div class="title-text">
             <h1>${esc(appTitle())}</h1>
-            <span>${esc(MODE_LABELS[state.mode])} / ${esc(LANG_LABELS[state.locale])}</span>
+            <span>${esc(modeLabel(state.mode))} / ${esc(LANG_LABELS[state.locale])}</span>
           </div>
         </div>
         <div class="toolbar">
@@ -288,6 +358,36 @@
           <select id="locale-select" class="compact-select" data-action="locale">${locales}</select>
         </div>
       </header>
+    `;
+  }
+
+  function renderUsageGuide() {
+    if (state.ui.usageGuideClosed || isUsageGuideHidden()) {
+      return "";
+    }
+
+    const copy = guideCopy();
+    return `
+      <section class="usage-guide" aria-labelledby="usage-guide-title">
+        <div class="usage-guide-header">
+          <h2 id="usage-guide-title">${esc(copy.title)}</h2>
+          <button
+            type="button"
+            class="usage-guide-close"
+            data-action="close-usage-guide"
+            aria-label="${attr(copy.closeLabel)}"
+          >
+            &times;
+          </button>
+        </div>
+        <ul class="usage-guide-list">
+          ${copy.items.map((item) => `<li>${esc(item)}</li>`).join("")}
+        </ul>
+        <label class="usage-guide-checkbox">
+          <input type="checkbox" data-action="hide-usage-guide-next-time">
+          <span>${esc(copy.hideNext)}</span>
+        </label>
+      </section>
     `;
   }
 
@@ -664,7 +764,7 @@
           <span class="pill">valid</span>
           <div>
             <div class="relic-card-title">${esc(item.effects.map((key) => label(getEffectByKey(key, item.mode))).join(" / "))}</div>
-            <div class="relic-card-mode">${esc(MODE_LABELS[item.mode] || item.mode)}${cursedCount ? ` / 弱化${cursedCount}枠必須` : ""}</div>
+            <div class="relic-card-mode">${esc(modeLabel(item.mode))}${cursedCount ? ` / 弱化${cursedCount}枠必須` : ""}</div>
           </div>
           <button class="icon-button" type="button" data-action="copy-generated" data-effects="${attr(item.effects.join("|"))}" title="Copy">
             <span class="copy-icon" aria-hidden="true"></span>
@@ -690,14 +790,14 @@
   function renderSavedCard(item) {
     const effects = item.effects.map((key) => getEffectByKey(key, item.mode));
     const debuffs = item.debuffs.map((key) => getDebuffByKey(key));
-    const title = item.name || `${MODE_LABELS[item.mode] || item.mode} ${new Date(item.createdAt).toLocaleDateString("ja-JP")}`;
+    const title = item.name || `${modeLabel(item.mode)} ${new Date(item.createdAt).toLocaleDateString("ja-JP")}`;
     return `
       <article class="relic-card">
         <div class="relic-card-head">
           <span class="gem ${item.color || "red"}" aria-hidden="true"></span>
           <div>
             <div class="relic-card-title">${esc(title)}</div>
-            <div class="relic-card-mode">${esc(MODE_LABELS[item.mode] || item.mode)}</div>
+            <div class="relic-card-mode">${esc(modeLabel(item.mode))}</div>
           </div>
           <div class="button-row">
             <button class="icon-button" type="button" data-action="copy-saved" data-id="${attr(item.id)}" title="Copy">
@@ -766,7 +866,7 @@
     const counts = Object.entries(state.effectsByMode)
       .map(([mode, effects]) => `
         <div class="meta-chip">
-          <span>${esc(MODE_LABELS[mode])}</span>
+          <span>${esc(modeLabel(mode))}</span>
           <strong>${effects.length}</strong>
           <span>effects</span>
         </div>
@@ -811,6 +911,21 @@
     }
 
     const action = target.dataset.action;
+    if (action === "close-usage-guide") {
+      state.ui.usageGuideClosed = true;
+      render();
+      return;
+    }
+
+    if (action === "hide-usage-guide-next-time") {
+      if (target.checked) {
+        hideUsageGuidePermanently();
+        state.ui.usageGuideClosed = true;
+        render();
+      }
+      return;
+    }
+
     if (action === "toggle-generated-results") {
       state.ui.showGeneratedResults = !state.ui.showGeneratedResults;
       if (state.ui.showGeneratedResults) {
@@ -1285,6 +1400,7 @@
         const haystack = [
           item.name,
           MODE_LABELS[item.mode],
+          modeLabel(item.mode),
           COLOR_LABELS[item.color],
           ...item.effects.map((key) => label(getEffectByKey(key, item.mode))),
           ...item.effects,
@@ -1369,6 +1485,7 @@
       generatedVisibleCount: Number.isFinite(Number(state.ui?.generatedVisibleCount))
         ? Math.max(RESULT_PAGE_SIZE, Number(state.ui.generatedVisibleCount))
         : RESULT_PAGE_SIZE,
+      usageGuideClosed: Boolean(state.ui?.usageGuideClosed),
     };
   }
 
@@ -1433,6 +1550,9 @@
     const normalized = normalize(text);
     for (const [mode, labelText] of Object.entries(MODE_LABELS)) {
       if (normalize(labelText) === normalized) return mode;
+      for (const locale of Object.keys(RELIC_SET_LABELS)) {
+        if (normalize(RELIC_SET_LABELS[locale][labelText]) === normalized) return mode;
+      }
     }
     return null;
   }
@@ -1474,7 +1594,7 @@
     const debuffs = item.debuffs.map((key) => getDebuffByKey(key));
     const lines = [
       "=== 遺物の選択 ===",
-      `モード: ${MODE_LABELS[item.mode] || item.mode}`,
+      `モード: ${modeLabel(item.mode)}`,
       `色: ${COLOR_LABELS[item.color] || item.color}`,
     ];
     effects.forEach((effect, index) => {

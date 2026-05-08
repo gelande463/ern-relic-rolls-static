@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08T12:20:44.377Z",
+  "generatedAt": "2026-05-08T12:53:51.855Z",
   "sourceDir": "web_app",
   "outputDir": "xserver_static_site",
   "files": [
@@ -13,7 +13,7 @@
     },
     {
       "path": "xserver_static_site/app.js",
-      "size": 55425
+      "size": 59060
     },
     {
       "path": "xserver_static_site/assets/ern_icon.ico",
@@ -73,7 +73,7 @@
     },
     {
       "path": "xserver_static_site/styles.css",
-      "size": 16573
+      "size": 17918
     }
   ]
 }
