@@ -3,7 +3,9 @@
 This directory is self-contained and ready to publish.
 
 Contents:
-- index.html / app.js / styles.css
+- index.html / about.html / contact.html / privacy-policy.html
+- app.js / styles.css
+- robots.txt / sitemap.xml
 - assets/
 - data/
 

@@ -1,11 +1,15 @@
 {
-  "generatedAt": "2026-05-07T14:12:32.420Z",
+  "generatedAt": "2026-05-08T11:49:26.141Z",
   "sourceDir": "web_app",
   "outputDir": "xserver_static_site",
   "files": [
     {
       "path": "xserver_static_site/.nojekyll",
       "size": 0
+    },
+    {
+      "path": "xserver_static_site/about.html",
+      "size": 3624
     },
     {
       "path": "xserver_static_site/app.js",
@@ -28,6 +32,10 @@
       "size": 5543
     },
     {
+      "path": "xserver_static_site/contact.html",
+      "size": 2935
+    },
+    {
       "path": "xserver_static_site/data/ern_data_summary.json",
       "size": 4151
     },
@@ -45,19 +53,27 @@
     },
     {
       "path": "xserver_static_site/index.html",
-      "size": 726
+      "size": 2709
+    },
+    {
+      "path": "xserver_static_site/privacy-policy.html",
+      "size": 5143
     },
     {
       "path": "xserver_static_site/README_DEPLOY.md",
-      "size": 432
+      "size": 509
     },
     {
       "path": "xserver_static_site/robots.txt",
-      "size": 23
+      "size": 73
+    },
+    {
+      "path": "xserver_static_site/sitemap.xml",
+      "size": 511
     },
     {
       "path": "xserver_static_site/styles.css",
-      "size": 12809
+      "size": 16475
     }
   ]
 }
