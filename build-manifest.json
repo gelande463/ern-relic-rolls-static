@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08T14:45:38.550Z",
+  "generatedAt": "2026-05-08T15:18:00.917Z",
   "sourceDir": "web_app",
   "outputDir": "xserver_static_site",
   "files": [
@@ -13,7 +13,7 @@
     },
     {
       "path": "xserver_static_site/app.js",
-      "size": 60481
+      "size": 68103
     },
     {
       "path": "xserver_static_site/assets/ern_icon.ico",
@@ -93,7 +93,7 @@
     },
     {
       "path": "xserver_static_site/index.html",
-      "size": 2845
+      "size": 3397
     },
     {
       "path": "xserver_static_site/privacy-policy.html",
@@ -113,7 +113,7 @@
     },
     {
       "path": "xserver_static_site/styles.css",
-      "size": 19029
+      "size": 22696
     }
   ]
 }

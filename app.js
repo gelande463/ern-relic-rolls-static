@@ -5,6 +5,7 @@
   const SAMPLE_URL = "./data/selected_relics.txt";
   const STORAGE_KEY = "ern-relic-rolls-web-state-v1";
   const GUIDE_HIDDEN_KEY = "nightreignrelic.hideUsageGuide";
+  const THEME_STORAGE_KEY = "nightreignrelic.theme";
   const MAX_TABLE_ROWS = 240;
   const MAX_COMBO_RESULTS = 300;
   const RESULT_PAGE_SIZE = 50;
@@ -107,6 +108,39 @@
     },
   };
 
+  const SEARCH_COPY = {
+    ja_JP: {
+      placeholder: "名称またはキーワードで検索",
+      requiredPlaceholder: "必須",
+      example: "例: 凍傷 / 攻撃力上昇 / 出撃時",
+    },
+    en_US: {
+      placeholder: "Search by effect name or keyword",
+      requiredPlaceholder: "Required",
+      example: "Example: frostbite / attack power / start",
+    },
+  };
+
+  const SEARCH_ALIASES = {
+    ja_JP: {
+      "封牢の囚を倒す度、攻撃力上昇": ["封牢", "囚", "牢獄", "攻撃力上昇", "攻撃アップ", "火力"],
+      "出撃時に「酸の噴霧」を持つ": ["酸の噴霧", "酸霧", "酸スプレー", "開幕酸", "出撃時 酸"],
+      "夜の侵入者を倒す度、攻撃力上昇": ["夜の侵入者", "侵入者", "攻撃アップ", "攻撃力アップ"],
+      "凍傷状態の敵に対する攻撃を強化": ["凍傷", "凍結", "氷", "冷気", "凍傷特効"],
+      "毒状態の敵に対する攻撃を強化": ["毒", "毒特効"],
+      "腐敗状態の敵に対する攻撃を強化": ["腐敗", "朱い腐敗", "腐敗特効"],
+      "聖杯瓶の回復量上昇": ["瓶", "聖杯瓶", "回復量", "回復"],
+      "最大HP上昇": ["hp", "体力", "最大体力"],
+      "最大FP上昇": ["fp", "精神", "最大fp"],
+      "スタミナ上昇": ["スタミナ", "持久"],
+      "出撃時": ["開始時", "開幕", "初期", "スタート時"],
+      "攻撃力上昇": ["攻撃アップ", "火力", "与ダメ", "ダメージアップ"],
+      "HP回復": ["体力回復", "回復", "ヒール"],
+      "FP回復": ["FPリジェネ", "青回復"],
+      "アーツゲージ": ["奥義ゲージ", "必殺ゲージ", "ゲージ"],
+    },
+  };
+
   const initialState = {
     data: null,
     effectsByMode: {},
@@ -148,6 +182,7 @@
   state.labelToKey = new Map();
   const app = document.getElementById("app");
 
+  applyTheme(getPreferredTheme());
   boot();
 
   async function boot() {
@@ -347,6 +382,57 @@
     localStorage.removeItem(GUIDE_HIDDEN_KEY);
   }
 
+  function searchCopy() {
+    return SEARCH_COPY[state.locale] || SEARCH_COPY.en_US;
+  }
+
+  function searchPlaceholder() {
+    return searchCopy().placeholder;
+  }
+
+  function debuffSearchPlaceholder(required = false) {
+    if (required) return searchCopy().requiredPlaceholder;
+    return state.locale === "ja_JP" ? "弱化を検索" : "Search debuff";
+  }
+
+  function getPreferredTheme() {
+    const saved = localStorage.getItem(THEME_STORAGE_KEY);
+    if (saved === "dark" || saved === "light") return saved;
+
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      return "light";
+    }
+
+    return "dark";
+  }
+
+  function currentTheme() {
+    return document.documentElement.getAttribute("data-theme") || getPreferredTheme();
+  }
+
+  function applyTheme(theme) {
+    const safeTheme = theme === "light" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", safeTheme);
+  }
+
+  function setTheme(theme) {
+    const safeTheme = theme === "light" ? "light" : "dark";
+    localStorage.setItem(THEME_STORAGE_KEY, safeTheme);
+    applyTheme(safeTheme);
+  }
+
+  function themeToggleLabel() {
+    const isDark = currentTheme() === "dark";
+    if (state.locale === "ja_JP") {
+      return isDark ? "ライト" : "ダーク";
+    }
+    return isDark ? "Light" : "Dark";
+  }
+
+  function themeToggleIcon() {
+    return currentTheme() === "dark" ? "☀︎" : "☾";
+  }
+
   function renderTopbar() {
     const modes = Object.keys(MODE_LABELS)
       .map((mode) => option(mode, modeLabel(mode), mode === state.mode))
@@ -369,6 +455,10 @@
           <select id="mode-select" class="compact-select" data-action="mode">${modes}</select>
           <label class="sr-only" for="locale-select">Language</label>
           <select id="locale-select" class="compact-select" data-action="locale">${locales}</select>
+          <button class="theme-toggle" type="button" data-action="toggle-theme" aria-label="Toggle color theme">
+            <span class="theme-toggle-icon" aria-hidden="true">${esc(themeToggleIcon())}</span>
+            <span class="theme-toggle-text">${esc(themeToggleLabel())}</span>
+          </button>
         </div>
       </header>
     `;
@@ -381,25 +471,30 @@
 
     const copy = guideCopy();
     return `
-      <section class="usage-guide" aria-labelledby="usage-guide-title">
-        <div class="usage-guide-header">
-          <h2 id="usage-guide-title">${esc(copy.title)}</h2>
-          <button
-            type="button"
-            class="usage-guide-close"
-            data-action="close-usage-guide"
-            aria-label="${attr(copy.closeLabel)}"
-          >
-            &times;
-          </button>
+      <section class="usage-guide speech-guide" aria-labelledby="usage-guide-title">
+        <div class="speech-guide-figure">
+          <img src="./assets/favicon.png" alt="" class="speech-guide-icon">
         </div>
-        <ul class="usage-guide-list">
-          ${copy.items.map((item) => `<li>${esc(item)}</li>`).join("")}
-        </ul>
-        <label class="usage-guide-checkbox">
-          <input type="checkbox" data-action="hide-usage-guide-next-time">
-          <span>${esc(copy.hideNext)}</span>
-        </label>
+        <div class="speech-guide-bubble">
+          <div class="usage-guide-header">
+            <h2 id="usage-guide-title">${esc(copy.title)}</h2>
+            <button
+              type="button"
+              class="usage-guide-close"
+              data-action="close-usage-guide"
+              aria-label="${attr(copy.closeLabel)}"
+            >
+              &times;
+            </button>
+          </div>
+          <ul class="usage-guide-list">
+            ${copy.items.map((item) => `<li>${esc(item)}</li>`).join("")}
+          </ul>
+          <label class="usage-guide-checkbox">
+            <input type="checkbox" data-action="hide-usage-guide-next-time">
+            <span>${esc(copy.hideNext)}</span>
+          </label>
+        </div>
       </section>
     `;
   }
@@ -478,7 +573,7 @@
       <div class="form-row">
         <label for="effect-${slot}">効果${slot + 1}</label>
         <div class="form-grid">
-          <input class="search-input" type="search" value="${attr(query)}" data-action="register-effect-query" data-slot="${slot}" placeholder="Search">
+          <input class="search-input" type="search" value="${attr(query)}" data-action="register-effect-query" data-slot="${slot}" placeholder="${attr(searchPlaceholder())}">
           ${renderEffectSelect(`effect-${slot}`, "register-effect", slot, selected, options, disabled)}
         </div>
       </div>
@@ -495,7 +590,7 @@
       <div class="form-row">
         <label for="debuff-${slot}">弱化${slot + 1}</label>
         <div class="form-grid">
-          <input class="search-input" type="search" value="${attr(query)}" data-action="register-debuff-query" data-slot="${slot}" placeholder="${required ? "Required" : "Search"}" ${disabled ? "disabled" : ""}>
+          <input class="search-input" type="search" value="${attr(query)}" data-action="register-debuff-query" data-slot="${slot}" placeholder="${attr(debuffSearchPlaceholder(required))}" ${disabled ? "disabled" : ""}>
           ${renderDebuffSelect(`debuff-${slot}`, "register-debuff", slot, selected, options, disabled, required)}
         </div>
       </div>
@@ -535,7 +630,7 @@
       <div class="form-row">
         <label for="search-effect-${slot}">効果${slot + 1}</label>
         <div class="form-grid">
-          <input class="search-input" type="search" value="${attr(query)}" data-action="search-effect-query" data-slot="${slot}" placeholder="Search">
+          <input class="search-input" type="search" value="${attr(query)}" data-action="search-effect-query" data-slot="${slot}" placeholder="${attr(searchPlaceholder())}">
           ${renderEffectSelect(`search-effect-${slot}`, "search-effect", slot, selected, options, false)}
         </div>
       </div>
@@ -552,7 +647,7 @@
       <div class="form-row">
         <label for="search-debuff-${slot}">弱化${slot + 1}</label>
         <div class="form-grid">
-          <input class="search-input" type="search" value="${attr(query)}" data-action="search-debuff-query" data-slot="${slot}" placeholder="${enabled ? "Required" : "---"}" ${enabled ? "" : "disabled"}>
+          <input class="search-input" type="search" value="${attr(query)}" data-action="search-debuff-query" data-slot="${slot}" placeholder="${attr(enabled ? debuffSearchPlaceholder(true) : "---")}" ${enabled ? "" : "disabled"}>
           ${renderDebuffSelect(`search-debuff-${slot}`, "search-debuff", slot, selected, options, !enabled, enabled)}
         </div>
       </div>
@@ -602,7 +697,7 @@
           </div>
           <div class="tool-panel-body">
             <div class="table-tools">
-              <input class="search-input" type="search" data-action="list-query" value="${attr(state.list.query)}" placeholder="Search">
+              <input class="search-input" type="search" data-action="list-query" value="${attr(state.list.query)}" placeholder="${attr(searchPlaceholder())}">
               <select class="compact-select" data-action="list-scope">
                 ${option("saved", "登録済み", state.list.scope === "saved")}
                 ${option("effects", "効果一覧", state.list.scope === "effects")}
@@ -956,6 +1051,13 @@
         state.ui.usageGuideClosed = true;
         render();
       }
+      return;
+    }
+
+    if (action === "toggle-theme") {
+      const nextTheme = currentTheme() === "dark" ? "light" : "dark";
+      setTheme(nextTheme);
+      render();
       return;
     }
 
@@ -1659,14 +1761,101 @@
   }
 
   function matchesRecord(record, normalizedQuery) {
-    const texts = [record.key, record.id, record.group, record.category, record.loc, ...Object.values(record.labels || {})];
-    return texts.some((text) => normalize(String(text)).includes(normalizedQuery));
+    const queryStrict = normalize(normalizedQuery);
+    const queryLoose = normalizeLoose(normalizedQuery);
+    const queryStrictCompact = queryStrict.replace(/\s+/g, "");
+    const queryLooseCompact = queryLoose.replace(/\s+/g, "");
+    const texts = [
+      record.key,
+      record.id,
+      record.group,
+      record.category,
+      record.loc,
+      ...Object.values(record.labels || {}),
+      ...recordAliases(record),
+    ]
+      .map((text) => String(text || ""))
+      .filter(Boolean);
+
+    return texts.some((text) => {
+      const strict = normalize(text);
+      const loose = normalizeLoose(text);
+      const strictCompact = strict.replace(/\s+/g, "");
+      const looseCompact = loose.replace(/\s+/g, "");
+      return (
+        (queryStrict && strict.includes(queryStrict)) ||
+        (queryLoose && loose.includes(queryLoose)) ||
+        (queryStrictCompact && strictCompact.includes(queryStrictCompact)) ||
+        (queryLooseCompact && looseCompact.includes(queryLooseCompact))
+      );
+    });
+  }
+
+  function recordAliases(record) {
+    const aliases = [];
+    const localeAliases = SEARCH_ALIASES[state.locale] || {};
+    const sourceTexts = [label(record), record.key, ...Object.values(record.labels || {})].filter(Boolean);
+    const normalizedSources = sourceTexts.map((text) => normalize(text));
+
+    for (const [aliasKey, values] of Object.entries(localeAliases)) {
+      const normalizedKey = normalize(aliasKey);
+      if (normalizedSources.some((source) => source.includes(normalizedKey) || normalizedKey.includes(source))) {
+        aliases.push(...values);
+      }
+    }
+
+    aliases.push(...derivedAliases(record));
+    return [...new Set(aliases)];
+  }
+
+  function derivedAliases(record) {
+    if (state.locale !== "ja_JP") return [];
+
+    const text = [record.key, ...Object.values(record.labels || {})].join(" ");
+    const normalized = normalize(text);
+    const aliases = [];
+
+    if (normalized.includes("出撃")) aliases.push("開始時", "開幕", "初期", "スタート時");
+    if (normalized.includes("攻撃力")) aliases.push("攻撃アップ", "火力", "与ダメ", "ダメージアップ");
+    if (normalized.includes("上昇")) aliases.push("アップ", "増加");
+    if (normalized.includes("強化")) aliases.push("アップ", "特効");
+    if (normalized.includes("回復")) aliases.push("ヒール", "リジェネ");
+    if (normalized.includes("凍傷")) aliases.push("凍結", "氷", "冷気");
+    if (normalized.includes("毒")) aliases.push("毒特効", "ポイズン");
+    if (normalized.includes("出血")) aliases.push("血", "出血特効");
+    if (normalized.includes("封牢")) aliases.push("牢獄", "囚", "封牢囚");
+    if (normalized.includes("アーツ")) aliases.push("奥義", "必殺", "アーツゲージ");
+    if (normalized.includes("スキル")) aliases.push("キャラスキル", "キャラクタースキル");
+    if (normalized.includes("炎")) aliases.push("火", "火炎");
+    if (normalized.includes("雷")) aliases.push("電撃", "ライトニング");
+    if (normalized.includes("聖")) aliases.push("神聖", "ホーリー");
+    if (normalized.includes("魔力")) aliases.push("魔法", "マジック");
+
+    return aliases;
+  }
+
+  function toHiragana(text) {
+    return String(text || "").replace(/[\u30a1-\u30f6]/g, (char) =>
+      String.fromCharCode(char.charCodeAt(0) - 0x60)
+    );
   }
 
   function normalize(text) {
-    return String(text || "")
-      .normalize("NFKC")
-      .toLowerCase()
+    return toHiragana(
+      String(text || "")
+        .normalize("NFKC")
+        .toLowerCase()
+        .replace(/[‐‑‒–—―ーｰ]/g, "-")
+        .replace(/[「」『』【】()（）［］\[\]{}｛｝'"`’‘”“:：;；,，.。・/／\\|!！?？]/g, " ")
+        .replace(/\+/g, " + ")
+        .replace(/\s+/g, " ")
+        .trim()
+    );
+  }
+
+  function normalizeLoose(text) {
+    return normalize(text)
+      .replace(/[^0-9a-zぁ-ん一-龠々+\- ]/g, "")
       .replace(/\s+/g, " ")
       .trim();
   }
