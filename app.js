@@ -181,6 +181,8 @@
   let state = structuredCloneWithoutMaps(initialState);
   state.labelToKey = new Map();
   const app = document.getElementById("app");
+  let isComposingText = false;
+  let pendingQueryRenderTimer = null;
 
   applyTheme(getPreferredTheme());
   boot();
@@ -295,6 +297,8 @@
   }
 
   function render() {
+    if (isComposingText) return;
+
     updatePageCopy();
     const focus = captureFocus();
     persist();
@@ -393,6 +397,14 @@
   function debuffSearchPlaceholder(required = false) {
     if (required) return searchCopy().requiredPlaceholder;
     return state.locale === "ja_JP" ? "弱化を検索" : "Search debuff";
+  }
+
+  function listSearchPlaceholder() {
+    return state.locale === "ja_JP" ? "\u4e00\u89a7\u3092\u691c\u7d22" : "Search list";
+  }
+
+  function searchInputBaseAttrs() {
+    return 'type="text" inputmode="search" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false"';
   }
 
   function getPreferredTheme() {
@@ -573,7 +585,7 @@
       <div class="form-row">
         <label for="effect-${slot}">効果${slot + 1}</label>
         <div class="form-grid">
-          <input class="search-input" type="search" value="${attr(query)}" data-action="register-effect-query" data-slot="${slot}" placeholder="${attr(searchPlaceholder())}">
+          <input class="search-input" ${searchInputBaseAttrs()} value="${attr(query)}" data-action="register-effect-query" data-slot="${slot}" placeholder="${attr(searchPlaceholder())}">
           ${renderEffectSelect(`effect-${slot}`, "register-effect", slot, selected, options, disabled)}
         </div>
       </div>
@@ -590,7 +602,7 @@
       <div class="form-row">
         <label for="debuff-${slot}">弱化${slot + 1}</label>
         <div class="form-grid">
-          <input class="search-input" type="search" value="${attr(query)}" data-action="register-debuff-query" data-slot="${slot}" placeholder="${attr(debuffSearchPlaceholder(required))}" ${disabled ? "disabled" : ""}>
+          <input class="search-input" ${searchInputBaseAttrs()} value="${attr(query)}" data-action="register-debuff-query" data-slot="${slot}" placeholder="${attr(debuffSearchPlaceholder(required))}" ${disabled ? "disabled" : ""}>
           ${renderDebuffSelect(`debuff-${slot}`, "register-debuff", slot, selected, options, disabled, required)}
         </div>
       </div>
@@ -630,7 +642,7 @@
       <div class="form-row">
         <label for="search-effect-${slot}">効果${slot + 1}</label>
         <div class="form-grid">
-          <input class="search-input" type="search" value="${attr(query)}" data-action="search-effect-query" data-slot="${slot}" placeholder="${attr(searchPlaceholder())}">
+          <input class="search-input" ${searchInputBaseAttrs()} value="${attr(query)}" data-action="search-effect-query" data-slot="${slot}" placeholder="${attr(searchPlaceholder())}">
           ${renderEffectSelect(`search-effect-${slot}`, "search-effect", slot, selected, options, false)}
         </div>
       </div>
@@ -647,7 +659,7 @@
       <div class="form-row">
         <label for="search-debuff-${slot}">弱化${slot + 1}</label>
         <div class="form-grid">
-          <input class="search-input" type="search" value="${attr(query)}" data-action="search-debuff-query" data-slot="${slot}" placeholder="${attr(enabled ? debuffSearchPlaceholder(true) : "---")}" ${enabled ? "" : "disabled"}>
+          <input class="search-input" ${searchInputBaseAttrs()} value="${attr(query)}" data-action="search-debuff-query" data-slot="${slot}" placeholder="${attr(enabled ? debuffSearchPlaceholder(true) : "---")}" ${enabled ? "" : "disabled"}>
           ${renderDebuffSelect(`search-debuff-${slot}`, "search-debuff", slot, selected, options, !enabled, enabled)}
         </div>
       </div>
@@ -697,7 +709,7 @@
           </div>
           <div class="tool-panel-body">
             <div class="table-tools">
-              <input class="search-input" type="search" data-action="list-query" value="${attr(state.list.query)}" placeholder="${attr(searchPlaceholder())}">
+              <input class="search-input" ${searchInputBaseAttrs()} data-action="list-query" value="${attr(state.list.query)}" placeholder="${attr(listSearchPlaceholder())}">
               <select class="compact-select" data-action="list-scope">
                 ${option("saved", "登録済み", state.list.scope === "saved")}
                 ${option("effects", "効果一覧", state.list.scope === "effects")}
@@ -1026,6 +1038,8 @@
     app.addEventListener("click", onClick);
     app.addEventListener("change", onChange);
     app.addEventListener("input", onInput);
+    app.addEventListener("compositionstart", onCompositionStart);
+    app.addEventListener("compositionend", onCompositionEnd);
   }
 
   function onClick(event) {
@@ -1170,31 +1184,91 @@
     }
   }
 
+  function onCompositionStart(event) {
+    if (!event.target.closest("[data-action]")) return;
+    isComposingText = true;
+  }
+
+  function onCompositionEnd(event) {
+    const target = event.target.closest("[data-action]");
+    if (!target) return;
+
+    isComposingText = false;
+
+    const action = target.dataset.action;
+    const slot = Number.parseInt(target.dataset.slot || "0", 10);
+    const handled = updateTextInputState(action, slot, target.value);
+    if (!handled) return;
+
+    if (action === "register-name") {
+      persist();
+      return;
+    }
+
+    scheduleQueryRender(0);
+  }
+
   function onInput(event) {
     const target = event.target.closest("[data-action]");
     if (!target) return;
+
     const action = target.dataset.action;
     const slot = Number.parseInt(target.dataset.slot || "0", 10);
+    const handled = updateTextInputState(action, slot, target.value);
+    if (!handled) return;
 
     if (action === "register-name") {
-      state.register.name = target.value;
       persist();
-    } else if (action === "register-effect-query") {
-      state.register.effectQueries[slot] = target.value;
-      render();
-    } else if (action === "register-debuff-query") {
-      state.register.debuffQueries[slot] = target.value;
-      render();
-    } else if (action === "search-effect-query") {
-      state.search.queries[slot] = target.value;
-      render();
-    } else if (action === "search-debuff-query") {
-      state.search.debuffQueries[slot] = target.value;
-      render();
-    } else if (action === "list-query") {
-      state.list.query = target.value;
-      render();
+      return;
     }
+
+    if (event.isComposing || isComposingText) {
+      return;
+    }
+
+    scheduleQueryRender();
+  }
+
+  function updateTextInputState(action, slot, value) {
+    if (action === "register-name") {
+      state.register.name = value;
+      return true;
+    }
+
+    if (action === "register-effect-query") {
+      state.register.effectQueries[slot] = value;
+      return true;
+    }
+
+    if (action === "register-debuff-query") {
+      state.register.debuffQueries[slot] = value;
+      return true;
+    }
+
+    if (action === "search-effect-query") {
+      state.search.queries[slot] = value;
+      return true;
+    }
+
+    if (action === "search-debuff-query") {
+      state.search.debuffQueries[slot] = value;
+      return true;
+    }
+
+    if (action === "list-query") {
+      state.list.query = value;
+      return true;
+    }
+
+    return false;
+  }
+
+  function scheduleQueryRender(delay = 80) {
+    window.clearTimeout(pendingQueryRenderTimer);
+    pendingQueryRenderTimer = window.setTimeout(() => {
+      pendingQueryRenderTimer = null;
+      render();
+    }, delay);
   }
 
   function validateSelection(selection) {
