@@ -188,9 +188,15 @@
   let pendingQueryRenderTimer = null;
 
   applyTheme(getPreferredTheme());
+  updateSiteThemeButton();
   boot();
 
   async function boot() {
+    wireSiteEvents();
+    if (!app) {
+      return;
+    }
+
     wireEvents();
     try {
       const [data, updatesData] = await Promise.all([
@@ -520,10 +526,6 @@
           <select id="mode-select" class="compact-select" data-action="mode">${modes}</select>
           <label class="sr-only" for="locale-select">Language</label>
           <select id="locale-select" class="compact-select" data-action="locale">${locales}</select>
-          <button class="theme-toggle" type="button" data-action="toggle-theme" aria-label="Toggle color theme">
-            <span class="theme-toggle-icon" aria-hidden="true">${esc(themeToggleIcon())}</span>
-            <span class="theme-toggle-text">${esc(themeToggleLabel())}</span>
-          </button>
         </div>
       </header>
     `;
@@ -1189,6 +1191,93 @@
     app.addEventListener("input", onInput);
     app.addEventListener("compositionstart", onCompositionStart);
     app.addEventListener("compositionend", onCompositionEnd);
+  }
+
+  function wireSiteEvents() {
+    document.addEventListener("click", onDocumentClick);
+    document.addEventListener("keydown", onDocumentKeydown);
+  }
+
+  function onDocumentClick(event) {
+    const navLink = event.target.closest(".site-nav a");
+    if (navLink) {
+      closeMobileMenu();
+      return;
+    }
+
+    const target = event.target.closest("[data-action]");
+    if (target) {
+      const action = target.dataset.action;
+
+      if (action === "toggle-mobile-menu") {
+        toggleMobileMenu(target);
+        return;
+      }
+
+      if (action === "toggle-site-theme") {
+        const nextTheme = currentTheme() === "dark" ? "light" : "dark";
+        setTheme(nextTheme);
+        updateSiteThemeButton();
+        if (app && state.data) {
+          render();
+        }
+        return;
+      }
+    }
+
+    if (
+      document.body.classList.contains("mobile-menu-open") &&
+      !event.target.closest(".site-header") &&
+      !event.target.closest(".site-nav")
+    ) {
+      closeMobileMenu();
+    }
+  }
+
+  function onDocumentKeydown(event) {
+    if (event.key === "Escape") {
+      closeMobileMenu();
+    }
+  }
+
+  function toggleMobileMenu(button) {
+    const navId = button.getAttribute("aria-controls");
+    const nav = navId ? document.getElementById(navId) : document.querySelector(".site-nav");
+    if (!nav) return;
+
+    const nextOpen = button.getAttribute("aria-expanded") !== "true";
+    button.setAttribute("aria-expanded", String(nextOpen));
+    button.setAttribute("aria-label", nextOpen ? "Close menu" : "Open menu");
+    nav.classList.toggle("is-open", nextOpen);
+    document.body.classList.toggle("mobile-menu-open", nextOpen);
+  }
+
+  function closeMobileMenu() {
+    const button = document.querySelector(".mobile-menu-toggle");
+    const nav = document.querySelector(".site-nav");
+
+    if (button) {
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-label", "Open menu");
+    }
+
+    if (nav) {
+      nav.classList.remove("is-open");
+    }
+
+    document.body.classList.remove("mobile-menu-open");
+  }
+
+  function updateSiteThemeButton() {
+    const button = document.querySelector("[data-action='toggle-site-theme']");
+    if (!button) return;
+
+    const isDark = currentTheme() === "dark";
+    const icon = isDark ? "☀︎" : "☾";
+    const label = isDark ? "Switch to light mode" : "Switch to dark mode";
+
+    button.innerHTML = `<span aria-hidden="true">${icon}</span>`;
+    button.setAttribute("aria-label", label);
   }
 
   function onClick(event) {

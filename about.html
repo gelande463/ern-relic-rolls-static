@@ -16,12 +16,29 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="site-brand" href="./" aria-label="Nightreign Relic home">
+      <a class="site-brand" href="./index.html" aria-label="Nightreign Relic home">
         <img src="./assets/favicon.png" alt="">
         <span>Nightreign Relic</span>
       </a>
-      <nav class="site-nav" aria-label="Site navigation">
-        <a href="./">Home</a>
+      <div class="site-header-actions">
+        <button class="site-theme-toggle" type="button" data-action="toggle-site-theme" aria-label="Toggle color theme">
+          <span aria-hidden="true">☾</span>
+        </button>
+        <button
+          class="mobile-menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          data-action="toggle-mobile-menu"
+        >
+          <span class="mobile-menu-line"></span>
+          <span class="mobile-menu-line"></span>
+          <span class="mobile-menu-line"></span>
+        </button>
+      </div>
+      <nav class="site-nav" id="site-nav" aria-label="Site navigation">
+        <a href="./index.html">Home</a>
         <a href="./about.html" aria-current="page">About</a>
         <a href="./contact.html">Contact</a>
         <a href="./privacy-policy.html">Privacy Policy</a>
@@ -61,5 +78,6 @@
       </nav>
       <p class="footer-copy">&copy; 2026 nightreignrelic.com</p>
     </footer>
+    <script src="./app.js" defer></script>
   </body>
 </html>
