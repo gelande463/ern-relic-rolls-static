@@ -928,6 +928,14 @@ input:disabled {
   letter-spacing: 0;
 }
 
+.list-panel-header {
+  align-items: flex-start;
+}
+
+.list-panel-header .list-action-row {
+  flex: 1 1 auto;
+}
+
 .tool-panel-body {
   padding: 10px;
 }
@@ -1180,6 +1188,68 @@ input:disabled {
   flex-wrap: wrap;
 }
 
+.list-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.list-action-button {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 7px 11px;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel-2);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.list-action-button:hover,
+.list-action-button:focus-visible {
+  border-color: var(--line-strong);
+  background: var(--panel-3);
+  outline: none;
+}
+
+.list-action-icon {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.list-action-label {
+  line-height: 1;
+}
+
+.danger-list-action {
+  color: var(--bad);
+  border-color: rgba(255, 82, 93, 0.45);
+  background: rgba(255, 82, 93, 0.08);
+}
+
+.danger-list-action:hover,
+.danger-list-action:focus-visible {
+  color: #fff;
+  border-color: var(--bad);
+  background: var(--bad);
+}
+
+.list-action-help {
+  width: 100%;
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
 .primary-button,
 .danger-button,
 .secondary-button {
@@ -1217,6 +1287,73 @@ input:disabled {
   border: 1px solid var(--line);
   background: #1b1f30;
   border-radius: 4px;
+}
+
+.relic-card-actions {
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.save-generated-button {
+  color: var(--ok);
+  border-color: rgba(71, 201, 120, 0.45);
+  background: rgba(71, 201, 120, 0.1);
+  font-weight: 900;
+}
+
+.save-generated-button:hover,
+.save-generated-button:focus-visible {
+  color: var(--bg);
+  border-color: var(--ok);
+  background: var(--ok);
+  outline: none;
+}
+
+.save-generated-button.is-saved,
+.save-generated-button:disabled {
+  color: var(--muted);
+  border-color: var(--line);
+  background: var(--panel-2);
+  opacity: 0.75;
+}
+
+.save-generated-icon {
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.x-share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: var(--ink);
+  border-color: var(--line);
+  background: var(--panel-2);
+  font-weight: 900;
+}
+
+.x-share-button:hover,
+.x-share-button:focus-visible {
+  color: var(--bg);
+  border-color: var(--accent-2);
+  background: var(--accent-2);
+  outline: none;
+}
+
+.x-share-mark {
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.share-arrow {
+  font-size: 11px;
+  line-height: 1;
+  transform: translateY(-1px);
 }
 
 .copy-icon,
@@ -1708,6 +1845,7 @@ input:disabled {
 :root[data-theme="light"] .effects-table td,
 :root[data-theme="light"] .color-button,
 :root[data-theme="light"] .secondary-button,
+:root[data-theme="light"] .list-action-button,
 :root[data-theme="light"] .icon-button,
 :root[data-theme="light"] .compact-select,
 :root[data-theme="light"] .compact-input,
@@ -1721,6 +1859,17 @@ input:disabled {
 :root[data-theme="light"] .tab-button {
   background: var(--panel-2);
   border-color: var(--line);
+}
+
+:root[data-theme="light"] .list-action-button:hover,
+:root[data-theme="light"] .list-action-button:focus-visible {
+  background: var(--panel-2);
+}
+
+:root[data-theme="light"] .save-generated-button.is-saved,
+:root[data-theme="light"] .save-generated-button:disabled,
+:root[data-theme="light"] .x-share-button {
+  background: var(--panel);
 }
 
 :root[data-theme="light"] .tab-button[aria-selected="true"] {
@@ -1807,6 +1956,27 @@ input:disabled {
   .footer-links {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .list-action-row {
+    justify-content: stretch;
+  }
+
+  .list-panel-header {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .list-action-button {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 40px;
+    padding: 8px 10px;
+  }
+
+  .list-action-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .site-header {
@@ -2096,6 +2266,15 @@ input:disabled {
 }
 
 @media (max-width: 420px) {
+  .relic-card-actions {
+    justify-content: flex-end;
+  }
+
+  .list-action-button {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+  }
+
   .debuff-slot {
     width: 100%;
     margin-left: 0;

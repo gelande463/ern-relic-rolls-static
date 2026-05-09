@@ -213,7 +213,9 @@
       };
       prepareData();
       normalizeStateShape();
+      readSelectionFromHash();
       sanitizeSelections();
+      applySharedRelicFromUrl();
       render();
     } catch (error) {
       app.innerHTML = `
@@ -876,27 +878,36 @@
   function renderListView() {
     const saved = filteredListSaved();
     const effects = filteredMasterEffects();
+    const labels = listActionLabels();
     return `
       <div class="split-layout">
         <section class="tool-panel">
-          <div class="tool-panel-header">
+          <div class="tool-panel-header list-panel-header">
             <h2>一覧</h2>
-            <div class="button-row">
-              <button class="icon-button" type="button" data-action="import-sample" title="Import selected_relics.txt">
-                <span class="import-icon" aria-hidden="true"></span>
-                <span class="sr-only">Import</span>
-              </button>
-              <button class="icon-button" type="button" data-action="export-saved" title="Download">
-                <span class="download-icon" aria-hidden="true"></span>
-                <span class="sr-only">Download</span>
-              </button>
-              <button class="icon-button" type="button" data-action="clear-saved" title="Delete all">
-                <span class="trash-icon" aria-hidden="true"></span>
-                <span class="sr-only">Delete all</span>
-              </button>
+            <div class="list-action-row">
+              ${renderListActionButton({
+                action: "import-sample",
+                icon: "📥",
+                label: labels.importSample,
+                title: labels.importSampleTitle,
+              })}
+              ${renderListActionButton({
+                action: "export-saved",
+                icon: "⬇",
+                label: labels.exportSaved,
+                title: labels.exportSavedTitle,
+              })}
+              ${renderListActionButton({
+                action: "clear-saved",
+                icon: "🗑",
+                label: labels.clearSaved,
+                title: labels.clearSavedTitle,
+                variant: "danger",
+              })}
             </div>
           </div>
           <div class="tool-panel-body">
+            ${renderListActionHelp()}
             <div class="table-tools">
               ${renderSearchInput({
                 value: state.list.query,
@@ -922,6 +933,57 @@
         </aside>
       </div>
     `;
+  }
+
+  function listActionLabels() {
+    if (state.locale === "ja_JP") {
+      return {
+        importSample: "サンプル読込",
+        importSampleTitle: "サンプルの selected_relics.txt を読み込む",
+        exportSaved: "登録一覧を保存",
+        exportSavedTitle: "登録済みの遺物一覧をテキストで保存する",
+        clearSaved: "全削除",
+        clearSavedTitle: "登録済みの遺物をすべて削除する",
+        confirmClear: "登録済みの遺物をすべて削除します。この操作は元に戻せません。よろしいですか？",
+      };
+    }
+
+    return {
+      importSample: "Load sample",
+      importSampleTitle: "Load sample selected_relics.txt",
+      exportSaved: "Export list",
+      exportSavedTitle: "Export saved relic list as text",
+      clearSaved: "Delete all",
+      clearSavedTitle: "Delete all saved relics",
+      confirmClear: "Delete all saved relics? This action cannot be undone.",
+    };
+  }
+
+  function renderListActionButton({ action, icon, label, title, variant = "secondary" }) {
+    const className = variant === "danger"
+      ? "list-action-button danger-list-action"
+      : "list-action-button";
+
+    return `
+      <button
+        class="${className}"
+        type="button"
+        data-action="${attr(action)}"
+        title="${attr(title)}"
+        aria-label="${attr(title)}"
+      >
+        <span class="list-action-icon" aria-hidden="true">${icon}</span>
+        <span class="list-action-label">${esc(label)}</span>
+      </button>
+    `;
+  }
+
+  function renderListActionHelp() {
+    const text = state.locale === "ja_JP"
+      ? "サンプル読込は selected_relics.txt の例を追加します。登録一覧を保存すると、現在の登録内容をテキストで出力できます。"
+      : "Load sample adds example relics from selected_relics.txt. Export list saves your current relic list as text.";
+
+    return `<p class="list-action-help">${esc(text)}</p>`;
   }
 
   function renderColorPicker(context, selected) {
@@ -1121,6 +1183,10 @@
     const effects = item.effects.map((key) => getEffectByKey(key, item.mode));
     const debuffs = item.debuffs.map((key) => getDebuffByKey(key));
     const cursedCount = effects.filter((effect) => effect?.cursed).length;
+    const generatedSavedItem = generatedItemFromEffects(item.effects);
+    const alreadySaved = isDuplicateSavedRelic(generatedSavedItem);
+    const saveLabel = alreadySaved ? savedGeneratedLabel() : saveGeneratedLabel();
+    const shareLabel = xShareLabel();
     return `
       <article class="relic-card">
         <div class="relic-card-head">
@@ -1129,10 +1195,35 @@
             <div class="relic-card-title">${esc(item.effects.map((key) => label(getEffectByKey(key, item.mode))).join(" / "))}</div>
             <div class="relic-card-mode">${esc(modeLabel(item.mode))}${cursedCount ? ` / 弱化${cursedCount}枠必須` : ""}</div>
           </div>
-          <button class="icon-button" type="button" data-action="copy-generated" data-effects="${attr(item.effects.join("|"))}" title="Copy">
-            <span class="copy-icon" aria-hidden="true"></span>
-            <span class="sr-only">Copy</span>
-          </button>
+          <div class="button-row relic-card-actions">
+            <button
+              class="icon-button save-generated-button ${alreadySaved ? "is-saved" : ""}"
+              type="button"
+              data-action="save-generated"
+              data-effects="${attr(item.effects.join("|"))}"
+              title="${attr(saveLabel)}"
+              aria-label="${attr(saveLabel)}"
+              ${alreadySaved ? "disabled" : ""}
+            >
+              <span class="save-generated-icon" aria-hidden="true">${alreadySaved ? "✓" : "＋"}</span>
+            </button>
+            <button class="icon-button" type="button" data-action="copy-generated" data-effects="${attr(item.effects.join("|"))}" title="Copy">
+              <span class="copy-icon" aria-hidden="true"></span>
+              <span class="sr-only">Copy</span>
+            </button>
+            <button
+              class="icon-button x-share-button"
+              type="button"
+              data-action="share-x-generated"
+              data-effects="${attr(item.effects.join("|"))}"
+              title="${attr(shareLabel)}"
+              aria-label="${attr(shareLabel)}"
+            >
+              <span class="x-share-mark" aria-hidden="true">𝕏</span>
+              <span class="share-arrow" aria-hidden="true">↗</span>
+              <span class="sr-only">${esc(shareLabel)}</span>
+            </button>
+          </div>
         </div>
         <ol class="effect-lines">
           ${effects
@@ -1154,6 +1245,7 @@
     const effects = item.effects.map((key) => getEffectByKey(key, item.mode));
     const debuffs = item.debuffs.map((key) => getDebuffByKey(key));
     const title = item.name || `${modeLabel(item.mode)} ${new Date(item.createdAt).toLocaleDateString("ja-JP")}`;
+    const shareLabel = xShareLabel();
     return `
       <article class="relic-card">
         <div class="relic-card-head">
@@ -1162,10 +1254,22 @@
             <div class="relic-card-title">${esc(title)}</div>
             <div class="relic-card-mode">${esc(modeLabel(item.mode))}</div>
           </div>
-          <div class="button-row">
+          <div class="button-row relic-card-actions">
             <button class="icon-button" type="button" data-action="copy-saved" data-id="${attr(item.id)}" title="Copy">
               <span class="copy-icon" aria-hidden="true"></span>
               <span class="sr-only">Copy</span>
+            </button>
+            <button
+              class="icon-button x-share-button"
+              type="button"
+              data-action="share-x-saved"
+              data-id="${attr(item.id)}"
+              title="${attr(shareLabel)}"
+              aria-label="${attr(shareLabel)}"
+            >
+              <span class="x-share-mark" aria-hidden="true">𝕏</span>
+              <span class="share-arrow" aria-hidden="true">↗</span>
+              <span class="sr-only">${esc(shareLabel)}</span>
             </button>
             <button class="icon-button" type="button" data-action="delete-saved" data-id="${attr(item.id)}" title="Delete">
               <span class="trash-icon" aria-hidden="true"></span>
@@ -1431,30 +1535,53 @@
     } else if (action === "copy-saved") {
       const item = state.saved.find((saved) => saved.id === target.dataset.id);
       if (item) copyText(formatRelicText(item));
+    } else if (action === "share-x-saved") {
+      const item = state.saved.find((saved) => saved.id === target.dataset.id);
+      if (item) openXShare(item);
+    } else if (action === "save-generated") {
+      const effects = (target.dataset.effects || "").split("|").filter(Boolean);
+      const item = generatedItemFromEffects(effects);
+
+      if (!item.effects.every(Boolean)) {
+        showToast(state.locale === "ja_JP" ? "保存できる候補が見つかりません。" : "No candidate to save.");
+        render();
+        return;
+      }
+
+      if (isDuplicateSavedRelic(item)) {
+        showToast(state.locale === "ja_JP" ? "この候補はすでに一覧に保存されています。" : "This candidate is already saved.");
+        render();
+        return;
+      }
+
+      state.saved.unshift(item);
+      showToast(state.locale === "ja_JP" ? "候補を一覧に保存しました。" : "Saved candidate to list.");
+      render();
     } else if (action === "copy-generated") {
       const effects = (target.dataset.effects || "").split("|").filter(Boolean);
-      copyText(
-        formatRelicText({
-          id: makeId(),
-          createdAt: Date.now(),
-          mode: state.mode,
-          locale: state.locale,
-          color: "red",
-          name: "",
-          effects,
-          debuffs: [...(state.search.debuffs || [null, null, null])],
-        })
-      );
+      copyText(formatRelicText(generatedItemFromEffects(effects)));
+    } else if (action === "share-x-generated") {
+      const effects = (target.dataset.effects || "").split("|").filter(Boolean);
+      openXShare(generatedItemFromEffects(effects));
     } else if (action === "delete-saved") {
       state.saved = state.saved.filter((saved) => saved.id !== target.dataset.id);
       showToast("削除しました。");
       render();
     } else if (action === "clear-saved") {
+      const labels = listActionLabels();
+      if (!window.confirm(labels.confirmClear)) {
+        return;
+      }
+
       state.saved = [];
-      showToast("一覧を空にしました。");
+      showToast(state.locale === "ja_JP" ? "登録済み遺物をすべて削除しました。" : "Deleted all saved relics.");
       render();
     } else if (action === "export-saved") {
-      downloadText("selected_relics_web.txt", state.saved.map(formatRelicText).join("\n"));
+      downloadText(
+        "selected_relics_web.txt",
+        state.saved.map(formatRelicText).join("\n"),
+        state.locale === "ja_JP" ? "登録済み遺物一覧を保存しました。" : "Exported saved relic list."
+      );
     } else if (action === "import-sample") {
       importSampleFile();
     }
@@ -1942,6 +2069,41 @@
     return getAllEffectsForMode(state.mode).filter((effect) => !q || matchesRecord(effect, q));
   }
 
+  function saveGeneratedLabel() {
+    return state.locale === "ja_JP" ? "一覧に保存" : "Save to list";
+  }
+
+  function savedGeneratedLabel() {
+    return state.locale === "ja_JP" ? "保存済み" : "Saved";
+  }
+
+  function xShareLabel() {
+    return state.locale === "ja_JP" ? "Xで共有" : "Share on X";
+  }
+
+  function generatedItemFromEffects(effects) {
+    return {
+      id: makeId(),
+      createdAt: Date.now(),
+      mode: state.mode,
+      locale: state.locale,
+      color: state.search.color === "all" ? "red" : state.search.color,
+      name: state.locale === "ja_JP" ? "検索候補" : "Generated candidate",
+      effects: normalizeTriple(effects),
+      debuffs: normalizeTriple(state.search.debuffs || [null, null, null]),
+    };
+  }
+
+  function isDuplicateSavedRelic(item) {
+    return state.saved.some(
+      (saved) =>
+        saved.mode === item.mode &&
+        saved.color === item.color &&
+        saved.effects.join("\u0001") === item.effects.join("\u0001") &&
+        saved.debuffs.join("\u0001") === item.debuffs.join("\u0001")
+    );
+  }
+
   function saveCurrentRelic() {
     const validation = validateSelection(state.register);
     if (!validation.valid) {
@@ -1951,16 +2113,8 @@
     }
 
     const item = currentRelicDraft();
-    const duplicate = state.saved.some(
-      (saved) =>
-        saved.mode === item.mode &&
-        saved.color === item.color &&
-        saved.effects.join("\u0001") === item.effects.join("\u0001") &&
-        saved.debuffs.join("\u0001") === item.debuffs.join("\u0001")
-    );
-
-    if (duplicate) {
-      showToast("同じ遺物が登録済みです。");
+    if (isDuplicateSavedRelic(item)) {
+      showToast(state.locale === "ja_JP" ? "同じ遺物が登録済みです。" : "This relic is already saved.");
       render();
       return;
     }
@@ -2039,10 +2193,14 @@
           added += 1;
         }
       }
-      showToast(`${added}件を読み込みました。`);
+      showToast(state.locale === "ja_JP" ? `${added}件のサンプル遺物を読み込みました。` : `Loaded ${added} sample relics.`);
       render();
     } catch (error) {
-      showToast(`読み込みに失敗しました: ${error.message || error}`);
+      showToast(
+        state.locale === "ja_JP"
+          ? `サンプル読込に失敗しました: ${error.message || error}`
+          : `Failed to load sample: ${error.message || error}`
+      );
       render();
     }
   }
@@ -2099,6 +2257,118 @@
     const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
     const url = `${location.origin}${location.pathname}#${encoded}`;
     copyText(url);
+  }
+
+  function encodeSharePayload(payload) {
+    const json = JSON.stringify(payload);
+    const utf8 = encodeURIComponent(json).replace(/%([0-9A-F]{2})/g, (_, hex) =>
+      String.fromCharCode(Number.parseInt(hex, 16))
+    );
+
+    return btoa(utf8)
+      .replace(/\+/g, "-")
+      .replace(/\//g, "_")
+      .replace(/=+$/g, "");
+  }
+
+  function decodeSharePayload(value) {
+    try {
+      const padded = value.replace(/-/g, "+").replace(/_/g, "/");
+      const base64 = padded + "=".repeat((4 - (padded.length % 4)) % 4);
+      const binary = atob(base64);
+      const json = decodeURIComponent(
+        Array.from(binary)
+          .map((char) => `%${char.charCodeAt(0).toString(16).padStart(2, "0")}`)
+          .join("")
+      );
+
+      return JSON.parse(json);
+    } catch {
+      return null;
+    }
+  }
+
+  function buildRelicSharePayload(item) {
+    return {
+      m: item.mode || state.mode,
+      c: item.color || "all",
+      e: normalizeTriple(item.effects),
+      d: normalizeTriple(item.debuffs),
+      n: item.name || "",
+    };
+  }
+
+  function buildRelicShareUrl(item) {
+    const url = new URL("https://nightreignrelic.com/");
+    url.searchParams.set("r", encodeSharePayload(buildRelicSharePayload(item)));
+    return url.toString();
+  }
+
+  function buildXShareText(item) {
+    const mode = item.mode || state.mode;
+    const effects = normalizeTriple(item.effects)
+      .map((key, index) => {
+        const effect = getEffectByKey(key, mode);
+        return effect ? `効果${index + 1}：${label(effect)}` : "";
+      })
+      .filter(Boolean);
+
+    const lines = [
+      "ナイトレイン遺物検索で遺物候補を共有しました",
+      "",
+      modeLabel(mode),
+      ...effects,
+      "",
+      "#ナイトレイン #ナイトレイン遺物検索",
+    ];
+
+    return lines.join("\n");
+  }
+
+  function truncateForX(text, maxLength = 220) {
+    if (text.length <= maxLength) return text;
+    return `${text.slice(0, maxLength - 1)}…`;
+  }
+
+  function openXShare(item) {
+    const text = truncateForX(buildXShareText(item));
+    const url = buildRelicShareUrl(item);
+
+    const intentUrl = new URL("https://twitter.com/intent/tweet");
+    intentUrl.searchParams.set("text", text);
+    intentUrl.searchParams.set("url", url);
+
+    window.open(intentUrl.toString(), "_blank", "noopener,noreferrer");
+  }
+
+  function applySharedRelicFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const encoded = params.get("r");
+    if (!encoded) return;
+
+    const payload = decodeSharePayload(encoded);
+    if (!payload || typeof payload !== "object" || Array.isArray(payload)) return;
+
+    const mode =
+      typeof payload.m === "string" && Object.prototype.hasOwnProperty.call(MODE_LABELS, payload.m)
+        ? payload.m
+        : state.mode;
+    const validDebuffs = new Set(state.debuffs.map((debuff) => debuff.key));
+
+    state.mode = mode;
+    state.activeTab = "search";
+    state.search.color = COLOR_ORDER.includes(payload.c) ? payload.c : "all";
+    state.search.effects = normalizeTriple(payload.e);
+    state.search.debuffs = normalizeTriple(payload.d).map((key) => (key && validDebuffs.has(key) ? key : null));
+    state.search.queries = ["", "", ""];
+    state.search.debuffQueries = ["", "", ""];
+
+    sanitizeSelections();
+
+    state.ui.showGeneratedResults = true;
+    state.ui.generatedVisibleCount = RESULT_PAGE_SIZE;
+
+    showToast("共有された遺物候補を表示しました。");
   }
 
   function readSelectionFromHash() {
@@ -2310,7 +2580,7 @@
     render();
   }
 
-  function downloadText(filename, text) {
+  function downloadText(filename, text, message = "") {
     const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement("a");
@@ -2320,7 +2590,7 @@
     anchor.click();
     anchor.remove();
     URL.revokeObjectURL(url);
-    showToast("出力しました。");
+    showToast(message || (state.locale === "ja_JP" ? "出力しました。" : "Exported."));
     render();
   }
 
