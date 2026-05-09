@@ -3,12 +3,14 @@
 
   const DATA_URL = "./data/ern_effects_export.json";
   const SAMPLE_URL = "./data/selected_relics.txt";
+  const UPDATES_URL = "./data/site-updates.json";
   const STORAGE_KEY = "ern-relic-rolls-web-state-v1";
   const GUIDE_HIDDEN_KEY = "nightreignrelic.hideUsageGuide";
   const THEME_STORAGE_KEY = "nightreignrelic.theme";
   const MAX_TABLE_ROWS = 240;
   const MAX_COMBO_RESULTS = 300;
   const RESULT_PAGE_SIZE = 50;
+  const MAX_UPDATE_ITEMS = 3;
 
   const MODE_LABELS = {
     base_game: "Base Relics",
@@ -143,6 +145,7 @@
 
   const initialState = {
     data: null,
+    updates: [],
     effectsByMode: {},
     debuffs: [],
     labelToKey: new Map(),
@@ -190,12 +193,16 @@
   async function boot() {
     wireEvents();
     try {
-      const data = await fetchJson(DATA_URL);
+      const [data, updatesData] = await Promise.all([
+        fetchJson(DATA_URL),
+        fetchOptionalJson(UPDATES_URL, { updates: [] }),
+      ]);
       const persisted = loadPersisted();
       state = {
         ...state,
         ...persisted,
         data,
+        updates: normalizeUpdates(updatesData),
       };
       prepareData();
       normalizeStateShape();
@@ -219,6 +226,16 @@
       throw new Error(`${url}: ${response.status}`);
     }
     return response.json();
+  }
+
+  async function fetchOptionalJson(url, fallback) {
+    try {
+      const response = await fetch(url, { cache: "no-store" });
+      if (!response.ok) return fallback;
+      return response.json();
+    } catch {
+      return fallback;
+    }
   }
 
   function prepareData() {
@@ -253,6 +270,24 @@
       .sort(compareEffects);
 
     state.labelToKey = buildLabelIndex();
+  }
+
+  function normalizeUpdates(updatesData) {
+    const items = Array.isArray(updatesData?.updates) ? updatesData.updates : [];
+    return items
+      .filter((item) => item && typeof item === "object")
+      .slice(0, MAX_UPDATE_ITEMS)
+      .map((item) => ({
+        date: String(item.date || ""),
+        badge_ja: String(item.badge_ja || "\u66f4\u65b0"),
+        badge_en: String(item.badge_en || "Update"),
+        title_ja: String(item.title_ja || ""),
+        title_en: String(item.title_en || ""),
+        body_ja: String(item.body_ja || ""),
+        body_en: String(item.body_en || ""),
+        url: String(item.url || ""),
+      }))
+      .filter((item) => item.title_ja || item.title_en);
   }
 
   function labelsFor(key, translations) {
@@ -304,6 +339,7 @@
     persist();
     app.innerHTML = `
       ${renderTopbar()}
+      ${renderUpdateBar()}
       ${renderUsageGuide()}
       ${renderTabs()}
       <section id="view-list" class="view ${state.activeTab === "list" ? "active" : ""}">
@@ -508,6 +544,65 @@
           </label>
         </div>
       </section>
+    `;
+  }
+
+  function renderUpdateBar() {
+    const updates = Array.isArray(state.updates) ? state.updates.slice(0, MAX_UPDATE_ITEMS) : [];
+    if (!updates.length) return "";
+
+    const isJapanese = state.locale === "ja_JP";
+    const heading = isJapanese ? "\u6700\u65b0\u30a2\u30c3\u30d7\u30c7\u30fc\u30c8" : "Latest Updates";
+    const subheading = isJapanese
+      ? "\u30b5\u30a4\u30c8\u306e\u66f4\u65b0\u60c5\u5831\u30923\u4ef6\u307e\u3067\u8868\u793a\u3057\u3066\u3044\u307e\u3059\u3002"
+      : "Showing up to three recent site updates.";
+    const kicker = isJapanese ? "\u304a\u77e5\u3089\u305b" : "News";
+
+    return `
+      <section class="update-strip" aria-labelledby="update-strip-title">
+        <div class="update-strip-header">
+          <div>
+            <p class="update-strip-kicker">${esc(kicker)}</p>
+            <h2 id="update-strip-title">${esc(heading)}</h2>
+          </div>
+          <p class="update-strip-subtitle">${esc(subheading)}</p>
+        </div>
+
+        <div class="update-strip-grid">
+          ${updates.map(renderUpdateItem).join("")}
+        </div>
+      </section>
+    `;
+  }
+
+  function renderUpdateItem(item) {
+    const badge = updateText(item, "badge");
+    const title = updateText(item, "title");
+    const body = updateText(item, "body");
+    const date = formatUpdateDate(item.date);
+    const hasUrl = Boolean(item.url);
+
+    const inner = `
+      <div class="update-card-top">
+        <span class="update-badge">${esc(badge)}</span>
+        ${date ? `<time class="update-date" datetime="${attr(item.date)}">${esc(date)}</time>` : ""}
+      </div>
+      <h3>${esc(title)}</h3>
+      ${body ? `<p>${esc(body)}</p>` : ""}
+    `;
+
+    if (hasUrl) {
+      return `
+        <a class="update-card update-card-link" href="${attr(item.url)}">
+          ${inner}
+        </a>
+      `;
+    }
+
+    return `
+      <article class="update-card">
+        ${inner}
+      </article>
     `;
   }
 
@@ -1832,6 +1927,27 @@
   function label(record) {
     if (!record) return "";
     return record.labels?.[state.locale] || record.labels?.en_US || record.key || "";
+  }
+
+  function updateText(item, key) {
+    const locale = state.locale === "ja_JP" ? "ja" : "en";
+    return item[`${key}_${locale}`] || item[`${key}_en`] || item[`${key}_ja`] || "";
+  }
+
+  function formatUpdateDate(value) {
+    if (!value) return "";
+
+    const date = new Date(`${value}T00:00:00`);
+    if (Number.isNaN(date.getTime())) return value;
+
+    if (state.locale === "ja_JP") {
+      return `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}`;
+    }
+
+    return date.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+    });
   }
 
   function matchesRecord(record, normalizedQuery) {

@@ -1,0 +1,34 @@
+{
+  "updates": [
+    {
+      "date": "2026-05-09",
+      "badge_ja": "更新",
+      "badge_en": "Update",
+      "title_ja": "日本語検索を改善しました",
+      "title_en": "Improved Japanese search",
+      "body_ja": "IME入力中に検索欄が崩れにくくなるよう調整しました。",
+      "body_en": "Adjusted search input behavior for Japanese IME composition.",
+      "url": ""
+    },
+    {
+      "date": "2026-05-09",
+      "badge_ja": "追加",
+      "badge_en": "New",
+      "title_ja": "ライト/ダーク切り替えを追加",
+      "title_en": "Added light/dark theme toggle",
+      "body_ja": "表示テーマを切り替え、次回以降も保存できるようにしました。",
+      "body_en": "Added persistent light and dark theme switching.",
+      "url": ""
+    },
+    {
+      "date": "2026-05-09",
+      "badge_ja": "予定",
+      "badge_en": "Soon",
+      "title_ja": "マップ機能を準備中",
+      "title_en": "Map feature in preparation",
+      "body_ja": "今後、ナイトレイン向けのマップ補助機能を追加予定です。",
+      "body_en": "A Nightreign map helper feature is planned for a future update.",
+      "url": ""
+    }
+  ]
+}
