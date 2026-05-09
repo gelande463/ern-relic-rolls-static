@@ -74,16 +74,16 @@
 
   const PAGE_COPY = {
     ja_JP: {
-      documentTitle: "ナイトレイン遺物検索 | Nightreign Relic Consultor",
+      documentTitle: "ナイトレイン遺物検索 | 神遺物・レア遺物シミュレータ",
       kicker: "ナイトレイン非公式ファンツール",
       title: "ナイトレイン遺物検索",
-      description: "エルデンリング ナイトレインの遺物効果、ロール候補、組み合わせを確認できる非公式ツールです。",
+      description: "ナイトレインの遺物効果、神遺物候補、レア遺物の組み合わせを確認できる非公式の遺物シミュレータです。",
     },
     en_US: {
-      documentTitle: "Nightreign Relic Consultor",
+      documentTitle: "Nightreign Relic Search | Relic Roll Simulator",
       kicker: "Unofficial Nightreign fan tool",
-      title: "Nightreign Relic Consultor",
-      description: "Check relic effects, sample rolls, and useful combinations for Elden Ring Nightreign.",
+      title: "Nightreign Relic Search",
+      description: "Search Nightreign relic effects, possible god-roll patterns, and rare relic combinations with this unofficial relic simulator.",
     },
   };
 
