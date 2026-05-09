@@ -7,6 +7,7 @@
   const STORAGE_KEY = "ern-relic-rolls-web-state-v1";
   const GUIDE_HIDDEN_KEY = "nightreignrelic.hideUsageGuide";
   const THEME_STORAGE_KEY = "nightreignrelic.theme";
+  const UPDATES_DISMISSED_KEY = "nightreignrelic.dismissedUpdatesSignature";
   const MAX_TABLE_ROWS = 240;
   const MAX_COMBO_RESULTS = 300;
   const RESULT_PAGE_SIZE = 50;
@@ -296,6 +297,36 @@
       .filter((item) => item.title_ja || item.title_en);
   }
 
+  function updatesSignature(updates) {
+    return updates
+      .slice(0, MAX_UPDATE_ITEMS)
+      .map((item) =>
+        [
+          item.date,
+          item.badge_ja,
+          item.badge_en,
+          item.title_ja,
+          item.title_en,
+          item.body_ja,
+          item.body_en,
+          item.url,
+        ].join("|")
+      )
+      .join("||");
+  }
+
+  function isUpdateBarDismissed(updates) {
+    const signature = updatesSignature(updates);
+    return Boolean(signature) && localStorage.getItem(UPDATES_DISMISSED_KEY) === signature;
+  }
+
+  function dismissUpdateBar(updates) {
+    const signature = updatesSignature(updates);
+    if (signature) {
+      localStorage.setItem(UPDATES_DISMISSED_KEY, signature);
+    }
+  }
+
   function labelsFor(key, translations) {
     const labels = { en_US: key };
     for (const locale of Object.keys(LANG_LABELS)) {
@@ -569,6 +600,7 @@
   function renderUpdateBar() {
     const updates = Array.isArray(state.updates) ? state.updates.slice(0, MAX_UPDATE_ITEMS) : [];
     if (!updates.length) return "";
+    if (isUpdateBarDismissed(updates)) return "";
 
     const isJapanese = state.locale === "ja_JP";
     const heading = isJapanese ? "\u6700\u65b0\u30a2\u30c3\u30d7\u30c7\u30fc\u30c8" : "Latest Updates";
@@ -576,9 +608,19 @@
       ? "\u30b5\u30a4\u30c8\u306e\u66f4\u65b0\u60c5\u5831\u30923\u4ef6\u307e\u3067\u8868\u793a\u3057\u3066\u3044\u307e\u3059\u3002"
       : "Showing up to three recent site updates.";
     const kicker = isJapanese ? "\u304a\u77e5\u3089\u305b" : "News";
+    const closeLabel = isJapanese ? "最新アップデート通知を閉じる" : "Close latest updates";
 
     return `
       <section class="update-strip" aria-labelledby="update-strip-title">
+        <button
+          class="update-strip-close"
+          type="button"
+          data-action="dismiss-update-strip"
+          aria-label="${attr(closeLabel)}"
+        >
+          &times;
+        </button>
+
         <div class="update-strip-header">
           <div>
             <p class="update-strip-kicker">${esc(kicker)}</p>
@@ -627,16 +669,16 @@
 
   function renderTabs() {
     const tabs = [
-      ["list", "一覧"],
-      ["register", "登録"],
       ["search", "組み合わせ<br>検索"],
+      ["register", "登録"],
+      ["list", "一覧"],
     ];
     return `
       <nav class="tabbar" aria-label="Main">
         ${tabs
           .map(
             ([id, text]) => `
-              <button class="tab-button" type="button" data-tab="${id}" aria-selected="${state.activeTab === id}">
+              <button class="tab-button ${id === "search" ? "primary-tab" : ""}" type="button" data-tab="${id}" aria-selected="${state.activeTab === id}">
                 ${text}
               </button>
             `
@@ -1007,13 +1049,15 @@
       return `<div class="empty-state">該当する遺物はありません。</div>`;
     }
 
+    const shouldAutoShowSingleResult = result.items.length === 1;
+    const shouldShowResults = state.ui.showGeneratedResults || shouldAutoShowSingleResult;
     const summary = result.truncated
-      ? `${result.items.length}件以上の有効ロールがあります。条件を追加すると絞り込めます。`
-      : `${result.items.length}件の有効ロールがあります。`;
+      ? `${result.items.length}件以上の候補があります。条件を追加すると絞り込めます。`
+      : `${result.items.length}件の候補が見つかりました。`;
 
-    if (!state.ui.showGeneratedResults) {
+    if (!shouldShowResults) {
       return `
-        <div class="status-box valid">${esc(summary)}</div>
+        <div class="status-box hit-status">${renderHitStatus(summary)}</div>
         <div class="result-actions">
           <button class="secondary-button result-toggle-button" type="button" data-action="toggle-generated-results">
             ロール候補を表示
@@ -1022,7 +1066,7 @@
       `;
     }
 
-    const visibleItems = result.items.slice(0, state.ui.generatedVisibleCount);
+    const visibleItems = shouldAutoShowSingleResult ? result.items : result.items.slice(0, state.ui.generatedVisibleCount);
     const hasMoreItems = visibleItems.length < result.items.length;
     const visibleSummary =
       result.truncated || hasMoreItems
@@ -1030,18 +1074,46 @@
         : summary;
 
     return `
-      <div class="status-box valid">${esc(visibleSummary)}</div>
-      <div class="result-actions">
-        ${
-          hasMoreItems
-            ? `<button class="secondary-button" type="button" data-action="show-more-generated-results">さらに50件表示</button>`
-            : ""
-        }
-        <button class="secondary-button" type="button" data-action="toggle-generated-results">ロール候補を閉じる</button>
-      </div>
+      <div class="status-box hit-status">${renderHitStatus(visibleSummary)}</div>
+      ${
+        shouldAutoShowSingleResult
+          ? ""
+          : `
+            <div class="result-actions">
+              ${
+                hasMoreItems
+                  ? `<button class="secondary-button" type="button" data-action="show-more-generated-results">さらに50件表示</button>`
+                  : ""
+              }
+              <button class="secondary-button" type="button" data-action="toggle-generated-results">ロール候補を閉じる</button>
+            </div>
+          `
+      }
       <div class="result-list" style="margin-top: 8px;">
         ${visibleItems.map(renderGeneratedCard).join("")}
       </div>
+    `;
+  }
+
+  function renderHitStatus(text) {
+    return `
+      <span class="hit-status-content">
+        <span class="gem yellow" aria-hidden="true"></span>
+        <span>${esc(text)}</span>
+      </span>
+    `;
+  }
+
+  function hitColorForItem() {
+    return "yellow";
+  }
+
+  function renderHitBadge(color = "yellow") {
+    return `
+      <span class="hit-badge">
+        <span class="gem ${attr(color)}" aria-hidden="true"></span>
+        <span>Hit</span>
+      </span>
     `;
   }
 
@@ -1052,7 +1124,7 @@
     return `
       <article class="relic-card">
         <div class="relic-card-head">
-          <span class="pill">valid</span>
+          ${renderHitBadge(hitColorForItem(item))}
           <div>
             <div class="relic-card-title">${esc(item.effects.map((key) => label(getEffectByKey(key, item.mode))).join(" / "))}</div>
             <div class="relic-card-mode">${esc(modeLabel(item.mode))}${cursedCount ? ` / 弱化${cursedCount}枠必須` : ""}</div>
@@ -1303,6 +1375,13 @@
         state.ui.usageGuideClosed = true;
         render();
       }
+      return;
+    }
+
+    if (action === "dismiss-update-strip") {
+      const updates = Array.isArray(state.updates) ? state.updates.slice(0, MAX_UPDATE_ITEMS) : [];
+      dismissUpdateBar(updates);
+      render();
       return;
     }
 
