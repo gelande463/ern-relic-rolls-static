@@ -830,6 +830,83 @@ input:disabled {
   gap: 6px;
 }
 
+.form-row.effect-slot,
+.form-row.debuff-slot {
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  gap: 6px;
+}
+
+.effect-slot,
+.debuff-slot {
+  display: grid;
+}
+
+.effect-slot {
+  margin-top: 4px;
+}
+
+.effect-slot > label {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.effect-slot-controls,
+.debuff-slot-controls {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.effect-slot-controls {
+  width: 100%;
+}
+
+.debuff-slot {
+  width: min(88%, 720px);
+  margin: -2px 0 4px 42px;
+  padding: 8px 10px 10px;
+  border-left: 2px solid var(--line);
+  border-radius: 0 0 14px 14px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.debuff-slot > label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.subslot-marker {
+  color: var(--accent-2);
+  font-size: 13px;
+  line-height: 1;
+}
+
+.required-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 18px;
+  padding: 1px 6px;
+  color: var(--bg);
+  background: var(--accent-2);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.debuff-slot.is-disabled {
+  opacity: 0.62;
+}
+
+.debuff-slot.is-disabled .required-pill {
+  display: none;
+}
+
 .nightfarer-row {
   align-items: start;
   grid-template-columns: 72px minmax(0, 1fr);
@@ -892,6 +969,24 @@ input:disabled {
   min-width: 0;
 }
 
+.search-input-wrap {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.search-input-icon {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1;
+  pointer-events: none;
+}
+
 .search-input,
 .select-input,
 .text-area {
@@ -917,6 +1012,18 @@ input:disabled {
 .select-input {
   appearance: none;
   padding-right: 34px;
+}
+
+.search-input.has-search-icon {
+  padding-left: 32px;
+}
+
+.search-input-wrap .search-input,
+.effect-slot-controls select,
+.debuff-slot-controls select,
+.effect-slot-controls .compact-select,
+.debuff-slot-controls .compact-select {
+  width: 100%;
 }
 
 .select-wrap::after {
@@ -1456,6 +1563,10 @@ input:disabled {
   filter: drop-shadow(0 10px 16px rgba(21, 24, 33, 0.16));
 }
 
+:root[data-theme="light"] .debuff-slot {
+  background: rgba(15, 23, 42, 0.025);
+}
+
 :root[data-theme="light"] .simulator-note-inner {
   background:
     linear-gradient(135deg, rgba(198, 40, 40, 0.06), transparent 42%),
@@ -1615,6 +1726,25 @@ input:disabled {
     padding: 0 10px;
   }
 
+  .debuff-slot {
+    width: calc(100% - 20px);
+    margin-left: 20px;
+    margin-right: 0;
+    padding: 8px 8px 10px;
+  }
+
+  .debuff-slot > label {
+    font-size: 11px;
+  }
+
+  .search-input-icon {
+    left: 10px;
+  }
+
+  .search-input.has-search-icon {
+    padding-left: 30px;
+  }
+
   .simulator-note {
     margin-top: 18px;
   }
@@ -1699,5 +1829,12 @@ input:disabled {
 
   .meta-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .debuff-slot {
+    width: 100%;
+    margin-left: 0;
   }
 }

@@ -443,6 +443,23 @@
     return 'type="text" inputmode="search" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false"';
   }
 
+  function renderSearchInput({ value, action, slot = null, placeholder, disabled = false }) {
+    const slotAttr = slot === null || slot === undefined ? "" : ` data-slot="${attr(slot)}"`;
+    return `
+      <div class="search-input-wrap">
+        <span class="search-input-icon" aria-hidden="true">&#8981;</span>
+        <input
+          class="search-input has-search-icon"
+          ${searchInputBaseAttrs()}
+          value="${attr(value)}"
+          data-action="${attr(action)}"${slotAttr}
+          placeholder="${attr(placeholder)}"
+          ${disabled ? "disabled" : ""}
+        >
+      </div>
+    `;
+  }
+
   function getPreferredTheme() {
     const saved = localStorage.getItem(THEME_STORAGE_KEY);
     if (saved === "dark" || saved === "light") return saved;
@@ -651,8 +668,9 @@
                 <label for="register-name">名称</label>
                 <input id="register-name" class="compact-input" type="text" maxlength="48" data-action="register-name" value="${attr(state.register.name)}" placeholder="Relic">
               </div>
-              ${[0, 1, 2].map((slot) => renderRegisterEffectSlot(slot)).join("")}
-              ${isDeep ? [0, 1, 2].map((slot) => renderRegisterDebuffSlot(slot, validation.requiredDebuffSlots[slot])).join("") : ""}
+              ${[0, 1, 2]
+                .map((slot) => `${renderRegisterEffectSlot(slot)}${isDeep ? renderRegisterDebuffSlot(slot, validation.requiredDebuffSlots[slot]) : ""}`)
+                .join("")}
               <button class="danger-button" type="button" data-action="reset-register">リセット</button>
               <div class="button-row">
                 <button class="primary-button" type="button" data-action="save-register" ${validation.valid ? "" : "disabled"}>登録</button>
@@ -677,10 +695,16 @@
     const query = state.register.effectQueries[slot] || "";
     const options = getViableEffects(slot, state.register, query, true);
     return `
-      <div class="form-row">
+      <div class="form-row effect-slot">
         <label for="effect-${slot}">効果${slot + 1}</label>
-        <div class="form-grid">
-          <input class="search-input" ${searchInputBaseAttrs()} value="${attr(query)}" data-action="register-effect-query" data-slot="${slot}" placeholder="${attr(searchPlaceholder())}">
+        <div class="effect-slot-controls">
+          ${renderSearchInput({
+            value: query,
+            action: "register-effect-query",
+            slot,
+            placeholder: searchPlaceholder(),
+            disabled,
+          })}
           ${renderEffectSelect(`effect-${slot}`, "register-effect", slot, selected, options, disabled)}
         </div>
       </div>
@@ -694,10 +718,20 @@
     const query = state.register.debuffQueries[slot] || "";
     const options = getAvailableDebuffs(slot, state.register, query);
     return `
-      <div class="form-row">
-        <label for="debuff-${slot}">弱化${slot + 1}</label>
-        <div class="form-grid">
-          <input class="search-input" ${searchInputBaseAttrs()} value="${attr(query)}" data-action="register-debuff-query" data-slot="${slot}" placeholder="${attr(debuffSearchPlaceholder(required))}" ${disabled ? "disabled" : ""}>
+      <div class="form-row debuff-slot ${disabled ? "is-disabled" : ""}">
+        <label for="debuff-${slot}">
+          <span class="subslot-marker">↳</span>
+          <span>${state.locale === "ja_JP" ? "付帯デバフ" : "Linked debuff"}</span>
+          ${required ? `<strong class="required-pill">${state.locale === "ja_JP" ? "必須" : "Required"}</strong>` : ""}
+        </label>
+        <div class="debuff-slot-controls">
+          ${renderSearchInput({
+            value: query,
+            action: "register-debuff-query",
+            slot,
+            placeholder: debuffSearchPlaceholder(required),
+            disabled,
+          })}
           ${renderDebuffSelect(`debuff-${slot}`, "register-debuff", slot, selected, options, disabled, required)}
         </div>
       </div>
@@ -717,8 +751,9 @@
               <label>色</label>
               ${renderColorPicker("search", state.search.color)}
             </div>
-            ${[0, 1, 2].map((slot) => renderSearchEffectSlot(slot)).join("")}
-            ${isDeepMode(state.mode) ? [0, 1, 2].map((slot) => renderSearchDebuffSlot(slot)).join("") : ""}
+            ${[0, 1, 2]
+              .map((slot) => `${renderSearchEffectSlot(slot)}${isDeepMode(state.mode) ? renderSearchDebuffSlot(slot) : ""}`)
+              .join("")}
             <button class="danger-button" type="button" data-action="reset-search">リセット</button>
           </div>
           <div class="status-panel">
@@ -734,10 +769,15 @@
     const selected = state.search.effects[slot];
     const options = getViableEffects(slot, state.search, query, true);
     return `
-      <div class="form-row">
+      <div class="form-row effect-slot">
         <label for="search-effect-${slot}">効果${slot + 1}</label>
-        <div class="form-grid">
-          <input class="search-input" ${searchInputBaseAttrs()} value="${attr(query)}" data-action="search-effect-query" data-slot="${slot}" placeholder="${attr(searchPlaceholder())}">
+        <div class="effect-slot-controls">
+          ${renderSearchInput({
+            value: query,
+            action: "search-effect-query",
+            slot,
+            placeholder: searchPlaceholder(),
+          })}
           ${renderEffectSelect(`search-effect-${slot}`, "search-effect", slot, selected, options, false)}
         </div>
       </div>
@@ -751,10 +791,20 @@
     const selected = state.search.debuffs?.[slot] || null;
     const options = getAvailableDebuffs(slot, state.search, query);
     return `
-      <div class="form-row">
-        <label for="search-debuff-${slot}">弱化${slot + 1}</label>
-        <div class="form-grid">
-          <input class="search-input" ${searchInputBaseAttrs()} value="${attr(query)}" data-action="search-debuff-query" data-slot="${slot}" placeholder="${attr(enabled ? debuffSearchPlaceholder(true) : "---")}" ${enabled ? "" : "disabled"}>
+      <div class="form-row debuff-slot ${enabled ? "" : "is-disabled"}">
+        <label for="search-debuff-${slot}">
+          <span class="subslot-marker">↳</span>
+          <span>${state.locale === "ja_JP" ? "付帯デバフ" : "Linked debuff"}</span>
+          ${enabled ? `<strong class="required-pill">${state.locale === "ja_JP" ? "必須" : "Required"}</strong>` : ""}
+        </label>
+        <div class="debuff-slot-controls">
+          ${renderSearchInput({
+            value: query,
+            action: "search-debuff-query",
+            slot,
+            placeholder: enabled ? debuffSearchPlaceholder(true) : "---",
+            disabled: !enabled,
+          })}
           ${renderDebuffSelect(`search-debuff-${slot}`, "search-debuff", slot, selected, options, !enabled, enabled)}
         </div>
       </div>
@@ -804,7 +854,11 @@
           </div>
           <div class="tool-panel-body">
             <div class="table-tools">
-              <input class="search-input" ${searchInputBaseAttrs()} data-action="list-query" value="${attr(state.list.query)}" placeholder="${attr(listSearchPlaceholder())}">
+              ${renderSearchInput({
+                value: state.list.query,
+                action: "list-query",
+                placeholder: listSearchPlaceholder(),
+              })}
               <select class="compact-select" data-action="list-scope">
                 ${option("saved", "登録済み", state.list.scope === "saved")}
                 ${option("effects", "効果一覧", state.list.scope === "effects")}
