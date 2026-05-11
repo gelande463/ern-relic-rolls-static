@@ -1121,8 +1121,16 @@
     return { x, y };
   }
 
-  function isDesktopLayout() {
+  function isDesktopViewport() {
     return window.matchMedia(DESKTOP_QUERY).matches;
+  }
+
+  function isMobileViewport() {
+    return !isDesktopViewport();
+  }
+
+  function isDesktopLayout() {
+    return isDesktopViewport();
   }
 
   function renderSummary() {
@@ -1664,7 +1672,13 @@
       for (let displayCol = 0; displayCol < COLS; displayCol += 1) {
         const sourceRow = displayCol;
         const sourceCol = COLS - 1 - displayRow;
-        parts.push(`<img class="nr-map-tile" src="${tileUrl(tileDirectory, sourceRow, sourceCol)}" alt="" draggable="false">`);
+        const left = Math.floor((displayCol * MAP_SIZE) / COLS);
+        const top = Math.floor((displayRow * MAP_SIZE) / ROWS);
+        const right = Math.ceil(((displayCol + 1) * MAP_SIZE) / COLS);
+        const bottom = Math.ceil(((displayRow + 1) * MAP_SIZE) / ROWS);
+        const width = right - left + 1;
+        const height = bottom - top + 1;
+        parts.push(`<img class="nr-map-tile" src="${tileUrl(tileDirectory, sourceRow, sourceCol)}" alt="" draggable="false" decoding="async" style="--nr-tile-left:${left}px;--nr-tile-top:${top}px;--nr-tile-width:${width}px;--nr-tile-height:${height}px">`);
       }
     }
     elements.tiles.innerHTML = parts.join("");
@@ -1772,10 +1786,14 @@
 
   function resetView() {
     const rect = elements.viewport.getBoundingClientRect();
-    const nextScale = clamp(Math.min(rect.width / MAP_SIZE, rect.height / MAP_SIZE) * 1.03, MIN_SCALE, MAX_SCALE);
+    const fitScale = Math.min(rect.width / MAP_SIZE, rect.height / MAP_SIZE);
+    const nextScale = isMobileViewport()
+      ? clamp(Math.max(fitScale * 1.65, 0.58), MIN_SCALE, MAX_SCALE)
+      : clamp(fitScale * 1.03, MIN_SCALE, MAX_SCALE);
     state.scale = nextScale;
     state.x = (rect.width - MAP_SIZE * nextScale) / 2;
     state.y = (rect.height - MAP_SIZE * nextScale) / 2;
+    clampTransform();
     applyTransform();
   }
 
@@ -1783,6 +1801,15 @@
     const rect = elements.viewport.getBoundingClientRect();
     const worldWidth = MAP_SIZE * state.scale;
     const worldHeight = MAP_SIZE * state.scale;
+
+    if (isMobileViewport()) {
+      const paddingX = Math.max(140, rect.width * 0.42);
+      const paddingY = Math.max(140, rect.height * 0.32);
+      state.x = clamp(state.x, rect.width - worldWidth - paddingX, paddingX);
+      state.y = clamp(state.y, rect.height - worldHeight - paddingY, paddingY);
+      return;
+    }
+
     const padding = 120;
     state.x = worldWidth <= rect.width ? (rect.width - worldWidth) / 2 : clamp(state.x, rect.width - worldWidth - padding, padding);
     state.y = worldHeight <= rect.height ? (rect.height - worldHeight) / 2 : clamp(state.y, rect.height - worldHeight - padding, padding);

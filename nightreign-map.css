@@ -1113,26 +1113,50 @@
 @media (max-width: 920px) {
   .nightreign-map-page {
     height: calc(100dvh - 56px);
-  }
-
-  /* Mobile-only tile overlap:
-     Avoid sub-pixel seams caused by CSS grid fractions + transform scaling on mobile browsers.
-     Do not apply this to desktop because the current desktop map rendering is already correct. */
-  .nr-map-tiles {
-    overflow: hidden;
-  }
-
-  .nr-map-tile {
-    width: calc(100% + 1px);
-    height: calc(100% + 1px);
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    will-change: transform;
+    overscroll-behavior: none;
   }
 
   .nr-map-shell {
     min-height: 0;
+    overscroll-behavior: none;
+  }
+
+  .nr-map-viewport {
+    touch-action: none;
+    overscroll-behavior: none;
+    cursor: grab;
+  }
+
+  .nr-map-viewport.is-dragging {
+    cursor: grabbing;
+  }
+
+  .nr-map-world {
+    transform-origin: 0 0;
+  }
+
+  /* Mobile-only absolute tiles:
+     Avoid sub-pixel seams caused by CSS grid fractions + transform scaling on mobile browsers.
+     Do not apply this to desktop because the current desktop map rendering is already correct. */
+  .nr-map-tiles {
+    display: block;
+    overflow: hidden;
+  }
+
+  .nr-map-tile {
+    position: absolute;
+    left: var(--nr-tile-left);
+    top: var(--nr-tile-top);
+    width: var(--nr-tile-width);
+    height: var(--nr-tile-height);
+    margin: 0;
+    object-fit: fill;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   .nr-top-status {
@@ -1168,9 +1192,7 @@
   }
 
   .nr-shift-orbs {
-    top: 174px;
-    left: 12px;
-    width: 122px;
+    display: none !important;
   }
 
   .nr-shift-button {
@@ -1283,9 +1305,13 @@
   }
 
   .nr-language-switch {
-    left: 8px;
-    bottom: 72px;
-    padding: 5px;
+    top: 44px;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    z-index: 40;
+    padding: 4px;
+    transform: translateX(-50%);
   }
 
   .nr-language-label {
@@ -1293,7 +1319,10 @@
   }
 
   .nr-language-switch button {
-    min-width: 46px;
+    min-width: 44px;
+    min-height: 28px;
+    padding: 5px 8px;
+    font-size: 11px;
   }
 }
 
