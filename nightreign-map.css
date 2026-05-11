@@ -1115,6 +1115,22 @@
     height: calc(100dvh - 56px);
   }
 
+  /* Mobile-only tile overlap:
+     Avoid sub-pixel seams caused by CSS grid fractions + transform scaling on mobile browsers.
+     Do not apply this to desktop because the current desktop map rendering is already correct. */
+  .nr-map-tiles {
+    overflow: hidden;
+  }
+
+  .nr-map-tile {
+    width: calc(100% + 1px);
+    height: calc(100% + 1px);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+  }
+
   .nr-map-shell {
     min-height: 0;
   }
