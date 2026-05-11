@@ -28,7 +28,7 @@
     "Field_Boss.png": 30,
     "Field_Boss_Red.png": 30,
     "Evergaol.png": 30,
-    "Church.png": 28,
+    "Church.png": 42,
     "Castle.png": 52,
     "Buried_Treasure.png": 22,
     "Tunnel_Entrance.png": 22,
@@ -41,7 +41,7 @@
     "Ruins.png": 42,
     "Event.png": 38,
     "Night_Location.png": 46,
-    "Scale_Bearing_Merchant.png": 24,
+    "Scale_Bearing_Merchant.png": 38,
     "Spawn_Location.png": 54,
     "Spawn_Hawk.png": 56,
   };
@@ -699,7 +699,13 @@
   function handleMarkerClick(marker, event) {
     const category = marker.dataset.category;
     if (category === "spawn") {
-      state.spawnPoint = marker.dataset.location || "";
+      const clickedLocation = marker.dataset.location || "";
+      if (state.spawnPoint && state.spawnPoint === clickedLocation) {
+        resetSpawnSelection();
+        return;
+      }
+
+      state.spawnPoint = clickedLocation;
       state.selectedLandmarks.clear();
       state.exactLayout = false;
       state.poiChoice = null;
@@ -750,6 +756,10 @@
   }
 
   function resetFinder() {
+    resetSpawnSelection();
+  }
+
+  function resetSpawnSelection() {
     state.spawnPoint = "";
     state.selectedLandmarks.clear();
     state.exactLayout = false;
@@ -944,7 +954,13 @@
 
   function renderCandidatePanel() {
     const matches = getMatchingLayouts();
-    elements.selectedFilters.innerHTML = renderFinderStatus(matches);
+    const hasSpecialEvent = hasConstructSpecialEvent(matches);
+    const specialEventLabel = specialEventLabelForCandidate(matches);
+    elements.candidatePanel.classList.toggle("has-special-event", hasSpecialEvent);
+    elements.selectedFilters.innerHTML = `
+      ${specialEventLabel ? `<div class="nr-special-event-banner">${esc(specialEventLabel)}</div>` : ""}
+      ${renderFinderStatus(matches)}
+    `;
 
     const candidates = candidateLandmarks(matches);
     elements.candidateGrid.innerHTML = candidates.length
@@ -958,6 +974,51 @@
       : renderSpawnShortcuts(matches);
 
     renderCandidateSheet();
+  }
+
+  function hasConstructSpecialEventInLayouts(layouts) {
+    return layouts.some((layout) => {
+      if (isConstructSpecialValue(layout?.specialEvent)) return true;
+
+      const landmarks = [
+        ...(layout?.filterLandmarks || []),
+        ...(layout?.dynamicPOIs || []),
+        ...(layout?.staticPois || []),
+      ];
+
+      return landmarks.some(isConstructSpecialPoi);
+    });
+  }
+
+  function hasConstructSpecialEvent(matches) {
+    const fromMatches = hasConstructSpecialEventInLayouts(matches);
+    const fromCurrentPattern = [
+      ...(state.pattern?.dynamicPOIs || []),
+      ...(state.staticPois || []),
+    ].some(isConstructSpecialPoi) || isConstructSpecialValue(state.pattern?.specialEvent);
+
+    return fromMatches || fromCurrentPattern;
+  }
+
+  function specialEventLabelForCandidate(matches) {
+    if (!hasConstructSpecialEvent(matches)) return "";
+    const layout = matches.find((candidate) => isConstructSpecialValue(candidate.specialEvent));
+    const label = translateValue(state.pattern?.specialEvent)
+      || state.pattern?.specialEvent
+      || translateValue(layout?.specialEvent)
+      || layout?.specialEvent
+      || t("special");
+    return label;
+  }
+
+  function isConstructSpecialPoi(poi) {
+    return String(poi?.icon || "").includes("Construct_21100.png")
+      || isConstructSpecialValue(poi?.value)
+      || isConstructSpecialValue(poi?.location);
+  }
+
+  function isConstructSpecialValue(value) {
+    return String(value || "").includes("Construct");
   }
 
   function renderFinderStatus(matches) {
@@ -1294,6 +1355,12 @@
     const signature = FILTERABLE_CATEGORIES.has(poi.category) ? signatureForLandmark(poi) : "";
     const selected = signature && state.selectedLandmarks.has(signature);
     const isSpawnSelected = poi.category === "spawn" && state.spawnPoint === poi.location;
+    const isChurchPoi = poi.icon === "Church.png"
+      || poi.selectedIcon === "Church.png"
+      || poi.category === "grace"
+      || poi.selectedType === 4
+      || poi.hasChurch
+      || poi.value === "Church";
     const size = poi.category === "spawn"
       ? (isSpawnSelected ? 68 : 56)
       : poi.kind === "filter"
@@ -1303,6 +1370,7 @@
     const classes = ["nr-poi"];
     if (poi.kind === "filter") classes.push("nr-filter-poi");
     if (isSpawnSelected) classes.push("is-selected-spawn");
+    if (isChurchPoi) classes.push("is-church-poi");
     if (poi.kind === "filter" && poi.hasChurch && !poi.selectedType) classes.push("is-church-choice");
     if (poi.kind === "filter" && !poi.hasChurch && !poi.selectedType) classes.push("is-question-choice");
     if (selected || poi.selectedType) classes.push("is-filter-selected");
