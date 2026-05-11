@@ -438,6 +438,12 @@
   align-items: start;
 }
 
+.nr-candidate-title-block {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
 .nr-candidate-header-actions {
   display: flex;
   align-items: start;
@@ -545,6 +551,22 @@
   line-height: 1.25;
   text-align: center;
   text-shadow: 0 1px 2px #000;
+}
+
+.nr-special-event-banner[hidden] {
+  display: none;
+}
+
+.nr-special-event-banner-header {
+  justify-self: start;
+  max-width: 100%;
+  margin: 2px 0 0;
+  padding: 4px 10px;
+  overflow: hidden;
+  font-size: 11px;
+  line-height: 1.15;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .nr-filter-chip {
@@ -1117,8 +1139,8 @@
 .nr-poi-type-menu {
   position: absolute;
   z-index: 150;
-  width: 264px;
-  padding: 14px;
+  width: 320px;
+  padding: 16px;
   color: #fff;
   border: 1px solid rgba(255, 226, 111, 0.38);
   border-radius: 8px;
@@ -1145,9 +1167,9 @@
 }
 
 .nr-poi-type-menu h3 {
-  margin: 0 0 11px;
+  margin: 0 0 13px;
   color: #ffe26f;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 1000;
   line-height: 1.2;
   text-align: center;
@@ -1157,21 +1179,21 @@
 .nr-poi-type-menu div {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: 12px;
 }
 
 .nr-poi-type-menu button {
-  min-height: 78px;
+  min-height: 94px;
   display: grid;
-  gap: 6px;
+  gap: 8px;
   place-items: center;
-  padding: 9px 7px;
+  padding: 11px 9px;
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 8px;
   background: rgba(8, 13, 21, 0.52);
   font: inherit;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 900;
   line-height: 1.15;
   text-align: center;
@@ -1186,8 +1208,8 @@
 }
 
 .nr-poi-type-menu img {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.62));
 }
@@ -1330,6 +1352,10 @@
     transform: translateY(0);
   }
 
+  .nr-candidate-panel.has-special-event:not(.is-open) {
+    transform: translateY(calc(100% - 116px));
+  }
+
   .nr-sheet-handle {
     display: block;
     width: 44px;
@@ -1382,24 +1408,30 @@
     font-size: 12px;
   }
 
+  .nr-special-event-banner-header {
+    margin: 1px 0 0;
+    padding: 4px 9px;
+    font-size: 11px;
+  }
+
   .nr-church-marker {
     width: 42px;
     height: 42px;
   }
 
   .nr-poi-type-menu {
-    width: min(300px, 88vw);
-    padding: 12px;
+    width: min(348px, 94vw);
+    padding: 14px;
   }
 
   .nr-poi-type-menu button {
-    min-height: 74px;
-    font-size: 12px;
+    min-height: 92px;
+    font-size: 13px;
   }
 
   .nr-poi-type-menu img {
-    width: 42px;
-    height: 42px;
+    width: 50px;
+    height: 50px;
   }
 
   .nr-desktop-control {

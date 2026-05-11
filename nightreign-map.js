@@ -428,6 +428,7 @@
     guide: app.querySelector("[data-nr-guide]"),
     candidatePanel: app.querySelector("[data-nr-candidate-panel]"),
     sheetHandle: app.querySelector("[data-nr-candidate-handle]"),
+    specialEventBanner: app.querySelector("[data-nr-special-event-banner]"),
     candidateGrid: app.querySelector("[data-nr-candidate-grid]"),
     selectedFilters: app.querySelector("[data-nr-selected-filters]"),
     summary: app.querySelector("[data-nr-summary]"),
@@ -705,7 +706,7 @@
     if (category === "spawn") {
       const clickedLocation = marker.dataset.location || "";
       if (state.spawnPoint && state.spawnPoint === clickedLocation) {
-        resetSpawnSelection();
+        resetSpawnSelection({ openCandidates: false });
         return;
       }
 
@@ -767,15 +768,15 @@
   }
 
   function resetFinder() {
-    resetSpawnSelection();
+    resetSpawnSelection({ openCandidates: true });
   }
 
-  function resetSpawnSelection() {
+  function resetSpawnSelection({ openCandidates = true } = {}) {
     state.spawnPoint = "";
     state.selectedLandmarks.clear();
     state.exactLayout = false;
     state.poiChoice = null;
-    state.candidateOpen = true;
+    state.candidateOpen = openCandidates;
     syncToFirstMatchingLayout();
   }
 
@@ -968,10 +969,11 @@
     const hasSpecialEvent = hasConstructSpecialEvent(matches);
     const specialEventLabel = specialEventLabelForCandidate(matches);
     elements.candidatePanel.classList.toggle("has-special-event", hasSpecialEvent);
-    elements.selectedFilters.innerHTML = `
-      ${specialEventLabel ? `<div class="nr-special-event-banner">${esc(specialEventLabel)}</div>` : ""}
-      ${renderFinderStatus(matches)}
-    `;
+    if (elements.specialEventBanner) {
+      elements.specialEventBanner.hidden = !specialEventLabel;
+      elements.specialEventBanner.textContent = specialEventLabel;
+    }
+    elements.selectedFilters.innerHTML = renderFinderStatus(matches);
 
     const candidates = candidateLandmarks(matches);
     elements.candidateGrid.innerHTML = candidates.length
