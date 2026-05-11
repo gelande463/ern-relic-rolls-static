@@ -1,53 +1,55 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ナイトレイン遺物検索 | 神遺物・レア遺物シミュレータ</title>
-    <meta name="description" content="ナイトレインの遺物検索、神遺物候補、レア遺物の効果組み合わせを確認できる非公式の遺物シミュレータです。効果が3行ある遺物を対象に、入手可能なロール候補を絞り込めます。">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://nightreignrelic.com/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Nightreign Relic">
-    <meta property="og:title" content="ナイトレイン遺物検索 | 神遺物・レア遺物シミュレータ">
-    <meta property="og:description" content="ナイトレインの遺物検索、神遺物候補、レア遺物の効果組み合わせを確認できる非公式の遺物シミュレータです。">
-    <meta property="og:url" content="https://nightreignrelic.com/">
-    <meta property="og:image" content="https://nightreignrelic.com/assets/ogp/relic-share-default.png">
-    <meta property="og:image:secure_url" content="https://nightreignrelic.com/assets/ogp/relic-share-default.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:alt" content="ナイトレイン遺物検索の共有画像">
-    <meta property="og:locale" content="ja_JP">
+  <title>ナイトレイン遺物検索 | 神遺物・レア遺物シミュレータ</title>
+  <meta name="description"
+    content="ナイトレインの遺物検索、神遺物候補、レア遺物の効果組み合わせを確認できる非公式の遺物シミュレータです。効果が3行ある遺物を対象に、入手可能なロール候補を絞り込めます。">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nightreignrelic.com/">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@sojustchilln">
-    <meta name="twitter:creator" content="@sojustchilln">
-    <meta name="twitter:title" content="ナイトレイン遺物検索 | 神遺物・レア遺物シミュレータ">
-    <meta name="twitter:description" content="ナイトレインの遺物検索、神遺物候補、レア遺物の効果組み合わせを確認できる非公式の遺物シミュレータです。">
-    <meta name="twitter:image" content="https://nightreignrelic.com/assets/ogp/relic-share-default.png">
-    <meta name="twitter:image:alt" content="ナイトレイン遺物検索の共有画像">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nightreign Relic">
+  <meta property="og:title" content="ナイトレイン遺物検索 | 神遺物・レア遺物シミュレータ">
+  <meta property="og:description" content="ナイトレインの遺物検索、神遺物候補、レア遺物の効果組み合わせを確認できる非公式の遺物シミュレータです。">
+  <meta property="og:url" content="https://nightreignrelic.com/">
+  <meta property="og:image" content="https://nightreignrelic.com/assets/ogp/relic-share-default.png">
+  <meta property="og:image:secure_url" content="https://nightreignrelic.com/assets/ogp/relic-share-default.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="ナイトレイン遺物検索の共有画像">
+  <meta property="og:locale" content="ja_JP">
 
-    <meta name="theme-color" content="#090b13">
-    <link rel="icon" href="./assets/favicon.png">
-    <link rel="apple-touch-icon" href="./assets/favicon.png">
-    <script>
-      (() => {
-        try {
-          const saved = localStorage.getItem("nightreignrelic.theme");
-          const theme =
-            saved === "dark" || saved === "light"
-              ? saved
-              : window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches
-                ? "light"
-                : "dark";
-          document.documentElement.setAttribute("data-theme", theme);
-        } catch {
-          document.documentElement.setAttribute("data-theme", "dark");
-        }
-      })();
-    </script>
-    <script type="application/ld+json">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@sojustchilln">
+  <meta name="twitter:creator" content="@sojustchilln">
+  <meta name="twitter:title" content="ナイトレイン遺物検索 | 神遺物・レア遺物シミュレータ">
+  <meta name="twitter:description" content="ナイトレインの遺物検索、神遺物候補、レア遺物の効果組み合わせを確認できる非公式の遺物シミュレータです。">
+  <meta name="twitter:image" content="https://nightreignrelic.com/assets/ogp/relic-share-default.png">
+  <meta name="twitter:image:alt" content="ナイトレイン遺物検索の共有画像">
+
+  <meta name="theme-color" content="#090b13">
+  <link rel="icon" href="./assets/favicon.png">
+  <link rel="apple-touch-icon" href="./assets/favicon.png">
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem("nightreignrelic.theme");
+        const theme =
+          saved === "dark" || saved === "light"
+            ? saved
+            : window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
@@ -56,175 +58,172 @@
   "url": "https://nightreignrelic.com/",
   "applicationCategory": "GameApplication",
   "operatingSystem": "Any",
-  "description": "ナイトレインの遺物検索、神遺物候補、レア遺物の効果組み合わせ確認ができる非公式の遺物シミュレータです。",
+  "description": "ナイトレインの遺物検索、神遺物候補、レア遺物の効果組み合わせ確認ができる遺物シミュレータです。",
   "inLanguage": ["ja", "en"],
   "isAccessibleForFree": true
 }
     </script>
-    <link rel="stylesheet" href="./styles.css">
-    <!-- Google AdSense verification code will be inserted here after account setup. -->
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="site-brand" href="./index.html" aria-label="Nightreign Relic home">
+  <link rel="stylesheet" href="./styles.css">
+  <!-- Google AdSense verification code will be inserted here after account setup. -->
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="./index.html" aria-label="Nightreign Relic home">
+      <img src="./assets/favicon.png" alt="">
+      <span>Nightreign Relic</span>
+    </a>
+    <div class="site-header-actions">
+      <button class="site-theme-toggle" type="button" data-action="toggle-site-theme" aria-label="Toggle color theme">
+        <span aria-hidden="true">☾</span>
+      </button>
+      <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-controls="site-nav"
+        aria-expanded="false" data-action="toggle-mobile-menu">
+        <span class="mobile-menu-line"></span>
+        <span class="mobile-menu-line"></span>
+        <span class="mobile-menu-line"></span>
+      </button>
+    </div>
+    <nav class="site-nav" id="site-nav" aria-label="Site navigation">
+      <a href="./index.html" aria-current="page">Home</a>
+      <a href="./nightreign-map/">Nightreign Map</a>
+      <a href="./about.html">About</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./privacy-policy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-kicker" id="hero-kicker">Elden Ring™ Nightreign</p>
+      <h1 class="hero-title" id="hero-title">ナイトレイン遺物検索</h1>
+      <p class="hero-description" id="hero-description">ナイトレインの遺物効果、神遺物候補、レア遺物の組み合わせを確認できる非公式の遺物シミュレータです。</p>
+    </div>
+  </section>
+
+  <main id="app" class="app-shell site-main" aria-live="polite">
+    <section class="loading-panel">
+      <div class="brand-mark" aria-hidden="true">
         <img src="./assets/favicon.png" alt="">
-        <span>Nightreign Relic</span>
-      </a>
-      <div class="site-header-actions">
-        <button class="site-theme-toggle" type="button" data-action="toggle-site-theme" aria-label="Toggle color theme">
-          <span aria-hidden="true">☾</span>
-        </button>
-        <button
-          class="mobile-menu-toggle"
-          type="button"
-          aria-label="Open menu"
-          aria-controls="site-nav"
-          aria-expanded="false"
-          data-action="toggle-mobile-menu"
-        >
-          <span class="mobile-menu-line"></span>
-          <span class="mobile-menu-line"></span>
-          <span class="mobile-menu-line"></span>
-        </button>
       </div>
-      <nav class="site-nav" id="site-nav" aria-label="Site navigation">
-        <a href="./index.html" aria-current="page">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./contact.html">Contact</a>
-        <a href="./privacy-policy.html">Privacy Policy</a>
-        <!-- Future: <a href="./map.html">Map</a> -->
-      </nav>
-    </header>
-
-    <section class="hero">
-      <div class="hero-inner">
-        <p class="hero-kicker" id="hero-kicker">ナイトレイン非公式ファンツール</p>
-        <h1 class="hero-title" id="hero-title">ナイトレイン遺物検索</h1>
-        <p class="hero-description" id="hero-description">ナイトレインの遺物効果、神遺物候補、レア遺物の組み合わせを確認できる非公式の遺物シミュレータです。</p>
-      </div>
+      <p>Loading relic data...</p>
     </section>
+  </main>
 
-    <main id="app" class="app-shell site-main" aria-live="polite">
-      <section class="loading-panel">
-        <div class="brand-mark" aria-hidden="true">
-          <img src="./assets/favicon.png" alt="">
-        </div>
-        <p>Loading relic data...</p>
-      </section>
-    </main>
+  <section class="seo-intro-section" aria-labelledby="seo-intro-title">
+    <div class="seo-intro-inner">
+      <p class="seo-intro-kicker">Nightreign Relic Search</p>
+      <h2 id="seo-intro-title">ナイトレインの遺物検索と神遺物厳選をサポート</h2>
 
-    <section class="seo-intro-section" aria-labelledby="seo-intro-title">
-      <div class="seo-intro-inner">
-        <p class="seo-intro-kicker">Nightreign Relic Search</p>
-        <h2 id="seo-intro-title">ナイトレインの遺物検索と神遺物厳選をサポート</h2>
+      <div class="seo-intro-body">
+        <p>
+          このサイトは、ナイトレインの遺物効果をすばやく確認し、
+          神遺物やレア遺物の候補を探すための非公式ファンツールです。
+          効果が3行ある遺物を対象に、欲しい効果の組み合わせを選択して、
+          入手可能なロール候補を絞り込むことができます。
+        </p>
 
-        <div class="seo-intro-body">
-          <p>
-            このサイトは、ナイトレインの遺物効果をすばやく確認し、
-            神遺物やレア遺物の候補を探すための非公式ファンツールです。
-            効果が3行ある遺物を対象に、欲しい効果の組み合わせを選択して、
-            入手可能なロール候補を絞り込むことができます。
-          </p>
+        <p>
+          ナイトレイン遺物検索では、名前やキーワードから効果を探せるだけでなく、
+          共存できない組み合わせや、効果の位置が存在しない組み合わせを除外して表示します。
+          神遺物を狙う際の効果確認や、レア遺物の組み合わせ比較に利用できます。
+        </p>
 
-          <p>
-            ナイトレイン遺物検索では、名前やキーワードから効果を探せるだけでなく、
-            共存できない組み合わせや、効果の位置が存在しない組み合わせを除外して表示します。
-            神遺物を狙う際の効果確認や、レア遺物の組み合わせ比較に利用できます。
-          </p>
-
-          <p>
-            ナイトレインで神おま厳選のように理想効果を追いかけたい場合、
-            どの効果が同時に付く可能性があるのかを事前に確認することが重要です。
-            本ツールは、ナイトレイン遺物シミュレータとして、効果1〜3の候補を選びながら
-            神遺物パターンを探しやすくすることを目的としています。
-          </p>
-        </div>
+        <p>
+          ナイトレインで神おま厳選のように理想効果を追いかけたい場合、
+          どの効果が同時に付く可能性があるのかを事前に確認することが重要です。
+          本ツールは、ナイトレイン遺物シミュレータとして、効果1〜3の候補を選びながら
+          神遺物パターンを探しやすくすることを目的としています。
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="seo-faq-section" aria-labelledby="seo-faq-title">
-      <div class="seo-faq-inner">
-        <p class="seo-intro-kicker">FAQ</p>
-        <h2 id="seo-faq-title">ナイトレイン遺物検索に関するよくある質問</h2>
+  <section class="seo-faq-section" aria-labelledby="seo-faq-title">
+    <div class="seo-faq-inner">
+      <p class="seo-intro-kicker">FAQ</p>
+      <h2 id="seo-faq-title">ナイトレイン遺物検索に関するよくある質問</h2>
 
-        <div class="seo-faq-list">
-          <article class="seo-faq-item">
-            <h3>このサイトでは何ができますか？</h3>
-            <p>
-              ナイトレインの遺物効果を検索し、効果が3行ある遺物の組み合わせ候補を確認できます。
-              神遺物やレア遺物を探す際に、どの効果が同時に付く可能性があるかを調べるためのツールです。
-            </p>
-          </article>
+      <div class="seo-faq-list">
+        <article class="seo-faq-item">
+          <h3>このサイトでは何ができますか？</h3>
+          <p>
+            ナイトレインの遺物効果を検索し、効果が3行ある遺物の組み合わせ候補を確認できます。
+            神遺物やレア遺物を探す際に、どの効果が同時に付く可能性があるかを調べるためのツールです。
+          </p>
+        </article>
 
-          <article class="seo-faq-item">
-            <h3>ナイトレインの神遺物を確定で作れますか？</h3>
-            <p>
-              このサイトは神遺物を確定で作成するものではありません。
-              入手可能な効果の組み合わせを確認し、理想に近い遺物を探すためのシミュレータです。
-            </p>
-          </article>
+        <article class="seo-faq-item">
+          <h3>ナイトレインの神遺物を確定で作れますか？</h3>
+          <p>
+            このサイトは神遺物を確定で作成するものではありません。
+            入手可能な効果の組み合わせを確認し、理想に近い遺物を探すためのシミュレータです。
+          </p>
+        </article>
 
-          <article class="seo-faq-item">
-            <h3>レア遺物やDLC遺物にも対応していますか？</h3>
-            <p>
-              通常遺物、深層遺物、DLCを含む遺物モードを切り替えて検索できます。
-              The Forsaken Hollow DLCを含む効果を確認する場合は、DLC対応モードを選択してください。
-            </p>
-          </article>
-        </div>
+        <article class="seo-faq-item">
+          <h3>レア遺物やDLC遺物にも対応していますか？</h3>
+          <p>
+            通常遺物、深層遺物、DLCを含む遺物モードを切り替えて検索できます。
+            The Forsaken Hollow DLCを含む効果を確認する場合は、DLC対応モードを選択してください。
+          </p>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="simulator-note" aria-labelledby="simulator-note-title">
-      <div class="simulator-note-inner">
-        <p class="simulator-note-kicker">Search Notes</p>
-        <h2 id="simulator-note-title">遺物シミュレーターについて</h2>
+  <section class="simulator-note" aria-labelledby="simulator-note-title">
+    <div class="simulator-note-inner">
+      <p class="simulator-note-kicker">Search Notes</p>
+      <h2 id="simulator-note-title">遺物シミュレーターについて</h2>
 
-        <div class="simulator-note-body">
-          <p>
-            この遺物シミュレーターは、効果が3行ある遺物のみ検索できます。
-          </p>
+      <div class="simulator-note-body">
+        <p>
+          この遺物シミュレーターは、効果が3行ある遺物のみ検索できます。
+        </p>
 
-          <p>
-            欲しい3つの効果を選び、次の順序で優先順位を付けてください。
-          </p>
+        <p>
+          欲しい3つの効果を選び、次の順序で優先順位を付けてください。
+        </p>
 
-          <p class="simulator-note-example">
-            例：キャラクター能力、武器攻撃効果、呪文/祈祷スキルなど、
-            ユーティリティ、属性、クールダウン、攻撃力アップ＋X、
-            ダメージ無効化および耐性
-          </p>
+        <p class="simulator-note-example">
+          例：キャラクター能力、武器攻撃効果、呪文/祈祷スキルなど、
+          ユーティリティ、属性、クールダウン、攻撃力アップ＋X、
+          ダメージ無効化および耐性
+        </p>
 
-          <p>
-            もし1行目で何かを選択し、他の2行に欲しいオプションが表示されない場合、
-            それは共存できない、または効果の位置が存在しないためです。
-          </p>
+        <p>
+          もし1行目で何かを選択し、他の2行に欲しいオプションが表示されない場合、
+          それは共存できない、または効果の位置が存在しないためです。
+        </p>
 
-          <p>
-            ナイトレイン深層遺物では、一部の効果がデバフ効果に関連しています。
-            デバフ効果の欄が表示された場合は、リストから1つ選択する必要があります。
-            これは3つ目の効果でも同様です。
-          </p>
+        <p>
+          ナイトレイン深層遺物では、一部の効果がデバフ効果に関連しています。
+          デバフ効果の欄が表示された場合は、リストから1つ選択する必要があります。
+          これは3つ目の効果でも同様です。
+        </p>
 
-          <p>
-            <strong>通常・深層遺物 DLCを含む</strong> は、
-            The Forsaken Hollow DLC を所持しており、ゲームバージョンパッチ v1.02 より上の
-            遺物効果を確認する場合のみ使用してください。
-            v1.02 までの遺物には、通常遺物または深層遺物のみを使用してください。
-          </p>
-        </div>
+        <p>
+          <strong>通常・深層遺物 DLCを含む</strong> は、
+          The Forsaken Hollow DLC を所持しており、ゲームバージョンパッチ v1.02 より上の
+          遺物効果を確認する場合のみ使用してください。
+          v1.02 までの遺物には、通常遺物または深層遺物のみを使用してください。
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="site-footer">
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="./about.html">About</a>
-        <a href="./contact.html">Contact</a>
-        <a href="./privacy-policy.html">Privacy Policy</a>
-      </nav>
-      <p class="footer-copy">&copy; 2026 nightreignrelic.com</p>
-    </footer>
+  <footer class="site-footer">
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="./about.html">About</a>
+      <a href="./nightreign-map/">Nightreign Map</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./privacy-policy.html">Privacy Policy</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 nightreignrelic.com</p>
+  </footer>
 
-    <script src="./app.js" defer></script>
-  </body>
+  <script src="./app.js" defer></script>
+</body>
+
 </html>

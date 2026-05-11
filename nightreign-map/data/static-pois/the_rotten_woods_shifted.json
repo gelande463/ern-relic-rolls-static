@@ -1,0 +1,1026 @@
+[
+  {
+    "id": "the_rotten_woods_shifted-Rot_Blessing-1",
+    "x": 1608,
+    "y": 1326.75,
+    "coordinates": [
+      1608,
+      1326.75
+    ],
+    "location": "Rot Blessing",
+    "value": "Rot Blessing",
+    "icon": "Mission_Objective.png",
+    "type": "Rot_Blessing",
+    "category": "event",
+    "source": "static",
+    "title": "Rot Blessing"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Rot_Blessing-3",
+    "x": 1895,
+    "y": 1028,
+    "coordinates": [
+      1895,
+      1028
+    ],
+    "location": "Rot Blessing",
+    "value": "Rot Blessing",
+    "icon": "Mission_Objective.png",
+    "type": "Rot_Blessing",
+    "category": "event",
+    "source": "static",
+    "title": "Rot Blessing"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Rot_Blessing-6",
+    "x": 1463.75,
+    "y": 1118,
+    "coordinates": [
+      1463.75,
+      1118
+    ],
+    "location": "Rot Blessing",
+    "value": "Rot Blessing",
+    "icon": "Mission_Objective.png",
+    "type": "Rot_Blessing",
+    "category": "event",
+    "source": "static",
+    "title": "Rot Blessing"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Sites_of_grace-1",
+    "x": 929.38,
+    "y": 583.75,
+    "coordinates": [
+      929.38,
+      583.75
+    ],
+    "location": "Site of Grace",
+    "value": "Site of Grace",
+    "icon": "Site_of_Grace.png",
+    "type": "Sites_of_grace",
+    "category": "grace",
+    "source": "static",
+    "title": "Site of Grace"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Sites_of_grace-3",
+    "x": 1130.55,
+    "y": 613.45,
+    "coordinates": [
+      1130.55,
+      613.45
+    ],
+    "location": "Site of Grace",
+    "value": "Site of Grace",
+    "icon": "Site_of_Grace.png",
+    "type": "Sites_of_grace",
+    "category": "grace",
+    "source": "static",
+    "title": "Site of Grace"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Sites_of_grace-6",
+    "x": 1378.33,
+    "y": 418.33,
+    "coordinates": [
+      1378.33,
+      418.33
+    ],
+    "location": "Site of Grace",
+    "value": "Site of Grace",
+    "icon": "Site_of_Grace.png",
+    "type": "Sites_of_grace",
+    "category": "grace",
+    "source": "static",
+    "title": "Site of Grace"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Sites_of_grace-9",
+    "x": 1615.67,
+    "y": 681,
+    "coordinates": [
+      1615.67,
+      681
+    ],
+    "location": "Site of Grace",
+    "value": "Site of Grace",
+    "icon": "Site_of_Grace.png",
+    "type": "Sites_of_grace",
+    "category": "grace",
+    "source": "static",
+    "title": "Site of Grace"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Sites_of_grace-12",
+    "x": 1767.33,
+    "y": 609,
+    "coordinates": [
+      1767.33,
+      609
+    ],
+    "location": "Site of Grace",
+    "value": "Site of Grace",
+    "icon": "Site_of_Grace.png",
+    "type": "Sites_of_grace",
+    "category": "grace",
+    "source": "static",
+    "title": "Site of Grace"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Sites_of_grace-15",
+    "x": 1273.33,
+    "y": 799.33,
+    "coordinates": [
+      1273.33,
+      799.33
+    ],
+    "location": "Site of Grace",
+    "value": "Site of Grace",
+    "icon": "Site_of_Grace.png",
+    "type": "Sites_of_grace",
+    "category": "grace",
+    "source": "static",
+    "title": "Site of Grace"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Sites_of_grace-18",
+    "x": 1356.33,
+    "y": 1209.67,
+    "coordinates": [
+      1356.33,
+      1209.67
+    ],
+    "location": "Site of Grace",
+    "value": "Site of Grace",
+    "icon": "Site_of_Grace.png",
+    "type": "Sites_of_grace",
+    "category": "grace",
+    "source": "static",
+    "title": "Site of Grace"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Sites_of_grace-21",
+    "x": 897.33,
+    "y": 1147,
+    "coordinates": [
+      897.33,
+      1147
+    ],
+    "location": "Site of Grace",
+    "value": "Site of Grace",
+    "icon": "Site_of_Grace.png",
+    "type": "Sites_of_grace",
+    "category": "grace",
+    "source": "static",
+    "title": "Site of Grace"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Sites_of_grace-24",
+    "x": 881.33,
+    "y": 895.67,
+    "coordinates": [
+      881.33,
+      895.67
+    ],
+    "location": "Site of Grace",
+    "value": "Site of Grace",
+    "icon": "Site_of_Grace.png",
+    "type": "Sites_of_grace",
+    "category": "grace",
+    "source": "static",
+    "title": "Site of Grace"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Tunnel_Entrances-1",
+    "x": 1064.25,
+    "y": 706,
+    "coordinates": [
+      1064.25,
+      706
+    ],
+    "location": "Tunnel Entrance",
+    "value": "Tunnel Entrance",
+    "icon": "Tunnel_Entrance.png",
+    "type": "Tunnel_Entrances",
+    "category": "traversal",
+    "source": "static",
+    "title": "Tunnel Entrance"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Tunnel_Entrances-3",
+    "x": 1294.25,
+    "y": 545.25,
+    "coordinates": [
+      1294.25,
+      545.25
+    ],
+    "location": "Tunnel Entrance",
+    "value": "Tunnel Entrance",
+    "icon": "Tunnel_Entrance.png",
+    "type": "Tunnel_Entrances",
+    "category": "traversal",
+    "source": "static",
+    "title": "Tunnel Entrance"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Tunnel_Entrances-6",
+    "x": 1341.5,
+    "y": 513.5,
+    "coordinates": [
+      1341.5,
+      513.5
+    ],
+    "location": "Tunnel Entrance",
+    "value": "Tunnel Entrance",
+    "icon": "Tunnel_Entrance.png",
+    "type": "Tunnel_Entrances",
+    "category": "traversal",
+    "source": "static",
+    "title": "Tunnel Entrance"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Tunnel_Entrances-9",
+    "x": 1545.25,
+    "y": 585.25,
+    "coordinates": [
+      1545.25,
+      585.25
+    ],
+    "location": "Tunnel Entrance",
+    "value": "Tunnel Entrance",
+    "icon": "Tunnel_Entrance.png",
+    "type": "Tunnel_Entrances",
+    "category": "traversal",
+    "source": "static",
+    "title": "Tunnel Entrance"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Tunnel_Entrances-10",
+    "x": 1545.5,
+    "y": 585.25,
+    "coordinates": [
+      1545.5,
+      585.25
+    ],
+    "location": "Tunnel Entrance",
+    "value": "Tunnel Entrance",
+    "icon": "Tunnel_Entrance.png",
+    "type": "Tunnel_Entrances",
+    "category": "traversal",
+    "source": "static",
+    "title": "Tunnel Entrance"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-1",
+    "x": 1087.5,
+    "y": 1034.5,
+    "coordinates": [
+      1087.5,
+      1034.5
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-3",
+    "x": 888,
+    "y": 1023.75,
+    "coordinates": [
+      888,
+      1023.75
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-6",
+    "x": 1045.25,
+    "y": 818,
+    "coordinates": [
+      1045.25,
+      818
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-9",
+    "x": 868,
+    "y": 829,
+    "coordinates": [
+      868,
+      829
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-12",
+    "x": 912.5,
+    "y": 731.5,
+    "coordinates": [
+      912.5,
+      731.5
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-15",
+    "x": 842.5,
+    "y": 547,
+    "coordinates": [
+      842.5,
+      547
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-18",
+    "x": 1147.75,
+    "y": 732.25,
+    "coordinates": [
+      1147.75,
+      732.25
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-21",
+    "x": 1176.75,
+    "y": 651.5,
+    "coordinates": [
+      1176.75,
+      651.5
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-24",
+    "x": 1324.25,
+    "y": 632.25,
+    "coordinates": [
+      1324.25,
+      632.25
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-27",
+    "x": 1299.5,
+    "y": 576.5,
+    "coordinates": [
+      1299.5,
+      576.5
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-30",
+    "x": 1341.75,
+    "y": 482.25,
+    "coordinates": [
+      1341.75,
+      482.25
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-33",
+    "x": 1323.75,
+    "y": 841.75,
+    "coordinates": [
+      1323.75,
+      841.75
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-36",
+    "x": 1604.5,
+    "y": 677,
+    "coordinates": [
+      1604.5,
+      677
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-39",
+    "x": 1633,
+    "y": 581.25,
+    "coordinates": [
+      1633,
+      581.25
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-42",
+    "x": 1732.75,
+    "y": 508,
+    "coordinates": [
+      1732.75,
+      508
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-45",
+    "x": 1764,
+    "y": 590.25,
+    "coordinates": [
+      1764,
+      590.25
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spiritstreams-48",
+    "x": 1884.5,
+    "y": 641.75,
+    "coordinates": [
+      1884.5,
+      641.75
+    ],
+    "location": "Spiritstream",
+    "value": "Spiritstream",
+    "icon": "Spiritstream.png",
+    "type": "Spiritstreams",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spiritstream"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spectral_Hawk_Trees-1",
+    "x": 1115.45,
+    "y": 428.55,
+    "coordinates": [
+      1115.45,
+      428.55
+    ],
+    "location": "Spectral Hawk Tree",
+    "value": "Spectral Hawk Tree",
+    "icon": "Spectral_Hawk_Tree.png",
+    "type": "Spectral_Hawk_Trees",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spectral Hawk Tree"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spectral_Hawk_Trees-3",
+    "x": 1525.27,
+    "y": 606.91,
+    "coordinates": [
+      1525.27,
+      606.91
+    ],
+    "location": "Spectral Hawk Tree",
+    "value": "Spectral Hawk Tree",
+    "icon": "Spectral_Hawk_Tree.png",
+    "type": "Spectral_Hawk_Trees",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spectral Hawk Tree"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spectral_Hawk_Trees-6",
+    "x": 1712.91,
+    "y": 555.45,
+    "coordinates": [
+      1712.91,
+      555.45
+    ],
+    "location": "Spectral Hawk Tree",
+    "value": "Spectral Hawk Tree",
+    "icon": "Spectral_Hawk_Tree.png",
+    "type": "Spectral_Hawk_Trees",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spectral Hawk Tree"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spectral_Hawk_Trees-7",
+    "x": 1712.91,
+    "y": 555.27,
+    "coordinates": [
+      1712.91,
+      555.27
+    ],
+    "location": "Spectral Hawk Tree",
+    "value": "Spectral Hawk Tree",
+    "icon": "Spectral_Hawk_Tree.png",
+    "type": "Spectral_Hawk_Trees",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spectral Hawk Tree"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spectral_Hawk_Trees-8",
+    "x": 1712.91,
+    "y": 555.09,
+    "coordinates": [
+      1712.91,
+      555.09
+    ],
+    "location": "Spectral Hawk Tree",
+    "value": "Spectral Hawk Tree",
+    "icon": "Spectral_Hawk_Tree.png",
+    "type": "Spectral_Hawk_Trees",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spectral Hawk Tree"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spectral_Hawk_Trees-9",
+    "x": 1388.5,
+    "y": 1233,
+    "coordinates": [
+      1388.5,
+      1233
+    ],
+    "location": "Spectral Hawk Tree",
+    "value": "Spectral Hawk Tree",
+    "icon": "Spectral_Hawk_Tree.png",
+    "type": "Spectral_Hawk_Trees",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spectral Hawk Tree"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Spectral_Hawk_Trees-12",
+    "x": 1033,
+    "y": 835.75,
+    "coordinates": [
+      1033,
+      835.75
+    ],
+    "location": "Spectral Hawk Tree",
+    "value": "Spectral Hawk Tree",
+    "icon": "Spectral_Hawk_Tree.png",
+    "type": "Spectral_Hawk_Trees",
+    "category": "traversal",
+    "source": "static",
+    "title": "Spectral Hawk Tree"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Scarabs-1",
+    "x": 1300.73,
+    "y": 1171.09,
+    "coordinates": [
+      1300.73,
+      1171.09
+    ],
+    "location": "Scarab",
+    "value": "Scarab",
+    "icon": "Scarab.png",
+    "type": "Scarabs",
+    "category": "scarab",
+    "source": "static",
+    "title": "Scarab"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Scarabs-3",
+    "x": 1204.73,
+    "y": 1160,
+    "coordinates": [
+      1204.73,
+      1160
+    ],
+    "location": "Scarab",
+    "value": "Scarab",
+    "icon": "Scarab.png",
+    "type": "Scarabs",
+    "category": "scarab",
+    "source": "static",
+    "title": "Scarab"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Scarabs-6",
+    "x": 1063.82,
+    "y": 1136.18,
+    "coordinates": [
+      1063.82,
+      1136.18
+    ],
+    "location": "Scarab",
+    "value": "Scarab",
+    "icon": "Scarab.png",
+    "type": "Scarabs",
+    "category": "scarab",
+    "source": "static",
+    "title": "Scarab"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Scarabs-9",
+    "x": 1017.82,
+    "y": 1197.82,
+    "coordinates": [
+      1017.82,
+      1197.82
+    ],
+    "location": "Scarab",
+    "value": "Scarab",
+    "icon": "Scarab.png",
+    "type": "Scarabs",
+    "category": "scarab",
+    "source": "static",
+    "title": "Scarab"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Scarabs-12",
+    "x": 861.82,
+    "y": 1032.55,
+    "coordinates": [
+      861.82,
+      1032.55
+    ],
+    "location": "Scarab",
+    "value": "Scarab",
+    "icon": "Scarab.png",
+    "type": "Scarabs",
+    "category": "scarab",
+    "source": "static",
+    "title": "Scarab"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Scarabs-15",
+    "x": 910,
+    "y": 955.45,
+    "coordinates": [
+      910,
+      955.45
+    ],
+    "location": "Scarab",
+    "value": "Scarab",
+    "icon": "Scarab.png",
+    "type": "Scarabs",
+    "category": "scarab",
+    "source": "static",
+    "title": "Scarab"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Scarabs-18",
+    "x": 1190,
+    "y": 854.55,
+    "coordinates": [
+      1190,
+      854.55
+    ],
+    "location": "Scarab",
+    "value": "Scarab",
+    "icon": "Scarab.png",
+    "type": "Scarabs",
+    "category": "scarab",
+    "source": "static",
+    "title": "Scarab"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Scarabs-21",
+    "x": 1194.36,
+    "y": 714.73,
+    "coordinates": [
+      1194.36,
+      714.73
+    ],
+    "location": "Scarab",
+    "value": "Scarab",
+    "icon": "Scarab.png",
+    "type": "Scarabs",
+    "category": "scarab",
+    "source": "static",
+    "title": "Scarab"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Scarabs-24",
+    "x": 1296,
+    "y": 709.82,
+    "coordinates": [
+      1296,
+      709.82
+    ],
+    "location": "Scarab",
+    "value": "Scarab",
+    "icon": "Scarab.png",
+    "type": "Scarabs",
+    "category": "scarab",
+    "source": "static",
+    "title": "Scarab"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Scarabs-27",
+    "x": 1034.25,
+    "y": 630.5,
+    "coordinates": [
+      1034.25,
+      630.5
+    ],
+    "location": "Scarab",
+    "value": "Scarab",
+    "icon": "Scarab.png",
+    "type": "Scarabs",
+    "category": "scarab",
+    "source": "static",
+    "title": "Scarab"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Scarabs-30",
+    "x": 1779.5,
+    "y": 441,
+    "coordinates": [
+      1779.5,
+      441
+    ],
+    "location": "Scarab",
+    "value": "Scarab",
+    "icon": "Scarab.png",
+    "type": "Scarabs",
+    "category": "scarab",
+    "source": "static",
+    "title": "Scarab"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Scarabs-33",
+    "x": 1530.75,
+    "y": 825.25,
+    "coordinates": [
+      1530.75,
+      825.25
+    ],
+    "location": "Scarab",
+    "value": "Scarab",
+    "icon": "Scarab.png",
+    "type": "Scarabs",
+    "category": "scarab",
+    "source": "static",
+    "title": "Scarab"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Buried_Treasures-1",
+    "x": 1328.75,
+    "y": 1118.12,
+    "coordinates": [
+      1328.75,
+      1118.12
+    ],
+    "location": "Buried Treasure",
+    "value": "Buried Treasure",
+    "icon": "Buried_Treasure.png",
+    "type": "Buried_Treasures",
+    "category": "treasure",
+    "source": "static",
+    "title": "Buried Treasure"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Buried_Treasures-3",
+    "x": 951.09,
+    "y": 1241.09,
+    "coordinates": [
+      951.09,
+      1241.09
+    ],
+    "location": "Buried Treasure",
+    "value": "Buried Treasure",
+    "icon": "Buried_Treasure.png",
+    "type": "Buried_Treasures",
+    "category": "treasure",
+    "source": "static",
+    "title": "Buried Treasure"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Buried_Treasures-6",
+    "x": 931.09,
+    "y": 864.73,
+    "coordinates": [
+      931.09,
+      864.73
+    ],
+    "location": "Buried Treasure",
+    "value": "Buried Treasure",
+    "icon": "Buried_Treasure.png",
+    "type": "Buried_Treasures",
+    "category": "treasure",
+    "source": "static",
+    "title": "Buried Treasure"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Buried_Treasures-9",
+    "x": 928.91,
+    "y": 644.73,
+    "coordinates": [
+      928.91,
+      644.73
+    ],
+    "location": "Buried Treasure",
+    "value": "Buried Treasure",
+    "icon": "Buried_Treasure.png",
+    "type": "Buried_Treasures",
+    "category": "treasure",
+    "source": "static",
+    "title": "Buried Treasure"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Buried_Treasures-12",
+    "x": 1324.73,
+    "y": 769.45,
+    "coordinates": [
+      1324.73,
+      769.45
+    ],
+    "location": "Buried Treasure",
+    "value": "Buried Treasure",
+    "icon": "Buried_Treasure.png",
+    "type": "Buried_Treasures",
+    "category": "treasure",
+    "source": "static",
+    "title": "Buried Treasure"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Buried_Treasures-15",
+    "x": 856,
+    "y": 297.82,
+    "coordinates": [
+      856,
+      297.82
+    ],
+    "location": "Buried Treasure",
+    "value": "Buried Treasure",
+    "icon": "Buried_Treasure.png",
+    "type": "Buried_Treasures",
+    "category": "treasure",
+    "source": "static",
+    "title": "Buried Treasure"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Buried_Treasures-18",
+    "x": 1495.64,
+    "y": 336,
+    "coordinates": [
+      1495.64,
+      336
+    ],
+    "location": "Buried Treasure",
+    "value": "Buried Treasure",
+    "icon": "Buried_Treasure.png",
+    "type": "Buried_Treasures",
+    "category": "treasure",
+    "source": "static",
+    "title": "Buried Treasure"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Buried_Treasures-21",
+    "x": 1747.82,
+    "y": 496.36,
+    "coordinates": [
+      1747.82,
+      496.36
+    ],
+    "location": "Buried Treasure",
+    "value": "Buried Treasure",
+    "icon": "Buried_Treasure.png",
+    "type": "Buried_Treasures",
+    "category": "treasure",
+    "source": "static",
+    "title": "Buried Treasure"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Buried_Treasures-24",
+    "x": 1559,
+    "y": 823.33,
+    "coordinates": [
+      1559,
+      823.33
+    ],
+    "location": "Buried Treasure",
+    "value": "Buried Treasure",
+    "icon": "Buried_Treasure.png",
+    "type": "Buried_Treasures",
+    "category": "treasure",
+    "source": "static",
+    "title": "Buried Treasure"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Smithing_Tables-1",
+    "x": 1228.38,
+    "y": 925,
+    "coordinates": [
+      1228.38,
+      925
+    ],
+    "location": "Smithing Table",
+    "value": "Smithing Table",
+    "icon": "Ruins.png",
+    "type": "Smithing_Tables",
+    "category": "utility",
+    "source": "static",
+    "title": "Smithing Table"
+  },
+  {
+    "id": "the_rotten_woods_shifted-Smithing_Tables-3",
+    "x": 1386.5,
+    "y": 878,
+    "coordinates": [
+      1386.5,
+      878
+    ],
+    "location": "Smithing Table",
+    "value": "Smithing Table",
+    "icon": "Ruins.png",
+    "type": "Smithing_Tables",
+    "category": "utility",
+    "source": "static",
+    "title": "Smithing Table"
+  }
+]

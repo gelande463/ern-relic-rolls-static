@@ -76,7 +76,7 @@
   const PAGE_COPY = {
     ja_JP: {
       documentTitle: "ナイトレイン遺物検索 | 神遺物・レア遺物シミュレータ",
-      kicker: "ナイトレイン非公式ファンツール",
+      kicker: "Elden Ring™ Nightreign",
       title: "ナイトレイン遺物検索",
       description: "ナイトレインの遺物効果、神遺物候補、レア遺物の組み合わせを確認できる非公式の遺物シミュレータです。",
     },

@@ -1,0 +1,1039 @@
+{
+  "layoutNumber": 70,
+  "patternId": "069",
+  "nightlord": "Adel",
+  "shiftingEarth": "Crater",
+  "spawnPoint": "Far Southwest",
+  "specialEvent": null,
+  "nightBosses": {
+    "day1": "Wormface",
+    "day2": "Crucible Knight and Golden Hippopotamus",
+    "extra": null
+  },
+  "nightCircles": {
+    "day1": "South of Castle",
+    "day2": "North of Crater"
+  },
+  "mapLayout": "the_crater_shifted",
+  "tileDirectory": "the_crater_shifted_map_tiles",
+  "dynamicPoiCount": 32,
+  "staticPoiCount": 54,
+  "filterLandmarks": [
+    {
+      "id": 93,
+      "location": "South Lake",
+      "value": "Fort - Abductor Virgin",
+      "title": "Abductor Virgin",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Fort.png"
+    },
+    {
+      "id": 94,
+      "location": "Groveside",
+      "value": "Fort - Lordsworn Captain",
+      "title": "Lordsworn Captain",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Fort.png"
+    },
+    {
+      "id": 96,
+      "location": "Gatefront",
+      "value": "Great Church - Mausoleum Knight",
+      "title": "Mausoleum Knight",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Great_Church.png"
+    },
+    {
+      "id": 95,
+      "location": "Stormhill North of Gate",
+      "value": "Ruins - Ancient Heroes of Zamor",
+      "title": "Ancient Heroes of Zamor",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Ruins.png"
+    },
+    {
+      "id": 97,
+      "location": "Northwest Stormhill",
+      "value": "Great Church - Fire Monk",
+      "title": "Fire Monk",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Great_Church.png"
+    },
+    {
+      "id": 107,
+      "location": "South Mistwood",
+      "value": "Camp - Leonine Misbegotten",
+      "title": "Leonine Misbegotten",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Main_Encampment.png"
+    },
+    {
+      "id": 108,
+      "location": "Waypoint Ruins",
+      "value": "Ruins - Runebear",
+      "title": "Runebear",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Ruins.png"
+    },
+    {
+      "id": 106,
+      "location": "Minor Erdtree",
+      "value": "Fort - Abductor Virgin",
+      "title": "Abductor Virgin",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Fort.png"
+    },
+    {
+      "id": 105,
+      "location": "West Mistwood",
+      "value": "Camp - Flame Chariots",
+      "title": "Flame Chariots",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Main_Encampment.png"
+    },
+    {
+      "id": 104,
+      "location": "Northeast Mistwood",
+      "value": "Great Church - Mausoleum Knight",
+      "title": "Mausoleum Knight",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Great_Church.png"
+    },
+    {
+      "id": 101,
+      "location": "Summonwater",
+      "value": "Ruins - Ancient Heroes of Zamor",
+      "title": "Ancient Heroes of Zamor",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Ruins.png"
+    },
+    {
+      "id": 33,
+      "location": "West of Warmaster's Shack",
+      "value": "Sorcerer's Rise - Fake Building",
+      "title": "Fake Building",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Sorcerer's_Rise.png"
+    },
+    {
+      "id": 28,
+      "location": "Southeast of Lake",
+      "value": "Church - Normal",
+      "title": "Normal",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Church.png"
+    },
+    {
+      "id": 29,
+      "location": "East of Cavalry Bridge",
+      "value": "Church - Normal",
+      "title": "Normal",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Church.png"
+    },
+    {
+      "id": 157,
+      "location": "Minor Erdtree",
+      "value": "Sorcerer's Rise - Missing Statue",
+      "title": "Missing Statue",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Sorcerer's_Rise.png"
+    },
+    {
+      "id": 37,
+      "location": "Third Church",
+      "value": "Church - Normal",
+      "title": "Normal",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Church.png"
+    },
+    {
+      "id": 159,
+      "location": "Castle",
+      "value": "Trolls",
+      "title": "Trolls",
+      "type": "Castle",
+      "category": "boss",
+      "icon": "Castle.png"
+    },
+    {
+      "id": 23,
+      "location": "Castle Basement",
+      "value": "Royal Revenant",
+      "title": "Royal Revenant",
+      "type": "Arena Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 158,
+      "location": "Castle Rooftop",
+      "value": "Ancestor Spirit",
+      "title": "Ancestor Spirit",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss_Red.png"
+    },
+    {
+      "id": 85,
+      "location": "Far Southwest of Lake",
+      "value": "Red Wolf",
+      "title": "Red Wolf",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 84,
+      "location": "Lake Field Boss",
+      "value": "Ulcerated Tree Spirit",
+      "title": "Ulcerated Tree Spirit",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss_Red.png"
+    },
+    {
+      "id": 86,
+      "location": "North of Stormhill Tunnel Entrance",
+      "value": "Tree Sentinel",
+      "title": "Tree Sentinel",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss_Red.png"
+    },
+    {
+      "id": 89,
+      "location": "Northwest Stormhill Cliffside",
+      "value": "Leonine Misbegotten",
+      "title": "Leonine Misbegotten",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 83,
+      "location": "Mistwood Spectral Hawk",
+      "value": "Draconic Tree Sentinel",
+      "title": "Draconic Tree Sentinel",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss_Red.png"
+    },
+    {
+      "id": 92,
+      "location": "North Mistwood",
+      "value": "Grafted Scion",
+      "title": "Grafted Scion",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 82,
+      "location": "Northwest of Lake",
+      "value": "Stoneskin Lords",
+      "title": "Stoneskin Lords",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    },
+    {
+      "id": 76,
+      "location": "Stormhill",
+      "value": "Godskin Apostle",
+      "title": "Godskin Apostle",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    },
+    {
+      "id": 81,
+      "location": "East of Lake",
+      "value": "Nox Warriors",
+      "title": "Nox Warriors",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    },
+    {
+      "id": 80,
+      "location": "Mistwood",
+      "value": "Grave Warden Duelist",
+      "title": "Grave Warden Duelist",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    }
+  ],
+  "dynamicPOIs": [
+    {
+      "id": 93,
+      "x": 1183.64,
+      "y": 1322,
+      "coordinates": [
+        1183.64,
+        1322
+      ],
+      "location": "South Lake",
+      "value": "Fort - Abductor Virgin",
+      "icon": "Fort.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Abductor Virgin"
+    },
+    {
+      "id": 94,
+      "x": 979.75,
+      "y": 1104.25,
+      "coordinates": [
+        979.75,
+        1104.25
+      ],
+      "location": "Groveside",
+      "value": "Fort - Lordsworn Captain",
+      "icon": "Fort.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Lordsworn Captain"
+    },
+    {
+      "id": 96,
+      "x": 1043.64,
+      "y": 931.09,
+      "coordinates": [
+        1043.64,
+        931.09
+      ],
+      "location": "Gatefront",
+      "value": "Great Church - Mausoleum Knight",
+      "icon": "Great_Church.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Mausoleum Knight"
+    },
+    {
+      "id": 95,
+      "x": 984,
+      "y": 742.5,
+      "coordinates": [
+        984,
+        742.5
+      ],
+      "location": "Stormhill North of Gate",
+      "value": "Ruins - Ancient Heroes of Zamor",
+      "icon": "Ruins.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Ancient Heroes of Zamor"
+    },
+    {
+      "id": 97,
+      "x": 891.75,
+      "y": 465,
+      "coordinates": [
+        891.75,
+        465
+      ],
+      "location": "Northwest Stormhill",
+      "value": "Great Church - Fire Monk",
+      "icon": "Great_Church.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Fire Monk"
+    },
+    {
+      "id": 107,
+      "x": 1768.67,
+      "y": 1238.67,
+      "coordinates": [
+        1768.67,
+        1238.67
+      ],
+      "location": "South Mistwood",
+      "value": "Camp - Leonine Misbegotten",
+      "icon": "Main_Encampment.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Leonine Misbegotten"
+    },
+    {
+      "id": 108,
+      "x": 1547.67,
+      "y": 1171.67,
+      "coordinates": [
+        1547.67,
+        1171.67
+      ],
+      "location": "Waypoint Ruins",
+      "value": "Ruins - Runebear",
+      "icon": "Ruins.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Runebear"
+    },
+    {
+      "id": 106,
+      "x": 1778.67,
+      "y": 1063.33,
+      "coordinates": [
+        1778.67,
+        1063.33
+      ],
+      "location": "Minor Erdtree",
+      "value": "Fort - Abductor Virgin",
+      "icon": "Fort.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Abductor Virgin"
+    },
+    {
+      "id": 105,
+      "x": 1572,
+      "y": 1001.33,
+      "coordinates": [
+        1572,
+        1001.33
+      ],
+      "location": "West Mistwood",
+      "value": "Camp - Flame Chariots",
+      "icon": "Main_Encampment.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Flame Chariots"
+    },
+    {
+      "id": 104,
+      "x": 1806.5,
+      "y": 712.75,
+      "coordinates": [
+        1806.5,
+        712.75
+      ],
+      "location": "Northeast Mistwood",
+      "value": "Great Church - Mausoleum Knight",
+      "icon": "Great_Church.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Mausoleum Knight"
+    },
+    {
+      "id": 101,
+      "x": 1705,
+      "y": 355.25,
+      "coordinates": [
+        1705,
+        355.25
+      ],
+      "location": "Summonwater",
+      "value": "Ruins - Ancient Heroes of Zamor",
+      "icon": "Ruins.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Ancient Heroes of Zamor"
+    },
+    {
+      "id": 33,
+      "x": 879.67,
+      "y": 595,
+      "coordinates": [
+        879.67,
+        595
+      ],
+      "location": "West of Warmaster's Shack",
+      "value": "Sorcerer's Rise - Fake Building",
+      "icon": "Sorcerer's_Rise.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Fake Building"
+    },
+    {
+      "id": 28,
+      "x": 1465.67,
+      "y": 1379.67,
+      "coordinates": [
+        1465.67,
+        1379.67
+      ],
+      "location": "Southeast of Lake",
+      "value": "Church - Normal",
+      "icon": "Church.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Normal"
+    },
+    {
+      "id": 29,
+      "x": 1431,
+      "y": 1081,
+      "coordinates": [
+        1431,
+        1081
+      ],
+      "location": "East of Cavalry Bridge",
+      "value": "Church - Normal",
+      "icon": "Church.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Normal"
+    },
+    {
+      "id": 157,
+      "x": 1873,
+      "y": 992,
+      "coordinates": [
+        1873,
+        992
+      ],
+      "location": "Minor Erdtree",
+      "value": "Sorcerer's Rise - Missing Statue",
+      "icon": "Sorcerer's_Rise.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Missing Statue"
+    },
+    {
+      "id": 37,
+      "x": 1841.75,
+      "y": 612.5,
+      "coordinates": [
+        1841.75,
+        612.5
+      ],
+      "location": "Third Church",
+      "value": "Church - Normal",
+      "icon": "Church.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Normal"
+    },
+    {
+      "id": 159,
+      "x": 1237.45,
+      "y": 832.36,
+      "coordinates": [
+        1237.45,
+        832.36
+      ],
+      "location": "Castle",
+      "value": "Trolls",
+      "icon": "Castle.png",
+      "type": "Castle",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Trolls"
+    },
+    {
+      "id": 23,
+      "x": 1291.88,
+      "y": 915.88,
+      "coordinates": [
+        1291.88,
+        915.88
+      ],
+      "location": "Castle Basement",
+      "value": "Royal Revenant",
+      "icon": "Field_Boss.png",
+      "type": "Arena Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Royal Revenant"
+    },
+    {
+      "id": 158,
+      "x": 1245.82,
+      "y": 916.36,
+      "coordinates": [
+        1245.82,
+        916.36
+      ],
+      "location": "Castle Rooftop",
+      "value": "Ancestor Spirit",
+      "icon": "Field_Boss_Red.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Ancestor Spirit"
+    },
+    {
+      "id": 85,
+      "x": 1034.67,
+      "y": 1389.67,
+      "coordinates": [
+        1034.67,
+        1389.67
+      ],
+      "location": "Far Southwest of Lake",
+      "value": "Red Wolf",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Red Wolf"
+    },
+    {
+      "id": 84,
+      "x": 1271.67,
+      "y": 1191,
+      "coordinates": [
+        1271.67,
+        1191
+      ],
+      "location": "Lake Field Boss",
+      "value": "Ulcerated Tree Spirit",
+      "icon": "Field_Boss_Red.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Ulcerated Tree Spirit"
+    },
+    {
+      "id": 86,
+      "x": 1048.33,
+      "y": 647.33,
+      "coordinates": [
+        1048.33,
+        647.33
+      ],
+      "location": "North of Stormhill Tunnel Entrance",
+      "value": "Tree Sentinel",
+      "icon": "Field_Boss_Red.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Tree Sentinel"
+    },
+    {
+      "id": 89,
+      "x": 977,
+      "y": 326.33,
+      "coordinates": [
+        977,
+        326.33
+      ],
+      "location": "Northwest Stormhill Cliffside",
+      "value": "Leonine Misbegotten",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Leonine Misbegotten"
+    },
+    {
+      "id": 83,
+      "x": 1683,
+      "y": 1290.67,
+      "coordinates": [
+        1683,
+        1290.67
+      ],
+      "location": "Mistwood Spectral Hawk",
+      "value": "Draconic Tree Sentinel",
+      "icon": "Field_Boss_Red.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Draconic Tree Sentinel"
+    },
+    {
+      "id": 92,
+      "x": 1811.67,
+      "y": 826,
+      "coordinates": [
+        1811.67,
+        826
+      ],
+      "location": "North Mistwood",
+      "value": "Grafted Scion",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Grafted Scion"
+    },
+    {
+      "id": 82,
+      "x": 1096.25,
+      "y": 1068.5,
+      "coordinates": [
+        1096.25,
+        1068.5
+      ],
+      "location": "Northwest of Lake",
+      "value": "Stoneskin Lords",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Stoneskin Lords"
+    },
+    {
+      "id": 76,
+      "x": 793.64,
+      "y": 536.73,
+      "coordinates": [
+        793.64,
+        536.73
+      ],
+      "location": "Stormhill",
+      "value": "Godskin Apostle",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Godskin Apostle"
+    },
+    {
+      "id": 81,
+      "x": 1559.25,
+      "y": 1297,
+      "coordinates": [
+        1559.25,
+        1297
+      ],
+      "location": "East of Lake",
+      "value": "Nox Warriors",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Nox Warriors"
+    },
+    {
+      "id": 80,
+      "x": 1845.12,
+      "y": 824.88,
+      "coordinates": [
+        1845.12,
+        824.88
+      ],
+      "location": "Mistwood",
+      "value": "Grave Warden Duelist",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Grave Warden Duelist"
+    },
+    {
+      "id": 187,
+      "x": 1231,
+      "y": 1045,
+      "coordinates": [
+        1231,
+        1045
+      ],
+      "location": "South of Castle",
+      "value": "Wormface",
+      "icon": "Night_Location.png",
+      "type": "Night Circle",
+      "category": "night",
+      "source": "dynamic",
+      "title": "Day 1: Wormface",
+      "night": 1
+    },
+    {
+      "id": 211,
+      "x": 1314,
+      "y": 319,
+      "coordinates": [
+        1314,
+        319
+      ],
+      "location": "North of Crater",
+      "value": "Crucible Knight and Golden Hippopotamus",
+      "icon": "Night_Location.png",
+      "type": "Night Circle",
+      "category": "night",
+      "source": "dynamic",
+      "title": "Day 2: Crucible Knight and Golden Hippopotamus",
+      "night": 2
+    },
+    {
+      "id": 207,
+      "x": 862,
+      "y": 1169,
+      "coordinates": [
+        862,
+        1169
+      ],
+      "location": "Far Southwest",
+      "value": "Spawn Point",
+      "icon": "Spawn_Location.png",
+      "type": "Spawn Point",
+      "category": "spawn",
+      "source": "dynamic",
+      "title": "Spawn: Far Southwest"
+    }
+  ],
+  "rawLayout": {
+    "Layout Number": "70",
+    "Nightlord": "Adel",
+    "Shifting Earth": "Crater",
+    "Spawn Point": "Far Southwest",
+    "Special Event": "empty",
+    "Night 1 Boss": "Wormface",
+    "Night 2 Boss": "Crucible Knight and Golden Hippopotamus",
+    "Extra Night Boss": "empty",
+    "Night 1 Circle": "South of Castle",
+    "Night 2 Circle": "North of Crater",
+    "Castle - Castle": {
+      "location": "Castle",
+      "value": "Trolls"
+    },
+    "Major Base - South Lake": {
+      "location": "South Lake",
+      "value": "Fort - Abductor Virgin"
+    },
+    "Major Base - Groveside": {
+      "location": "Groveside",
+      "value": "Fort - Lordsworn Captain"
+    },
+    "Major Base - Gatefront": {
+      "location": "Gatefront",
+      "value": "Great Church - Mausoleum Knight"
+    },
+    "Major Base - Stormhill North of Gate": {
+      "location": "Stormhill North of Gate",
+      "value": "Ruins - Ancient Heroes of Zamor"
+    },
+    "Major Base - Alexander Spot": {
+      "location": "Alexander Spot",
+      "value": "empty"
+    },
+    "Major Base - Northwest Stormhill": {
+      "location": "Northwest Stormhill",
+      "value": "Great Church - Fire Monk"
+    },
+    "Major Base - Northeast Stormhill": {
+      "location": "Northeast Stormhill",
+      "value": "empty"
+    },
+    "Major Base - South Mistwood": {
+      "location": "South Mistwood",
+      "value": "Camp - Leonine Misbegotten"
+    },
+    "Major Base - Waypoint Ruins": {
+      "location": "Waypoint Ruins",
+      "value": "Ruins - Runebear"
+    },
+    "Major Base - Minor Erdtree": {
+      "location": "Minor Erdtree",
+      "value": "Fort - Abductor Virgin"
+    },
+    "Major Base - West Mistwood": {
+      "location": "West Mistwood",
+      "value": "Camp - Flame Chariots"
+    },
+    "Major Base - Northwest Mistwood": {
+      "location": "Northwest Mistwood",
+      "value": "empty"
+    },
+    "Major Base - Artist's Shack": {
+      "location": "Artist's Shack",
+      "value": "empty"
+    },
+    "Major Base - Northeast Mistwood": {
+      "location": "Northeast Mistwood",
+      "value": "Great Church - Mausoleum Knight"
+    },
+    "Major Base - Summonwater Approach": {
+      "location": "Summonwater Approach",
+      "value": "empty"
+    },
+    "Major Base - Summonwater": {
+      "location": "Summonwater",
+      "value": "Ruins - Ancient Heroes of Zamor"
+    },
+    "Minor Base - Far Southwest": {
+      "location": "Far Southwest",
+      "value": "Small Camp - Nobles and Soldiers"
+    },
+    "Minor Base - Lake": {
+      "location": "Lake",
+      "value": "Small Camp - Misbegotten"
+    },
+    "Minor Base - Stormhill South of Gate": {
+      "location": "Stormhill South of Gate",
+      "value": "Small Camp - Dogs and Soldiers"
+    },
+    "Minor Base - Above Stormhill Tunnel Entrance": {
+      "location": "Above Stormhill Tunnel Entrance",
+      "value": "empty"
+    },
+    "Minor Base - West of Warmaster's Shack": {
+      "location": "West of Warmaster's Shack",
+      "value": "Sorcerer's Rise - Fake Building"
+    },
+    "Minor Base - Southeast of Lake": {
+      "location": "Southeast of Lake",
+      "value": "Church - Normal"
+    },
+    "Minor Base - East of Cavalry Bridge": {
+      "location": "East of Cavalry Bridge",
+      "value": "Church - Normal"
+    },
+    "Minor Base - Minor Erdtree": {
+      "location": "Minor Erdtree",
+      "value": "Sorcerer's Rise - Missing Statue"
+    },
+    "Minor Base - Below Summonwater Hawk": {
+      "location": "Below Summonwater Hawk",
+      "value": "Small Camp - Caravans"
+    },
+    "Minor Base - Third Church": {
+      "location": "Third Church",
+      "value": "Church - Normal"
+    },
+    "Minor Base - Northeast of Saintsbridge": {
+      "location": "Northeast of Saintsbridge",
+      "value": "empty"
+    },
+    "Evergaol - Northwest of Lake": {
+      "location": "Northwest of Lake",
+      "value": "Stoneskin Lords"
+    },
+    "Evergaol - Murkwater Terminus": {
+      "location": "Murkwater Terminus",
+      "value": "empty"
+    },
+    "Evergaol - Stormhill": {
+      "location": "Stormhill",
+      "value": "Godskin Apostle"
+    },
+    "Evergaol - Highroad": {
+      "location": "Highroad",
+      "value": "empty"
+    },
+    "Evergaol - East of Lake": {
+      "location": "East of Lake",
+      "value": "Nox Warriors"
+    },
+    "Evergaol - Mistwood": {
+      "location": "Mistwood",
+      "value": "Grave Warden Duelist"
+    },
+    "Evergaol - Northeast Tunnel Entrance": {
+      "location": "Northeast Tunnel Entrance",
+      "value": "empty"
+    },
+    "Arena Boss - Castle Basement": {
+      "location": "Castle Basement",
+      "value": "Royal Revenant"
+    },
+    "Field Boss - Castle Rooftop": {
+      "location": "Castle Rooftop",
+      "value": "Ancestor Spirit"
+    },
+    "Field Boss - Far Southwest of Lake": {
+      "location": "Far Southwest of Lake",
+      "value": "Red Wolf"
+    },
+    "Field Boss - Lake": {
+      "location": "Lake Field Boss",
+      "value": "Ulcerated Tree Spirit"
+    },
+    "Field Boss - North of Stormhill Tunnel Entrance": {
+      "location": "North of Stormhill Tunnel Entrance",
+      "value": "Tree Sentinel"
+    },
+    "Field Boss - North of Murkwater Terminus": {
+      "location": "North of Murkwater Terminus",
+      "value": "empty"
+    },
+    "Field Boss - Stormhill Spectral Hawk": {
+      "location": "Stormhill Spectral Hawk",
+      "value": "empty"
+    },
+    "Field Boss - Northwest Stormhill Cliffside": {
+      "location": "Northwest Stormhill Cliffside",
+      "value": "Leonine Misbegotten"
+    },
+    "Field Boss - Mistwood Spectral Hawk": {
+      "location": "Mistwood Spectral Hawk",
+      "value": "Draconic Tree Sentinel"
+    },
+    "Field Boss - North Mistwood": {
+      "location": "North Mistwood",
+      "value": "Grafted Scion"
+    },
+    "Field Boss - East of Murkwater Terminus": {
+      "location": "East of Murkwater Terminus",
+      "value": "empty"
+    },
+    "Field Boss - Northwest of Summonwater": {
+      "location": "Northwest of Summonwater",
+      "value": "empty"
+    },
+    "Rotted Woods - Southwest": {
+      "location": "Southwest",
+      "value": "empty"
+    },
+    "Rotted Woods - Southeast": {
+      "location": "Southeast",
+      "value": "empty"
+    },
+    "Rotted Woods - Center West": {
+      "location": "Center West",
+      "value": "empty"
+    },
+    "Rotted Woods - Center East": {
+      "location": "Center East",
+      "value": "empty"
+    },
+    "Rotted Woods - Far Northwest": {
+      "location": "Far Northwest",
+      "value": "empty"
+    },
+    "Rotted Woods - Northwest": {
+      "location": "Northwest",
+      "value": "empty"
+    },
+    "Rotted Woods - Northeast": {
+      "location": "Northeast",
+      "value": "empty"
+    },
+    "Rotted Woods - Far Northeast": {
+      "location": "Far Northeast",
+      "value": "empty"
+    },
+    "Rot Blessing": "empty",
+    "Frenzy Tower": "empty",
+    "Scale-Bearing Merchant": "empty"
+  },
+  "attribution": {
+    "source": "NikVince/nightreign-map-router",
+    "license": "MIT"
+  }
+}

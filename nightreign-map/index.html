@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Nightreign Map | Nightreign Relic</title>
+  <meta name="description"
+    content="夜の王、地変、スポーン地点、教会、POIからNightreignのマップパターンを絞り込める日本語対応マップビューア。">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nightreignrelic.com/nightreign-map/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nightreign Relic">
+  <meta property="og:title" content="Nightreign Map | Nightreign Relic">
+  <meta property="og:description" content="スポーン地点、教会、POIを選択してNightreignのマップパターンを絞り込めます。">
+  <meta property="og:url" content="https://nightreignrelic.com/nightreign-map/">
+  <meta property="og:image" content="https://nightreignrelic.com/assets/ogp/relic-share-default.png">
+  <meta property="og:image:secure_url" content="https://nightreignrelic.com/assets/ogp/relic-share-default.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Nightreign Relic share image">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@sojustchilln">
+  <meta name="twitter:creator" content="@sojustchilln">
+  <meta name="twitter:title" content="Nightreign Map | Nightreign Relic">
+  <meta name="twitter:description" content="スポーン地点、教会、POIを選択してNightreignのマップパターンを絞り込めます。">
+  <meta name="twitter:image" content="https://nightreignrelic.com/assets/ogp/relic-share-default.png">
+  <meta name="twitter:image:alt" content="Nightreign Relic share image">
+
+  <meta name="theme-color" content="#090b13">
+  <link rel="icon" href="../assets/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/favicon.png">
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem("nightreignrelic.theme");
+        const theme =
+          saved === "dark" || saved === "light"
+            ? saved
+            : window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../nightreign-map.css">
+</head>
+
+<body>
+  <header class="site-header nr-site-header">
+    <a class="site-brand" href="../index.html" aria-label="Nightreign Relic ホーム">
+      <img src="../assets/favicon.png" alt="">
+      <span>Nightreign Relic</span>
+    </a>
+    <div class="site-header-actions">
+      <button class="site-theme-toggle" type="button" data-action="toggle-site-theme" aria-label="カラーテーマを切り替え">
+        <span aria-hidden="true">◐</span>
+      </button>
+      <button class="mobile-menu-toggle" type="button" aria-label="メニューを開く" aria-controls="site-nav"
+        aria-expanded="false" data-action="toggle-mobile-menu">
+        <span class="mobile-menu-line"></span>
+        <span class="mobile-menu-line"></span>
+        <span class="mobile-menu-line"></span>
+      </button>
+    </div>
+    <nav class="site-nav" id="site-nav" aria-label="サイトナビゲーション">
+      <a href="../index.html">ホーム</a>
+      <a href="./" aria-current="page">Nightreign Map</a>
+      <a href="../about.html">概要</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <a href="../privacy-policy.html">プライバシーポリシー</a>
+    </nav>
+  </header>
+
+  <main class="nightreign-map-page" data-nightreign-map-app>
+    <section class="nr-map-shell" aria-label="Nightreign マップビューア">
+      <div class="nr-map-viewport" data-nr-map-viewport>
+        <div class="nr-map-world" data-nr-map-world>
+          <div class="nr-map-tiles" data-nr-map-tiles></div>
+          <div class="nr-poi-layer" data-nr-poi-layer></div>
+        </div>
+      </div>
+
+      <div class="nr-top-status" data-nr-status>夜の王: すべて</div>
+
+      <button type="button" class="nr-orb nr-nightlord-orb" data-nr-action="open-nightlord"
+        aria-label="夜の王を選択">
+        <span class="nr-orb-ring"></span>
+        <span class="nr-orb-glyph" data-nr-nightlord-glyph>?</span>
+        <span class="nr-orb-caption" data-nr-nightlord-label>夜の王</span>
+      </button>
+
+      <div class="nr-shift-orbs" data-nr-shift-orbs aria-label="地変ショートカット"></div>
+
+      <button type="button" class="nr-orb nr-map-orb" data-nr-action="open-map" aria-label="マップを選択">
+        <span class="nr-orb-ring"></span>
+        <span class="nr-map-preview" data-nr-map-preview></span>
+        <span class="nr-orb-caption" data-nr-map-label>通常</span>
+      </button>
+
+      <section class="nr-guide-panel" data-nr-guide aria-labelledby="nr-guide-title">
+        <div class="nr-guide-figure">
+          <img src="../assets/favicon.png" alt="" class="nr-guide-icon">
+        </div>
+        <div class="nr-guide-bubble">
+          <div class="nr-guide-header">
+            <div>
+              <p class="nr-guide-kicker" data-i18n="guideKicker">マップガイド</p>
+              <h1 id="nr-guide-title" data-i18n="guideTitle">使い方</h1>
+            </div>
+            <button type="button" class="nr-panel-close" data-nr-action="close-guide" aria-label="使い方を閉じる">×</button>
+          </div>
+          <ul class="nr-guide-list">
+            <li data-i18n="guide1">まずスポーン地点のマーカーをクリックして開始します。</li>
+            <li data-i18n="guide2">青い丸は教会です。クリックすると教会として選択されます。</li>
+            <li data-i18n="guide3">疑問符をクリックすると、その地点のPOI種類を選択できます。</li>
+          </ul>
+          <label class="nr-guide-hide">
+            <input type="checkbox" data-nr-control="hideGuide">
+            <span data-i18n="hideGuide">次回から表示しない</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="nr-candidate-panel" data-nr-candidate-panel aria-labelledby="nr-candidate-title">
+        <button type="button" class="nr-sheet-handle" data-nr-action="toggle-candidates"
+          aria-label="候補パネルを切り替え"></button>
+        <div class="nr-candidate-header">
+          <div>
+            <p data-i18n="candidateKicker">マップパターン検索</p>
+            <h2 id="nr-candidate-title" data-i18n="candidateTitle">候補パターン</h2>
+          </div>
+          <button type="button" class="nr-panel-close nr-mobile-only" data-nr-action="toggle-candidates"
+            aria-label="候補パネルを閉じる">×</button>
+        </div>
+
+        <div class="nr-layout-row">
+          <label class="nr-select-field nr-desktop-control">
+            <span data-i18n="nightlordLabel">夜の王</span>
+            <select data-nr-control="nightlord"></select>
+          </label>
+          <label class="nr-select-field nr-desktop-control">
+            <span data-i18n="earthLabel">地変</span>
+            <select data-nr-control="shiftingEarth"></select>
+          </label>
+          <label class="nr-select-field nr-desktop-control nr-span-2">
+            <span data-i18n="spawnLabel">スポーン地点</span>
+            <select data-nr-control="spawnPoint"></select>
+          </label>
+          <label class="nr-select-field">
+            <span data-i18n="layoutLabel">レイアウト</span>
+            <select data-nr-control="layoutNumber"></select>
+          </label>
+          <button type="button" class="nr-text-button" data-nr-action="copy-link" data-i18n="copyLink">リンク</button>
+        </div>
+
+        <div class="nr-selected-filters" data-nr-selected-filters></div>
+        <div class="nr-candidate-grid" data-nr-candidate-grid></div>
+
+        <details class="nr-filter-drawer">
+          <summary data-i18n="displayFilters">表示フィルター</summary>
+          <div class="nr-mini-actions">
+            <label class="nr-switch">
+              <input type="checkbox" data-nr-control="showLabels">
+              <span data-i18n="labels">ラベル</span>
+            </label>
+            <button type="button" class="nr-text-button" data-nr-action="clear-landmarks"
+              data-i18n="clearFilters">選択をクリア</button>
+          </div>
+          <div class="nr-category-list" data-nr-categories></div>
+        </details>
+
+        <dl class="nr-summary" data-nr-summary></dl>
+      </section>
+
+      <section class="nr-choice-panel" data-nr-panel="nightlord" hidden aria-label="夜の王の選択">
+        <div class="nr-choice-header">
+          <h2 data-i18n="nightlordChoice">夜の王を選択</h2>
+          <button type="button" class="nr-panel-close" data-nr-action="close-panels" aria-label="閉じる">×</button>
+        </div>
+        <div class="nr-choice-grid" data-nr-nightlord-options></div>
+      </section>
+
+      <section class="nr-choice-panel nr-map-choice-panel" data-nr-panel="map" hidden aria-label="マップの選択">
+        <div class="nr-choice-header">
+          <h2 data-i18n="mapChoice">マップを選択</h2>
+          <button type="button" class="nr-panel-close" data-nr-action="close-panels" aria-label="閉じる">×</button>
+        </div>
+        <div class="nr-choice-grid nr-map-choice-grid" data-nr-map-options></div>
+      </section>
+
+      <div class="nr-zoom-controls" aria-label="マップのズーム操作">
+        <button type="button" class="nr-icon-button" data-nr-action="zoom-out" aria-label="縮小">−</button>
+        <button type="button" class="nr-icon-button" data-nr-action="reset-view" aria-label="表示位置をリセット">⟳</button>
+        <button type="button" class="nr-icon-button" data-nr-action="zoom-in" aria-label="拡大">+</button>
+      </div>
+
+      <nav class="nr-language-switch" data-nr-languages aria-label="言語">
+        <span class="nr-language-label" data-i18n="languageLabel">言語</span>
+        <span class="nr-language-options">
+          <button type="button" data-nr-lang="ja">日本語</button>
+          <button type="button" data-nr-lang="en">EN</button>
+        </span>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="site-footer nr-map-footer">
+    <nav class="footer-links" aria-label="フッターナビゲーション">
+      <a href="../index.html">ホーム</a>
+      <a href="./">Nightreign Map</a>
+      <a href="../about.html">概要</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <a href="../privacy-policy.html">プライバシーポリシー</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 nightreignrelic.com</p>
+  </footer>
+
+  <script src="../app.js" defer></script>
+  <script src="../nightreign-map.js" defer></script>
+</body>
+
+</html>
