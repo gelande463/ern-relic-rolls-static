@@ -19,6 +19,8 @@
   const DESKTOP_QUERY = "(min-width: 921px)";
   const CANDIDATE_PANEL_MARGIN = 12;
   const FILTERABLE_CATEGORIES = new Set(["major", "minor", "boss", "evergaol"]);
+  const SPECIAL_EVENT_ICONS = new Set(["Construct_21100.png", "Event.png"]);
+  const SPECIAL_EVENT_DISPLAY_ICON = "Construct_21100.png";
 
   const ICON_SIZES = {
     "Mission_Objective.png": 34,
@@ -39,7 +41,8 @@
     "Site_of_Grace.png": 22,
     "Scarab.png": 18,
     "Ruins.png": 42,
-    "Event.png": 38,
+    "Event.png": 42,
+    "Construct_21100.png": 42,
     "Night_Location.png": 46,
     "Scale_Bearing_Merchant.png": 38,
     "Spawn_Location.png": 54,
@@ -79,6 +82,7 @@
     "Night_Location.png": 13,
     "Scale_Bearing_Merchant.png": 14,
     "Event.png": 15,
+    "Construct_21100.png": 15,
     "Mission_Objective.png": 15,
   };
 
@@ -730,6 +734,13 @@
         return;
       }
 
+      if (state.poiChoice?.id === filterId) {
+        state.poiChoice = null;
+        renderPois();
+        event.stopPropagation();
+        return;
+      }
+
       state.poiChoice = { id: filterId };
       renderPois();
       event.stopPropagation();
@@ -978,7 +989,7 @@
 
   function hasConstructSpecialEventInLayouts(layouts) {
     return layouts.some((layout) => {
-      if (isConstructSpecialValue(layout?.specialEvent)) return true;
+      if (isKnownSpecialEventValue(layout?.specialEvent)) return true;
 
       const landmarks = [
         ...(layout?.filterLandmarks || []),
@@ -995,26 +1006,46 @@
     const fromCurrentPattern = [
       ...(state.pattern?.dynamicPOIs || []),
       ...(state.staticPois || []),
-    ].some(isConstructSpecialPoi) || isConstructSpecialValue(state.pattern?.specialEvent);
+    ].some(isConstructSpecialPoi) || isKnownSpecialEventValue(state.pattern?.specialEvent);
 
     return fromMatches || fromCurrentPattern;
   }
 
   function specialEventLabelForCandidate(matches) {
     if (!hasConstructSpecialEvent(matches)) return "";
-    const layout = matches.find((candidate) => isConstructSpecialValue(candidate.specialEvent));
-    const label = translateValue(state.pattern?.specialEvent)
-      || state.pattern?.specialEvent
-      || translateValue(layout?.specialEvent)
-      || layout?.specialEvent
-      || t("special");
-    return label;
+    const labels = [];
+    const addLabel = (value) => {
+      if (!isKnownSpecialEventValue(value)) return;
+      const label = translateValue(value) || value;
+      if (!labels.includes(label)) labels.push(label);
+    };
+
+    for (const layout of matches) {
+      if (hasConstructSpecialEventInLayouts([layout])) addLabel(layout.specialEvent);
+    }
+    if (hasConstructSpecialEventInLayouts([{ specialEvent: state.pattern?.specialEvent, dynamicPOIs: state.pattern?.dynamicPOIs }])) {
+      addLabel(state.pattern?.specialEvent);
+    }
+
+    if (!labels.length) return t("special");
+    const visibleLabels = labels.slice(0, 2).join(" / ");
+    return `${t("special")}: ${visibleLabels}${labels.length > 2 ? ` +${labels.length - 2}` : ""}`;
   }
 
   function isConstructSpecialPoi(poi) {
-    return String(poi?.icon || "").includes("Construct_21100.png")
+    return isSpecialEventIcon(poi?.icon)
+      || String(poi?.icon || "").includes("Construct_21100.png")
       || isConstructSpecialValue(poi?.value)
       || isConstructSpecialValue(poi?.location);
+  }
+
+  function isSpecialEventIcon(icon) {
+    return SPECIAL_EVENT_ICONS.has(String(icon || ""));
+  }
+
+  function isKnownSpecialEventValue(value) {
+    const text = String(value || "");
+    return Boolean(text) && (text.includes("Construct") || Boolean(state.index?.specialEvents?.includes(text)));
   }
 
   function isConstructSpecialValue(value) {
@@ -1359,7 +1390,6 @@
       || poi.selectedIcon === "Church.png"
       || poi.category === "grace"
       || poi.selectedType === 4
-      || poi.hasChurch
       || poi.value === "Church";
     const size = poi.category === "spawn"
       ? (isSpawnSelected ? 68 : 56)
@@ -1409,7 +1439,11 @@
       }
       return `<span class="nr-question-marker">?</span>`;
     }
-    return `<img src="${ASSET_BASE}/icons/${attr(poi.icon)}" alt="">`;
+    return `<img src="${ASSET_BASE}/icons/${attr(displayIconForPoi(poi))}" alt="">`;
+  }
+
+  function displayIconForPoi(poi) {
+    return isSpecialEventIcon(poi?.icon) ? SPECIAL_EVENT_DISPLAY_ICON : poi.icon;
   }
 
   function renderPoiChoiceMenu() {

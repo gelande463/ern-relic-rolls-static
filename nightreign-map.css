@@ -1117,14 +1117,17 @@
 .nr-poi-type-menu {
   position: absolute;
   z-index: 150;
-  width: 190px;
-  padding: 10px;
+  width: 264px;
+  padding: 14px;
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 6px;
-  background: rgba(31, 45, 66, 0.98);
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
-  transform: translate(-50%, calc(-100% - 24px));
+  border: 1px solid rgba(255, 226, 111, 0.38);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(43, 58, 82, 0.99), rgba(20, 29, 43, 0.99));
+  box-shadow:
+    0 20px 46px rgba(0, 0, 0, 0.56),
+    0 0 20px rgba(241, 199, 78, 0.16);
+  transform: translate(-50%, calc(-100% - 30px));
   pointer-events: auto;
 }
 
@@ -1135,37 +1138,43 @@
   bottom: -9px;
   width: 16px;
   height: 16px;
-  background: rgba(31, 45, 66, 0.98);
-  border-right: 1px solid rgba(255, 255, 255, 0.22);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(20, 29, 43, 0.99);
+  border-right: 1px solid rgba(255, 226, 111, 0.38);
+  border-bottom: 1px solid rgba(255, 226, 111, 0.38);
   transform: translateX(-50%) rotate(45deg);
 }
 
 .nr-poi-type-menu h3 {
-  margin: 0 0 8px;
-  font-size: 13px;
+  margin: 0 0 11px;
+  color: #ffe26f;
+  font-size: 15px;
+  font-weight: 1000;
   line-height: 1.2;
+  text-align: center;
+  text-shadow: 0 1px 2px #000;
 }
 
 .nr-poi-type-menu div {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
+  gap: 10px;
 }
 
 .nr-poi-type-menu button {
-  min-height: 58px;
+  min-height: 78px;
   display: grid;
-  gap: 4px;
+  gap: 6px;
   place-items: center;
-  padding: 6px;
+  padding: 9px 7px;
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 6px;
-  background: rgba(8, 13, 21, 0.36);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  background: rgba(8, 13, 21, 0.52);
   font: inherit;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 900;
+  line-height: 1.15;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -1177,8 +1186,8 @@
 }
 
 .nr-poi-type-menu img {
-  width: 30px;
-  height: 30px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.62));
 }
@@ -1374,6 +1383,21 @@
   }
 
   .nr-church-marker {
+    width: 42px;
+    height: 42px;
+  }
+
+  .nr-poi-type-menu {
+    width: min(300px, 88vw);
+    padding: 12px;
+  }
+
+  .nr-poi-type-menu button {
+    min-height: 74px;
+    font-size: 12px;
+  }
+
+  .nr-poi-type-menu img {
     width: 42px;
     height: 42px;
   }
