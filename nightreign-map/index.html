@@ -50,7 +50,7 @@
     })();
   </script>
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../nightreign-map.css?v=20260511-03">
+  <link rel="stylesheet" href="../nightreign-map.css?v=20260511-04">
 </head>
 
 <body>
@@ -130,15 +130,17 @@
       </section>
 
       <section class="nr-candidate-panel" data-nr-candidate-panel aria-labelledby="nr-candidate-title">
-        <button type="button" class="nr-sheet-handle" data-nr-action="toggle-candidates"
-          aria-label="候補パネルを切り替え"></button>
+        <button type="button" class="nr-sheet-handle" data-nr-action="toggle-candidates" data-nr-candidate-handle
+          aria-label="候補パネルを開く"></button>
         <div class="nr-candidate-header">
           <div>
             <p data-i18n="candidateKicker">マップパターン検索</p>
             <h2 id="nr-candidate-title" data-i18n="candidateTitle">候補パターン</h2>
           </div>
-          <button type="button" class="nr-panel-close nr-mobile-only" data-nr-action="toggle-candidates"
-            aria-label="候補パネルを閉じる">×</button>
+          <div class="nr-candidate-header-actions">
+            <button type="button" class="nr-text-button nr-reset-button" data-nr-action="finder-reset"
+              data-i18n="resetFinder">リセット</button>
+          </div>
         </div>
 
         <div class="nr-layout-row">
@@ -224,7 +226,7 @@
   </footer>
 
   <script src="../app.js" defer></script>
-  <script src="../nightreign-map.js?v=20260511-03" defer></script>
+  <script src="../nightreign-map.js?v=20260511-04" defer></script>
 </body>
 
 </html>

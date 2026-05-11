@@ -43,6 +43,7 @@
     "Night_Location.png": 46,
     "Scale_Bearing_Merchant.png": 24,
     "Spawn_Location.png": 54,
+    "Spawn_Hawk.png": 56,
   };
 
   const TYPE_DEFINITIONS = {
@@ -74,6 +75,7 @@
     "Castle.png": 10,
     "Great_Church.png": 11,
     "Spawn_Location.png": 12,
+    "Spawn_Hawk.png": 12,
     "Night_Location.png": 13,
     "Scale_Bearing_Merchant.png": 14,
     "Event.png": 15,
@@ -115,6 +117,7 @@
       displayFilters: "表示フィルター",
       labels: "ラベル",
       clearFilters: "選択をクリア",
+      resetFinder: "リセット",
       nightlordChoice: "夜の王を選択",
       mapChoice: "マップを選択",
       selected: "選択中",
@@ -123,6 +126,7 @@
       none: "なし",
       map: "マップ",
       spawn: "スポーン",
+      selectedSpawn: "選択中のスポーン地点",
       special: "特殊イベント",
       pois: "POI",
       spawnStepTitle: "スポーン地点を選択",
@@ -144,6 +148,8 @@
       filterByMap: "地図上のマーカーで絞り込み",
       removeFilter: "条件を削除",
       candidateDragHint: "ドラッグで移動。ダブルクリックで初期位置に戻します。",
+      candidateOpenAria: "候補パネルを開く",
+      candidateCloseAria: "候補パネルを閉じる",
       languageLabel: "言語",
     },
     en: {
@@ -169,6 +175,7 @@
       displayFilters: "Display filters",
       labels: "Labels",
       clearFilters: "Clear",
+      resetFinder: "Reset",
       nightlordChoice: "Select Nightlord",
       mapChoice: "Select Map",
       selected: "Selected",
@@ -177,6 +184,7 @@
       none: "None",
       map: "Map",
       spawn: "Spawn",
+      selectedSpawn: "Selected spawn point",
       special: "Special",
       pois: "POIs",
       spawnStepTitle: "Select Spawn Point",
@@ -198,6 +206,8 @@
       filterByMap: "Filter from the map markers",
       removeFilter: "Remove filter",
       candidateDragHint: "Drag to move. Double-click to reset.",
+      candidateOpenAria: "Open candidate panel",
+      candidateCloseAria: "Close candidate panel",
       languageLabel: "Language",
     },
   };
@@ -413,6 +423,7 @@
     status: app.querySelector("[data-nr-status]"),
     guide: app.querySelector("[data-nr-guide]"),
     candidatePanel: app.querySelector("[data-nr-candidate-panel]"),
+    sheetHandle: app.querySelector("[data-nr-candidate-handle]"),
     candidateGrid: app.querySelector("[data-nr-candidate-grid]"),
     selectedFilters: app.querySelector("[data-nr-selected-filters]"),
     summary: app.querySelector("[data-nr-summary]"),
@@ -667,6 +678,8 @@
       state.candidateOpen = !state.candidateOpen;
       renderCandidateSheet();
       persistState();
+    } else if (action === "finder-reset") {
+      resetFinder();
     } else if (action === "clear-landmarks") {
       state.selectedLandmarks.clear();
       state.exactLayout = false;
@@ -721,7 +734,6 @@
     if (signature) {
       toggleLandmark(signature);
       state.exactLayout = false;
-      state.candidateOpen = true;
       syncToFirstMatchingLayout();
       return;
     }
@@ -734,6 +746,14 @@
     state.selectedLandmarks.add(signatureForType(id, type));
     state.poiChoice = null;
     state.exactLayout = false;
+    syncToFirstMatchingLayout();
+  }
+
+  function resetFinder() {
+    state.spawnPoint = "";
+    state.selectedLandmarks.clear();
+    state.exactLayout = false;
+    state.poiChoice = null;
     state.candidateOpen = true;
     syncToFirstMatchingLayout();
   }
@@ -996,14 +1016,20 @@
       .filter((spawn) => validSpawns.has(spawn.location))
       .map((spawn) => `
         <button type="button" class="nr-spawn-shortcut" data-nr-spawn-shortcut="${attr(spawn.location)}">
-          <img src="${ASSET_BASE}/icons/Spawn_Location.png" alt="">
+          <img src="${ASSET_BASE}/icons/Spawn_Hawk.png" alt="">
           <span>${esc(spawnLabel(spawn.location))}</span>
         </button>
       `).join("");
   }
 
   function renderCandidateSheet() {
-    elements.candidatePanel.classList.toggle("is-open", state.candidateOpen);
+    const isOpen = state.candidateOpen;
+    elements.candidatePanel.classList.toggle("is-open", isOpen);
+    if (elements.sheetHandle) {
+      elements.sheetHandle.dataset.state = isOpen ? "open" : "closed";
+      elements.sheetHandle.setAttribute("aria-label", isOpen ? t("candidateCloseAria") : t("candidateOpenAria"));
+      elements.sheetHandle.setAttribute("title", isOpen ? t("candidateCloseAria") : t("candidateOpenAria"));
+    }
     applyCandidatePanelPosition();
   }
 
@@ -1157,22 +1183,20 @@
     state.aggregateMarkers.clear();
 
     const matches = getMatchingLayouts();
+    const count = matches.length;
     let pois = [];
-    const isExact = state.exactLayout || matches.length === 1;
+    const isExact = state.exactLayout || count === 1;
 
     if (!state.spawnPoint && !isExact) {
       const validSpawns = validSpawnLocations(matches);
       pois = spawnPois().filter((poi) => validSpawns.has(poi.location));
-    } else if (isExact && matches.length !== 0) {
-      const exactLayout = matches.length === 1 ? matches[0] : findLayout(state.layoutNumber);
-      const exactPatternPois = exactLayout?.layoutNumber === state.pattern.layoutNumber
-        ? state.pattern.dynamicPOIs
-        : state.pattern.dynamicPOIs;
+    } else if (isExact && count !== 0) {
+      const exactPatternPois = state.pattern.dynamicPOIs;
       const staticPois = state.staticPois.filter((poi) => state.categories.has(poi.category));
       const dynamicPois = exactPatternPois.filter((poi) => state.categories.has(poi.category));
-      pois = [...staticPois, ...dynamicPois, ...spawnPois()];
+      pois = [...staticPois, ...dynamicPois, ...selectedSpawnPois()];
     } else {
-      pois = aggregateFilterPois(matches);
+      pois = [...aggregateFilterPois(matches), ...selectedSpawnPois()];
     }
 
     const validPois = pois.filter((poi) => isFiniteNumber(poi.x) && isFiniteNumber(poi.y));
@@ -1188,10 +1212,28 @@
       location: spawn.location,
       value: "Spawn Point",
       title: spawn.location,
-      icon: "Spawn_Location.png",
+      icon: "Spawn_Hawk.png",
       category: "spawn",
       source: "spawn-all",
     }));
+  }
+
+  function selectedSpawnPois() {
+    if (!state.spawnPoint) return [];
+    const spawn = state.index.spawnPointDetails.find((item) => item.location === state.spawnPoint);
+    if (!spawn) return [];
+    return [{
+      id: `spawn-selected-${spawn.id}`,
+      x: spawn.x,
+      y: spawn.y,
+      location: spawn.location,
+      value: "Spawn Point",
+      title: `${spawnLabel(spawn.location)} / ${t("selectedSpawn")}`,
+      icon: "Spawn_Hawk.png",
+      category: "spawn",
+      source: "spawn-selected",
+      selected: true,
+    }];
   }
 
   function aggregateFilterPois(matches) {
@@ -1252,13 +1294,18 @@
     const signature = FILTERABLE_CATEGORIES.has(poi.category) ? signatureForLandmark(poi) : "";
     const selected = signature && state.selectedLandmarks.has(signature);
     const isSpawnSelected = poi.category === "spawn" && state.spawnPoint === poi.location;
-    const size = poi.category === "spawn" ? 44 : poi.kind === "filter" ? 38 : (ICON_SIZES[poi.icon] || 28);
+    const size = poi.category === "spawn"
+      ? (isSpawnSelected ? 68 : 56)
+      : poi.kind === "filter"
+        ? 42
+        : Math.round((ICON_SIZES[poi.icon] || 28) * 1.12);
     const label = labelForPoi(poi);
     const classes = ["nr-poi"];
     if (poi.kind === "filter") classes.push("nr-filter-poi");
+    if (isSpawnSelected) classes.push("is-selected-spawn");
     if (poi.kind === "filter" && poi.hasChurch && !poi.selectedType) classes.push("is-church-choice");
     if (poi.kind === "filter" && !poi.hasChurch && !poi.selectedType) classes.push("is-question-choice");
-    if (selected || isSpawnSelected || poi.selectedType) classes.push("is-filter-selected");
+    if (selected || poi.selectedType) classes.push("is-filter-selected");
 
     return `
       <button
@@ -1281,6 +1328,10 @@
   }
 
   function renderPoiIcon(poi) {
+    if (poi.category === "spawn") {
+      return `<img src="${ASSET_BASE}/icons/Spawn_Hawk.png" alt="">`;
+    }
+
     if (poi.kind === "filter") {
       if (poi.selectedType) {
         return `<img src="${ASSET_BASE}/icons/${attr(poi.selectedIcon)}" alt="">`;
@@ -1531,7 +1582,7 @@
       if (poi.hasChurch) return typeLabel(4);
       return "POI";
     }
-    if (poi.category === "spawn") return state.spawnPoint === poi.location ? t("selected") : t("spawn");
+    if (poi.category === "spawn") return state.spawnPoint === poi.location ? t("selectedSpawn") : t("spawn");
     if (poi.category === "merchant") return typeLabel(14);
     if (poi.category === "night" && poi.night) return `${state.language === "ja" ? `第${poi.night}夜` : `Night ${poi.night}`} ${translateValue(String(poi.title || "").replace(/^Day [12]: /, ""))}`;
     return translateValue(poi.value) || translateValue(poi.title) || locationLabel(poi.location) || "POI";
@@ -1837,6 +1888,7 @@
   }
 
   function zIndexForPoi(poi, index) {
+    if (poi.category === "spawn" && state.spawnPoint === poi.location) return 92;
     if (poi.kind === "filter") return 80 + (index % 7);
     const base = { night: 72, spawn: 70, event: 66, merchant: 62, boss: 58, evergaol: 56, major: 50, minor: 46 }[poi.category] || 30;
     return base + (index % 7);
