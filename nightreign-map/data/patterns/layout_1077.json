@@ -1,0 +1,956 @@
+{
+  "layoutNumber": 1077,
+  "patternId": "1076",
+  "nightlord": "Heolstor",
+  "shiftingEarth": "Great Hollow",
+  "spawnPoint": "Northeast",
+  "specialEvent": null,
+  "nightBosses": {
+    "day1": "Battlefield Commander",
+    "day2": "Crucible Knight and Golden Hippopotamus",
+    "extra": null
+  },
+  "nightCircles": {
+    "day1": "Great Hollow Night 1 Circle",
+    "day2": "Great Hollow Night 2 Boss"
+  },
+  "mapLayout": "great_hollow_shifted",
+  "tileDirectory": "great_hollow_shifted_map_tiles",
+  "dynamicPoiCount": 31,
+  "staticPoiCount": 0,
+  "filterLandmarks": [
+    {
+      "id": 10245,
+      "location": "Great Hollow 245",
+      "value": "Church - Normal",
+      "title": "Normal",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Church.png"
+    },
+    {
+      "id": 10256,
+      "location": "Great Hollow 256",
+      "value": "Church - Normal",
+      "title": "Normal",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Church.png"
+    },
+    {
+      "id": 10260,
+      "location": "Great Hollow 260",
+      "value": "Church - Normal",
+      "title": "Normal",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Church.png"
+    },
+    {
+      "id": 10282,
+      "location": "Great Hollow 282",
+      "value": "Church - Normal",
+      "title": "Normal",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Church.png"
+    },
+    {
+      "id": 10266,
+      "location": "Great Hollow 266",
+      "value": "Sorcerer's Rise - Withered Trees",
+      "title": "Withered Trees",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Sorcerer's_Rise.png"
+    },
+    {
+      "id": 10246,
+      "location": "Great Hollow 246",
+      "value": "Royal Carian Knight",
+      "title": "Royal Carian Knight",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 10252,
+      "location": "Great Hollow 252",
+      "value": "Golden Hippopotamus",
+      "title": "Golden Hippopotamus",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 10264,
+      "location": "Great Hollow 264",
+      "value": "Miranda Blossom",
+      "title": "Miranda Blossom",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 10268,
+      "location": "Great Hollow 268",
+      "value": "Demi-Human Queen",
+      "title": "Demi-Human Queen",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 10258,
+      "location": "Great Hollow 258",
+      "value": "Leonine Misbegotten",
+      "title": "Leonine Misbegotten",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 10262,
+      "location": "Great Hollow 262",
+      "value": "Black Knife Assassin",
+      "title": "Black Knife Assassin",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 10253,
+      "location": "Great Hollow 253",
+      "value": "Giant Crabs",
+      "title": "Giant Crabs",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 10272,
+      "location": "Great Hollow 272",
+      "value": "Bell Bearing Hunter",
+      "title": "Bell Bearing Hunter",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 10271,
+      "location": "Great Hollow 271",
+      "value": "Erdtree Avatar",
+      "title": "Erdtree Avatar",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 10261,
+      "location": "Great Hollow 261",
+      "value": "Grafted Scion",
+      "title": "Grafted Scion",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 10263,
+      "location": "Great Hollow 263",
+      "value": "Draconic Tree Sentinel",
+      "title": "Draconic Tree Sentinel",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 10270,
+      "location": "Great Hollow 270",
+      "value": "Chief Bloodfiend",
+      "title": "Chief Bloodfiend",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 10267,
+      "location": "Great Hollow 267",
+      "value": "Bloodbane Giant Crows",
+      "title": "Bloodbane Giant Crows",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 10269,
+      "location": "Great Hollow 269",
+      "value": "Putrid Avatar",
+      "title": "Putrid Avatar",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 10247,
+      "location": "Great Hollow 247",
+      "value": "Golden Hippopotamus",
+      "title": "Golden Hippopotamus",
+      "type": "Castle",
+      "category": "boss",
+      "icon": "Castle.png"
+    },
+    {
+      "id": 10273,
+      "location": "Great Hollow 273",
+      "value": "Cleanrot Knights",
+      "title": "Cleanrot Knights",
+      "type": "Castle",
+      "category": "boss",
+      "icon": "Castle.png"
+    },
+    {
+      "id": 10277,
+      "location": "Great Hollow 277",
+      "value": "Centipede Demon",
+      "title": "Centipede Demon",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss_Red.png"
+    },
+    {
+      "id": 10277,
+      "location": "Great Hollow 277",
+      "value": "Night's Cavalry Duo",
+      "title": "Night's Cavalry Duo",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss_Red.png"
+    },
+    {
+      "id": 10277,
+      "location": "Great Hollow 277",
+      "value": "Morgott",
+      "title": "Morgott",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss_Red.png"
+    },
+    {
+      "id": 10254,
+      "location": "Great Hollow 254",
+      "value": "Royal Revenant",
+      "title": "Royal Revenant",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss_Red.png"
+    },
+    {
+      "id": 10254,
+      "location": "Great Hollow 254",
+      "value": "Death Rite Bird",
+      "title": "Death Rite Bird",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss_Red.png"
+    },
+    {
+      "id": 10254,
+      "location": "Great Hollow 254",
+      "value": "Fallingstar Beast",
+      "title": "Fallingstar Beast",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss_Red.png"
+    }
+  ],
+  "dynamicPOIs": [
+    {
+      "id": 10245,
+      "x": 446,
+      "y": 134,
+      "coordinates": [
+        446,
+        134
+      ],
+      "location": "Great Hollow 245",
+      "value": "Church - Normal",
+      "icon": "Church.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Normal"
+    },
+    {
+      "id": 10256,
+      "x": 599,
+      "y": 394,
+      "coordinates": [
+        599,
+        394
+      ],
+      "location": "Great Hollow 256",
+      "value": "Church - Normal",
+      "icon": "Church.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Normal"
+    },
+    {
+      "id": 10260,
+      "x": 709,
+      "y": 498,
+      "coordinates": [
+        709,
+        498
+      ],
+      "location": "Great Hollow 260",
+      "value": "Church - Normal",
+      "icon": "Church.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Normal"
+    },
+    {
+      "id": 10282,
+      "x": 354,
+      "y": 521,
+      "coordinates": [
+        354,
+        521
+      ],
+      "location": "Great Hollow 282",
+      "value": "Church - Normal",
+      "icon": "Church.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Normal"
+    },
+    {
+      "id": 10266,
+      "x": 880,
+      "y": 576,
+      "coordinates": [
+        880,
+        576
+      ],
+      "location": "Great Hollow 266",
+      "value": "Sorcerer's Rise - Withered Trees",
+      "icon": "Sorcerer's_Rise.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Withered Trees"
+    },
+    {
+      "id": 10246,
+      "x": 323,
+      "y": 209,
+      "coordinates": [
+        323,
+        209
+      ],
+      "location": "Great Hollow 246",
+      "value": "Royal Carian Knight",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Royal Carian Knight"
+    },
+    {
+      "id": 10252,
+      "x": 488,
+      "y": 289,
+      "coordinates": [
+        488,
+        289
+      ],
+      "location": "Great Hollow 252",
+      "value": "Golden Hippopotamus",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Golden Hippopotamus"
+    },
+    {
+      "id": 10264,
+      "x": 482,
+      "y": 536,
+      "coordinates": [
+        482,
+        536
+      ],
+      "location": "Great Hollow 264",
+      "value": "Miranda Blossom",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Miranda Blossom"
+    },
+    {
+      "id": 10268,
+      "x": 476,
+      "y": 579,
+      "coordinates": [
+        476,
+        579
+      ],
+      "location": "Great Hollow 268",
+      "value": "Demi-Human Queen",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Demi-Human Queen"
+    },
+    {
+      "id": 10258,
+      "x": 684,
+      "y": 464,
+      "coordinates": [
+        684,
+        464
+      ],
+      "location": "Great Hollow 258",
+      "value": "Leonine Misbegotten",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Leonine Misbegotten"
+    },
+    {
+      "id": 10262,
+      "x": 805,
+      "y": 526,
+      "coordinates": [
+        805,
+        526
+      ],
+      "location": "Great Hollow 262",
+      "value": "Black Knife Assassin",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Black Knife Assassin"
+    },
+    {
+      "id": 10253,
+      "x": 856,
+      "y": 359,
+      "coordinates": [
+        856,
+        359
+      ],
+      "location": "Great Hollow 253",
+      "value": "Giant Crabs",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Giant Crabs"
+    },
+    {
+      "id": 10272,
+      "x": 505,
+      "y": 677,
+      "coordinates": [
+        505,
+        677
+      ],
+      "location": "Great Hollow 272",
+      "value": "Bell Bearing Hunter",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Bell Bearing Hunter"
+    },
+    {
+      "id": 10271,
+      "x": 356,
+      "y": 610,
+      "coordinates": [
+        356,
+        610
+      ],
+      "location": "Great Hollow 271",
+      "value": "Erdtree Avatar",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Erdtree Avatar"
+    },
+    {
+      "id": 10261,
+      "x": 274,
+      "y": 501,
+      "coordinates": [
+        274,
+        501
+      ],
+      "location": "Great Hollow 261",
+      "value": "Grafted Scion",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Grafted Scion"
+    },
+    {
+      "id": 10263,
+      "x": 206,
+      "y": 529,
+      "coordinates": [
+        206,
+        529
+      ],
+      "location": "Great Hollow 263",
+      "value": "Draconic Tree Sentinel",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Draconic Tree Sentinel"
+    },
+    {
+      "id": 10270,
+      "x": 238,
+      "y": 607,
+      "coordinates": [
+        238,
+        607
+      ],
+      "location": "Great Hollow 270",
+      "value": "Chief Bloodfiend",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Chief Bloodfiend"
+    },
+    {
+      "id": 10267,
+      "x": 225,
+      "y": 577,
+      "coordinates": [
+        225,
+        577
+      ],
+      "location": "Great Hollow 267",
+      "value": "Bloodbane Giant Crows",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Bloodbane Giant Crows"
+    },
+    {
+      "id": 10269,
+      "x": 785,
+      "y": 585,
+      "coordinates": [
+        785,
+        585
+      ],
+      "location": "Great Hollow 269",
+      "value": "Putrid Avatar",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Putrid Avatar"
+    },
+    {
+      "id": 10247,
+      "x": 370,
+      "y": 218,
+      "coordinates": [
+        370,
+        218
+      ],
+      "location": "Great Hollow 247",
+      "value": "Golden Hippopotamus",
+      "icon": "Castle.png",
+      "type": "Castle",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Golden Hippopotamus"
+    },
+    {
+      "id": 10273,
+      "x": 747,
+      "y": 678,
+      "coordinates": [
+        747,
+        678
+      ],
+      "location": "Great Hollow 273",
+      "value": "Cleanrot Knights",
+      "icon": "Castle.png",
+      "type": "Castle",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Cleanrot Knights"
+    },
+    {
+      "id": 10277,
+      "x": 835,
+      "y": 728,
+      "coordinates": [
+        835,
+        728
+      ],
+      "location": "Great Hollow 277",
+      "value": "Centipede Demon",
+      "icon": "Field_Boss_Red.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Centipede Demon"
+    },
+    {
+      "id": 10277,
+      "x": 835,
+      "y": 728,
+      "coordinates": [
+        835,
+        728
+      ],
+      "location": "Great Hollow 277",
+      "value": "Night's Cavalry Duo",
+      "icon": "Field_Boss_Red.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Night's Cavalry Duo"
+    },
+    {
+      "id": 10277,
+      "x": 835,
+      "y": 728,
+      "coordinates": [
+        835,
+        728
+      ],
+      "location": "Great Hollow 277",
+      "value": "Morgott",
+      "icon": "Field_Boss_Red.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Morgott"
+    },
+    {
+      "id": 10254,
+      "x": 238,
+      "y": 384,
+      "coordinates": [
+        238,
+        384
+      ],
+      "location": "Great Hollow 254",
+      "value": "Royal Revenant",
+      "icon": "Field_Boss_Red.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Royal Revenant"
+    },
+    {
+      "id": 10254,
+      "x": 238,
+      "y": 384,
+      "coordinates": [
+        238,
+        384
+      ],
+      "location": "Great Hollow 254",
+      "value": "Death Rite Bird",
+      "icon": "Field_Boss_Red.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Death Rite Bird"
+    },
+    {
+      "id": 10254,
+      "x": 238,
+      "y": 384,
+      "coordinates": [
+        238,
+        384
+      ],
+      "location": "Great Hollow 254",
+      "value": "Fallingstar Beast",
+      "icon": "Field_Boss_Red.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Fallingstar Beast"
+    },
+    {
+      "id": 10255,
+      "x": 502,
+      "y": 393,
+      "coordinates": [
+        502,
+        393
+      ],
+      "location": "Great Hollow Night 1 Circle",
+      "value": "Battlefield Commander",
+      "icon": "Night_Location.png",
+      "type": "Night Circle",
+      "category": "night",
+      "source": "dynamic",
+      "title": "Day 1: Battlefield Commander",
+      "night": 1
+    },
+    {
+      "id": 10250,
+      "x": 661,
+      "y": 247,
+      "coordinates": [
+        661,
+        247
+      ],
+      "location": "Great Hollow Night 2 Boss",
+      "value": "Crucible Knight and Golden Hippopotamus",
+      "icon": "Night_Location.png",
+      "type": "Night Circle",
+      "category": "night",
+      "source": "dynamic",
+      "title": "Day 2: Crucible Knight and Golden Hippopotamus",
+      "night": 2
+    },
+    {
+      "id": 10251,
+      "x": 186,
+      "y": 255,
+      "coordinates": [
+        186,
+        255
+      ],
+      "location": "Great Hollow Night 2 Circle",
+      "value": "Day 2 Circle",
+      "icon": "Night_Location.png",
+      "type": "Night Circle",
+      "category": "night",
+      "source": "dynamic",
+      "title": "Night 2 Circle",
+      "night": 2
+    },
+    {
+      "id": 10248,
+      "x": 853,
+      "y": 228,
+      "coordinates": [
+        853,
+        228
+      ],
+      "location": "Northeast",
+      "value": "Spawn Point",
+      "icon": "Spawn_Location.png",
+      "type": "Spawn Point",
+      "category": "spawn",
+      "source": "dynamic",
+      "title": "Spawn: Northeast"
+    }
+  ],
+  "rawLayout": {
+    "layout_number": "1077",
+    "nightlord": "Heolstor",
+    "shifting_earth": "Forsaken Hollows",
+    "churches": [
+      {
+        "poi_id": 245,
+        "value": "Church - Normal",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 256,
+        "value": "Church - Normal",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 260,
+        "value": "Church - Normal",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 282,
+        "value": "Church - Normal",
+        "location": "TBD"
+      }
+    ],
+    "sorcerers_rises": [
+      {
+        "poi_id": 266,
+        "value": "Sorcerer's Rise - Withered Trees",
+        "location": "TBD"
+      }
+    ],
+    "evergaols": [],
+    "forts": [],
+    "ruins": [],
+    "field_bosses": [
+      {
+        "poi_id": 246,
+        "boss": "Royal Carian Knight",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 252,
+        "boss": "Golden Hippopotamus",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 264,
+        "boss": "Miranda Blossom",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 268,
+        "boss": "Demi-Human Queen",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 258,
+        "boss": "Leonine Misbegotten",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 262,
+        "boss": "Black Knife Assassin",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 253,
+        "boss": "Giant Crabs",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 272,
+        "boss": "Bell Bearing Hunter",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 271,
+        "boss": "Erdtree Avatar",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 261,
+        "boss": "Grafted Scion",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 263,
+        "boss": "Draconic Tree Sentinel",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 270,
+        "boss": "Chief Bloodfiend",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 267,
+        "boss": "Bloodbane Giant Crows",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 269,
+        "boss": "Putrid Avatar",
+        "location": "TBD"
+      }
+    ],
+    "camps": [],
+    "great_churches": [],
+    "blacksmith_town": [],
+    "march": [],
+    "caravans": [],
+    "temple": [
+      {
+        "poi_id": 277,
+        "boss": "Centipede Demon",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 277,
+        "boss": "Night's Cavalry Duo",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 277,
+        "boss": "Morgott",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 254,
+        "boss": "Royal Revenant",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 254,
+        "boss": "Death Rite Bird",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 254,
+        "boss": "Fallingstar Beast",
+        "location": "TBD"
+      }
+    ],
+    "medium_castle": [
+      {
+        "poi_id": 273,
+        "boss": "Cleanrot Knights",
+        "location": "TBD"
+      }
+    ],
+    "small_castle": [
+      {
+        "poi_id": 247,
+        "boss": "Golden Hippopotamus",
+        "location": "TBD"
+      }
+    ],
+    "extra_night_boss": "empty",
+    "special_events": [],
+    "night1": {
+      "circle_location": "TBD",
+      "boss": "Battlefield Commander",
+      "poi_id": 255
+    },
+    "night2": {
+      "circle_location": "TBD",
+      "boss": "Crucible Knight and Golden Hippopotamus",
+      "poi_id": 250
+    },
+    "townships": [],
+    "spawn_points": [
+      {
+        "poi_id": 248,
+        "value": "Spawn Point",
+        "location": "TBD"
+      }
+    ],
+    "castle": [],
+    "day2_location": {
+      "poi_id": 251,
+      "value": "Day 2 Circle"
+    }
+  },
+  "attribution": {
+    "source": "Nightreign Overlay 3.0.3 public/assets/data + thefifthmatt pattern lineage",
+    "license": "source-derived"
+  }
+}

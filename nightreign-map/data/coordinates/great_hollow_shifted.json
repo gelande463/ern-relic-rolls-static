@@ -1,0 +1,400 @@
+{
+  "source": "Nightreign Overlay 3.0.3 public/assets/data/poi_uv_with_ids.json",
+  "bounds": {
+    "left": 0,
+    "width": 1000,
+    "height": 1000
+  },
+  "points": [
+    {
+      "id": 10214,
+      "sourcePoiId": 214,
+      "x": 105.21,
+      "y": 836.05,
+      "coordinates": [
+        105.21,
+        836.05
+      ]
+    },
+    {
+      "id": 10245,
+      "sourcePoiId": 245,
+      "x": 446,
+      "y": 134,
+      "coordinates": [
+        446,
+        134
+      ]
+    },
+    {
+      "id": 10246,
+      "sourcePoiId": 246,
+      "x": 323,
+      "y": 209,
+      "coordinates": [
+        323,
+        209
+      ]
+    },
+    {
+      "id": 10247,
+      "sourcePoiId": 247,
+      "x": 370,
+      "y": 218,
+      "coordinates": [
+        370,
+        218
+      ]
+    },
+    {
+      "id": 10248,
+      "sourcePoiId": 248,
+      "x": 853,
+      "y": 228,
+      "coordinates": [
+        853,
+        228
+      ]
+    },
+    {
+      "id": 10250,
+      "sourcePoiId": 250,
+      "x": 661,
+      "y": 247,
+      "coordinates": [
+        661,
+        247
+      ]
+    },
+    {
+      "id": 10251,
+      "sourcePoiId": 251,
+      "x": 186,
+      "y": 255,
+      "coordinates": [
+        186,
+        255
+      ]
+    },
+    {
+      "id": 10252,
+      "sourcePoiId": 252,
+      "x": 488,
+      "y": 289,
+      "coordinates": [
+        488,
+        289
+      ]
+    },
+    {
+      "id": 10253,
+      "sourcePoiId": 253,
+      "x": 856,
+      "y": 359,
+      "coordinates": [
+        856,
+        359
+      ]
+    },
+    {
+      "id": 10254,
+      "sourcePoiId": 254,
+      "x": 238,
+      "y": 384,
+      "coordinates": [
+        238,
+        384
+      ]
+    },
+    {
+      "id": 10255,
+      "sourcePoiId": 255,
+      "x": 502,
+      "y": 393,
+      "coordinates": [
+        502,
+        393
+      ]
+    },
+    {
+      "id": 10256,
+      "sourcePoiId": 256,
+      "x": 599,
+      "y": 394,
+      "coordinates": [
+        599,
+        394
+      ]
+    },
+    {
+      "id": 10257,
+      "sourcePoiId": 257,
+      "x": 422,
+      "y": 408,
+      "coordinates": [
+        422,
+        408
+      ]
+    },
+    {
+      "id": 10258,
+      "sourcePoiId": 258,
+      "x": 684,
+      "y": 464,
+      "coordinates": [
+        684,
+        464
+      ]
+    },
+    {
+      "id": 10259,
+      "sourcePoiId": 259,
+      "x": 611,
+      "y": 496,
+      "coordinates": [
+        611,
+        496
+      ]
+    },
+    {
+      "id": 10260,
+      "sourcePoiId": 260,
+      "x": 709,
+      "y": 498,
+      "coordinates": [
+        709,
+        498
+      ]
+    },
+    {
+      "id": 10261,
+      "sourcePoiId": 261,
+      "x": 274,
+      "y": 501,
+      "coordinates": [
+        274,
+        501
+      ]
+    },
+    {
+      "id": 10262,
+      "sourcePoiId": 262,
+      "x": 805,
+      "y": 526,
+      "coordinates": [
+        805,
+        526
+      ]
+    },
+    {
+      "id": 10263,
+      "sourcePoiId": 263,
+      "x": 206,
+      "y": 529,
+      "coordinates": [
+        206,
+        529
+      ]
+    },
+    {
+      "id": 10264,
+      "sourcePoiId": 264,
+      "x": 482,
+      "y": 536,
+      "coordinates": [
+        482,
+        536
+      ]
+    },
+    {
+      "id": 10265,
+      "sourcePoiId": 265,
+      "x": 710,
+      "y": 557,
+      "coordinates": [
+        710,
+        557
+      ]
+    },
+    {
+      "id": 10266,
+      "sourcePoiId": 266,
+      "x": 880,
+      "y": 576,
+      "coordinates": [
+        880,
+        576
+      ]
+    },
+    {
+      "id": 10267,
+      "sourcePoiId": 267,
+      "x": 225,
+      "y": 577,
+      "coordinates": [
+        225,
+        577
+      ]
+    },
+    {
+      "id": 10268,
+      "sourcePoiId": 268,
+      "x": 476,
+      "y": 579,
+      "coordinates": [
+        476,
+        579
+      ]
+    },
+    {
+      "id": 10269,
+      "sourcePoiId": 269,
+      "x": 785,
+      "y": 585,
+      "coordinates": [
+        785,
+        585
+      ]
+    },
+    {
+      "id": 10270,
+      "sourcePoiId": 270,
+      "x": 238,
+      "y": 607,
+      "coordinates": [
+        238,
+        607
+      ]
+    },
+    {
+      "id": 10271,
+      "sourcePoiId": 271,
+      "x": 356,
+      "y": 610,
+      "coordinates": [
+        356,
+        610
+      ]
+    },
+    {
+      "id": 10272,
+      "sourcePoiId": 272,
+      "x": 505,
+      "y": 677,
+      "coordinates": [
+        505,
+        677
+      ]
+    },
+    {
+      "id": 10273,
+      "sourcePoiId": 273,
+      "x": 747,
+      "y": 678,
+      "coordinates": [
+        747,
+        678
+      ]
+    },
+    {
+      "id": 10274,
+      "sourcePoiId": 274,
+      "x": 350,
+      "y": 695,
+      "coordinates": [
+        350,
+        695
+      ]
+    },
+    {
+      "id": 10276,
+      "sourcePoiId": 276,
+      "x": 236,
+      "y": 728,
+      "coordinates": [
+        236,
+        728
+      ]
+    },
+    {
+      "id": 10277,
+      "sourcePoiId": 277,
+      "x": 835,
+      "y": 728,
+      "coordinates": [
+        835,
+        728
+      ]
+    },
+    {
+      "id": 10278,
+      "sourcePoiId": 278,
+      "x": 712,
+      "y": 759,
+      "coordinates": [
+        712,
+        759
+      ]
+    },
+    {
+      "id": 10279,
+      "sourcePoiId": 279,
+      "x": 903,
+      "y": 809,
+      "coordinates": [
+        903,
+        809
+      ]
+    },
+    {
+      "id": 10280,
+      "sourcePoiId": 280,
+      "x": 359,
+      "y": 826,
+      "coordinates": [
+        359,
+        826
+      ]
+    },
+    {
+      "id": 10281,
+      "sourcePoiId": 281,
+      "x": 487,
+      "y": 861,
+      "coordinates": [
+        487,
+        861
+      ]
+    },
+    {
+      "id": 10282,
+      "sourcePoiId": 282,
+      "x": 354,
+      "y": 521,
+      "coordinates": [
+        354,
+        521
+      ]
+    },
+    {
+      "id": 10283,
+      "sourcePoiId": 283,
+      "x": 860,
+      "y": 596,
+      "coordinates": [
+        860,
+        596
+      ]
+    },
+    {
+      "id": 10284,
+      "sourcePoiId": 284,
+      "x": 533,
+      "y": 754,
+      "coordinates": [
+        533,
+        754
+      ]
+    }
+  ]
+}

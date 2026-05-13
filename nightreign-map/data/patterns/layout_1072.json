@@ -1,0 +1,1419 @@
+{
+  "layoutNumber": 1072,
+  "patternId": "1071",
+  "nightlord": "Heolstor",
+  "shiftingEarth": "Default",
+  "spawnPoint": "Above Stormhill Tunnel Entrance",
+  "specialEvent": null,
+  "nightBosses": {
+    "day1": "Night's Cavalry Duo",
+    "day2": "Crucible Knight and Golden Hippopotamus",
+    "extra": null
+  },
+  "nightCircles": {
+    "day1": "East of Saintsbridge",
+    "day2": "West Stormhill Graveyard"
+  },
+  "mapLayout": "default",
+  "tileDirectory": "default_map_tiles",
+  "dynamicPoiCount": 46,
+  "staticPoiCount": 0,
+  "filterLandmarks": [
+    {
+      "id": 94,
+      "location": "Groveside",
+      "value": "Camp - Elder Lion",
+      "title": "Elder Lion",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Main_Encampment.png"
+    },
+    {
+      "id": 101,
+      "location": "Summonwater",
+      "value": "Camp - Frenzied Flame Troll",
+      "title": "Frenzied Flame Troll",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Main_Encampment.png"
+    },
+    {
+      "id": 93,
+      "location": "South Lake",
+      "value": "Camp - Royal Army Knights",
+      "title": "Royal Army Knights",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Main_Encampment.png"
+    },
+    {
+      "id": 107,
+      "location": "South Mistwood",
+      "value": "Camp - Royal Army Knights",
+      "title": "Royal Army Knights",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Main_Encampment.png"
+    },
+    {
+      "id": 100,
+      "location": "Summonwater Approach",
+      "value": "Great Church - Mausoleum Knight",
+      "title": "Mausoleum Knight",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Great_Church.png"
+    },
+    {
+      "id": 102,
+      "location": "Artist's Shack",
+      "value": "Great Church - Oracle Envoys",
+      "title": "Oracle Envoys",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Great_Church.png"
+    },
+    {
+      "id": 95,
+      "location": "Stormhill North of Gate",
+      "value": "Great Church - Oracle Envoys",
+      "title": "Oracle Envoys",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Great_Church.png"
+    },
+    {
+      "id": 99,
+      "location": "Northeast Stormhill",
+      "value": "Blacksmith Town - Divine Bird Warrior",
+      "title": "Divine Bird Warrior",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Township.png"
+    },
+    {
+      "id": 96,
+      "location": "Gatefront",
+      "value": "Blacksmith Town - Divine Bird Warrior",
+      "title": "Divine Bird Warrior",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Township.png"
+    },
+    {
+      "id": 104,
+      "location": "Northeast Mistwood",
+      "value": "Blacksmith Town - Ancestral Follower Warriors",
+      "title": "Ancestral Follower Warriors",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Township.png"
+    },
+    {
+      "id": 105,
+      "location": "West Mistwood",
+      "value": "Blacksmith Town - Omen",
+      "title": "Omen",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Township.png"
+    },
+    {
+      "id": 215,
+      "location": "Southwest of Minor Erdtree",
+      "value": "March - Kindred of Rot",
+      "title": "Kindred of Rot",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Main_Encampment.png"
+    },
+    {
+      "id": 108,
+      "location": "Waypoint Ruins",
+      "value": "March - Kindred of Rot",
+      "title": "Kindred of Rot",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Main_Encampment.png"
+    },
+    {
+      "id": 103,
+      "location": "Northwest Mistwood",
+      "value": "March - Sanguine Nobles",
+      "title": "Sanguine Nobles",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Main_Encampment.png"
+    },
+    {
+      "id": 98,
+      "location": "Alexander Spot",
+      "value": "March - Sanguine Nobles",
+      "title": "Sanguine Nobles",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Main_Encampment.png"
+    },
+    {
+      "id": 97,
+      "location": "Northwest Stormhill",
+      "value": "March - Sanguine Nobles",
+      "title": "Sanguine Nobles",
+      "type": "Major Base",
+      "category": "major",
+      "icon": "Main_Encampment.png"
+    },
+    {
+      "id": 29,
+      "location": "East of Cavalry Bridge",
+      "value": "Church - Normal",
+      "title": "Normal",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Church.png"
+    },
+    {
+      "id": 32,
+      "location": "Stormhill South of Gate",
+      "value": "Church - Normal",
+      "title": "Normal",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Church.png"
+    },
+    {
+      "id": 36,
+      "location": "Below Summonwater Hawk",
+      "value": "Church - Normal",
+      "title": "Normal",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Church.png"
+    },
+    {
+      "id": 28,
+      "location": "Southeast of Lake",
+      "value": "Sorcerer's Rise - Unlit Candle",
+      "title": "Unlit Candle",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Sorcerer's_Rise.png"
+    },
+    {
+      "id": 30,
+      "location": "Lake",
+      "value": "Sorcerer's Rise - Imp Statue",
+      "title": "Imp Statue",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Sorcerer's_Rise.png"
+    },
+    {
+      "id": 35,
+      "location": "Northeast of Saintsbridge",
+      "value": "Small Camp - Caravans",
+      "title": "Caravans",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Main_Encampment.png"
+    },
+    {
+      "id": 106,
+      "location": "Minor Erdtree",
+      "value": "Small Camp - Caravans",
+      "title": "Caravans",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Main_Encampment.png"
+    },
+    {
+      "id": 82,
+      "location": "Northwest of Lake",
+      "value": "Bloodhound Knight",
+      "title": "Bloodhound Knight",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    },
+    {
+      "id": 76,
+      "location": "Stormhill",
+      "value": "Dragonkin Soldier",
+      "title": "Dragonkin Soldier",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    },
+    {
+      "id": 77,
+      "location": "Highroad",
+      "value": "Banished Knights",
+      "title": "Banished Knights",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    },
+    {
+      "id": 79,
+      "location": "Northeast Tunnel Entrance",
+      "value": "Death Rite Bird",
+      "title": "Death Rite Bird",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    },
+    {
+      "id": 78,
+      "location": "Murkwater Terminus",
+      "value": "Crucible Knight with Sword",
+      "title": "Crucible Knight with Sword",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    },
+    {
+      "id": 80,
+      "location": "Mistwood",
+      "value": "Omen",
+      "title": "Omen",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    },
+    {
+      "id": 81,
+      "location": "East of Lake",
+      "value": "Beastmen of Farum Azula",
+      "title": "Beastmen of Farum Azula",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    },
+    {
+      "id": 89,
+      "location": "Northwest Stormhill Cliffside",
+      "value": "Bell Bearing Hunter",
+      "title": "Bell Bearing Hunter",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 88,
+      "location": "Stormhill Spectral Hawk",
+      "value": "Elder Lion",
+      "title": "Elder Lion",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 86,
+      "location": "North of Stormhill Tunnel Entrance",
+      "value": "Golden Hippopotamus",
+      "title": "Golden Hippopotamus",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 87,
+      "location": "North of Murkwater Terminus",
+      "value": "Ulcerated Tree Spirit",
+      "title": "Ulcerated Tree Spirit",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 90,
+      "location": "East of Murkwater Terminus",
+      "value": "Royal Revenant",
+      "title": "Royal Revenant",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 91,
+      "location": "Northwest of Summonwater",
+      "value": "Magma Wyrm",
+      "title": "Magma Wyrm",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 92,
+      "location": "North Mistwood",
+      "value": "Leonine Misbegotten",
+      "title": "Leonine Misbegotten",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 83,
+      "location": "Mistwood Spectral Hawk",
+      "value": "Ancient Hero of Zamor",
+      "title": "Ancient Hero of Zamor",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 84,
+      "location": "Lake Field Boss",
+      "value": "Grafted Scion",
+      "title": "Grafted Scion",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 85,
+      "location": "Far Southwest of Lake",
+      "value": "Black Blade Kindred",
+      "title": "Black Blade Kindred",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 158,
+      "location": "Castle Rooftop",
+      "value": "Ancestor Spirit",
+      "title": "Ancestor Spirit",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 23,
+      "location": "Castle Basement",
+      "value": "Red Wolf",
+      "title": "Red Wolf",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 159,
+      "location": "Castle",
+      "value": "Crucible Knights",
+      "title": "Crucible Knights",
+      "type": "Castle",
+      "category": "boss",
+      "icon": "Castle.png"
+    }
+  ],
+  "dynamicPOIs": [
+    {
+      "id": 94,
+      "x": 979.75,
+      "y": 1104.25,
+      "coordinates": [
+        979.75,
+        1104.25
+      ],
+      "location": "Groveside",
+      "value": "Camp - Elder Lion",
+      "icon": "Main_Encampment.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Elder Lion"
+    },
+    {
+      "id": 101,
+      "x": 1705,
+      "y": 355.25,
+      "coordinates": [
+        1705,
+        355.25
+      ],
+      "location": "Summonwater",
+      "value": "Camp - Frenzied Flame Troll",
+      "icon": "Main_Encampment.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Frenzied Flame Troll"
+    },
+    {
+      "id": 93,
+      "x": 1183.64,
+      "y": 1322,
+      "coordinates": [
+        1183.64,
+        1322
+      ],
+      "location": "South Lake",
+      "value": "Camp - Royal Army Knights",
+      "icon": "Main_Encampment.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Royal Army Knights"
+    },
+    {
+      "id": 107,
+      "x": 1768.67,
+      "y": 1238.67,
+      "coordinates": [
+        1768.67,
+        1238.67
+      ],
+      "location": "South Mistwood",
+      "value": "Camp - Royal Army Knights",
+      "icon": "Main_Encampment.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Royal Army Knights"
+    },
+    {
+      "id": 100,
+      "x": 1585.25,
+      "y": 501,
+      "coordinates": [
+        1585.25,
+        501
+      ],
+      "location": "Summonwater Approach",
+      "value": "Great Church - Mausoleum Knight",
+      "icon": "Great_Church.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Mausoleum Knight"
+    },
+    {
+      "id": 102,
+      "x": 1485,
+      "y": 733,
+      "coordinates": [
+        1485,
+        733
+      ],
+      "location": "Artist's Shack",
+      "value": "Great Church - Oracle Envoys",
+      "icon": "Great_Church.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Oracle Envoys"
+    },
+    {
+      "id": 95,
+      "x": 984,
+      "y": 742.5,
+      "coordinates": [
+        984,
+        742.5
+      ],
+      "location": "Stormhill North of Gate",
+      "value": "Great Church - Oracle Envoys",
+      "icon": "Great_Church.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Oracle Envoys"
+    },
+    {
+      "id": 99,
+      "x": 1190.25,
+      "y": 296,
+      "coordinates": [
+        1190.25,
+        296
+      ],
+      "location": "Northeast Stormhill",
+      "value": "Blacksmith Town - Divine Bird Warrior",
+      "icon": "Township.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Divine Bird Warrior"
+    },
+    {
+      "id": 96,
+      "x": 1043.64,
+      "y": 931.09,
+      "coordinates": [
+        1043.64,
+        931.09
+      ],
+      "location": "Gatefront",
+      "value": "Blacksmith Town - Divine Bird Warrior",
+      "icon": "Township.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Divine Bird Warrior"
+    },
+    {
+      "id": 104,
+      "x": 1806.5,
+      "y": 712.75,
+      "coordinates": [
+        1806.5,
+        712.75
+      ],
+      "location": "Northeast Mistwood",
+      "value": "Blacksmith Town - Ancestral Follower Warriors",
+      "icon": "Township.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Ancestral Follower Warriors"
+    },
+    {
+      "id": 105,
+      "x": 1572,
+      "y": 1001.33,
+      "coordinates": [
+        1572,
+        1001.33
+      ],
+      "location": "West Mistwood",
+      "value": "Blacksmith Town - Omen",
+      "icon": "Township.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Omen"
+    },
+    {
+      "id": 215,
+      "x": 1781.47,
+      "y": 1075.71,
+      "coordinates": [
+        1781.47,
+        1075.71
+      ],
+      "location": "Southwest of Minor Erdtree",
+      "value": "March - Kindred of Rot",
+      "icon": "Main_Encampment.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Kindred of Rot"
+    },
+    {
+      "id": 108,
+      "x": 1547.67,
+      "y": 1171.67,
+      "coordinates": [
+        1547.67,
+        1171.67
+      ],
+      "location": "Waypoint Ruins",
+      "value": "March - Kindred of Rot",
+      "icon": "Main_Encampment.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Kindred of Rot"
+    },
+    {
+      "id": 103,
+      "x": 1632.75,
+      "y": 782.75,
+      "coordinates": [
+        1632.75,
+        782.75
+      ],
+      "location": "Northwest Mistwood",
+      "value": "March - Sanguine Nobles",
+      "icon": "Main_Encampment.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Sanguine Nobles"
+    },
+    {
+      "id": 98,
+      "x": 1209.75,
+      "y": 508.25,
+      "coordinates": [
+        1209.75,
+        508.25
+      ],
+      "location": "Alexander Spot",
+      "value": "March - Sanguine Nobles",
+      "icon": "Main_Encampment.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Sanguine Nobles"
+    },
+    {
+      "id": 97,
+      "x": 891.75,
+      "y": 465,
+      "coordinates": [
+        891.75,
+        465
+      ],
+      "location": "Northwest Stormhill",
+      "value": "March - Sanguine Nobles",
+      "icon": "Main_Encampment.png",
+      "type": "Major Base",
+      "category": "major",
+      "source": "dynamic",
+      "title": "Sanguine Nobles"
+    },
+    {
+      "id": 29,
+      "x": 1431,
+      "y": 1081,
+      "coordinates": [
+        1431,
+        1081
+      ],
+      "location": "East of Cavalry Bridge",
+      "value": "Church - Normal",
+      "icon": "Church.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Normal"
+    },
+    {
+      "id": 32,
+      "x": 852,
+      "y": 960,
+      "coordinates": [
+        852,
+        960
+      ],
+      "location": "Stormhill South of Gate",
+      "value": "Church - Normal",
+      "icon": "Church.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Normal"
+    },
+    {
+      "id": 36,
+      "x": 1688,
+      "y": 625.75,
+      "coordinates": [
+        1688,
+        625.75
+      ],
+      "location": "Below Summonwater Hawk",
+      "value": "Church - Normal",
+      "icon": "Church.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Normal"
+    },
+    {
+      "id": 28,
+      "x": 1465.67,
+      "y": 1379.67,
+      "coordinates": [
+        1465.67,
+        1379.67
+      ],
+      "location": "Southeast of Lake",
+      "value": "Sorcerer's Rise - Unlit Candle",
+      "icon": "Sorcerer's_Rise.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Unlit Candle"
+    },
+    {
+      "id": 30,
+      "x": 1284,
+      "y": 1187,
+      "coordinates": [
+        1284,
+        1187
+      ],
+      "location": "Lake",
+      "value": "Sorcerer's Rise - Imp Statue",
+      "icon": "Sorcerer's_Rise.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Imp Statue"
+    },
+    {
+      "id": 35,
+      "x": 1415,
+      "y": 392.5,
+      "coordinates": [
+        1415,
+        392.5
+      ],
+      "location": "Northeast of Saintsbridge",
+      "value": "Small Camp - Caravans",
+      "icon": "Main_Encampment.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Caravans"
+    },
+    {
+      "id": 106,
+      "x": 1778.67,
+      "y": 1063.33,
+      "coordinates": [
+        1778.67,
+        1063.33
+      ],
+      "location": "Minor Erdtree",
+      "value": "Small Camp - Caravans",
+      "icon": "Main_Encampment.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Caravans"
+    },
+    {
+      "id": 82,
+      "x": 1096.25,
+      "y": 1068.5,
+      "coordinates": [
+        1096.25,
+        1068.5
+      ],
+      "location": "Northwest of Lake",
+      "value": "Bloodhound Knight",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Bloodhound Knight"
+    },
+    {
+      "id": 76,
+      "x": 793.64,
+      "y": 536.73,
+      "coordinates": [
+        793.64,
+        536.73
+      ],
+      "location": "Stormhill",
+      "value": "Dragonkin Soldier",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Dragonkin Soldier"
+    },
+    {
+      "id": 77,
+      "x": 1323.82,
+      "y": 331.82,
+      "coordinates": [
+        1323.82,
+        331.82
+      ],
+      "location": "Highroad",
+      "value": "Banished Knights",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Banished Knights"
+    },
+    {
+      "id": 79,
+      "x": 1577.12,
+      "y": 614.38,
+      "coordinates": [
+        1577.12,
+        614.38
+      ],
+      "location": "Northeast Tunnel Entrance",
+      "value": "Death Rite Bird",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Death Rite Bird"
+    },
+    {
+      "id": 78,
+      "x": 1263.27,
+      "y": 645.82,
+      "coordinates": [
+        1263.27,
+        645.82
+      ],
+      "location": "Murkwater Terminus",
+      "value": "Crucible Knight with Sword",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Crucible Knight with Sword"
+    },
+    {
+      "id": 80,
+      "x": 1845.12,
+      "y": 824.88,
+      "coordinates": [
+        1845.12,
+        824.88
+      ],
+      "location": "Mistwood",
+      "value": "Omen",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Omen"
+    },
+    {
+      "id": 81,
+      "x": 1559.25,
+      "y": 1297,
+      "coordinates": [
+        1559.25,
+        1297
+      ],
+      "location": "East of Lake",
+      "value": "Beastmen of Farum Azula",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Beastmen of Farum Azula"
+    },
+    {
+      "id": 89,
+      "x": 977,
+      "y": 326.33,
+      "coordinates": [
+        977,
+        326.33
+      ],
+      "location": "Northwest Stormhill Cliffside",
+      "value": "Bell Bearing Hunter",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Bell Bearing Hunter"
+    },
+    {
+      "id": 88,
+      "x": 1076.33,
+      "y": 428,
+      "coordinates": [
+        1076.33,
+        428
+      ],
+      "location": "Stormhill Spectral Hawk",
+      "value": "Elder Lion",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Elder Lion"
+    },
+    {
+      "id": 86,
+      "x": 1048.33,
+      "y": 647.33,
+      "coordinates": [
+        1048.33,
+        647.33
+      ],
+      "location": "North of Stormhill Tunnel Entrance",
+      "value": "Golden Hippopotamus",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Golden Hippopotamus"
+    },
+    {
+      "id": 87,
+      "x": 1311,
+      "y": 595.67,
+      "coordinates": [
+        1311,
+        595.67
+      ],
+      "location": "North of Murkwater Terminus",
+      "value": "Ulcerated Tree Spirit",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Ulcerated Tree Spirit"
+    },
+    {
+      "id": 90,
+      "x": 1428.33,
+      "y": 650.33,
+      "coordinates": [
+        1428.33,
+        650.33
+      ],
+      "location": "East of Murkwater Terminus",
+      "value": "Royal Revenant",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Royal Revenant"
+    },
+    {
+      "id": 91,
+      "x": 1600.67,
+      "y": 365.33,
+      "coordinates": [
+        1600.67,
+        365.33
+      ],
+      "location": "Northwest of Summonwater",
+      "value": "Magma Wyrm",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Magma Wyrm"
+    },
+    {
+      "id": 92,
+      "x": 1811.67,
+      "y": 826,
+      "coordinates": [
+        1811.67,
+        826
+      ],
+      "location": "North Mistwood",
+      "value": "Leonine Misbegotten",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Leonine Misbegotten"
+    },
+    {
+      "id": 83,
+      "x": 1683,
+      "y": 1290.67,
+      "coordinates": [
+        1683,
+        1290.67
+      ],
+      "location": "Mistwood Spectral Hawk",
+      "value": "Ancient Hero of Zamor",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Ancient Hero of Zamor"
+    },
+    {
+      "id": 84,
+      "x": 1271.67,
+      "y": 1191,
+      "coordinates": [
+        1271.67,
+        1191
+      ],
+      "location": "Lake Field Boss",
+      "value": "Grafted Scion",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Grafted Scion"
+    },
+    {
+      "id": 85,
+      "x": 1034.67,
+      "y": 1389.67,
+      "coordinates": [
+        1034.67,
+        1389.67
+      ],
+      "location": "Far Southwest of Lake",
+      "value": "Black Blade Kindred",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Black Blade Kindred"
+    },
+    {
+      "id": 158,
+      "x": 1245.82,
+      "y": 916.36,
+      "coordinates": [
+        1245.82,
+        916.36
+      ],
+      "location": "Castle Rooftop",
+      "value": "Ancestor Spirit",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Ancestor Spirit"
+    },
+    {
+      "id": 23,
+      "x": 1291.88,
+      "y": 915.88,
+      "coordinates": [
+        1291.88,
+        915.88
+      ],
+      "location": "Castle Basement",
+      "value": "Red Wolf",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Red Wolf"
+    },
+    {
+      "id": 159,
+      "x": 1237.45,
+      "y": 832.36,
+      "coordinates": [
+        1237.45,
+        832.36
+      ],
+      "location": "Castle",
+      "value": "Crucible Knights",
+      "icon": "Castle.png",
+      "type": "Castle",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Crucible Knights"
+    },
+    {
+      "id": 182,
+      "x": 1463,
+      "y": 453,
+      "coordinates": [
+        1463,
+        453
+      ],
+      "location": "East of Saintsbridge",
+      "value": "Night's Cavalry Duo",
+      "icon": "Night_Location.png",
+      "type": "Night Circle",
+      "category": "night",
+      "source": "dynamic",
+      "title": "Day 1: Night's Cavalry Duo",
+      "night": 1
+    },
+    {
+      "id": 176,
+      "x": 864,
+      "y": 673,
+      "coordinates": [
+        864,
+        673
+      ],
+      "location": "West Stormhill Graveyard",
+      "value": "Crucible Knight and Golden Hippopotamus",
+      "icon": "Night_Location.png",
+      "type": "Night Circle",
+      "category": "night",
+      "source": "dynamic",
+      "title": "Day 2: Crucible Knight and Golden Hippopotamus",
+      "night": 2
+    },
+    {
+      "id": 34,
+      "x": 1126.33,
+      "y": 689,
+      "coordinates": [
+        1126.33,
+        689
+      ],
+      "location": "Above Stormhill Tunnel Entrance",
+      "value": "Spawn Point",
+      "icon": "Spawn_Location.png",
+      "type": "Spawn Point",
+      "category": "spawn",
+      "source": "dynamic",
+      "title": "Spawn: Above Stormhill Tunnel Entrance"
+    }
+  ],
+  "rawLayout": {
+    "layout_number": "1072",
+    "nightlord": "Heolstor",
+    "shifting_earth": "Default",
+    "churches": [
+      {
+        "poi_id": 29,
+        "value": "Church - Normal",
+        "location": "East of Cavalry Bridge"
+      },
+      {
+        "poi_id": 32,
+        "value": "Church - Normal",
+        "location": "Stormhill South of Gate"
+      },
+      {
+        "poi_id": 36,
+        "value": "Church - Normal",
+        "location": "Below Summonwater Hawk"
+      }
+    ],
+    "sorcerers_rises": [
+      {
+        "poi_id": 28,
+        "value": "Sorcerer's Rise - Unlit Candle",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 30,
+        "value": "Sorcerer's Rise - Imp Statue",
+        "location": "TBD"
+      }
+    ],
+    "evergaols": [
+      {
+        "poi_id": 82,
+        "boss": "Bloodhound Knight",
+        "location": "Northwest of Lake"
+      },
+      {
+        "poi_id": 76,
+        "boss": "Dragonkin Soldier",
+        "location": "Stormhill"
+      },
+      {
+        "poi_id": 77,
+        "boss": "Banished Knights",
+        "location": "Highroad"
+      },
+      {
+        "poi_id": 79,
+        "boss": "Death Rite Bird",
+        "location": "Northeast Tunnel Entrance"
+      },
+      {
+        "poi_id": 78,
+        "boss": "Crucible Knight with Sword",
+        "location": "Murkwater Terminus"
+      },
+      {
+        "poi_id": 80,
+        "boss": "Omen",
+        "location": "Mistwood"
+      },
+      {
+        "poi_id": 81,
+        "boss": "Beastmen of Farum Azula",
+        "location": "East of Lake"
+      }
+    ],
+    "forts": [],
+    "ruins": [],
+    "field_bosses": [
+      {
+        "poi_id": 89,
+        "boss": "Bell Bearing Hunter",
+        "location": "Northwest Stormhill Cliffside"
+      },
+      {
+        "poi_id": 88,
+        "boss": "Elder Lion",
+        "location": "Stormhill Spectral Hawk"
+      },
+      {
+        "poi_id": 86,
+        "boss": "Golden Hippopotamus",
+        "location": "North of Stormhill Tunnel Entrance"
+      },
+      {
+        "poi_id": 87,
+        "boss": "Ulcerated Tree Spirit",
+        "location": "North of Murkwater Terminus"
+      },
+      {
+        "poi_id": 90,
+        "boss": "Royal Revenant",
+        "location": "East of Murkwater Terminus"
+      },
+      {
+        "poi_id": 91,
+        "boss": "Magma Wyrm",
+        "location": "Northwest of Summonwater"
+      },
+      {
+        "poi_id": 92,
+        "boss": "Leonine Misbegotten",
+        "location": "North Mistwood"
+      },
+      {
+        "poi_id": 83,
+        "boss": "Ancient Hero of Zamor",
+        "location": "Mistwood Spectral Hawk"
+      },
+      {
+        "poi_id": 84,
+        "boss": "Grafted Scion",
+        "location": "Lake Field Boss"
+      },
+      {
+        "poi_id": 85,
+        "boss": "Black Blade Kindred",
+        "location": "Far Southwest of Lake"
+      },
+      {
+        "poi_id": 158,
+        "boss": "Ancestor Spirit",
+        "location": "Castle Rooftop"
+      },
+      {
+        "poi_id": 23,
+        "boss": "Red Wolf",
+        "location": "Castle Basement"
+      }
+    ],
+    "camps": [
+      {
+        "poi_id": 94,
+        "value": "Camp - Elder Lion",
+        "location": "Groveside"
+      },
+      {
+        "poi_id": 101,
+        "value": "Camp - Frenzied Flame Troll",
+        "location": "Summonwater"
+      },
+      {
+        "poi_id": 93,
+        "value": "Camp - Royal Army Knights",
+        "location": "South Lake"
+      },
+      {
+        "poi_id": 107,
+        "value": "Camp - Royal Army Knights",
+        "location": "South Mistwood"
+      }
+    ],
+    "great_churches": [
+      {
+        "poi_id": 100,
+        "value": "Great Church - Mausoleum Knight",
+        "location": "Summonwater Approach"
+      },
+      {
+        "poi_id": 102,
+        "value": "Great Church - Oracle Envoys",
+        "location": "Artist's Shack"
+      },
+      {
+        "poi_id": 95,
+        "value": "Great Church - Oracle Envoys",
+        "location": "Stormhill North of Gate"
+      }
+    ],
+    "blacksmith_town": [
+      {
+        "poi_id": 99,
+        "value": "Blacksmith Town - Divine Bird Warrior",
+        "location": "Northeast Stormhill"
+      },
+      {
+        "poi_id": 96,
+        "value": "Blacksmith Town - Divine Bird Warrior",
+        "location": "Gatefront"
+      },
+      {
+        "poi_id": 104,
+        "value": "Blacksmith Town - Ancestral Follower Warriors",
+        "location": "Northeast Mistwood"
+      },
+      {
+        "poi_id": 105,
+        "value": "Blacksmith Town - Omen",
+        "location": "West Mistwood"
+      }
+    ],
+    "march": [
+      {
+        "poi_id": 215,
+        "value": "March - Kindred of Rot",
+        "location": "Southwest of Minor Erdtree"
+      },
+      {
+        "poi_id": 108,
+        "value": "March - Kindred of Rot",
+        "location": "Waypoint Ruins"
+      },
+      {
+        "poi_id": 103,
+        "value": "March - Sanguine Nobles",
+        "location": "Northwest Mistwood"
+      },
+      {
+        "poi_id": 98,
+        "value": "March - Sanguine Nobles",
+        "location": "Alexander Spot"
+      },
+      {
+        "poi_id": 97,
+        "value": "March - Sanguine Nobles",
+        "location": "Northwest Stormhill"
+      }
+    ],
+    "caravans": [
+      {
+        "poi_id": 35,
+        "value": "Small Camp - Caravans",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 106,
+        "value": "Small Camp - Caravans",
+        "location": "TBD"
+      }
+    ],
+    "temple": [],
+    "medium_castle": [],
+    "small_castle": [],
+    "extra_night_boss": "empty",
+    "special_events": [],
+    "night1": {
+      "circle_location": "TBD",
+      "boss": "Night's Cavalry Duo",
+      "poi_id": 182
+    },
+    "night2": {
+      "circle_location": "TBD",
+      "boss": "Crucible Knight and Golden Hippopotamus",
+      "poi_id": 176
+    },
+    "townships": [],
+    "spawn_points": [
+      {
+        "poi_id": 34,
+        "value": "Spawn Point",
+        "location": "TBD"
+      }
+    ],
+    "castle": [
+      {
+        "poi_id": 159,
+        "boss": "Crucible Knights",
+        "location": "Castle"
+      }
+    ]
+  },
+  "attribution": {
+    "source": "Nightreign Overlay 3.0.3 public/assets/data + thefifthmatt pattern lineage",
+    "license": "source-derived"
+  }
+}

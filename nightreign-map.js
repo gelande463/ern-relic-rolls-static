@@ -21,6 +21,26 @@
   const FILTERABLE_CATEGORIES = new Set(["major", "minor", "boss", "evergaol"]);
   const SPECIAL_EVENT_ICONS = new Set(["Construct_21100.png", "Event.png"]);
   const SPECIAL_EVENT_DISPLAY_ICON = "Construct_21100.png";
+  const DLC_EARTHS = new Set(["Great Hollow"]);
+  const GREAT_HOLLOW_SPAWNS = new Set(["Northeast", "Southwest", "South"]);
+  const EARTH_ALIASES = {
+    "Forsaken Hollows": "Great Hollow",
+    "Great Hollow": "Great Hollow",
+    "Noklateo, the Shrouded City": "Noklateo",
+    Noklateo: "Noklateo",
+  };
+  const CRYSTAL_COLORS = {
+    red: "#ff4f69",
+    blue: "#35c8ff",
+    purple: "#9a6cff",
+    green: "#20df67",
+  };
+  const CRYSTAL_ICONS = {
+    red: "red-crystal.png",
+    blue: "blue-crystal.png",
+    purple: "purple-crystal.png",
+    green: "green-crystal.png",
+  };
 
   const ICON_SIZES = {
     "Mission_Objective.png": 34,
@@ -92,9 +112,11 @@
     Fulghor: "fulghor.png",
     Gladius: "gladius.png",
     Gnoster: "gnoster.png",
+    Harmonia: "harmonia.png",
     Heolstor: "heolstor.png",
     Libra: "libra.png",
     Maris: "maris.png",
+    Straghess: "straghess.png",
   };
 
   const COPY = {
@@ -155,6 +177,21 @@
       candidateOpenAria: "候補パネルを開く",
       candidateCloseAria: "候補パネルを閉じる",
       languageLabel: "言語",
+      crystalFabLabel: "結晶",
+      crystalTitle: "結晶シード",
+      crystalAll: "すべて",
+      crystalRed: "赤",
+      crystalBlue: "青",
+      crystalPurple: "紫",
+      crystalGreen: "緑",
+      crystalUnique: "固有",
+      crystalRoute: "ルート",
+      crystalOff: "非表示",
+      crystalRouteSelect: "判定ルート",
+      crystalConfirm: "確定目安",
+      crystalTime: "タイム",
+      crystalUnmapped: "未対応",
+      crystalSeeds: "シード",
     },
     en: {
       unknownNightlord: "Nightlord: ???",
@@ -213,6 +250,21 @@
       candidateOpenAria: "Open candidate panel",
       candidateCloseAria: "Close candidate panel",
       languageLabel: "Language",
+      crystalFabLabel: "Crystal",
+      crystalTitle: "Crystal Seed",
+      crystalAll: "All",
+      crystalRed: "Red",
+      crystalBlue: "Blue",
+      crystalPurple: "Purple",
+      crystalGreen: "Green",
+      crystalUnique: "Unique",
+      crystalRoute: "Route",
+      crystalOff: "Off",
+      crystalRouteSelect: "Route",
+      crystalConfirm: "Confirm",
+      crystalTime: "Time",
+      crystalUnmapped: "Unmapped",
+      crystalSeeds: "Seeds",
     },
   };
 
@@ -223,9 +275,11 @@
       Fulghor: "フルゴール",
       Gladius: "グラディウス",
       Gnoster: "グノスター",
+      Harmonia: "ハルモニア",
       Heolstor: "ヘオルスター",
       Libra: "リブラ",
       Maris: "マリス",
+      Straghess: "ストラーゲス",
     },
     en: {},
   };
@@ -238,6 +292,7 @@
       Crater: "クレーター",
       "Rotted Woods": "腐れ森",
       Noklateo: "ノクラテオ",
+      "Great Hollow": "大空洞",
     },
     en: {
       Default: "Default",
@@ -245,6 +300,7 @@
       Crater: "Crater",
       "Rotted Woods": "Rotted Woods",
       Noklateo: "Noklateo",
+      "Great Hollow": "Great Hollow",
     },
   };
 
@@ -275,7 +331,10 @@
       "Far Southwest": "南西端",
       "Minor Erdtree": "小黄金樹",
       "Northeast of Saintsbridge": "聖人橋の北東",
+      Northeast: "北東",
       "Southeast of Lake": "湖の南東",
+      South: "南",
+      Southwest: "南西",
       "Stormhill South of Gate": "嵐丘・関門南",
       "West of Warmaster's Shack": "戦学びのボロ家西",
     },
@@ -307,6 +366,7 @@
       "Northeast of Saintsbridge": "聖人橋の北東",
       "Northeast Stormhill": "嵐丘北東",
       "Northeast Tunnel Entrance": "北東坑道入口",
+      Northeast: "北東",
       "North of Murkwater Terminus": "曇り川終点の北",
       "North of Stormhill Tunnel Entrance": "嵐丘坑道入口の北",
       "Northwest Mistwood": "霧の森北西",
@@ -315,7 +375,12 @@
       "Northwest Stormhill": "嵐丘北西",
       "Northwest Stormhill Cliffside": "嵐丘北西の崖際",
       "South Lake": "南湖",
+      South: "南",
       "Southeast of Lake": "湖の南東",
+      Southwest: "南西",
+      "Great Hollow Night 1 Circle": "大空洞 第1夜の円",
+      "Great Hollow Night 2 Boss": "大空洞 第2夜ボス",
+      "Great Hollow Night 2 Circle": "大空洞 第2夜の円",
       "Stormhill": "嵐丘",
       "Stormhill North of Gate": "嵐丘・関門北",
       "Stormhill South of Gate": "嵐丘・関門南",
@@ -410,6 +475,25 @@
       "Windy Trees": "風の木",
       "Withered Trees": "枯れ木",
       Wormface: "ミミズ顔",
+      "Balancers Raid": "調停者の襲撃",
+      "Caligo Blizzard": "カリゴの吹雪",
+      "Difficult Sorcerer's Rise": "高難度魔術師塔",
+      "Extra Night Boss": "追加夜ボス",
+      "Frenzy Tower": "狂い火の塔",
+      "Gladius Invasion": "グラディウス侵攻",
+      "Libra Curse": "リブラの呪い",
+      "Maris Bubbles": "マリスの泡",
+      "Meteor Strike": "隕石落下",
+      "Night Horde": "夜の群れ",
+      "Walking Mausoleum": "歩く霊廟",
+      "Day 1 Balancers Raid": "第1夜 調停者の襲撃",
+      "Day 1 Caligo Blizzard": "第1夜 カリゴの吹雪",
+      "Day 1 Frenzy Tower": "第1夜 狂い火の塔",
+      "Day 1 Gladius Invasion": "第1夜 グラディウス侵攻",
+      "Day 1 Walking Mausoleum": "第1夜 歩く霊廟",
+      "Day 2 Caligo Blizzard": "第2夜 カリゴの吹雪",
+      "Day 2 Frenzy Tower": "第2夜 狂い火の塔",
+      "Day 2 Gladius Invasion": "第2夜 グラディウス侵攻",
     },
     en: {},
   };
@@ -437,6 +521,15 @@
     languages: app.querySelector("[data-nr-languages]"),
     nightlordOptions: app.querySelector("[data-nr-nightlord-options]"),
     mapOptions: app.querySelector("[data-nr-map-options]"),
+    dlcFab: app.querySelector(".nr-dlc-fab"),
+    dlcMapPreview: app.querySelector("[data-nr-dlc-map-preview]"),
+    dlcMapOptions: app.querySelector("[data-nr-dlc-map-options]"),
+    crystalLayer: app.querySelector("[data-nr-crystal-layer]"),
+    crystalFab: app.querySelector(".nr-crystal-fab"),
+    crystalPanel: app.querySelector("[data-nr-panel='crystal']"),
+    crystalModes: app.querySelector("[data-nr-crystal-modes]"),
+    crystalRouteSelect: app.querySelector("[data-nr-crystal-route]"),
+    crystalRouteInfo: app.querySelector("[data-nr-crystal-route-info]"),
     mapPreview: app.querySelector("[data-nr-map-preview]"),
     nightlordLabel: app.querySelector("[data-nr-nightlord-label]"),
     nightlordGlyph: app.querySelector("[data-nr-nightlord-glyph]"),
@@ -481,6 +574,13 @@
     candidatePosition: null,
     panelDrag: null,
     initializedView: false,
+    crystals: {
+      locations: [],
+      seeds: {},
+      routes: [],
+      mode: "off",
+      routeId: "",
+    },
   };
 
   boot();
@@ -488,15 +588,19 @@
   async function boot() {
     wireEvents();
     try {
-      const [index, masterPois] = await Promise.all([
+      const [index, masterPois, crystals] = await Promise.all([
         fetchJson(`${DATA_BASE}/index.json`),
         fetchJson(`${DATA_BASE}/poi_coordinates_with_ids.json`),
+        loadCrystalData(),
       ]);
       state.index = index;
       state.poiCoordinates = new Map(masterPois.map((poi) => [String(poi.id), {
         x: Number(poi.coordinates?.[0]),
         y: Number(poi.coordinates?.[1]),
       }]));
+      state.crystals.locations = crystals.locations;
+      state.crystals.seeds = crystals.seeds;
+      state.crystals.routes = crystals.routes;
       applyInitialState(readInitialState());
       renderStaticControls();
       renderAllControls();
@@ -517,7 +621,7 @@
     });
 
     elements.controls.shiftingEarth.addEventListener("change", () => {
-      state.shiftingEarth = elements.controls.shiftingEarth.value;
+      state.shiftingEarth = canonicalEarth(elements.controls.shiftingEarth.value);
       state.spawnPoint = "";
       state.selectedLandmarks.clear();
       state.exactLayout = false;
@@ -611,7 +715,7 @@
 
       const mapChoice = event.target.closest("[data-nr-earth]");
       if (mapChoice) {
-        state.shiftingEarth = mapChoice.dataset.nrEarth;
+        state.shiftingEarth = canonicalEarth(mapChoice.dataset.nrEarth || "");
         state.spawnPoint = "";
         state.selectedLandmarks.clear();
         state.exactLayout = false;
@@ -642,8 +746,21 @@
         return;
       }
 
+      const crystalMode = event.target.closest("[data-nr-crystal-mode]");
+      if (crystalMode) {
+        setCrystalMode(crystalMode.dataset.nrCrystalMode);
+        return;
+      }
+
       const action = event.target.closest("[data-nr-action]");
       if (action) handleAction(action.dataset.nrAction);
+    });
+
+    elements.crystalRouteSelect?.addEventListener("change", () => {
+      state.crystals.routeId = elements.crystalRouteSelect.value;
+      state.crystals.mode = "route";
+      renderCrystalControls();
+      renderCrystals();
     });
 
     elements.candidatePanel.addEventListener("pointerdown", onCandidatePanelPointerDown);
@@ -673,6 +790,13 @@
       togglePanel("nightlord");
     } else if (action === "open-map") {
       togglePanel("map");
+    } else if (action === "open-dlc-map") {
+      togglePanel("dlc-map");
+    } else if (action === "open-crystal") {
+      if (state.crystals.mode === "off") state.crystals.mode = "all";
+      togglePanel("crystal");
+      renderCrystalControls();
+      renderCrystals();
     } else if (action === "close-panels") {
       closePanels();
     } else if (action === "close-guide") {
@@ -848,6 +972,7 @@
     renderOrbs();
     renderLanguageSwitch();
     renderCandidateSheet();
+    renderCrystalControls();
     elements.controls.showLabels.checked = state.showLabels;
     elements.hideGuide.checked = state.hideGuide;
     elements.guide.hidden = state.hideGuide;
@@ -869,7 +994,7 @@
 
     renderSelect(
       elements.controls.spawnPoint,
-      [{ value: "", label: t("anySpawn") }, ...state.index.spawnPoints.map((value) => ({ value, label: spawnLabel(value) }))],
+      [{ value: "", label: t("anySpawn") }, ...availableSpawnPoints().map((value) => ({ value, label: spawnLabel(value) }))],
       state.spawnPoint
     );
 
@@ -899,7 +1024,7 @@
       elements.nightlordGlyph.textContent = "?";
     }
     elements.status.textContent = statusText();
-    elements.mapLabel.textContent = state.shiftingEarth ? mapLabel(state.shiftingEarth) : mapLabel("Default");
+    elements.mapLabel.textContent = mapLabel(state.shiftingEarth || state.pattern?.shiftingEarth || "Default");
 
     for (const button of elements.shiftOrbs.querySelectorAll("[data-nr-earth]")) {
       button.classList.toggle("is-active", button.dataset.nrEarth === state.shiftingEarth);
@@ -908,6 +1033,12 @@
       button.classList.toggle("is-active", button.dataset.nrNightlord === state.nightlord);
     }
     for (const button of elements.mapOptions.querySelectorAll("[data-nr-earth]")) {
+      button.classList.toggle("is-active", button.dataset.nrEarth === state.shiftingEarth);
+    }
+    if (elements.dlcFab) {
+      elements.dlcFab.classList.toggle("is-active", isDlcEarth(state.shiftingEarth));
+    }
+    for (const button of elements.dlcMapOptions?.querySelectorAll("[data-nr-earth]") || []) {
       button.classList.toggle("is-active", button.dataset.nrEarth === state.shiftingEarth);
     }
   }
@@ -930,9 +1061,32 @@
 
   function renderMapChoices() {
     const choices = [{ value: "", label: t("anyEarth"), key: "default" }]
-      .concat(state.index.shiftingEarths.map((value) => ({ value, label: mapLabel(value), key: mapKeyForEarth(value) })));
+      .concat(baseEarths().map((value) => ({ value, label: mapLabel(value), key: mapKeyForEarth(value) })));
     elements.mapOptions.innerHTML = choices.map((choice) => {
       const tile = tileUrl(state.index.maps[choice.key]?.tileDirectory || "default_map_tiles", 2, 3);
+      return `
+        <button type="button" class="nr-choice-card" data-nr-earth="${attr(choice.value)}">
+          <span class="nr-choice-token is-map" style="background-image:url('${attr(tile)}')"></span>
+          <span>${esc(choice.label)}</span>
+        </button>
+      `;
+    }).join("");
+    renderDlcMapChoices();
+  }
+
+  function renderDlcMapChoices() {
+    const choices = dlcEarths().map((value) => ({ value, label: mapLabel(value), key: mapKeyForEarth(value) }));
+    if (elements.dlcFab) elements.dlcFab.hidden = choices.length === 0;
+    if (elements.dlcMapPreview) {
+      const first = choices[0];
+      const directory = state.index.maps[first?.key]?.tileDirectory || "great_hollow_shifted_map_tiles";
+      elements.dlcMapPreview.style.backgroundImage = `url("${tileUrl(directory, 2, 3)}")`;
+      elements.dlcFab?.setAttribute("title", first ? `DLC: ${first.label}` : "DLC");
+    }
+    if (!elements.dlcMapOptions) return;
+
+    elements.dlcMapOptions.innerHTML = choices.map((choice) => {
+      const tile = tileUrl(state.index.maps[choice.key]?.tileDirectory || "great_hollow_shifted_map_tiles", 2, 3);
       return `
         <button type="button" class="nr-choice-card" data-nr-earth="${attr(choice.value)}">
           <span class="nr-choice-token is-map" style="background-image:url('${attr(tile)}')"></span>
@@ -943,7 +1097,7 @@
   }
 
   function renderShiftOrbs() {
-    elements.shiftOrbs.innerHTML = state.index.shiftingEarths.map((earth) => `
+    elements.shiftOrbs.innerHTML = baseEarths().map((earth) => `
       <button type="button" class="nr-shift-button" data-nr-earth="${attr(earth)}" title="${attr(mapLabel(earth))}">
         ${esc(shortMapLabel(earth))}
       </button>
@@ -1106,8 +1260,11 @@
   function renderSpawnShortcuts(matches) {
     if (state.spawnPoint) return `<div class="nr-filter-chip">${esc(t("none"))}</div>`;
     const validSpawns = validSpawnLocations(matches);
+    const allowed = new Set(availableSpawnPoints());
     return state.index.spawnPointDetails
       .filter((spawn) => validSpawns.has(spawn.location))
+      .filter((spawn) => allowed.has(spawn.location))
+      .filter(spawnDetailMatchesCurrentMap)
       .map((spawn) => `
         <button type="button" class="nr-spawn-shortcut" data-nr-spawn-shortcut="${attr(spawn.location)}">
           <img src="${ASSET_BASE}/icons/Spawn_Hawk.png" alt="">
@@ -1296,25 +1453,220 @@
     const validPois = pois.filter((poi) => isFiniteNumber(poi.x) && isFiniteNumber(poi.y));
     elements.poiLayer.innerHTML = validPois.map(renderPoi).join("") + renderPoiChoiceMenu();
     app.classList.toggle("nr-labels-hidden", !state.showLabels);
+    renderCrystals();
+  }
+
+  async function loadCrystalData() {
+    try {
+      const [locationsData, seedsData, routesData] = await Promise.all([
+        fetchJson(`${DATA_BASE}/crystals/great_hollow_crystal_locations.json`),
+        fetchJson(`${DATA_BASE}/crystals/great_hollow_crystal_seeds.json`),
+        fetchJson(`${DATA_BASE}/crystals/great_hollow_crystal_routes.json`),
+      ]);
+      return {
+        locations: Array.isArray(locationsData.locations) ? locationsData.locations : [],
+        seeds: seedsData.seeds || {},
+        routes: Array.isArray(routesData.routes) ? routesData.routes : [],
+      };
+    } catch (error) {
+      console.warn("Crystal overlay data unavailable", error);
+      return { locations: [], seeds: {}, routes: [] };
+    }
+  }
+
+  function setCrystalMode(mode) {
+    const next = ["all", "red", "blue", "purple", "green", "unique", "route", "off"].includes(mode) ? mode : "all";
+    state.crystals.mode = next;
+    if (next === "route" && !state.crystals.routeId) {
+      state.crystals.routeId = state.crystals.routes[0]?.id || "";
+    }
+    renderCrystalControls();
+    renderCrystals();
+  }
+
+  function renderCrystalControls() {
+    const available = isGreatHollowMap() && state.crystals.locations.length > 0;
+    if (elements.crystalFab) {
+      elements.crystalFab.hidden = !available;
+      elements.crystalFab.classList.toggle("is-active", available && state.crystals.mode !== "off");
+    }
+    if (!available) {
+      if (elements.crystalPanel) elements.crystalPanel.hidden = true;
+      if (elements.crystalLayer) elements.crystalLayer.innerHTML = "";
+      return;
+    }
+
+    for (const button of elements.crystalModes?.querySelectorAll("[data-nr-crystal-mode]") || []) {
+      button.classList.toggle("is-active", button.dataset.nrCrystalMode === state.crystals.mode);
+    }
+
+    if (elements.crystalRouteSelect) {
+      const routes = state.crystals.routes;
+      if (!state.crystals.routeId && routes.length) state.crystals.routeId = routes[0].id;
+      const html = routes.map((route) => (
+        `<option value="${attr(route.id)}"${route.id === state.crystals.routeId ? " selected" : ""}>${esc(route.name)}</option>`
+      )).join("");
+      if (elements.crystalRouteSelect.innerHTML !== html) elements.crystalRouteSelect.innerHTML = html;
+      if (routes.some((route) => route.id === state.crystals.routeId)) {
+        elements.crystalRouteSelect.value = state.crystals.routeId;
+      }
+      elements.crystalRouteSelect.disabled = state.crystals.mode !== "route";
+    }
+
+    if (elements.crystalRouteInfo) {
+      const route = selectedCrystalRoute();
+      if (!route) {
+        elements.crystalRouteInfo.textContent = "";
+      } else {
+        const details = [
+          `${route.start} / ${crystalSeedLabel(route.seed)}`,
+          route.fastestConfirm ? `${t("crystalConfirm")}: ${route.fastestConfirm}` : "",
+          route.estimatedTimes?.length ? `${t("crystalTime")}: ${route.estimatedTimes.join(" / ")}` : "",
+          route.unmappedChecks?.length ? `${t("crystalUnmapped")}: ${route.unmappedChecks.join(", ")}` : "",
+        ].filter(Boolean);
+        elements.crystalRouteInfo.textContent = details.join(" | ");
+      }
+    }
+  }
+
+  function renderCrystals() {
+    if (!elements.crystalLayer) return;
+    const entries = visibleCrystalEntries();
+    elements.crystalLayer.innerHTML = entries.map((entry) => renderCrystalMarker(entry.location, entry.step)).join("");
+  }
+
+  function visibleCrystalEntries() {
+    if (!isGreatHollowMap() || state.crystals.mode === "off") return [];
+
+    if (state.crystals.mode === "route") {
+      const route = selectedCrystalRoute();
+      if (!route) return [];
+      return (route.routeCrystals || [])
+        .map((id, index) => ({ location: crystalLocationById(id), step: index + 1 }))
+        .filter((entry) => entry.location);
+    }
+
+    if (state.crystals.mode === "unique") {
+      return state.crystals.locations
+        .filter((location) => location.uniqueFor)
+        .map((location) => ({ location, step: null }));
+    }
+
+    if (CRYSTAL_COLORS[state.crystals.mode]) {
+      return (state.crystals.seeds[state.crystals.mode] || [])
+        .map((id) => ({ location: crystalLocationById(id), step: null }))
+        .filter((entry) => entry.location);
+    }
+
+    return state.crystals.locations.map((location) => ({ location, step: null }));
+  }
+
+  function renderCrystalMarker(location, step) {
+    const { left, top } = positionPercent(location.x, location.y);
+    const color = crystalColorFor(location);
+    const icon = crystalIconFor(location);
+    const seeds = Array.isArray(location.seeds) ? location.seeds : [];
+    const title = [
+      location.label,
+      seeds.length ? `${t("crystalSeeds")}: ${seeds.map(crystalSeedLabel).join(", ")}` : "",
+      location.uniqueFor ? `${t("crystalUnique")}: ${crystalSeedLabel(location.uniqueFor)}` : "",
+      location.notes || "",
+    ].filter(Boolean).join("\n");
+    const seedDots = seeds.map((seed) => (
+      `<i style="--seed-color:${attr(CRYSTAL_COLORS[seed] || "#a9f6ff")}" title="${attr(capitalize(seed))}"></i>`
+    )).join("");
+    return `
+      <button type="button"
+        class="nr-crystal${location.uniqueFor ? " is-unique" : ""}"
+        style="left:${left.toFixed(3)}%;top:${top.toFixed(3)}%;--crystal-color:${attr(color)}"
+        title="${attr(title)}"
+        aria-label="${attr(title)}">
+        <img class="nr-crystal-icon" src="${ASSET_BASE}/icons/crystals/${attr(icon)}" alt="">
+        ${step ? `<span class="nr-crystal-step">${esc(step)}</span>` : ""}
+        <span class="nr-crystal-label">${esc(location.label)}</span>
+        ${seedDots ? `<span class="nr-crystal-seeds">${seedDots}</span>` : ""}
+      </button>
+    `;
+  }
+
+  function selectedCrystalRoute() {
+    return state.crystals.routes.find((route) => route.id === state.crystals.routeId) || state.crystals.routes[0] || null;
+  }
+
+  function crystalLocationById(id) {
+    return state.crystals.locations.find((location) => location.id === id) || null;
+  }
+
+  function crystalColorFor(location) {
+    if (CRYSTAL_COLORS[state.crystals.mode]) return CRYSTAL_COLORS[state.crystals.mode];
+    if (state.crystals.mode === "route") {
+      const route = selectedCrystalRoute();
+      if (route?.seed && CRYSTAL_COLORS[route.seed]) return CRYSTAL_COLORS[route.seed];
+    }
+    if (location.uniqueFor && CRYSTAL_COLORS[location.uniqueFor]) return CRYSTAL_COLORS[location.uniqueFor];
+    const seed = Array.isArray(location.seeds) ? location.seeds.find((item) => CRYSTAL_COLORS[item]) : "";
+    return CRYSTAL_COLORS[seed] || "#a9f6ff";
+  }
+
+  function crystalIconFor(location) {
+    if (CRYSTAL_ICONS[state.crystals.mode]) return CRYSTAL_ICONS[state.crystals.mode];
+    if (state.crystals.mode === "route") {
+      const route = selectedCrystalRoute();
+      if (route?.seed && CRYSTAL_ICONS[route.seed]) return CRYSTAL_ICONS[route.seed];
+    }
+    if (location.uniqueFor && CRYSTAL_ICONS[location.uniqueFor]) return CRYSTAL_ICONS[location.uniqueFor];
+    const seed = Array.isArray(location.seeds) ? location.seeds.find((item) => CRYSTAL_ICONS[item]) : "";
+    return CRYSTAL_ICONS[seed] || CRYSTAL_ICONS.blue;
+  }
+
+  function crystalSeedLabel(seed) {
+    return {
+      red: t("crystalRed"),
+      blue: t("crystalBlue"),
+      purple: t("crystalPurple"),
+      green: t("crystalGreen"),
+    }[seed] || capitalize(seed);
+  }
+
+  function currentEarthForSpawnOptions() {
+    return state.shiftingEarth || state.pattern?.shiftingEarth || "Default";
+  }
+
+  function availableSpawnPoints() {
+    const earth = canonicalEarth(currentEarthForSpawnOptions());
+    const byEarth = state.index.spawnPointsByEarth || {};
+    if (byEarth[earth]) return byEarth[earth];
+    if (earth === "Great Hollow") return ["Northeast", "Southwest", "South"];
+    return (state.index.spawnPoints || []).filter((spawn) => !GREAT_HOLLOW_SPAWNS.has(spawn));
+  }
+
+  function spawnDetailMatchesCurrentMap(spawn) {
+    if (!spawn?.mapLayout) return state.mapLayout !== "great_hollow_shifted";
+    return spawn.mapLayout === state.mapLayout;
   }
 
   function spawnPois() {
-    return state.index.spawnPointDetails.map((spawn) => ({
-      id: `spawn-${spawn.id}`,
-      x: spawn.x,
-      y: spawn.y,
-      location: spawn.location,
-      value: "Spawn Point",
-      title: spawn.location,
-      icon: "Spawn_Hawk.png",
-      category: "spawn",
-      source: "spawn-all",
-    }));
+    const allowed = new Set(availableSpawnPoints());
+    return state.index.spawnPointDetails
+      .filter((spawn) => allowed.has(spawn.location))
+      .filter(spawnDetailMatchesCurrentMap)
+      .map((spawn) => ({
+        id: `spawn-${spawn.id}`,
+        x: spawn.x,
+        y: spawn.y,
+        location: spawn.location,
+        value: "Spawn Point",
+        title: spawn.location,
+        icon: "Spawn_Hawk.png",
+        category: "spawn",
+        source: "spawn-all",
+      }));
   }
 
   function selectedSpawnPois() {
     if (!state.spawnPoint) return [];
-    const spawn = state.index.spawnPointDetails.find((item) => item.location === state.spawnPoint);
+    const details = state.index.spawnPointDetails.filter((item) => item.location === state.spawnPoint);
+    const spawn = details.find(spawnDetailMatchesCurrentMap) || details[0];
     if (!spawn) return [];
     return [{
       id: `spawn-selected-${spawn.id}`,
@@ -1383,8 +1735,7 @@
   }
 
   function renderPoi(poi, index) {
-    const left = ((poi.x - LEFT_BOUND) / ACTIVE_WIDTH) * 100;
-    const top = (poi.y / ACTIVE_HEIGHT) * 100;
+    const { left, top } = positionPercent(poi.x, poi.y);
     const signature = FILTERABLE_CATEGORIES.has(poi.category) ? signatureForLandmark(poi) : "";
     const selected = signature && state.selectedLandmarks.has(signature);
     const isSpawnSelected = poi.category === "spawn" && state.spawnPoint === poi.location;
@@ -1452,8 +1803,7 @@
     if (!state.poiChoice) return "";
     const marker = state.aggregateMarkers.get(String(state.poiChoice.id));
     if (!marker || marker.hasChurch) return "";
-    const left = ((marker.x - LEFT_BOUND) / ACTIVE_WIDTH) * 100;
-    const top = (marker.y / ACTIVE_HEIGHT) * 100;
+    const { left, top } = positionPercent(marker.x, marker.y);
     const options = marker.options.filter((option) => option.type !== 4);
     if (!options.length) return "";
     return `
@@ -1563,9 +1913,10 @@
     const layout = findLayout(state.layoutNumber) || state.index.layouts[0];
     state.layoutNumber = layout.layoutNumber;
     state.nightlord = hasOption(state.index.nightlords, initial.nightlord) ? initial.nightlord : "";
-    state.shiftingEarth = hasOption(state.index.shiftingEarths, initial.shiftingEarth) ? initial.shiftingEarth : "";
+    const initialEarth = canonicalEarth(initial.shiftingEarth);
+    state.shiftingEarth = hasOption(state.index.shiftingEarths, initialEarth) ? initialEarth : "";
     state.spawnPoint = hasOption(state.index.spawnPoints, initial.spawnPoint) ? initial.spawnPoint : "";
-    state.exactLayout = Boolean(initial.exactLayout);
+    state.exactLayout = Boolean(initial.exactLayout || (initial.layoutPinnedByQuery && state.layoutNumber >= 1001));
     chooseFirstMatchingLayout();
   }
 
@@ -1582,6 +1933,7 @@
         categories: splitList(query.get("cats")),
         selectedLandmarks: splitList(query.get("lm"), ";"),
         language: query.get("lang") || "ja",
+        layoutPinnedByQuery: query.has("layout"),
         exactLayout: query.get("exact") === "1",
         hideGuide: localStorage.getItem(GUIDE_KEY) === "1",
       };
@@ -1753,8 +2105,53 @@
     return { major: 1, minor: 2, boss: 3, evergaol: 4 }[category] || 9;
   }
 
+  function canonicalEarth(value) {
+    return EARTH_ALIASES[value] || value || "";
+  }
+
+  function isDlcEarth(earth) {
+    return DLC_EARTHS.has(canonicalEarth(earth));
+  }
+
+  function isGreatHollowMap() {
+    return state.mapLayout === "great_hollow_shifted"
+      || canonicalEarth(state.shiftingEarth || state.pattern?.shiftingEarth) === "Great Hollow";
+  }
+
+  function baseEarths() {
+    return (state.index?.shiftingEarths || []).filter((earth) => !isDlcEarth(earth));
+  }
+
+  function dlcEarths() {
+    return (state.index?.shiftingEarths || []).filter((earth) => isDlcEarth(earth));
+  }
+
+  function currentMapInfo() {
+    return state.index?.maps?.[state.mapLayout]
+      || state.index?.maps?.[state.pattern?.mapLayout]
+      || state.index?.maps?.default
+      || null;
+  }
+
+  function currentBounds() {
+    return currentMapInfo()?.bounds || {
+      left: LEFT_BOUND,
+      width: ACTIVE_WIDTH,
+      height: ACTIVE_HEIGHT,
+    };
+  }
+
+  function positionPercent(x, y) {
+    const bounds = currentBounds();
+    return {
+      left: ((Number(x) - Number(bounds.left || 0)) / Number(bounds.width || ACTIVE_WIDTH)) * 100,
+      top: (Number(y) / Number(bounds.height || ACTIVE_HEIGHT)) * 100,
+    };
+  }
+
   function mapKeyForEarth(earth) {
-    const found = state.index.layouts.find((layout) => layout.shiftingEarth === earth);
+    const canonical = canonicalEarth(earth);
+    const found = state.index.layouts.find((layout) => layout.shiftingEarth === canonical);
     return found?.mapLayout || "default";
   }
 
@@ -1799,7 +2196,7 @@
 
   function shortMapLabel(earth) {
     if (state.language !== "ja") return earth === "Default" ? "D" : earth.slice(0, 1);
-    return { Default: "通", Mountaintop: "山", Crater: "穴", "Rotted Woods": "森", Noklateo: "都" }[earth] || earth.slice(0, 1);
+    return { Default: "通", Mountaintop: "山", Crater: "穴", "Rotted Woods": "森", Noklateo: "都", "Great Hollow": "DLC" }[earth] || earth.slice(0, 1);
   }
 
   function formatSelectedPoiCount(count) {
@@ -1849,7 +2246,7 @@
   }
 
   function onPointerDown(event) {
-    if (event.target.closest(".nr-poi, .nr-poi-type-menu")) return;
+    if (event.target.closest(".nr-poi, .nr-poi-type-menu, .nr-crystal")) return;
     if (event.button !== undefined && event.button !== 0) return;
     elements.viewport.setPointerCapture(event.pointerId);
     elements.viewport.classList.add("is-dragging");
@@ -2052,5 +2449,10 @@
 
   function attr(value) {
     return esc(value).replace(/"/g, "&quot;");
+  }
+
+  function capitalize(value) {
+    const text = String(value || "");
+    return text ? text.charAt(0).toUpperCase() + text.slice(1) : "";
   }
 })();

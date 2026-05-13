@@ -1,0 +1,402 @@
+{
+  "source": {
+    "definitiveMap": "https://www.reddit.com/r/Nightreign/comments/1pljy7p/the_great_hollow_crystals_definitive_map/",
+    "bountifulNotes": "https://www.reddit.com/r/Nightreign/comments/1rycjl2/best_maps_for_crystal_seeds_in_the_great_hollow/",
+    "routesSheet": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+    "notes": [
+      "Crystal seed data is intentionally independent from map pattern / POI seed data.",
+      "Normal crystal seeds are red, blue, purple, and green.",
+      "Bountiful / extra crystal cases are excluded from normal seed matching.",
+      "Coordinates are first-pass manual readings and should be visually reviewed in-game."
+    ]
+  },
+  "locations": [
+    {
+      "id": "gh_crystal_001",
+      "x": 452,
+      "y": 318,
+      "imageX": 488,
+      "imageY": 343,
+      "label": "Kaiden camp",
+      "seeds": [
+        "blue"
+      ],
+      "uniqueFor": "blue",
+      "aliases": [
+        "kaiden camp"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_002",
+      "x": 702,
+      "y": 317,
+      "imageX": 758,
+      "imageY": 342,
+      "label": "North tower overlook",
+      "seeds": [
+        "red"
+      ],
+      "uniqueFor": "red",
+      "aliases": [
+        "drop location",
+        "north start drop",
+        "north tower overlook"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_003",
+      "x": 517,
+      "y": 411,
+      "imageX": 558,
+      "imageY": 444,
+      "label": "Below north tower",
+      "seeds": [
+        "green"
+      ],
+      "uniqueFor": "green",
+      "aliases": [
+        "below the north tower",
+        "above north starting area"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_004",
+      "x": 361,
+      "y": 431,
+      "imageX": 390,
+      "imageY": 466,
+      "label": "Poison/blood ruin",
+      "seeds": [
+        "red",
+        "blue"
+      ],
+      "uniqueFor": null,
+      "aliases": [
+        "in the poison/blood ruin",
+        "poison/blood ruin"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_005",
+      "x": 415,
+      "y": 470,
+      "imageX": 448,
+      "imageY": 508,
+      "label": "Ant path",
+      "seeds": [
+        "blue",
+        "purple"
+      ],
+      "uniqueFor": null,
+      "aliases": [
+        "ant path"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_006",
+      "x": 252,
+      "y": 487,
+      "imageX": 272,
+      "imageY": 526,
+      "label": "South start",
+      "seeds": [
+        "red",
+        "purple"
+      ],
+      "uniqueFor": null,
+      "aliases": [
+        "south start",
+        "by south start",
+        "west"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_007",
+      "x": 657,
+      "y": 470,
+      "imageX": 710,
+      "imageY": 508,
+      "label": "NE tree end",
+      "seeds": [
+        "blue",
+        "purple"
+      ],
+      "uniqueFor": null,
+      "aliases": [
+        "ne tree end",
+        "ne tree"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_008",
+      "x": 740,
+      "y": 483,
+      "imageX": 799,
+      "imageY": 522,
+      "label": "N Castle right of tree",
+      "seeds": [
+        "green"
+      ],
+      "uniqueFor": "green",
+      "aliases": [
+        "n castle (right of the tree)",
+        "n castle right of tree"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_009",
+      "x": 704,
+      "y": 507,
+      "imageX": 760,
+      "imageY": 548,
+      "label": "Past bridge towards N Castle",
+      "seeds": [
+        "red"
+      ],
+      "uniqueFor": null,
+      "aliases": [
+        "past the bridge towards n castle",
+        "past bridge towards n castle"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_010",
+      "x": 223,
+      "y": 614,
+      "imageX": 241,
+      "imageY": 663,
+      "label": "Southwest start ledge",
+      "seeds": [
+        "green"
+      ],
+      "uniqueFor": "green",
+      "aliases": [
+        "south of start"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_011",
+      "x": 269,
+      "y": 594,
+      "imageX": 291,
+      "imageY": 641,
+      "label": "Between Kaiden and south start",
+      "seeds": [
+        "blue"
+      ],
+      "uniqueFor": "blue",
+      "aliases": [
+        "between kaiden-south start",
+        "between south-kaiden start"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_012",
+      "x": 387,
+      "y": 600,
+      "imageX": 418,
+      "imageY": 648,
+      "label": "Below poison/blood camp",
+      "seeds": [
+        "green",
+        "purple"
+      ],
+      "uniqueFor": null,
+      "aliases": [
+        "below the poison/blood camp",
+        "below the poison/blood ruin",
+        "underground nw"
+      ],
+      "confidence": "manual-v1",
+      "notes": "Also used by route notes as Underground NW; verify exact vertical level."
+    },
+    {
+      "id": "gh_crystal_013",
+      "x": 444,
+      "y": 574,
+      "imageX": 479,
+      "imageY": 620,
+      "label": "Center",
+      "seeds": [
+        "red",
+        "green"
+      ],
+      "uniqueFor": null,
+      "aliases": [
+        "center"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_014",
+      "x": 518,
+      "y": 675,
+      "imageX": 559,
+      "imageY": 729,
+      "label": "Bridge center",
+      "seeds": [
+        "purple"
+      ],
+      "uniqueFor": "purple",
+      "aliases": [
+        "bridge center",
+        "center bridge",
+        "bridge to center"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_015",
+      "x": 619,
+      "y": 647,
+      "imageX": 668,
+      "imageY": 699,
+      "label": "Overlook center",
+      "seeds": [
+        "blue",
+        "purple"
+      ],
+      "uniqueFor": null,
+      "aliases": [
+        "overlook center"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_016",
+      "x": 673,
+      "y": 606,
+      "imageX": 727,
+      "imageY": 654,
+      "label": "South of final bridge",
+      "seeds": [
+        "blue"
+      ],
+      "uniqueFor": "blue",
+      "aliases": [
+        "south of final bridge"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_017",
+      "x": 780,
+      "y": 601,
+      "imageX": 842,
+      "imageY": 649,
+      "label": "Under the tree",
+      "seeds": [
+        "green",
+        "purple"
+      ],
+      "uniqueFor": null,
+      "aliases": [
+        "under the tree"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_018",
+      "x": 335,
+      "y": 768,
+      "imageX": 362,
+      "imageY": 829,
+      "label": "Underground southwest",
+      "seeds": [
+        "red",
+        "blue"
+      ],
+      "uniqueFor": null,
+      "aliases": [
+        "underground sw",
+        "underground southwest",
+        "toward ug church",
+        "underground alcove crystal"
+      ],
+      "confidence": "manual-v1",
+      "notes": "Underground/lower-level crystal group."
+    },
+    {
+      "id": "gh_crystal_019",
+      "x": 429,
+      "y": 776,
+      "imageX": 463,
+      "imageY": 838,
+      "label": "Beneath south tree",
+      "seeds": [
+        "purple"
+      ],
+      "uniqueFor": "purple",
+      "aliases": [
+        "beneath south tree",
+        "below south tree"
+      ],
+      "confidence": "manual-v1",
+      "notes": ""
+    },
+    {
+      "id": "gh_crystal_020",
+      "x": 641,
+      "y": 732,
+      "imageX": 692,
+      "imageY": 791,
+      "label": "On the way to underground church",
+      "seeds": [
+        "red",
+        "green"
+      ],
+      "uniqueFor": null,
+      "aliases": [
+        "on the way to underground church",
+        "behind the ug church"
+      ],
+      "confidence": "manual-v1",
+      "notes": "Route sheet distinguishes behind/on-way-to UG church; verify exact lower-level path."
+    },
+    {
+      "id": "gh_crystal_021",
+      "x": 766,
+      "y": 743,
+      "imageX": 827,
+      "imageY": 802,
+      "label": "Past UG church",
+      "seeds": [
+        "red",
+        "green"
+      ],
+      "uniqueFor": null,
+      "aliases": [
+        "past ug church"
+      ],
+      "confidence": "manual-v1",
+      "notes": "Lower-right underground/church-side crystal."
+    }
+  ]
+}

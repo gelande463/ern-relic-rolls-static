@@ -50,7 +50,7 @@
     })();
   </script>
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../nightreign-map.css?v=20260512-02">
+  <link rel="stylesheet" href="../nightreign-map.css?v=20260514-crystal-icons01">
 </head>
 
 <body>
@@ -85,6 +85,7 @@
         <div class="nr-map-world" data-nr-map-world>
           <div class="nr-map-tiles" data-nr-map-tiles></div>
           <div class="nr-poi-layer" data-nr-poi-layer></div>
+          <div class="nr-crystal-layer" data-nr-crystal-layer></div>
         </div>
       </div>
 
@@ -103,6 +104,17 @@
         <span class="nr-orb-ring"></span>
         <span class="nr-map-preview" data-nr-map-preview></span>
         <span class="nr-orb-caption" data-nr-map-label>通常</span>
+      </button>
+
+      <button type="button" class="nr-dlc-fab" data-nr-action="open-dlc-map" aria-label="DLCマップを選択" hidden>
+        <span class="nr-dlc-fab__ring"></span>
+        <span class="nr-dlc-fab__preview" data-nr-dlc-map-preview></span>
+        <span class="nr-dlc-fab__label">DLC</span>
+      </button>
+
+      <button type="button" class="nr-crystal-fab" data-nr-action="open-crystal" aria-label="水晶シードを表示" hidden>
+        <span class="nr-crystal-fab__icon"><img src="./assets/icons/crystals/blue-crystal.png" alt=""></span>
+        <span class="nr-crystal-fab__label" data-i18n="crystalFabLabel">Crystal</span>
       </button>
 
       <section class="nr-guide-panel" data-nr-guide aria-labelledby="nr-guide-title">
@@ -199,6 +211,36 @@
         <div class="nr-choice-grid nr-map-choice-grid" data-nr-map-options></div>
       </section>
 
+      <section class="nr-choice-panel nr-dlc-map-panel" data-nr-panel="dlc-map" hidden aria-label="DLCマップの選択">
+        <div class="nr-choice-header">
+          <h2>DLCマップを選択</h2>
+          <button type="button" class="nr-panel-close" data-nr-action="close-panels" aria-label="閉じる">×</button>
+        </div>
+        <div class="nr-choice-grid nr-map-choice-grid" data-nr-dlc-map-options></div>
+      </section>
+
+      <section class="nr-choice-panel nr-crystal-panel" data-nr-panel="crystal" hidden aria-label="水晶シードの表示">
+        <div class="nr-choice-header">
+          <h2 data-i18n="crystalTitle">Crystal Seed</h2>
+          <button type="button" class="nr-panel-close" data-nr-action="close-panels" aria-label="閉じる">×</button>
+        </div>
+        <div class="nr-crystal-mode-grid" data-nr-crystal-modes>
+          <button type="button" data-nr-crystal-mode="all" data-i18n="crystalAll">All</button>
+          <button type="button" data-nr-crystal-mode="red" data-i18n="crystalRed">Red</button>
+          <button type="button" data-nr-crystal-mode="blue" data-i18n="crystalBlue">Blue</button>
+          <button type="button" data-nr-crystal-mode="purple" data-i18n="crystalPurple">Purple</button>
+          <button type="button" data-nr-crystal-mode="green" data-i18n="crystalGreen">Green</button>
+          <button type="button" data-nr-crystal-mode="unique" data-i18n="crystalUnique">Unique</button>
+          <button type="button" data-nr-crystal-mode="route" data-i18n="crystalRoute">Route</button>
+          <button type="button" data-nr-crystal-mode="off" data-i18n="crystalOff">Off</button>
+        </div>
+        <label class="nr-crystal-route-field">
+          <span data-i18n="crystalRouteSelect">Route</span>
+          <select data-nr-crystal-route></select>
+        </label>
+        <div class="nr-crystal-route-info" data-nr-crystal-route-info></div>
+      </section>
+
       <div class="nr-zoom-controls" aria-label="マップのズーム操作">
         <button type="button" class="nr-icon-button" data-nr-action="zoom-out" aria-label="縮小">−</button>
         <button type="button" class="nr-icon-button" data-nr-action="reset-view" aria-label="表示位置をリセット">⟳</button>
@@ -227,7 +269,7 @@
   </footer>
 
   <script src="../app.js" defer></script>
-  <script src="../nightreign-map.js?v=20260512-02" defer></script>
+  <script src="../nightreign-map.js?v=20260514-crystal-icons01" defer></script>
 </body>
 
 </html>

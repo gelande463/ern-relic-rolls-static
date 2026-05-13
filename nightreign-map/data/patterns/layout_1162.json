@@ -1,0 +1,1016 @@
+{
+  "layoutNumber": 1162,
+  "patternId": "1161",
+  "nightlord": "Straghess",
+  "shiftingEarth": "Mountaintop",
+  "spawnPoint": "Stormhill South of Gate",
+  "specialEvent": "Day 1 Morgott Invasion",
+  "nightBosses": {
+    "day1": "Great Red Bear",
+    "day2": "Knight Artorias",
+    "extra": null
+  },
+  "nightCircles": {
+    "day1": "South Lake",
+    "day2": "Southeast Mountaintop"
+  },
+  "mapLayout": "the_mountaintop_shifted",
+  "tileDirectory": "the_mountaintop_shifted_map_tiles",
+  "dynamicPoiCount": 33,
+  "staticPoiCount": 0,
+  "filterLandmarks": [
+    {
+      "id": 35,
+      "location": "Northeast of Saintsbridge",
+      "value": "Church - Normal",
+      "title": "Normal",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Church.png"
+    },
+    {
+      "id": 36,
+      "location": "Below Summonwater Hawk",
+      "value": "Church - Normal",
+      "title": "Normal",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Church.png"
+    },
+    {
+      "id": 31,
+      "location": "Far Southwest",
+      "value": "Church - Normal",
+      "title": "Normal",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Church.png"
+    },
+    {
+      "id": 32,
+      "location": "Stormhill South of Gate",
+      "value": "Church - Rats",
+      "title": "Rats",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Church.png"
+    },
+    {
+      "id": 37,
+      "location": "Third Church",
+      "value": "Sorcerer's Rise - Fleeing Stump",
+      "title": "Fleeing Stump",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Sorcerer's_Rise.png"
+    },
+    {
+      "id": 30,
+      "location": "Lake",
+      "value": "Small Camp - Caravans",
+      "title": "Caravans",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Main_Encampment.png"
+    },
+    {
+      "id": 30,
+      "location": "Lake",
+      "value": "Township - Township",
+      "title": "Township",
+      "type": "Minor Base",
+      "category": "minor",
+      "icon": "Township.png"
+    },
+    {
+      "id": 82,
+      "location": "Northwest of Lake",
+      "value": "Beastly Brigade",
+      "title": "Beastly Brigade",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    },
+    {
+      "id": 80,
+      "location": "Mistwood",
+      "value": "Banished Knights",
+      "title": "Banished Knights",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    },
+    {
+      "id": 79,
+      "location": "Northeast Tunnel Entrance",
+      "value": "Crucible Knight with Spear",
+      "title": "Crucible Knight with Spear",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    },
+    {
+      "id": 81,
+      "location": "East of Lake",
+      "value": "Stoneskin Lords",
+      "title": "Stoneskin Lords",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "icon": "Evergaol.png"
+    },
+    {
+      "id": 90,
+      "location": "East of Murkwater Terminus",
+      "value": "Leonine Misbegotten",
+      "title": "Leonine Misbegotten",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 91,
+      "location": "Northwest of Summonwater",
+      "value": "Black Blade Kindred",
+      "title": "Black Blade Kindred",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 92,
+      "location": "North Mistwood",
+      "value": "Demi-Human Queen",
+      "title": "Demi-Human Queen",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 83,
+      "location": "Mistwood Spectral Hawk",
+      "value": "Ulcerated Tree Spirit",
+      "title": "Ulcerated Tree Spirit",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 84,
+      "location": "Lake Field Boss",
+      "value": "Red Wolf",
+      "title": "Red Wolf",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 85,
+      "location": "Far Southwest of Lake",
+      "value": "Erdtree Avatar",
+      "title": "Erdtree Avatar",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 158,
+      "location": "Castle Rooftop",
+      "value": "Draconic Tree Sentinel",
+      "title": "Draconic Tree Sentinel",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 23,
+      "location": "Castle Basement",
+      "value": "Bell Bearing Hunter",
+      "title": "Bell Bearing Hunter",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 141,
+      "location": "POI 141",
+      "value": "Mountaintop Ice Dragon",
+      "title": "Mountaintop Ice Dragon",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 147,
+      "location": "POI 147",
+      "value": "Mountaintop Ice Dragon",
+      "title": "Mountaintop Ice Dragon",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 145,
+      "location": "POI 145",
+      "value": "Mountaintop Ice Dragon",
+      "title": "Mountaintop Ice Dragon",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 142,
+      "location": "POI 142",
+      "value": "Mountaintop Ice Dragon",
+      "title": "Mountaintop Ice Dragon",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 140,
+      "location": "POI 140",
+      "value": "Flying Dragon",
+      "title": "Flying Dragon",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 87,
+      "location": "North of Murkwater Terminus",
+      "value": "Snowfield Trolls",
+      "title": "Snowfield Trolls",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 146,
+      "location": "POI 146",
+      "value": "Demi-Human Swordmaster",
+      "title": "Demi-Human Swordmaster",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 143,
+      "location": "POI 143",
+      "value": "Demi-Human Swordmaster",
+      "title": "Demi-Human Swordmaster",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 144,
+      "location": "POI 144",
+      "value": "Giant Crows",
+      "title": "Giant Crows",
+      "type": "Field Boss",
+      "category": "boss",
+      "icon": "Field_Boss.png"
+    },
+    {
+      "id": 159,
+      "location": "Castle",
+      "value": "Banished Knights",
+      "title": "Banished Knights",
+      "type": "Castle",
+      "category": "boss",
+      "icon": "Castle.png"
+    }
+  ],
+  "dynamicPOIs": [
+    {
+      "id": 35,
+      "x": 1415,
+      "y": 392.5,
+      "coordinates": [
+        1415,
+        392.5
+      ],
+      "location": "Northeast of Saintsbridge",
+      "value": "Church - Normal",
+      "icon": "Church.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Normal"
+    },
+    {
+      "id": 36,
+      "x": 1688,
+      "y": 625.75,
+      "coordinates": [
+        1688,
+        625.75
+      ],
+      "location": "Below Summonwater Hawk",
+      "value": "Church - Normal",
+      "icon": "Church.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Normal"
+    },
+    {
+      "id": 31,
+      "x": 842,
+      "y": 1218.67,
+      "coordinates": [
+        842,
+        1218.67
+      ],
+      "location": "Far Southwest",
+      "value": "Church - Normal",
+      "icon": "Church.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Normal"
+    },
+    {
+      "id": 32,
+      "x": 852,
+      "y": 960,
+      "coordinates": [
+        852,
+        960
+      ],
+      "location": "Stormhill South of Gate",
+      "value": "Church - Rats",
+      "icon": "Church.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Rats"
+    },
+    {
+      "id": 37,
+      "x": 1841.75,
+      "y": 612.5,
+      "coordinates": [
+        1841.75,
+        612.5
+      ],
+      "location": "Third Church",
+      "value": "Sorcerer's Rise - Fleeing Stump",
+      "icon": "Sorcerer's_Rise.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Fleeing Stump"
+    },
+    {
+      "id": 30,
+      "x": 1284,
+      "y": 1187,
+      "coordinates": [
+        1284,
+        1187
+      ],
+      "location": "Lake",
+      "value": "Small Camp - Caravans",
+      "icon": "Main_Encampment.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Caravans"
+    },
+    {
+      "id": 30,
+      "x": 1284,
+      "y": 1187,
+      "coordinates": [
+        1284,
+        1187
+      ],
+      "location": "Lake",
+      "value": "Township - Township",
+      "icon": "Township.png",
+      "type": "Minor Base",
+      "category": "minor",
+      "source": "dynamic",
+      "title": "Township"
+    },
+    {
+      "id": 82,
+      "x": 1096.25,
+      "y": 1068.5,
+      "coordinates": [
+        1096.25,
+        1068.5
+      ],
+      "location": "Northwest of Lake",
+      "value": "Beastly Brigade",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Beastly Brigade"
+    },
+    {
+      "id": 80,
+      "x": 1845.12,
+      "y": 824.88,
+      "coordinates": [
+        1845.12,
+        824.88
+      ],
+      "location": "Mistwood",
+      "value": "Banished Knights",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Banished Knights"
+    },
+    {
+      "id": 79,
+      "x": 1577.12,
+      "y": 614.38,
+      "coordinates": [
+        1577.12,
+        614.38
+      ],
+      "location": "Northeast Tunnel Entrance",
+      "value": "Crucible Knight with Spear",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Crucible Knight with Spear"
+    },
+    {
+      "id": 81,
+      "x": 1559.25,
+      "y": 1297,
+      "coordinates": [
+        1559.25,
+        1297
+      ],
+      "location": "East of Lake",
+      "value": "Stoneskin Lords",
+      "icon": "Evergaol.png",
+      "type": "Evergaol",
+      "category": "evergaol",
+      "source": "dynamic",
+      "title": "Stoneskin Lords"
+    },
+    {
+      "id": 90,
+      "x": 1428.33,
+      "y": 650.33,
+      "coordinates": [
+        1428.33,
+        650.33
+      ],
+      "location": "East of Murkwater Terminus",
+      "value": "Leonine Misbegotten",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Leonine Misbegotten"
+    },
+    {
+      "id": 91,
+      "x": 1600.67,
+      "y": 365.33,
+      "coordinates": [
+        1600.67,
+        365.33
+      ],
+      "location": "Northwest of Summonwater",
+      "value": "Black Blade Kindred",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Black Blade Kindred"
+    },
+    {
+      "id": 92,
+      "x": 1811.67,
+      "y": 826,
+      "coordinates": [
+        1811.67,
+        826
+      ],
+      "location": "North Mistwood",
+      "value": "Demi-Human Queen",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Demi-Human Queen"
+    },
+    {
+      "id": 83,
+      "x": 1683,
+      "y": 1290.67,
+      "coordinates": [
+        1683,
+        1290.67
+      ],
+      "location": "Mistwood Spectral Hawk",
+      "value": "Ulcerated Tree Spirit",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Ulcerated Tree Spirit"
+    },
+    {
+      "id": 84,
+      "x": 1271.67,
+      "y": 1191,
+      "coordinates": [
+        1271.67,
+        1191
+      ],
+      "location": "Lake Field Boss",
+      "value": "Red Wolf",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Red Wolf"
+    },
+    {
+      "id": 85,
+      "x": 1034.67,
+      "y": 1389.67,
+      "coordinates": [
+        1034.67,
+        1389.67
+      ],
+      "location": "Far Southwest of Lake",
+      "value": "Erdtree Avatar",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Erdtree Avatar"
+    },
+    {
+      "id": 158,
+      "x": 1245.82,
+      "y": 916.36,
+      "coordinates": [
+        1245.82,
+        916.36
+      ],
+      "location": "Castle Rooftop",
+      "value": "Draconic Tree Sentinel",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Draconic Tree Sentinel"
+    },
+    {
+      "id": 23,
+      "x": 1291.88,
+      "y": 915.88,
+      "coordinates": [
+        1291.88,
+        915.88
+      ],
+      "location": "Castle Basement",
+      "value": "Bell Bearing Hunter",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Bell Bearing Hunter"
+    },
+    {
+      "id": 141,
+      "x": 907.5,
+      "y": 604,
+      "coordinates": [
+        907.5,
+        604
+      ],
+      "location": "POI 141",
+      "value": "Mountaintop Ice Dragon",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Mountaintop Ice Dragon"
+    },
+    {
+      "id": 147,
+      "x": 1125.5,
+      "y": 482,
+      "coordinates": [
+        1125.5,
+        482
+      ],
+      "location": "POI 147",
+      "value": "Mountaintop Ice Dragon",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Mountaintop Ice Dragon"
+    },
+    {
+      "id": 145,
+      "x": 1175.5,
+      "y": 338,
+      "coordinates": [
+        1175.5,
+        338
+      ],
+      "location": "POI 145",
+      "value": "Mountaintop Ice Dragon",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Mountaintop Ice Dragon"
+    },
+    {
+      "id": 142,
+      "x": 836.5,
+      "y": 426,
+      "coordinates": [
+        836.5,
+        426
+      ],
+      "location": "POI 142",
+      "value": "Mountaintop Ice Dragon",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Mountaintop Ice Dragon"
+    },
+    {
+      "id": 140,
+      "x": 1031,
+      "y": 600.5,
+      "coordinates": [
+        1031,
+        600.5
+      ],
+      "location": "POI 140",
+      "value": "Flying Dragon",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Flying Dragon"
+    },
+    {
+      "id": 87,
+      "x": 1311,
+      "y": 595.67,
+      "coordinates": [
+        1311,
+        595.67
+      ],
+      "location": "North of Murkwater Terminus",
+      "value": "Snowfield Trolls",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Snowfield Trolls"
+    },
+    {
+      "id": 146,
+      "x": 1265.5,
+      "y": 333,
+      "coordinates": [
+        1265.5,
+        333
+      ],
+      "location": "POI 146",
+      "value": "Demi-Human Swordmaster",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Demi-Human Swordmaster"
+    },
+    {
+      "id": 143,
+      "x": 927.5,
+      "y": 359,
+      "coordinates": [
+        927.5,
+        359
+      ],
+      "location": "POI 143",
+      "value": "Demi-Human Swordmaster",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Demi-Human Swordmaster"
+    },
+    {
+      "id": 144,
+      "x": 1079,
+      "y": 329,
+      "coordinates": [
+        1079,
+        329
+      ],
+      "location": "POI 144",
+      "value": "Giant Crows",
+      "icon": "Field_Boss.png",
+      "type": "Field Boss",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Giant Crows"
+    },
+    {
+      "id": 159,
+      "x": 1237.45,
+      "y": 832.36,
+      "coordinates": [
+        1237.45,
+        832.36
+      ],
+      "location": "Castle",
+      "value": "Banished Knights",
+      "icon": "Castle.png",
+      "type": "Castle",
+      "category": "boss",
+      "source": "dynamic",
+      "title": "Banished Knights"
+    },
+    {
+      "id": 179,
+      "x": 1307,
+      "y": 1290,
+      "coordinates": [
+        1307,
+        1290
+      ],
+      "location": "South Lake",
+      "value": "Great Red Bear",
+      "icon": "Night_Location.png",
+      "type": "Night Circle",
+      "category": "night",
+      "source": "dynamic",
+      "title": "Day 1: Great Red Bear",
+      "night": 1
+    },
+    {
+      "id": 212,
+      "x": 1185,
+      "y": 669,
+      "coordinates": [
+        1185,
+        669
+      ],
+      "location": "Southeast Mountaintop",
+      "value": "Knight Artorias",
+      "icon": "Night_Location.png",
+      "type": "Night Circle",
+      "category": "night",
+      "source": "dynamic",
+      "title": "Day 2: Knight Artorias",
+      "night": 2
+    },
+    {
+      "id": 214,
+      "x": 684.8,
+      "y": 1412.93,
+      "coordinates": [
+        684.8,
+        1412.93
+      ],
+      "location": "POI 214",
+      "value": "Day 1 Morgott Invasion",
+      "icon": "Construct_21100.png",
+      "type": "Special Event",
+      "category": "event",
+      "source": "dynamic",
+      "title": "Day 1 Morgott Invasion"
+    },
+    {
+      "id": 32,
+      "x": 852,
+      "y": 960,
+      "coordinates": [
+        852,
+        960
+      ],
+      "location": "Stormhill South of Gate",
+      "value": "Spawn Point",
+      "icon": "Spawn_Location.png",
+      "type": "Spawn Point",
+      "category": "spawn",
+      "source": "dynamic",
+      "title": "Spawn: Stormhill South of Gate"
+    }
+  ],
+  "rawLayout": {
+    "layout_number": "1162",
+    "nightlord": "Straghess",
+    "shifting_earth": "Mountaintop",
+    "churches": [
+      {
+        "poi_id": 35,
+        "value": "Church - Normal",
+        "location": "Northeast of Saintsbridge"
+      },
+      {
+        "poi_id": 36,
+        "value": "Church - Normal",
+        "location": "Below Summonwater Hawk"
+      },
+      {
+        "poi_id": 31,
+        "value": "Church - Normal",
+        "location": "Far Southwest"
+      },
+      {
+        "poi_id": 32,
+        "value": "Church - Rats",
+        "location": "Stormhill South of Gate"
+      }
+    ],
+    "sorcerers_rises": [
+      {
+        "poi_id": 37,
+        "value": "Sorcerer's Rise - Fleeing Stump",
+        "location": "TBD"
+      }
+    ],
+    "evergaols": [
+      {
+        "poi_id": 82,
+        "boss": "Beastly Brigade",
+        "location": "Northwest of Lake"
+      },
+      {
+        "poi_id": 80,
+        "boss": "Banished Knights",
+        "location": "Mistwood"
+      },
+      {
+        "poi_id": 79,
+        "boss": "Crucible Knight with Spear",
+        "location": "Northeast Tunnel Entrance"
+      },
+      {
+        "poi_id": 81,
+        "boss": "Stoneskin Lords",
+        "location": "East of Lake"
+      }
+    ],
+    "forts": [],
+    "ruins": [],
+    "field_bosses": [
+      {
+        "poi_id": 90,
+        "boss": "Leonine Misbegotten",
+        "location": "East of Murkwater Terminus"
+      },
+      {
+        "poi_id": 91,
+        "boss": "Black Blade Kindred",
+        "location": "Northwest of Summonwater"
+      },
+      {
+        "poi_id": 92,
+        "boss": "Demi-Human Queen",
+        "location": "North Mistwood"
+      },
+      {
+        "poi_id": 83,
+        "boss": "Ulcerated Tree Spirit",
+        "location": "Mistwood Spectral Hawk"
+      },
+      {
+        "poi_id": 84,
+        "boss": "Red Wolf",
+        "location": "Lake Field Boss"
+      },
+      {
+        "poi_id": 85,
+        "boss": "Erdtree Avatar",
+        "location": "Far Southwest of Lake"
+      },
+      {
+        "poi_id": 158,
+        "boss": "Draconic Tree Sentinel",
+        "location": "Castle Rooftop"
+      },
+      {
+        "poi_id": 23,
+        "boss": "Bell Bearing Hunter",
+        "location": "Castle Basement"
+      },
+      {
+        "poi_id": 141,
+        "boss": "Mountaintop Ice Dragon",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 147,
+        "boss": "Mountaintop Ice Dragon",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 145,
+        "boss": "Mountaintop Ice Dragon",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 142,
+        "boss": "Mountaintop Ice Dragon",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 140,
+        "boss": "Flying Dragon",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 87,
+        "boss": "Snowfield Trolls",
+        "location": "North of Murkwater Terminus"
+      },
+      {
+        "poi_id": 146,
+        "boss": "Demi-Human Swordmaster",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 143,
+        "boss": "Demi-Human Swordmaster",
+        "location": "TBD"
+      },
+      {
+        "poi_id": 144,
+        "boss": "Giant Crows",
+        "location": "TBD"
+      }
+    ],
+    "camps": [],
+    "great_churches": [],
+    "blacksmith_town": [],
+    "march": [],
+    "caravans": [
+      {
+        "poi_id": 30,
+        "value": "Small Camp - Caravans",
+        "location": "Lake"
+      }
+    ],
+    "extra_night_boss": "empty",
+    "special_events": [
+      {
+        "event": "Day 1 Morgott Invasion",
+        "night": 1,
+        "location": "TBD",
+        "poi_id": 214
+      }
+    ],
+    "night1": {
+      "circle_location": "TBD",
+      "boss": "Great Red Bear",
+      "poi_id": 179
+    },
+    "night2": {
+      "circle_location": "TBD",
+      "boss": "Knight Artorias",
+      "poi_id": 212
+    },
+    "townships": [
+      {
+        "poi_id": 30,
+        "value": "Township - Township",
+        "location": "Lake"
+      }
+    ],
+    "spawn_points": [
+      {
+        "poi_id": 32,
+        "value": "Spawn Point",
+        "location": "TBD"
+      }
+    ],
+    "castle": [
+      {
+        "poi_id": 159,
+        "boss": "Banished Knights",
+        "location": "TBD"
+      }
+    ]
+  },
+  "attribution": {
+    "source": "Nightreign Overlay 3.0.3 public/assets/data + thefifthmatt pattern lineage",
+    "license": "source-derived"
+  }
+}

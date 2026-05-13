@@ -1,0 +1,467 @@
+{
+  "source": {
+    "definitiveMap": "https://www.reddit.com/r/Nightreign/comments/1pljy7p/the_great_hollow_crystals_definitive_map/",
+    "bountifulNotes": "https://www.reddit.com/r/Nightreign/comments/1rycjl2/best_maps_for_crystal_seeds_in_the_great_hollow/",
+    "routesSheet": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+    "notes": [
+      "Crystal seed data is intentionally independent from map pattern / POI seed data.",
+      "Normal crystal seeds are red, blue, purple, and green.",
+      "Bountiful / extra crystal cases are excluded from normal seed matching.",
+      "Coordinates are first-pass manual readings and should be visually reviewed in-game."
+    ]
+  },
+  "routes": [
+    {
+      "id": "gh_route_kaiden_blue",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "Kaiden Blue",
+      "start": "Kaiden",
+      "seed": "blue",
+      "videoUrl": "https://www.youtube.com/watch?v=tzfN1NTmEJM",
+      "fastestConfirm": "after kaiden camp",
+      "checks": [
+        "in the poison/blood ruin",
+        "ant path",
+        "between kaiden-south start",
+        "NE tree end",
+        "overlook center"
+      ],
+      "estimatedTimes": [
+        "3:06",
+        "2:43",
+        "1:50 (3crystal) skipping #3"
+      ],
+      "notes": "Consider skipping #3 and going #5 instead; team will likely hit it.",
+      "routeCrystals": [
+        "gh_crystal_004",
+        "gh_crystal_005",
+        "gh_crystal_011",
+        "gh_crystal_007",
+        "gh_crystal_015"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_kaiden_green",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "Kaiden Green",
+      "start": "Kaiden",
+      "seed": "green",
+      "videoUrl": "https://www.youtube.com/watch?v=y3Xk85p9n3Y",
+      "fastestConfirm": "after kaiden camp -> check below",
+      "checks": [
+        "below the poison/blood ruin",
+        "center",
+        "bridge center",
+        "south of final bridge"
+      ],
+      "estimatedTimes": [
+        "2:33"
+      ],
+      "notes": "Very unlikely team will hit any crystal; you need to do 4.",
+      "routeCrystals": [
+        "gh_crystal_012",
+        "gh_crystal_013",
+        "gh_crystal_014",
+        "gh_crystal_016"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_kaiden_red",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "Kaiden Red",
+      "start": "Kaiden",
+      "seed": "red",
+      "videoUrl": "https://www.youtube.com/watch?v=NzcYpxCDdio",
+      "fastestConfirm": "if there is overlook crystal",
+      "checks": [
+        "below the north tower",
+        "overlook center",
+        "center",
+        "between south-kaiden start"
+      ],
+      "estimatedTimes": [
+        "2:16 (3), 3:26 (4)",
+        "2:20 (3), 3:26 (4)",
+        "2:19 (3), 3:37 (4)"
+      ],
+      "notes": "Jump from crystal 3 to 4 is precise and easy to miss; team will likely get #4.",
+      "routeCrystals": [
+        "gh_crystal_003",
+        "gh_crystal_015",
+        "gh_crystal_013",
+        "gh_crystal_011"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_kaiden_purple",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "Kaiden Purple",
+      "start": "Kaiden",
+      "seed": "purple",
+      "videoUrl": "https://www.youtube.com/watch?v=tE7UN9yONbk",
+      "fastestConfirm": "if there is no overlook crystal",
+      "checks": [
+        "below the north tower",
+        "bridge to center",
+        "ant path",
+        "under the tree"
+      ],
+      "estimatedTimes": [
+        "2:47"
+      ],
+      "notes": "Team will likely hit one crystal, so three may be enough.",
+      "routeCrystals": [
+        "gh_crystal_003",
+        "gh_crystal_014",
+        "gh_crystal_005",
+        "gh_crystal_017"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_south_purple",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "South Purple",
+      "start": "South",
+      "seed": "purple",
+      "videoUrl": "https://www.youtube.com/watch?v=kwfA5vjK46s",
+      "fastestConfirm": "If start has a crystal",
+      "checks": [
+        "south start",
+        "ant path",
+        "below south tree",
+        "NE tree end"
+      ],
+      "estimatedTimes": [
+        "2:05"
+      ],
+      "notes": "Fastest crystal break seed, even faster if a teammate clears #4.",
+      "routeCrystals": [
+        "gh_crystal_006",
+        "gh_crystal_005",
+        "gh_crystal_019",
+        "gh_crystal_007"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_south_green_no_ug",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "South Green (no UG)",
+      "start": "South",
+      "seed": "green",
+      "videoUrl": "https://www.youtube.com/watch?v=eLTu0nYEzuI",
+      "fastestConfirm": "If neither start nor west has a crystal",
+      "checks": [
+        "below the poison/blood camp",
+        "center",
+        "center bridge",
+        "south of final bridge"
+      ],
+      "estimatedTimes": [
+        "3:29",
+        "3:22"
+      ],
+      "notes": "You probably want to go south -> center via spiritspring for this seed.",
+      "routeCrystals": [
+        "gh_crystal_012",
+        "gh_crystal_013",
+        "gh_crystal_014",
+        "gh_crystal_016"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_south_green_ug",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "South Green (UG)",
+      "start": "South",
+      "seed": "green",
+      "videoUrl": "",
+      "fastestConfirm": "If neither start nor west has a crystal",
+      "checks": [
+        "above north starting area",
+        "past UG church",
+        "south of final bridge",
+        "center bridge"
+      ],
+      "estimatedTimes": [
+        "4:08"
+      ],
+      "notes": "If both starting checks whiff, hit the bird immediately for this route.",
+      "routeCrystals": [
+        "gh_crystal_003",
+        "gh_crystal_021",
+        "gh_crystal_016",
+        "gh_crystal_014"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_south_blue",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "South Blue",
+      "start": "South",
+      "seed": "blue",
+      "videoUrl": "https://www.youtube.com/watch?v=_dkyk3RStr4",
+      "fastestConfirm": "if west has crystal + ant path has a crystal",
+      "checks": [
+        "between kaiden-south start",
+        "ant path",
+        "overlook center",
+        "N Castle (right of the tree)"
+      ],
+      "estimatedTimes": [
+        "3:11"
+      ],
+      "notes": "",
+      "routeCrystals": [
+        "gh_crystal_011",
+        "gh_crystal_005",
+        "gh_crystal_015",
+        "gh_crystal_008"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_south_red",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "South Red",
+      "start": "South",
+      "seed": "red",
+      "videoUrl": "https://www.youtube.com/watch?v=W6m01kvV46E",
+      "fastestConfirm": "if west has crystal + ant path does not have",
+      "checks": [
+        "between kaiden-south start",
+        "center",
+        "overlook center",
+        "below north tower"
+      ],
+      "estimatedTimes": [
+        "2:34"
+      ],
+      "notes": "An attentive teammate could hit the red crystal going toward UG church.",
+      "routeCrystals": [
+        "gh_crystal_011",
+        "gh_crystal_013",
+        "gh_crystal_015",
+        "gh_crystal_003"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_north_red_ug",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "North Red (UG)",
+      "start": "North",
+      "seed": "red",
+      "videoUrl": "",
+      "fastestConfirm": "If drop location has crystal",
+      "checks": [
+        "Drop location",
+        "On the way to underground church",
+        "Underground SW",
+        "Center"
+      ],
+      "estimatedTimes": [
+        "2:47 (3)"
+      ],
+      "notes": "Teammates will probably hit the past-bridge crystal.",
+      "routeCrystals": [
+        "gh_crystal_002",
+        "gh_crystal_020",
+        "gh_crystal_018",
+        "gh_crystal_013"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_north_red_no_ug",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "North Red (no UG)",
+      "start": "North",
+      "seed": "red",
+      "videoUrl": "https://www.youtube.com/watch?v=7nGSpGAcBD4",
+      "fastestConfirm": "If drop location has crystal",
+      "checks": [
+        "Drop location",
+        "On the way to underground church",
+        "Center",
+        "Overlook center"
+      ],
+      "estimatedTimes": [
+        "2:58"
+      ],
+      "notes": "",
+      "routeCrystals": [
+        "gh_crystal_002",
+        "gh_crystal_020",
+        "gh_crystal_013",
+        "gh_crystal_015"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_north_green_ug",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "North Green (UG)",
+      "start": "North",
+      "seed": "green",
+      "videoUrl": "https://www.youtube.com/watch?v=tEF_dGUNazA",
+      "fastestConfirm": "If crystal exists directly south of start",
+      "checks": [
+        "South of start",
+        "Behind the UG church",
+        "Past the bridge towards N Castle",
+        "Bridge Center"
+      ],
+      "estimatedTimes": [
+        "3:37",
+        "3:40"
+      ],
+      "notes": "",
+      "routeCrystals": [
+        "gh_crystal_010",
+        "gh_crystal_020",
+        "gh_crystal_009",
+        "gh_crystal_014"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_north_green_no_ug",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "North Green (no UG)",
+      "start": "North",
+      "seed": "green",
+      "videoUrl": "https://www.youtube.com/watch?v=Ct0LhToSzjY",
+      "fastestConfirm": "",
+      "checks": [
+        "South of start",
+        "Past the bridge towards N Castle",
+        "Bridge Center",
+        "Center"
+      ],
+      "estimatedTimes": [
+        "2:42"
+      ],
+      "notes": "",
+      "routeCrystals": [
+        "gh_crystal_010",
+        "gh_crystal_009",
+        "gh_crystal_014",
+        "gh_crystal_013"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_north_blue",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "North Blue",
+      "start": "North",
+      "seed": "blue",
+      "videoUrl": "https://www.youtube.com/watch?v=6rVA0JYXS2I",
+      "fastestConfirm": "If crystal exists in the underground alcove",
+      "checks": [
+        "NE tree end",
+        "Underground alcove crystal",
+        "N Castle (right of the tree)",
+        "Overlook center"
+      ],
+      "estimatedTimes": [
+        "3:30"
+      ],
+      "notes": "Can take the tree after #3.",
+      "routeCrystals": [
+        "gh_crystal_007",
+        "gh_crystal_018",
+        "gh_crystal_008",
+        "gh_crystal_015"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_north_blue_alt",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "North Blue Alt",
+      "start": "North",
+      "seed": "blue",
+      "videoUrl": "",
+      "fastestConfirm": "",
+      "checks": [
+        "NE tree end",
+        "Underground alcove crystal",
+        "Underground NW",
+        "Ant path"
+      ],
+      "estimatedTimes": [
+        "3:52"
+      ],
+      "notes": "Taking the tree after #2.",
+      "routeCrystals": [
+        "gh_crystal_007",
+        "gh_crystal_018",
+        "gh_crystal_012",
+        "gh_crystal_005"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_north_purple_ug",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "North Purple (UG)",
+      "start": "North",
+      "seed": "purple",
+      "videoUrl": "https://www.youtube.com/watch?v=EqBc_YCODpY",
+      "fastestConfirm": "If none of the above",
+      "checks": [
+        "NE tree end",
+        "Behind the UG church",
+        "Underground NW",
+        "Beneath south tree"
+      ],
+      "estimatedTimes": [
+        "3:16",
+        "3:06 (1-hit)",
+        "3:40 (safe path)"
+      ],
+      "notes": "Dangerous path.",
+      "routeCrystals": [
+        "gh_crystal_007",
+        "gh_crystal_020",
+        "gh_crystal_012",
+        "gh_crystal_019"
+      ],
+      "unmappedChecks": []
+    },
+    {
+      "id": "gh_route_north_purple_no_ug",
+      "source": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+      "name": "North Purple (no UG)",
+      "start": "North",
+      "seed": "purple",
+      "videoUrl": "https://www.youtube.com/watch?v=31EuBaCaD4g",
+      "fastestConfirm": "If none of the above",
+      "checks": [
+        "NE tree end",
+        "Underground NW",
+        "Beneath south tree",
+        "Ant path"
+      ],
+      "estimatedTimes": [
+        "2:57"
+      ],
+      "notes": "",
+      "routeCrystals": [
+        "gh_crystal_007",
+        "gh_crystal_012",
+        "gh_crystal_019",
+        "gh_crystal_005"
+      ],
+      "unmappedChecks": []
+    }
+  ]
+}

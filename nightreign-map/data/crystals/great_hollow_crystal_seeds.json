@@ -1,0 +1,55 @@
+{
+  "source": {
+    "definitiveMap": "https://www.reddit.com/r/Nightreign/comments/1pljy7p/the_great_hollow_crystals_definitive_map/",
+    "bountifulNotes": "https://www.reddit.com/r/Nightreign/comments/1rycjl2/best_maps_for_crystal_seeds_in_the_great_hollow/",
+    "routesSheet": "https://docs.google.com/spreadsheets/d/1TKQzHILCI2jmb5qP7H0ke_ov2Z4Qw_Dj4n59nDWSHSE/edit?gid=0",
+    "notes": [
+      "Crystal seed data is intentionally independent from map pattern / POI seed data.",
+      "Normal crystal seeds are red, blue, purple, and green.",
+      "Bountiful / extra crystal cases are excluded from normal seed matching.",
+      "Coordinates are first-pass manual readings and should be visually reviewed in-game."
+    ]
+  },
+  "seeds": {
+    "red": [
+      "gh_crystal_002",
+      "gh_crystal_004",
+      "gh_crystal_006",
+      "gh_crystal_009",
+      "gh_crystal_013",
+      "gh_crystal_018",
+      "gh_crystal_020",
+      "gh_crystal_021"
+    ],
+    "blue": [
+      "gh_crystal_001",
+      "gh_crystal_004",
+      "gh_crystal_005",
+      "gh_crystal_007",
+      "gh_crystal_011",
+      "gh_crystal_015",
+      "gh_crystal_016",
+      "gh_crystal_018"
+    ],
+    "purple": [
+      "gh_crystal_005",
+      "gh_crystal_006",
+      "gh_crystal_007",
+      "gh_crystal_012",
+      "gh_crystal_014",
+      "gh_crystal_015",
+      "gh_crystal_017",
+      "gh_crystal_019"
+    ],
+    "green": [
+      "gh_crystal_003",
+      "gh_crystal_008",
+      "gh_crystal_010",
+      "gh_crystal_012",
+      "gh_crystal_013",
+      "gh_crystal_017",
+      "gh_crystal_020",
+      "gh_crystal_021"
+    ]
+  }
+}
