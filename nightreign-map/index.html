@@ -50,7 +50,7 @@
     })();
   </script>
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../nightreign-map.css?v=20260514-crystal-icons01">
+  <link rel="stylesheet" href="../nightreign-map.css?v=20260514-crystal-seed02">
 </head>
 
 <body>
@@ -112,7 +112,7 @@
         <span class="nr-dlc-fab__label">DLC</span>
       </button>
 
-      <button type="button" class="nr-crystal-fab" data-nr-action="open-crystal" aria-label="水晶シードを表示" hidden>
+      <button type="button" class="nr-crystal-fab" data-nr-action="toggle-crystal-layer" aria-label="結晶パターンを表示" hidden>
         <span class="nr-crystal-fab__icon"><img src="./assets/icons/crystals/blue-crystal.png" alt=""></span>
         <span class="nr-crystal-fab__label" data-i18n="crystalFabLabel">Crystal</span>
       </button>
@@ -219,26 +219,31 @@
         <div class="nr-choice-grid nr-map-choice-grid" data-nr-dlc-map-options></div>
       </section>
 
-      <section class="nr-choice-panel nr-crystal-panel" data-nr-panel="crystal" hidden aria-label="水晶シードの表示">
+      <section class="nr-choice-panel nr-crystal-panel" data-nr-panel="crystal" hidden aria-label="結晶パターン">
         <div class="nr-choice-header">
-          <h2 data-i18n="crystalTitle">Crystal Seed</h2>
+          <h2 data-i18n="crystalTitle">結晶パターン</h2>
           <button type="button" class="nr-panel-close" data-nr-action="close-panels" aria-label="閉じる">×</button>
         </div>
-        <div class="nr-crystal-mode-grid" data-nr-crystal-modes>
-          <button type="button" data-nr-crystal-mode="all" data-i18n="crystalAll">All</button>
-          <button type="button" data-nr-crystal-mode="red" data-i18n="crystalRed">Red</button>
-          <button type="button" data-nr-crystal-mode="blue" data-i18n="crystalBlue">Blue</button>
-          <button type="button" data-nr-crystal-mode="purple" data-i18n="crystalPurple">Purple</button>
-          <button type="button" data-nr-crystal-mode="green" data-i18n="crystalGreen">Green</button>
-          <button type="button" data-nr-crystal-mode="unique" data-i18n="crystalUnique">Unique</button>
-          <button type="button" data-nr-crystal-mode="route" data-i18n="crystalRoute">Route</button>
-          <button type="button" data-nr-crystal-mode="off" data-i18n="crystalOff">Off</button>
+        <div class="nr-crystal-section">
+          <div class="nr-crystal-title" data-i18n="crystalSeedTitle">Seed</div>
+          <div class="nr-crystal-seed-buttons" data-nr-crystal-modes>
+            <button type="button" data-nr-crystal-seed="all" data-i18n="crystalAll">All</button>
+            <button type="button" data-nr-crystal-seed="red" data-i18n="crystalRed">Red</button>
+            <button type="button" data-nr-crystal-seed="green" data-i18n="crystalGreen">Green</button>
+            <button type="button" data-nr-crystal-seed="purple" data-i18n="crystalPurple">Purple</button>
+            <button type="button" data-nr-crystal-seed="blue" data-i18n="crystalBlue">Blue</button>
+            <button type="button" data-nr-crystal-seed="unique" data-i18n="crystalUnique">Unique</button>
+          </div>
         </div>
-        <label class="nr-crystal-route-field">
-          <span data-i18n="crystalRouteSelect">Route</span>
-          <select data-nr-crystal-route></select>
-        </label>
-        <div class="nr-crystal-route-info" data-nr-crystal-route-info></div>
+        <div class="nr-crystal-section">
+          <div class="nr-crystal-title" data-i18n="crystalCandidateTitle">候補</div>
+          <div class="nr-crystal-candidates" data-nr-crystal-candidates></div>
+        </div>
+        <div class="nr-crystal-section">
+          <button type="button" class="nr-crystal-reset" data-nr-action="reset-crystal-seed" data-i18n="crystalReset">
+            判定をリセット
+          </button>
+        </div>
       </section>
 
       <div class="nr-zoom-controls" aria-label="マップのズーム操作">
@@ -269,7 +274,7 @@
   </footer>
 
   <script src="../app.js" defer></script>
-  <script src="../nightreign-map.js?v=20260514-crystal-icons01" defer></script>
+  <script src="../nightreign-map.js?v=20260514-crystal-seed02" defer></script>
 </body>
 
 </html>

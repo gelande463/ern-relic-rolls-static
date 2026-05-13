@@ -29,17 +29,19 @@
     "Noklateo, the Shrouded City": "Noklateo",
     Noklateo: "Noklateo",
   };
+  const CRYSTAL_SEEDS = ["red", "green", "purple", "blue"];
   const CRYSTAL_COLORS = {
     red: "#ff4f69",
-    blue: "#35c8ff",
-    purple: "#9a6cff",
     green: "#20df67",
+    purple: "#9a6cff",
+    blue: "#35c8ff",
   };
   const CRYSTAL_ICONS = {
     red: "red-crystal.png",
-    blue: "blue-crystal.png",
-    purple: "purple-crystal.png",
     green: "green-crystal.png",
+    purple: "purple-crystal.png",
+    blue: "blue-crystal.png",
+    unknown: "unknown-crystal.png",
   };
 
   const ICON_SIZES = {
@@ -178,7 +180,12 @@
       candidateCloseAria: "候補パネルを閉じる",
       languageLabel: "言語",
       crystalFabLabel: "結晶",
-      crystalTitle: "結晶シード",
+      crystalTitle: "結晶パターン",
+      crystalSeedTitle: "Seed",
+      crystalCandidateTitle: "候補",
+      crystalReset: "判定をリセット",
+      crystalPoi: "結晶POI",
+      crystalCheckpoint: "水晶確認地点",
       crystalAll: "すべて",
       crystalRed: "赤",
       crystalBlue: "青",
@@ -251,7 +258,12 @@
       candidateCloseAria: "Close candidate panel",
       languageLabel: "Language",
       crystalFabLabel: "Crystal",
-      crystalTitle: "Crystal Seed",
+      crystalTitle: "Crystal Pattern",
+      crystalSeedTitle: "Seed",
+      crystalCandidateTitle: "Candidates",
+      crystalReset: "Reset detection",
+      crystalPoi: "Crystal POI",
+      crystalCheckpoint: "Crystal checkpoint",
       crystalAll: "All",
       crystalRed: "Red",
       crystalBlue: "Blue",
@@ -528,8 +540,7 @@
     crystalFab: app.querySelector(".nr-crystal-fab"),
     crystalPanel: app.querySelector("[data-nr-panel='crystal']"),
     crystalModes: app.querySelector("[data-nr-crystal-modes]"),
-    crystalRouteSelect: app.querySelector("[data-nr-crystal-route]"),
-    crystalRouteInfo: app.querySelector("[data-nr-crystal-route-info]"),
+    crystalCandidates: app.querySelector("[data-nr-crystal-candidates]"),
     mapPreview: app.querySelector("[data-nr-map-preview]"),
     nightlordLabel: app.querySelector("[data-nr-nightlord-label]"),
     nightlordGlyph: app.querySelector("[data-nr-nightlord-glyph]"),
@@ -575,10 +586,14 @@
     panelDrag: null,
     initializedView: false,
     crystals: {
+      loaded: false,
+      enabled: false,
+      seedFilter: "all",
+      candidates: CRYSTAL_SEEDS.slice(),
+      selectedLocationIds: [],
       locations: [],
       seeds: {},
       routes: [],
-      mode: "off",
       routeId: "",
     },
   };
@@ -601,6 +616,7 @@
       state.crystals.locations = crystals.locations;
       state.crystals.seeds = crystals.seeds;
       state.crystals.routes = crystals.routes;
+      state.crystals.loaded = true;
       applyInitialState(readInitialState());
       renderStaticControls();
       renderAllControls();
@@ -740,27 +756,30 @@
         return;
       }
 
+      const crystalMarker = event.target.closest("[data-nr-crystal-id]");
+      if (crystalMarker) {
+        event.preventDefault();
+        event.stopPropagation();
+        selectCrystalLocation(crystalMarker.dataset.nrCrystalId);
+        renderCrystalControls();
+        renderCrystals();
+        return;
+      }
+
       const marker = event.target.closest(".nr-poi");
       if (marker) {
         handleMarkerClick(marker, event);
         return;
       }
 
-      const crystalMode = event.target.closest("[data-nr-crystal-mode]");
-      if (crystalMode) {
-        setCrystalMode(crystalMode.dataset.nrCrystalMode);
+      const crystalSeed = event.target.closest("[data-nr-crystal-seed]");
+      if (crystalSeed) {
+        setCrystalSeedFilter(crystalSeed.dataset.nrCrystalSeed);
         return;
       }
 
       const action = event.target.closest("[data-nr-action]");
       if (action) handleAction(action.dataset.nrAction);
-    });
-
-    elements.crystalRouteSelect?.addEventListener("change", () => {
-      state.crystals.routeId = elements.crystalRouteSelect.value;
-      state.crystals.mode = "route";
-      renderCrystalControls();
-      renderCrystals();
     });
 
     elements.candidatePanel.addEventListener("pointerdown", onCandidatePanelPointerDown);
@@ -792,9 +811,14 @@
       togglePanel("map");
     } else if (action === "open-dlc-map") {
       togglePanel("dlc-map");
-    } else if (action === "open-crystal") {
-      if (state.crystals.mode === "off") state.crystals.mode = "all";
-      togglePanel("crystal");
+    } else if (action === "toggle-crystal-layer") {
+      state.crystals.enabled = !state.crystals.enabled;
+      if (state.crystals.enabled) openPanel("crystal");
+      else if (elements.crystalPanel) elements.crystalPanel.hidden = true;
+      renderCrystalControls();
+      renderCrystals();
+    } else if (action === "reset-crystal-seed") {
+      resetCrystalSeedDetection();
       renderCrystalControls();
       renderCrystals();
     } else if (action === "close-panels") {
@@ -1463,10 +1487,13 @@
         fetchJson(`${DATA_BASE}/crystals/great_hollow_crystal_seeds.json`),
         fetchJson(`${DATA_BASE}/crystals/great_hollow_crystal_routes.json`),
       ]);
+      const locations = Array.isArray(locationsData) ? locationsData : locationsData.locations;
+      const seeds = seedsData.normal || seedsData.seeds || seedsData;
+      const routes = Array.isArray(routesData) ? routesData : routesData.routes;
       return {
-        locations: Array.isArray(locationsData.locations) ? locationsData.locations : [],
-        seeds: seedsData.seeds || {},
-        routes: Array.isArray(routesData.routes) ? routesData.routes : [],
+        locations: Array.isArray(locations) ? locations.map(normalizeCrystalLocation) : [],
+        seeds: seeds || {},
+        routes: Array.isArray(routes) ? routes.map(normalizeCrystalRoute) : [],
       };
     } catch (error) {
       console.warn("Crystal overlay data unavailable", error);
@@ -1474,11 +1501,52 @@
     }
   }
 
-  function setCrystalMode(mode) {
-    const next = ["all", "red", "blue", "purple", "green", "unique", "route", "off"].includes(mode) ? mode : "all";
-    state.crystals.mode = next;
-    if (next === "route" && !state.crystals.routeId) {
-      state.crystals.routeId = state.crystals.routes[0]?.id || "";
+  function normalizeCrystalLocation(location) {
+    const seeds = Array.isArray(location.seeds)
+      ? location.seeds.filter((seed) => CRYSTAL_SEEDS.includes(seed))
+      : [];
+    return {
+      ...location,
+      x: Number(location.x),
+      y: Number(location.y),
+      seeds,
+      uniqueFor: CRYSTAL_SEEDS.includes(location.uniqueFor) ? location.uniqueFor : null,
+      checkStarts: normalizeCrystalStarts(location.checkStarts),
+      checkPriority: Number(location.checkPriority) || 99,
+      routeTags: Array.isArray(location.routeTags) ? location.routeTags : [],
+    };
+  }
+
+  function normalizeCrystalRoute(route) {
+    return {
+      ...route,
+      id: route.id || `${route.start || "route"}-${route.seed || "seed"}`.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+      start: normalizeCrystalStart(route.start),
+      seed: CRYSTAL_SEEDS.includes(route.seed) ? route.seed : "",
+      checks: Array.isArray(route.checks) ? route.checks : [],
+      routeCrystals: Array.isArray(route.routeCrystals) ? route.routeCrystals : [],
+      estimatedTime: route.estimatedTime || route.estimatedTimes?.[0] || "",
+    };
+  }
+
+  function normalizeCrystalStarts(starts) {
+    if (!Array.isArray(starts)) return [];
+    return [...new Set(starts.map(normalizeCrystalStart).filter(Boolean))];
+  }
+
+  function normalizeCrystalStart(start) {
+    const value = String(start || "");
+    if (value === "North") return "Northeast";
+    if (value === "Kaiden") return "Southwest";
+    return GREAT_HOLLOW_SPAWNS.has(value) ? value : "";
+  }
+
+  function setCrystalSeedFilter(seed) {
+    const next = ["all", "unique", ...CRYSTAL_SEEDS].includes(seed) ? seed : "all";
+    state.crystals.seedFilter = next;
+    state.crystals.enabled = true;
+    if (CRYSTAL_SEEDS.includes(next)) {
+      state.crystals.candidates = [next];
     }
     renderCrystalControls();
     renderCrystals();
@@ -1488,135 +1556,126 @@
     const available = isGreatHollowMap() && state.crystals.locations.length > 0;
     if (elements.crystalFab) {
       elements.crystalFab.hidden = !available;
-      elements.crystalFab.classList.toggle("is-active", available && state.crystals.mode !== "off");
+      elements.crystalFab.classList.toggle("is-active", available && state.crystals.enabled);
     }
     if (!available) {
       if (elements.crystalPanel) elements.crystalPanel.hidden = true;
       if (elements.crystalLayer) elements.crystalLayer.innerHTML = "";
+      state.crystals.enabled = false;
       return;
     }
 
-    for (const button of elements.crystalModes?.querySelectorAll("[data-nr-crystal-mode]") || []) {
-      button.classList.toggle("is-active", button.dataset.nrCrystalMode === state.crystals.mode);
+    for (const button of elements.crystalModes?.querySelectorAll("[data-nr-crystal-seed]") || []) {
+      button.classList.toggle("is-active", button.dataset.nrCrystalSeed === state.crystals.seedFilter);
     }
 
-    if (elements.crystalRouteSelect) {
-      const routes = state.crystals.routes;
-      if (!state.crystals.routeId && routes.length) state.crystals.routeId = routes[0].id;
-      const html = routes.map((route) => (
-        `<option value="${attr(route.id)}"${route.id === state.crystals.routeId ? " selected" : ""}>${esc(route.name)}</option>`
+    if (elements.crystalCandidates) {
+      const candidates = state.crystals.candidates?.length ? state.crystals.candidates : CRYSTAL_SEEDS;
+      elements.crystalCandidates.innerHTML = candidates.map((seed) => (
+        `<span class="nr-crystal-candidate-chip">${esc(crystalSeedLabel(seed))}</span>`
       )).join("");
-      if (elements.crystalRouteSelect.innerHTML !== html) elements.crystalRouteSelect.innerHTML = html;
-      if (routes.some((route) => route.id === state.crystals.routeId)) {
-        elements.crystalRouteSelect.value = state.crystals.routeId;
-      }
-      elements.crystalRouteSelect.disabled = state.crystals.mode !== "route";
-    }
-
-    if (elements.crystalRouteInfo) {
-      const route = selectedCrystalRoute();
-      if (!route) {
-        elements.crystalRouteInfo.textContent = "";
-      } else {
-        const details = [
-          `${route.start} / ${crystalSeedLabel(route.seed)}`,
-          route.fastestConfirm ? `${t("crystalConfirm")}: ${route.fastestConfirm}` : "",
-          route.estimatedTimes?.length ? `${t("crystalTime")}: ${route.estimatedTimes.join(" / ")}` : "",
-          route.unmappedChecks?.length ? `${t("crystalUnmapped")}: ${route.unmappedChecks.join(", ")}` : "",
-        ].filter(Boolean);
-        elements.crystalRouteInfo.textContent = details.join(" | ");
-      }
     }
   }
 
   function renderCrystals() {
     if (!elements.crystalLayer) return;
-    const entries = visibleCrystalEntries();
-    elements.crystalLayer.innerHTML = entries.map((entry) => renderCrystalMarker(entry.location, entry.step)).join("");
+    const locations = currentCrystalLocations();
+    elements.crystalLayer.innerHTML = locations.map(renderCrystalMarker).join("");
   }
 
-  function visibleCrystalEntries() {
-    if (!isGreatHollowMap() || state.crystals.mode === "off") return [];
-
-    if (state.crystals.mode === "route") {
-      const route = selectedCrystalRoute();
-      if (!route) return [];
-      return (route.routeCrystals || [])
-        .map((id, index) => ({ location: crystalLocationById(id), step: index + 1 }))
-        .filter((entry) => entry.location);
-    }
-
-    if (state.crystals.mode === "unique") {
-      return state.crystals.locations
-        .filter((location) => location.uniqueFor)
-        .map((location) => ({ location, step: null }));
-    }
-
-    if (CRYSTAL_COLORS[state.crystals.mode]) {
-      return (state.crystals.seeds[state.crystals.mode] || [])
-        .map((id) => ({ location: crystalLocationById(id), step: null }))
-        .filter((entry) => entry.location);
-    }
-
-    return state.crystals.locations.map((location) => ({ location, step: null }));
+  function currentCrystalLocations() {
+    if (!isGreatHollowMap() || !state.crystals.enabled) return [];
+    const filter = state.crystals.seedFilter;
+    const candidates = new Set(state.crystals.candidates?.length ? state.crystals.candidates : CRYSTAL_SEEDS);
+    return state.crystals.locations.filter((location) => {
+      const seeds = Array.isArray(location.seeds) ? location.seeds : [];
+      if (filter === "unique") return Boolean(location.uniqueFor);
+      if (CRYSTAL_SEEDS.includes(filter)) return seeds.includes(filter);
+      return seeds.some((seed) => candidates.has(seed));
+    });
   }
 
-  function renderCrystalMarker(location, step) {
+  function renderCrystalMarker(location) {
     const { left, top } = positionPercent(location.x, location.y);
-    const color = crystalColorFor(location);
     const icon = crystalIconFor(location);
     const seeds = Array.isArray(location.seeds) ? location.seeds : [];
+    const checkpoint = isSpawnCheckLocation(location);
+    const selected = state.crystals.selectedLocationIds.includes(location.id);
     const title = [
-      location.label,
+      checkpoint ? t("crystalCheckpoint") : t("crystalPoi"),
+      location.label || location.id,
       seeds.length ? `${t("crystalSeeds")}: ${seeds.map(crystalSeedLabel).join(", ")}` : "",
       location.uniqueFor ? `${t("crystalUnique")}: ${crystalSeedLabel(location.uniqueFor)}` : "",
       location.notes || "",
     ].filter(Boolean).join("\n");
-    const seedDots = seeds.map((seed) => (
-      `<i style="--seed-color:${attr(CRYSTAL_COLORS[seed] || "#a9f6ff")}" title="${attr(capitalize(seed))}"></i>`
-    )).join("");
+    const classes = ["nr-poi", "is-crystal"];
+    if (location.uniqueFor) classes.push("is-unique");
+    if (checkpoint) classes.push("is-checkpoint");
+    if (selected) classes.push("is-selected");
     return `
       <button type="button"
-        class="nr-crystal${location.uniqueFor ? " is-unique" : ""}"
-        style="left:${left.toFixed(3)}%;top:${top.toFixed(3)}%;--crystal-color:${attr(color)}"
+        class="${classes.join(" ")}"
+        data-nr-crystal-id="${attr(location.id)}"
+        style="left:${left.toFixed(3)}%;top:${top.toFixed(3)}%"
         title="${attr(title)}"
         aria-label="${attr(title)}">
-        <img class="nr-crystal-icon" src="${ASSET_BASE}/icons/crystals/${attr(icon)}" alt="">
-        ${step ? `<span class="nr-crystal-step">${esc(step)}</span>` : ""}
-        <span class="nr-crystal-label">${esc(location.label)}</span>
-        ${seedDots ? `<span class="nr-crystal-seeds">${seedDots}</span>` : ""}
+        <img class="nr-poi-icon" src="${ASSET_BASE}/icons/crystals/${attr(icon)}" alt="">
+        <span class="nr-poi-label">${esc(crystalLabel(location))}</span>
       </button>
     `;
-  }
-
-  function selectedCrystalRoute() {
-    return state.crystals.routes.find((route) => route.id === state.crystals.routeId) || state.crystals.routes[0] || null;
   }
 
   function crystalLocationById(id) {
     return state.crystals.locations.find((location) => location.id === id) || null;
   }
 
-  function crystalColorFor(location) {
-    if (CRYSTAL_COLORS[state.crystals.mode]) return CRYSTAL_COLORS[state.crystals.mode];
-    if (state.crystals.mode === "route") {
-      const route = selectedCrystalRoute();
-      if (route?.seed && CRYSTAL_COLORS[route.seed]) return CRYSTAL_COLORS[route.seed];
+  function selectCrystalLocation(locationId) {
+    const location = crystalLocationById(locationId);
+    if (!location) return;
+    const locationSeeds = Array.isArray(location.seeds) ? location.seeds : [];
+    if (!locationSeeds.length) return;
+    const current = state.crystals.candidates?.length ? state.crystals.candidates : CRYSTAL_SEEDS.slice();
+    const next = intersectSeeds(current, locationSeeds);
+    state.crystals.candidates = next.length ? next : locationSeeds.slice();
+    if (!state.crystals.selectedLocationIds.includes(locationId)) {
+      state.crystals.selectedLocationIds.push(locationId);
     }
-    if (location.uniqueFor && CRYSTAL_COLORS[location.uniqueFor]) return CRYSTAL_COLORS[location.uniqueFor];
-    const seed = Array.isArray(location.seeds) ? location.seeds.find((item) => CRYSTAL_COLORS[item]) : "";
-    return CRYSTAL_COLORS[seed] || "#a9f6ff";
+    state.crystals.seedFilter = state.crystals.candidates.length === 1 ? state.crystals.candidates[0] : "all";
+    state.crystals.enabled = true;
+  }
+
+  function intersectSeeds(current, observed) {
+    const observedSet = new Set(observed);
+    return current.filter((seed) => observedSet.has(seed));
+  }
+
+  function resetCrystalSeedDetection() {
+    state.crystals.seedFilter = "all";
+    state.crystals.candidates = CRYSTAL_SEEDS.slice();
+    state.crystals.selectedLocationIds = [];
+    state.crystals.enabled = true;
+  }
+
+  function isSpawnCheckLocation(location) {
+    const currentSpawn = state.spawnPoint || state.pattern?.spawnPoint || "";
+    const starts = Array.isArray(location.checkStarts) ? location.checkStarts : [];
+    return Boolean(currentSpawn && starts.includes(currentSpawn));
   }
 
   function crystalIconFor(location) {
-    if (CRYSTAL_ICONS[state.crystals.mode]) return CRYSTAL_ICONS[state.crystals.mode];
-    if (state.crystals.mode === "route") {
-      const route = selectedCrystalRoute();
-      if (route?.seed && CRYSTAL_ICONS[route.seed]) return CRYSTAL_ICONS[route.seed];
-    }
+    const filter = state.crystals.seedFilter;
+    if (CRYSTAL_ICONS[filter]) return CRYSTAL_ICONS[filter];
     if (location.uniqueFor && CRYSTAL_ICONS[location.uniqueFor]) return CRYSTAL_ICONS[location.uniqueFor];
-    const seed = Array.isArray(location.seeds) ? location.seeds.find((item) => CRYSTAL_ICONS[item]) : "";
-    return CRYSTAL_ICONS[seed] || CRYSTAL_ICONS.blue;
+    const seeds = Array.isArray(location.seeds) ? location.seeds : [];
+    if (seeds.length === 1 && CRYSTAL_ICONS[seeds[0]]) return CRYSTAL_ICONS[seeds[0]];
+    return CRYSTAL_ICONS.unknown;
+  }
+
+  function crystalLabel(location) {
+    if (location.uniqueFor) return crystalSeedLabel(location.uniqueFor);
+    const seeds = Array.isArray(location.seeds) ? location.seeds : [];
+    if (seeds.length === 1) return crystalSeedLabel(seeds[0]);
+    return t("crystalPoi");
   }
 
   function crystalSeedLabel(seed) {
@@ -2006,6 +2065,12 @@
   function togglePanel(name) {
     for (const panel of app.querySelectorAll("[data-nr-panel]")) {
       panel.hidden = panel.dataset.nrPanel === name ? !panel.hidden : true;
+    }
+  }
+
+  function openPanel(name) {
+    for (const panel of app.querySelectorAll("[data-nr-panel]")) {
+      panel.hidden = panel.dataset.nrPanel !== name;
     }
   }
 
