@@ -25,6 +25,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://nightreignrelic.com/nightreign-map/?lang=ja</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nightreignrelic.com/nightreign-map/?lang=en</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://nightreignrelic.com/privacy-policy.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>

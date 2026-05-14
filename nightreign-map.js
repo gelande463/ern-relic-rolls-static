@@ -2047,12 +2047,24 @@
 
   function updateCopy() {
     document.documentElement.lang = state.language === "ja" ? "ja" : "en";
+    updateLanguageCanonical();
     for (const node of app.querySelectorAll("[data-i18n]")) {
       const key = node.dataset.i18n;
       if (COPY[state.language][key]) node.textContent = COPY[state.language][key];
     }
     elements.candidatePanel.querySelector(".nr-candidate-header")?.setAttribute("title", t("candidateDragHint"));
     renderLanguageSwitch();
+  }
+
+  function updateLanguageCanonical() {
+    const language = state.language === "en" ? "en" : "ja";
+    const params = new URLSearchParams(window.location.search);
+    const canonicalUrl = params.has("lang") || language === "en"
+      ? `https://nightreignrelic.com/nightreign-map/?lang=${language}`
+      : "https://nightreignrelic.com/nightreign-map/";
+
+    document.querySelector("link[rel='canonical']")?.setAttribute("href", canonicalUrl);
+    document.querySelector("meta[property='og:url']")?.setAttribute("content", canonicalUrl);
   }
 
   function renderLanguageSwitch() {
