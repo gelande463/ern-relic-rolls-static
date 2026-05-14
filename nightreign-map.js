@@ -8,6 +8,7 @@
   const ASSET_BASE = "./assets";
   const STORAGE_KEY = "nightreign-map.state.v3";
   const GUIDE_KEY = "nightreign-map.hide-guide.v1";
+  const CANDIDATE_HIDE_KEY = "nightreign-map.hide-candidates.v1";
   const MAP_SIZE = 1000;
   const ROWS = 6;
   const COLS = 6;
@@ -135,6 +136,7 @@
       guide2: "青い丸は教会です。クリックすると教会として選択されます。",
       guide3: "疑問符をクリックすると、その地点のPOI種類を選択できます。",
       hideGuide: "次回から表示しない",
+      hideCandidates: "次回から自動表示しない",
       candidateKicker: "Map Pattern Finder",
       candidateTitle: "候補パターン",
       layoutLabel: "レイアウト",
@@ -144,6 +146,8 @@
       copyLink: "リンク",
       displayFilters: "表示フィルター",
       labels: "ラベル",
+      labelsOn: "ON",
+      labelsOff: "OFF",
       clearFilters: "選択をクリア",
       resetFinder: "リセット",
       nightlordChoice: "夜の王を選択",
@@ -213,6 +217,7 @@
       guide2: "Blue circles are churches. Click one to select Church.",
       guide3: "Click a question mark to choose a POI type for that location.",
       hideGuide: "Do not show again",
+      hideCandidates: "Do not auto-open",
       candidateKicker: "Map Pattern Finder",
       candidateTitle: "Pattern Candidates",
       layoutLabel: "Layout",
@@ -222,6 +227,8 @@
       copyLink: "Link",
       displayFilters: "Display filters",
       labels: "Labels",
+      labelsOn: "ON",
+      labelsOff: "OFF",
       clearFilters: "Clear",
       resetFinder: "Reset",
       nightlordChoice: "Select Nightlord",
@@ -546,6 +553,9 @@
     nightlordGlyph: app.querySelector("[data-nr-nightlord-glyph]"),
     mapLabel: app.querySelector("[data-nr-map-label]"),
     hideGuide: app.querySelector("[data-nr-control='hideGuide']"),
+    hideCandidates: app.querySelector("[data-nr-control='hideCandidates']"),
+    labelToggle: app.querySelector(".nr-label-toggle"),
+    labelToggleState: app.querySelector("[data-nr-label-toggle-state]"),
     controls: {
       nightlord: app.querySelector("[data-nr-control='nightlord']"),
       shiftingEarth: app.querySelector("[data-nr-control='shiftingEarth']"),
@@ -574,6 +584,7 @@
     categories: new Set(),
     showLabels: true,
     hideGuide: false,
+    hideCandidates: false,
     candidateOpen: true,
     mapLayout: "",
     scale: 1,
@@ -650,7 +661,7 @@
       state.selectedLandmarks.clear();
       state.exactLayout = false;
       state.poiChoice = null;
-      state.candidateOpen = true;
+      openCandidatesIfAllowed();
       syncToFirstMatchingLayout();
     });
 
@@ -669,6 +680,7 @@
 
     elements.controls.showLabels.addEventListener("change", () => {
       state.showLabels = elements.controls.showLabels.checked;
+      renderLabelControls();
       renderPois();
       persistState();
     });
@@ -676,6 +688,11 @@
     elements.hideGuide.addEventListener("change", () => {
       state.hideGuide = elements.hideGuide.checked;
       if (state.hideGuide) elements.guide.hidden = true;
+      persistState();
+    });
+
+    elements.hideCandidates.addEventListener("change", () => {
+      state.hideCandidates = elements.hideCandidates.checked;
       persistState();
     });
 
@@ -702,7 +719,7 @@
         state.selectedLandmarks.clear();
         state.exactLayout = false;
         state.poiChoice = null;
-        state.candidateOpen = true;
+        openCandidatesIfAllowed();
         syncToFirstMatchingLayout();
         return;
       }
@@ -831,6 +848,11 @@
       state.candidateOpen = !state.candidateOpen;
       renderCandidateSheet();
       persistState();
+    } else if (action === "toggle-labels") {
+      state.showLabels = !state.showLabels;
+      renderLabelControls();
+      renderPois();
+      persistState();
     } else if (action === "finder-reset") {
       resetFinder();
     } else if (action === "clear-landmarks") {
@@ -862,7 +884,7 @@
       state.selectedLandmarks.clear();
       state.exactLayout = false;
       state.poiChoice = null;
-      state.candidateOpen = true;
+      openCandidatesIfAllowed();
       syncToFirstMatchingLayout();
       return;
     }
@@ -924,8 +946,12 @@
     state.selectedLandmarks.clear();
     state.exactLayout = false;
     state.poiChoice = null;
-    state.candidateOpen = openCandidates;
+    state.candidateOpen = Boolean(openCandidates && !state.hideCandidates);
     syncToFirstMatchingLayout();
+  }
+
+  function openCandidatesIfAllowed() {
+    if (!state.hideCandidates) state.candidateOpen = true;
   }
 
   function syncToFirstMatchingLayout() {
@@ -997,9 +1023,22 @@
     renderLanguageSwitch();
     renderCandidateSheet();
     renderCrystalControls();
-    elements.controls.showLabels.checked = state.showLabels;
+    renderLabelControls();
+    elements.hideCandidates.checked = state.hideCandidates;
     elements.hideGuide.checked = state.hideGuide;
     elements.guide.hidden = state.hideGuide;
+  }
+
+  function renderLabelControls() {
+    elements.controls.showLabels.checked = state.showLabels;
+    if (elements.labelToggle) {
+      elements.labelToggle.classList.toggle("is-on", state.showLabels);
+      elements.labelToggle.setAttribute("aria-pressed", state.showLabels ? "true" : "false");
+      elements.labelToggle.setAttribute("title", state.showLabels ? `${t("labels")}: ${t("labelsOn")}` : `${t("labels")}: ${t("labelsOff")}`);
+    }
+    if (elements.labelToggleState) {
+      elements.labelToggleState.textContent = state.showLabels ? t("labelsOn") : t("labelsOff");
+    }
     app.classList.toggle("nr-labels-hidden", !state.showLabels);
   }
 
@@ -1961,7 +2000,8 @@
     );
     state.showLabels = initial.showLabels !== false;
     state.hideGuide = Boolean(initial.hideGuide);
-    state.candidateOpen = initial.candidateOpen !== false;
+    state.hideCandidates = Boolean(initial.hideCandidates);
+    state.candidateOpen = state.hideCandidates ? false : initial.candidateOpen !== false;
     state.candidatePosition = normalizeCandidatePosition(initial.candidatePosition);
     state.selectedLandmarks = new Set(
       Array.isArray(initial.selectedLandmarks)
@@ -1995,6 +2035,7 @@
         layoutPinnedByQuery: query.has("layout"),
         exactLayout: query.get("exact") === "1",
         hideGuide: localStorage.getItem(GUIDE_KEY) === "1",
+        hideCandidates: localStorage.getItem(CANDIDATE_HIDE_KEY) === "1",
       };
     }
 
@@ -2004,9 +2045,13 @@
       return {
         ...parsed,
         hideGuide: parsed.hideGuide || localStorage.getItem(GUIDE_KEY) === "1",
+        hideCandidates: parsed.hideCandidates || localStorage.getItem(CANDIDATE_HIDE_KEY) === "1",
       };
     } catch {
-      return { hideGuide: localStorage.getItem(GUIDE_KEY) === "1" };
+      return {
+        hideGuide: localStorage.getItem(GUIDE_KEY) === "1",
+        hideCandidates: localStorage.getItem(CANDIDATE_HIDE_KEY) === "1",
+      };
     }
   }
 
@@ -2022,12 +2067,14 @@
       selectedLandmarks: [...state.selectedLandmarks],
       language: state.language,
       hideGuide: state.hideGuide,
+      hideCandidates: state.hideCandidates,
       candidateOpen: state.candidateOpen,
       candidatePosition: state.candidatePosition,
     };
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
       localStorage.setItem(GUIDE_KEY, state.hideGuide ? "1" : "0");
+      localStorage.setItem(CANDIDATE_HIDE_KEY, state.hideCandidates ? "1" : "0");
     } catch {
       // Storage can be disabled.
     }

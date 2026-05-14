@@ -54,7 +54,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3031634155666482"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../nightreign-map.css?v=20260514-crystal-seed02">
+  <link rel="stylesheet" href="../nightreign-map.css?v=20260514-map-ui03">
 </head>
 
 <body>
@@ -121,6 +121,11 @@
         <span class="nr-crystal-fab__label" data-i18n="crystalFabLabel">Crystal</span>
       </button>
 
+      <button type="button" class="nr-label-toggle" data-nr-action="toggle-labels" aria-pressed="true">
+        <span class="nr-label-toggle__text" data-i18n="labels">ラベル</span>
+        <span class="nr-label-toggle__state" data-nr-label-toggle-state>ON</span>
+      </button>
+
       <section class="nr-guide-panel" data-nr-guide aria-labelledby="nr-guide-title">
         <div class="nr-guide-figure">
           <img src="../assets/favicon.png" alt="" class="nr-guide-icon">
@@ -180,10 +185,15 @@
           <button type="button" class="nr-text-button" data-nr-action="copy-link" data-i18n="copyLink">リンク</button>
         </div>
 
+        <label class="nr-candidate-hide">
+          <input type="checkbox" data-nr-control="hideCandidates">
+          <span data-i18n="hideCandidates">次回から自動表示しない</span>
+        </label>
+
         <div class="nr-selected-filters" data-nr-selected-filters></div>
         <div class="nr-candidate-grid" data-nr-candidate-grid></div>
 
-        <details class="nr-filter-drawer">
+        <details class="nr-filter-drawer" open>
           <summary data-i18n="displayFilters">表示フィルター</summary>
           <div class="nr-mini-actions">
             <label class="nr-switch">
@@ -278,7 +288,7 @@
   </footer>
 
   <script src="../app.js" defer></script>
-  <script src="../nightreign-map.js?v=20260514-crystal-seed02" defer></script>
+  <script src="../nightreign-map.js?v=20260514-map-ui03" defer></script>
 </body>
 
 </html>
