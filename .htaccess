@@ -1,2 +1,6 @@
 # Required for XServer Static custom domain configuration.
 DirectoryIndex index.html
+
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
