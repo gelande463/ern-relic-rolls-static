@@ -18,6 +18,7 @@
   const MIN_SCALE = 0.18;
   const MAX_SCALE = 4.6;
   const DESKTOP_QUERY = "(min-width: 921px)";
+  const TABLET_MAP_MODE_CLASS = "nr-tablet-map-mode";
   const CANDIDATE_PANEL_MARGIN = 12;
   const FILTERABLE_CATEGORIES = new Set(["major", "minor", "boss", "evergaol"]);
   const SPECIAL_EVENT_ICONS = new Set(["Construct_21100.png", "Event.png"]);
@@ -612,6 +613,7 @@
   boot();
 
   async function boot() {
+    updateTabletMapMode();
     wireEvents();
     try {
       const [index, masterPois, crystals] = await Promise.all([
@@ -815,10 +817,30 @@
     elements.viewport.addEventListener("pointerup", onPointerEnd);
     elements.viewport.addEventListener("pointercancel", onPointerEnd);
     window.addEventListener("resize", debounce(() => {
+      updateTabletMapMode();
       clampTransform();
       applyTransform();
       applyCandidatePanelPosition();
     }, 120));
+    window.addEventListener("orientationchange", () => {
+      window.setTimeout(() => {
+        updateTabletMapMode();
+        clampTransform();
+        applyTransform();
+        applyCandidatePanelPosition();
+      }, 180);
+    });
+    app.addEventListener(
+      "error",
+      (event) => {
+        const target = event.target;
+        if (!(target instanceof HTMLImageElement)) return;
+        if (!target.classList.contains("nr-map-full")) return;
+
+        app.classList.remove(TABLET_MAP_MODE_CLASS);
+      },
+      true
+    );
   }
 
   function handleAction(action) {
@@ -1469,8 +1491,38 @@
     return !isDesktopViewport();
   }
 
+  function isTouchMapViewport() {
+    return isMobileViewport() || isTabletMapViewport();
+  }
+
   function isDesktopLayout() {
     return isDesktopViewport();
+  }
+
+  function isTabletMapViewport() {
+    const width = window.innerWidth || document.documentElement.clientWidth || 0;
+    const height = window.innerHeight || document.documentElement.clientHeight || 0;
+    const minSide = Math.min(width, height);
+    const maxSide = Math.max(width, height);
+    const userAgent = navigator.userAgent || "";
+    const isIPadDesktopMode = /Macintosh/i.test(userAgent) && Number(navigator.maxTouchPoints || 0) > 1;
+    const isTabletUserAgent = /iPad|Tablet|Android(?!.*Mobile)|Silk/i.test(userAgent);
+    const coarse = typeof window.matchMedia === "function" && window.matchMedia("(pointer: coarse)").matches;
+    const noHover = typeof window.matchMedia === "function" && window.matchMedia("(hover: none)").matches;
+    const touchCapable = Number(navigator.maxTouchPoints || 0) > 0 || coarse || noHover;
+
+    return (
+      touchCapable &&
+      (isTabletUserAgent || isIPadDesktopMode || minSide >= 600) &&
+      minSide >= 600 &&
+      minSide <= 1024 &&
+      maxSide >= 768 &&
+      maxSide <= 1366
+    );
+  }
+
+  function updateTabletMapMode() {
+    app.classList.toggle(TABLET_MAP_MODE_CLASS, isTabletMapViewport());
   }
 
   function renderSummary() {
@@ -2365,6 +2417,7 @@
         parts.push(`<img class="nr-map-tile" src="${tileUrl(tileDirectory, sourceRow, sourceCol)}" alt="" draggable="false" decoding="async" style="--nr-tile-left:${left}px;--nr-tile-top:${top}px;--nr-tile-width:${width}px;--nr-tile-height:${height}px;--nr-tablet-tile-left:${tabletLeft}px;--nr-tablet-tile-top:${tabletTop}px;--nr-tablet-tile-width:${tabletWidth}px;--nr-tablet-tile-height:${tabletHeight}px">`);
       }
     }
+    parts.push(`<img class="nr-map-full" src="${ASSET_BASE}/maps/${attr(tileDirectory)}/full_map.webp" alt="" draggable="false" decoding="async">`);
     elements.tiles.innerHTML = parts.join("");
   }
 
@@ -2471,7 +2524,7 @@
   function resetView() {
     const rect = elements.viewport.getBoundingClientRect();
     const fitScale = Math.min(rect.width / MAP_SIZE, rect.height / MAP_SIZE);
-    const nextScale = isMobileViewport()
+    const nextScale = isTouchMapViewport()
       ? clamp(Math.max(fitScale * 1.65, 0.58), MIN_SCALE, MAX_SCALE)
       : clamp(fitScale * 1.03, MIN_SCALE, MAX_SCALE);
     state.scale = nextScale;
@@ -2486,7 +2539,7 @@
     const worldWidth = MAP_SIZE * state.scale;
     const worldHeight = MAP_SIZE * state.scale;
 
-    if (isMobileViewport()) {
+    if (isTouchMapViewport()) {
       const paddingX = Math.max(140, rect.width * 0.42);
       const paddingY = Math.max(140, rect.height * 0.32);
       state.x = clamp(state.x, rect.width - worldWidth - paddingX, paddingX);

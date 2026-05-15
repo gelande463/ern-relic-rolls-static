@@ -84,6 +84,18 @@
   pointer-events: none;
 }
 
+.nr-map-full {
+  display: none;
+  position: absolute;
+  inset: 0;
+  width: 1000px;
+  height: 1000px;
+  object-fit: fill;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 .nr-poi-layer {
   pointer-events: none;
 }
@@ -1904,6 +1916,20 @@
   .nr-map-world {
     transform-origin: 0 0;
   }
+}
+
+.nr-tablet-map-mode .nr-map-tiles {
+  display: block;
+  overflow: hidden;
+  contain: paint;
+}
+
+.nr-tablet-map-mode .nr-map-tile {
+  display: none !important;
+}
+
+.nr-tablet-map-mode .nr-map-full {
+  display: block;
 }
 
 @media (max-width: 520px) {
