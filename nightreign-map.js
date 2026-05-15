@@ -2354,7 +2354,15 @@
         const bottom = Math.ceil(((displayRow + 1) * MAP_SIZE) / ROWS);
         const width = right - left + 1;
         const height = bottom - top + 1;
-        parts.push(`<img class="nr-map-tile" src="${tileUrl(tileDirectory, sourceRow, sourceCol)}" alt="" draggable="false" decoding="async" style="--nr-tile-left:${left}px;--nr-tile-top:${top}px;--nr-tile-width:${width}px;--nr-tile-height:${height}px">`);
+
+        const tabletLeft = Math.round((displayCol * MAP_SIZE) / COLS);
+        const tabletTop = Math.round((displayRow * MAP_SIZE) / ROWS);
+        const tabletRight = Math.round(((displayCol + 1) * MAP_SIZE) / COLS);
+        const tabletBottom = Math.round(((displayRow + 1) * MAP_SIZE) / ROWS);
+        const tabletWidth = tabletRight - tabletLeft;
+        const tabletHeight = tabletBottom - tabletTop;
+
+        parts.push(`<img class="nr-map-tile" src="${tileUrl(tileDirectory, sourceRow, sourceCol)}" alt="" draggable="false" decoding="async" style="--nr-tile-left:${left}px;--nr-tile-top:${top}px;--nr-tile-width:${width}px;--nr-tile-height:${height}px;--nr-tablet-tile-left:${tabletLeft}px;--nr-tablet-tile-top:${tabletTop}px;--nr-tablet-tile-width:${tabletWidth}px;--nr-tablet-tile-height:${tabletHeight}px">`);
       }
     }
     elements.tiles.innerHTML = parts.join("");

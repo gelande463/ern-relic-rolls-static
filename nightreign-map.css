@@ -1857,6 +1857,36 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1180px) and (pointer: coarse) {
+  /* Tablet-only tile correction:
+     desktop keeps CSS Grid, phones keep the existing mobile absolute values. */
+  .nr-map-tiles {
+    display: block;
+    overflow: hidden;
+    contain: paint;
+  }
+
+  .nr-map-tile {
+    position: absolute;
+    left: var(--nr-tablet-tile-left, var(--nr-tile-left));
+    top: var(--nr-tablet-tile-top, var(--nr-tile-top));
+    width: var(--nr-tablet-tile-width, var(--nr-tile-width));
+    height: var(--nr-tablet-tile-height, var(--nr-tile-height));
+    margin: 0;
+    object-fit: fill;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .nr-map-world {
+    transform-origin: 0 0;
+  }
+}
+
 @media (max-width: 520px) {
   .nr-candidate-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
