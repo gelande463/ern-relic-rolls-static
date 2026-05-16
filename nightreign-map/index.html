@@ -54,7 +54,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3031634155666482"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../nightreign-map.css?v=20260515-tablet-fullmap01">
+  <link rel="stylesheet" href="../nightreign-map.css?v=20260516-map-timer-auto01">
 </head>
 
 <body>
@@ -125,6 +125,33 @@
         <span class="nr-label-toggle__text" data-i18n="labels">ラベル</span>
         <span class="nr-label-toggle__state" data-nr-label-toggle-state>ON</span>
       </button>
+
+      <button type="button" class="nr-timer-toggle" data-nr-action="toggle-timer" aria-pressed="false"
+        aria-label="タイマー表示を切り替え">
+        <span class="nr-timer-toggle__text" data-i18n="timerToggle">タイマー</span>
+        <span class="nr-timer-toggle__state" data-nr-timer-toggle-state>OFF</span>
+      </button>
+
+      <button type="button" class="nr-mobile-ui-toggle" data-nr-action="toggle-mobile-ui" aria-pressed="false">
+        <span class="nr-mobile-ui-toggle__text" data-i18n="mobileUiToggle">表示集中</span>
+        <span class="nr-mobile-ui-toggle__state" data-nr-mobile-ui-toggle-state>OFF</span>
+      </button>
+
+      <section class="nr-map-timer" data-nr-timer-window hidden aria-label="マップタイマー">
+        <div class="nr-map-timer__header">
+          <span class="nr-map-timer__title" data-i18n="timerTitle">Map Timer</span>
+          <button type="button" class="nr-map-timer__picker-button" data-nr-action="open-timer-picker"
+            data-nr-timer-picker-button>Phase 1</button>
+        </div>
+
+        <button type="button" class="nr-map-timer__display" data-nr-action="toggle-timer-running">04:30.00</button>
+
+        <div class="nr-map-timer__controls">
+          <button type="button" data-nr-action="start-timer" data-i18n="timerStart">Start</button>
+          <button type="button" data-nr-action="pause-timer" data-i18n="timerPause">Pause</button>
+          <button type="button" data-nr-action="reset-timer" data-i18n="timerReset">Reset</button>
+        </div>
+      </section>
 
       <section class="nr-guide-panel" data-nr-guide aria-labelledby="nr-guide-title">
         <div class="nr-guide-figure">
@@ -260,6 +287,52 @@
         </div>
       </section>
 
+      <section class="nr-choice-panel nr-timer-picker-panel" data-nr-panel="timer-picker" hidden aria-label="タイマーを選択">
+        <div class="nr-choice-header">
+          <h2 data-i18n="timerPickerTitle">タイマー選択</h2>
+          <button type="button" class="nr-panel-close" data-nr-action="close-panels" aria-label="閉じる">×</button>
+        </div>
+
+        <div class="nr-timer-wheel" data-nr-timer-wheel>
+          <button type="button" class="nr-timer-wheel__item" data-nr-timer-preset="auto">
+            <span>AUTO</span>
+            <strong>Phase 1-4</strong>
+          </button>
+          <button type="button" class="nr-timer-wheel__item" data-nr-timer-preset="phase1">
+            <span>Phase 1</span>
+            <strong>04:30.00</strong>
+          </button>
+          <button type="button" class="nr-timer-wheel__item" data-nr-timer-preset="phase2">
+            <span>Phase 2</span>
+            <strong>03:00.00</strong>
+          </button>
+          <button type="button" class="nr-timer-wheel__item" data-nr-timer-preset="phase3">
+            <span>Phase 3</span>
+            <strong>03:30.00</strong>
+          </button>
+          <button type="button" class="nr-timer-wheel__item" data-nr-timer-preset="phase4">
+            <span>Phase 4</span>
+            <strong>03:00.00</strong>
+          </button>
+          <button type="button" class="nr-timer-wheel__item" data-nr-timer-preset="free">
+            <span>Free</span>
+            <strong data-i18n="timerFreeDisplay">自由設定</strong>
+          </button>
+        </div>
+
+        <div class="nr-timer-free" data-nr-timer-free hidden>
+          <label>
+            <span data-i18n="timerMinutes">分</span>
+            <input type="number" min="0" max="99" inputmode="numeric" data-nr-free-minutes value="4">
+          </label>
+          <label>
+            <span data-i18n="timerSeconds">秒</span>
+            <input type="number" min="0" max="59" inputmode="numeric" data-nr-free-seconds value="30">
+          </label>
+          <button type="button" data-nr-action="apply-free-timer" data-i18n="timerApplyFree">Freeを適用</button>
+        </div>
+      </section>
+
       <div class="nr-zoom-controls" aria-label="マップのズーム操作">
         <button type="button" class="nr-icon-button" data-nr-action="zoom-out" aria-label="縮小">−</button>
         <button type="button" class="nr-icon-button" data-nr-action="reset-view" aria-label="表示位置をリセット">⟳</button>
@@ -288,7 +361,7 @@
   </footer>
 
   <script src="../app.js" defer></script>
-  <script src="../nightreign-map.js?v=20260515-tablet-fullmap01" defer></script>
+  <script src="../nightreign-map.js?v=20260516-map-timer-auto01" defer></script>
 </body>
 
 </html>

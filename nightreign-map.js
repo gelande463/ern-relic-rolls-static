@@ -9,6 +9,7 @@
   const STORAGE_KEY = "nightreign-map.state.v3";
   const GUIDE_KEY = "nightreign-map.hide-guide.v1";
   const CANDIDATE_HIDE_KEY = "nightreign-map.hide-candidates.v1";
+  const TIMER_STORAGE_KEY = "nightreign-map-timer-state-v1";
   const MAP_SIZE = 1000;
   const ROWS = 6;
   const COLS = 6;
@@ -45,6 +46,16 @@
     blue: "blue-crystal.png",
     unknown: "unknown-crystal.png",
   };
+  const TIMER_PRESETS = [
+    { key: "auto", label: "AUTO", durationMs: 270000, display: "Phase 1-4" },
+    { key: "phase1", label: "Phase 1", durationMs: 270000, display: "04:30.00" },
+    { key: "phase2", label: "Phase 2", durationMs: 180000, display: "03:00.00" },
+    { key: "phase3", label: "Phase 3", durationMs: 210000, display: "03:30.00" },
+    { key: "phase4", label: "Phase 4", durationMs: 180000, display: "03:00.00" },
+    { key: "free", label: "Free", durationMs: null, display: "自由設定" },
+  ];
+  const TIMER_AUTO_SEQUENCE = ["phase1", "phase2", "phase3", "phase4"];
+  const TIMER_WARNING_PHASES = new Set(["phase1", "phase3"]);
 
   const ICON_SIZES = {
     "Mission_Objective.png": 34,
@@ -149,6 +160,21 @@
       labels: "ラベル",
       labelsOn: "ON",
       labelsOff: "OFF",
+      mobileUiToggle: "表示集中",
+      mobileUiOn: "ON",
+      mobileUiOff: "OFF",
+      mobileUiOnTitle: "スマホ表示の操作アイコンを非表示にします",
+      mobileUiOffTitle: "スマホ表示の操作アイコンを表示します",
+      timerToggle: "タイマー",
+      timerTitle: "Map Timer",
+      timerStart: "スタート",
+      timerPause: "停止",
+      timerReset: "リセット",
+      timerPickerTitle: "タイマー選択",
+      timerFreeDisplay: "自由設定",
+      timerMinutes: "分",
+      timerSeconds: "秒",
+      timerApplyFree: "Freeを適用",
       clearFilters: "選択をクリア",
       resetFinder: "リセット",
       nightlordChoice: "夜の王を選択",
@@ -230,6 +256,21 @@
       labels: "Labels",
       labelsOn: "ON",
       labelsOff: "OFF",
+      mobileUiToggle: "Focus",
+      mobileUiOn: "ON",
+      mobileUiOff: "OFF",
+      mobileUiOnTitle: "Hide mobile map controls",
+      mobileUiOffTitle: "Show mobile map controls",
+      timerToggle: "Timer",
+      timerTitle: "Map Timer",
+      timerStart: "Start",
+      timerPause: "Pause",
+      timerReset: "Reset",
+      timerPickerTitle: "Select Timer",
+      timerFreeDisplay: "Custom",
+      timerMinutes: "Min",
+      timerSeconds: "Sec",
+      timerApplyFree: "Apply Free",
       clearFilters: "Clear",
       resetFinder: "Reset",
       nightlordChoice: "Select Nightlord",
@@ -557,6 +598,16 @@
     hideCandidates: app.querySelector("[data-nr-control='hideCandidates']"),
     labelToggle: app.querySelector(".nr-label-toggle"),
     labelToggleState: app.querySelector("[data-nr-label-toggle-state]"),
+    mobileUiToggle: app.querySelector(".nr-mobile-ui-toggle"),
+    mobileUiToggleState: app.querySelector("[data-nr-mobile-ui-toggle-state]"),
+    timerToggle: app.querySelector(".nr-timer-toggle"),
+    timerToggleState: app.querySelector("[data-nr-timer-toggle-state]"),
+    timerWindow: app.querySelector("[data-nr-timer-window]"),
+    timerDisplay: app.querySelector(".nr-map-timer__display"),
+    timerPickerButton: app.querySelector("[data-nr-timer-picker-button]"),
+    timerFree: app.querySelector("[data-nr-timer-free]"),
+    freeMinutes: app.querySelector("[data-nr-free-minutes]"),
+    freeSeconds: app.querySelector("[data-nr-free-seconds]"),
     controls: {
       nightlord: app.querySelector("[data-nr-control='nightlord']"),
       shiftingEarth: app.querySelector("[data-nr-control='shiftingEarth']"),
@@ -584,6 +635,16 @@
     selectedLandmarks: new Set(),
     categories: new Set(),
     showLabels: true,
+    mobileUiHidden: false,
+    timer: {
+      enabled: false,
+      running: false,
+      preset: "phase1",
+      durationMs: 270000,
+      remainingMs: 270000,
+      autoPhaseIndex: 0,
+      lastTickAt: 0,
+    },
     hideGuide: false,
     hideCandidates: false,
     candidateOpen: true,
@@ -610,6 +671,8 @@
     },
   };
 
+  let timerRafId = 0;
+
   boot();
 
   async function boot() {
@@ -631,6 +694,7 @@
       state.crystals.routes = crystals.routes;
       state.crystals.loaded = true;
       applyInitialState(readInitialState());
+      loadTimerState();
       renderStaticControls();
       renderAllControls();
       updateCopy();
@@ -797,6 +861,13 @@
         return;
       }
 
+      const timerPreset = event.target.closest("[data-nr-timer-preset]");
+      if (timerPreset) {
+        event.preventDefault();
+        selectTimerPreset(timerPreset.dataset.nrTimerPreset || "phase1");
+        return;
+      }
+
       const action = event.target.closest("[data-nr-action]");
       if (action) handleAction(action.dataset.nrAction);
     });
@@ -875,6 +946,28 @@
       renderLabelControls();
       renderPois();
       persistState();
+    } else if (action === "toggle-mobile-ui") {
+      state.mobileUiHidden = !state.mobileUiHidden;
+      renderMobileUiControls();
+      persistState();
+    } else if (action === "toggle-timer") {
+      toggleTimerEnabled();
+    } else if (action === "open-timer-picker") {
+      state.timer.enabled = true;
+      openPanel("timer-picker");
+      renderTimer();
+      saveTimerState();
+    } else if (action === "toggle-timer-running") {
+      if (state.timer.running) pauseTimer();
+      else startTimer();
+    } else if (action === "start-timer") {
+      startTimer();
+    } else if (action === "pause-timer") {
+      pauseTimer();
+    } else if (action === "reset-timer") {
+      resetTimer();
+    } else if (action === "apply-free-timer") {
+      applyFreeTimer();
     } else if (action === "finder-reset") {
       resetFinder();
     } else if (action === "clear-landmarks") {
@@ -1046,6 +1139,8 @@
     renderCandidateSheet();
     renderCrystalControls();
     renderLabelControls();
+    renderMobileUiControls();
+    renderTimer();
     elements.hideCandidates.checked = state.hideCandidates;
     elements.hideGuide.checked = state.hideGuide;
     elements.guide.hidden = state.hideGuide;
@@ -1062,6 +1157,310 @@
       elements.labelToggleState.textContent = state.showLabels ? t("labelsOn") : t("labelsOff");
     }
     app.classList.toggle("nr-labels-hidden", !state.showLabels);
+  }
+
+  function renderMobileUiControls() {
+    const hidden = Boolean(state.mobileUiHidden);
+    app.classList.toggle("nr-mobile-ui-hidden", hidden);
+
+    if (elements.mobileUiToggle) {
+      elements.mobileUiToggle.classList.toggle("is-on", hidden);
+      elements.mobileUiToggle.setAttribute("aria-pressed", hidden ? "true" : "false");
+      elements.mobileUiToggle.setAttribute("title", hidden ? t("mobileUiOffTitle") : t("mobileUiOnTitle"));
+    }
+
+    if (elements.mobileUiToggleState) {
+      elements.mobileUiToggleState.textContent = hidden ? t("mobileUiOn") : t("mobileUiOff");
+    }
+  }
+
+  function timerPresetByKey(key) {
+    return TIMER_PRESETS.find((preset) => preset.key === key) || TIMER_PRESETS.find((preset) => preset.key === "phase1");
+  }
+
+  function clampAutoPhaseIndex(index) {
+    const numericIndex = Number.isFinite(Number(index)) ? Math.trunc(Number(index)) : 0;
+    return Math.max(0, Math.min(TIMER_AUTO_SEQUENCE.length - 1, numericIndex));
+  }
+
+  function isAutoTimer() {
+    return state.timer.preset === "auto";
+  }
+
+  function currentTimerPhaseKey() {
+    if (!isAutoTimer()) return state.timer.preset;
+    return TIMER_AUTO_SEQUENCE[clampAutoPhaseIndex(state.timer.autoPhaseIndex)] || "phase1";
+  }
+
+  function currentTimerPhasePreset() {
+    return timerPresetByKey(currentTimerPhaseKey());
+  }
+
+  function setAutoPhase(index, options = {}) {
+    const phaseIndex = clampAutoPhaseIndex(index);
+    const phase = timerPresetByKey(TIMER_AUTO_SEQUENCE[phaseIndex]);
+    state.timer.autoPhaseIndex = phaseIndex;
+    state.timer.durationMs = phase.durationMs;
+    if (options.resetRemaining !== false) {
+      state.timer.remainingMs = phase.durationMs;
+    }
+  }
+
+  function timerPickerLabel() {
+    if (!isAutoTimer()) return timerPresetByKey(state.timer.preset).label;
+    return `AUTO: ${currentTimerPhasePreset().label}`;
+  }
+
+  function timerShouldWarn() {
+    return TIMER_WARNING_PHASES.has(currentTimerPhaseKey()) && state.timer.remainingMs > 0 && state.timer.remainingMs <= 60000;
+  }
+
+  function formatTimerMs(ms) {
+    const safeMs = Math.max(0, Math.floor(Number(ms) || 0));
+    const minutes = Math.floor(safeMs / 60000);
+    const seconds = Math.floor((safeMs % 60000) / 1000);
+    const centiseconds = Math.floor((safeMs % 1000) / 10);
+    return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}.${String(centiseconds).padStart(2, "0")}`;
+  }
+
+  function loadTimerState() {
+    try {
+      const raw = localStorage.getItem(TIMER_STORAGE_KEY);
+      if (!raw) return;
+
+      const saved = JSON.parse(raw);
+      if (!saved || typeof saved !== "object") return;
+
+      const preset = timerPresetByKey(saved.preset);
+      state.timer.enabled = Boolean(saved.enabled);
+      state.timer.running = false;
+      state.timer.preset = preset.key;
+      state.timer.autoPhaseIndex = clampAutoPhaseIndex(saved.autoPhaseIndex);
+      state.timer.lastTickAt = 0;
+
+      const savedDuration = Number(saved.durationMs);
+      const savedRemaining = Number(saved.remainingMs);
+
+      if (preset.key === "auto") {
+        setAutoPhase(state.timer.autoPhaseIndex);
+        state.timer.remainingMs = Number.isFinite(savedRemaining) && savedRemaining >= 0
+          ? Math.min(savedRemaining, state.timer.durationMs)
+          : state.timer.durationMs;
+        return;
+      }
+
+      state.timer.durationMs = preset.durationMs || (Number.isFinite(savedDuration) && savedDuration > 0 ? savedDuration : 270000);
+      state.timer.remainingMs = Number.isFinite(savedRemaining) && savedRemaining >= 0
+        ? Math.min(savedRemaining, state.timer.durationMs)
+        : state.timer.durationMs;
+    } catch {
+      // Ignore corrupted timer state.
+    }
+  }
+
+  function saveTimerState() {
+    try {
+      localStorage.setItem(TIMER_STORAGE_KEY, JSON.stringify({
+        enabled: state.timer.enabled,
+        preset: state.timer.preset,
+        durationMs: state.timer.durationMs,
+        remainingMs: state.timer.remainingMs,
+        autoPhaseIndex: state.timer.autoPhaseIndex,
+      }));
+    } catch {
+      // Storage can be disabled.
+    }
+  }
+
+  function renderTimer() {
+    const enabled = Boolean(state.timer.enabled);
+    app.classList.toggle("nr-timer-priority-mode", enabled);
+
+    if (elements.timerWindow) {
+      elements.timerWindow.hidden = !enabled;
+      elements.timerWindow.classList.toggle("is-running", Boolean(state.timer.running));
+      elements.timerWindow.classList.toggle("is-warning", timerShouldWarn());
+    }
+
+    if (elements.timerToggle) {
+      elements.timerToggle.classList.toggle("is-active", enabled);
+      elements.timerToggle.setAttribute("aria-pressed", enabled ? "true" : "false");
+      elements.timerToggle.setAttribute("title", `${t("timerToggle")}: ${enabled ? "ON" : "OFF"}`);
+    }
+
+    if (elements.timerToggleState) {
+      elements.timerToggleState.textContent = enabled ? "ON" : "OFF";
+    }
+
+    if (elements.timerDisplay) {
+      elements.timerDisplay.textContent = formatTimerMs(state.timer.remainingMs);
+    }
+
+    if (elements.timerPickerButton) {
+      elements.timerPickerButton.textContent = timerPickerLabel();
+    }
+
+    for (const item of app.querySelectorAll("[data-nr-timer-preset]")) {
+      item.classList.toggle("is-active", item.dataset.nrTimerPreset === state.timer.preset);
+      item.classList.toggle("is-auto-current", isAutoTimer() && item.dataset.nrTimerPreset === currentTimerPhaseKey());
+    }
+
+    if (elements.timerFree) {
+      elements.timerFree.hidden = state.timer.preset !== "free";
+    }
+
+    const durationSeconds = Math.max(1, Math.round(state.timer.durationMs / 1000));
+    const minutes = Math.floor(durationSeconds / 60);
+    const seconds = durationSeconds % 60;
+    if (elements.freeMinutes && document.activeElement !== elements.freeMinutes) {
+      elements.freeMinutes.value = String(minutes);
+    }
+    if (elements.freeSeconds && document.activeElement !== elements.freeSeconds) {
+      elements.freeSeconds.value = String(seconds);
+    }
+  }
+
+  function consumeTimerDelta(delta) {
+    const nextRemaining = state.timer.remainingMs - delta;
+    if (nextRemaining > 0) {
+      state.timer.remainingMs = nextRemaining;
+      return;
+    }
+
+    if (!isAutoTimer()) {
+      state.timer.remainingMs = 0;
+      state.timer.running = false;
+      state.timer.lastTickAt = 0;
+      return;
+    }
+
+    let overflow = Math.max(0, -nextRemaining);
+    while (state.timer.autoPhaseIndex < TIMER_AUTO_SEQUENCE.length - 1) {
+      setAutoPhase(state.timer.autoPhaseIndex + 1);
+      if (overflow < state.timer.durationMs) {
+        state.timer.remainingMs = state.timer.durationMs - overflow;
+        return;
+      }
+      overflow -= state.timer.durationMs;
+    }
+
+    state.timer.remainingMs = 0;
+    state.timer.running = false;
+    state.timer.lastTickAt = 0;
+  }
+
+  function tickTimer(now) {
+    if (!state.timer.running) return;
+
+    if (!state.timer.lastTickAt) {
+      state.timer.lastTickAt = now;
+    }
+
+    const delta = now - state.timer.lastTickAt;
+    state.timer.lastTickAt = now;
+    consumeTimerDelta(delta);
+    renderTimer();
+
+    if (state.timer.running) {
+      timerRafId = requestAnimationFrame(tickTimer);
+    } else {
+      saveTimerState();
+    }
+  }
+
+  function startTimer() {
+    if (!state.timer.enabled) state.timer.enabled = true;
+    if (state.timer.remainingMs <= 0) {
+      if (isAutoTimer() && state.timer.autoPhaseIndex >= TIMER_AUTO_SEQUENCE.length - 1) {
+        setAutoPhase(0);
+      } else if (isAutoTimer()) {
+        setAutoPhase(state.timer.autoPhaseIndex);
+      } else {
+        state.timer.remainingMs = state.timer.durationMs;
+      }
+    }
+
+    state.timer.running = true;
+    state.timer.lastTickAt = 0;
+    cancelAnimationFrame(timerRafId);
+    timerRafId = requestAnimationFrame(tickTimer);
+    renderTimer();
+    saveTimerState();
+  }
+
+  function pauseTimer() {
+    state.timer.running = false;
+    state.timer.lastTickAt = 0;
+    cancelAnimationFrame(timerRafId);
+    renderTimer();
+    saveTimerState();
+  }
+
+  function resetTimer() {
+    state.timer.running = false;
+    state.timer.lastTickAt = 0;
+    if (isAutoTimer()) setAutoPhase(0);
+    else state.timer.remainingMs = state.timer.durationMs;
+    cancelAnimationFrame(timerRafId);
+    renderTimer();
+    saveTimerState();
+  }
+
+  function toggleTimerEnabled() {
+    state.timer.enabled = !state.timer.enabled;
+
+    if (!state.timer.enabled) {
+      state.timer.running = false;
+      state.timer.lastTickAt = 0;
+      cancelAnimationFrame(timerRafId);
+      const timerPicker = app.querySelector("[data-nr-panel='timer-picker']");
+      if (timerPicker) timerPicker.hidden = true;
+    }
+
+    renderTimer();
+    saveTimerState();
+  }
+
+  function selectTimerPreset(key) {
+    const preset = timerPresetByKey(key);
+    state.timer.preset = preset.key;
+    state.timer.running = false;
+    state.timer.lastTickAt = 0;
+
+    if (preset.key === "auto") {
+      setAutoPhase(0);
+    } else if (preset.key !== "free") {
+      state.timer.autoPhaseIndex = 0;
+      state.timer.durationMs = preset.durationMs;
+      state.timer.remainingMs = preset.durationMs;
+    } else if (!state.timer.durationMs) {
+      state.timer.autoPhaseIndex = 0;
+      state.timer.durationMs = 270000;
+      state.timer.remainingMs = 270000;
+    }
+
+    cancelAnimationFrame(timerRafId);
+    renderTimer();
+    saveTimerState();
+  }
+
+  function applyFreeTimer() {
+    const rawMinutes = Number(elements.freeMinutes?.value || 0);
+    const rawSeconds = Number(elements.freeSeconds?.value || 0);
+    const minutes = Math.max(0, Math.min(99, Math.trunc(Number.isFinite(rawMinutes) ? rawMinutes : 0)));
+    const seconds = Math.max(0, Math.min(59, Math.trunc(Number.isFinite(rawSeconds) ? rawSeconds : 0)));
+    const durationMs = Math.max(1000, ((minutes * 60) + seconds) * 1000);
+
+    state.timer.preset = "free";
+    state.timer.autoPhaseIndex = 0;
+    state.timer.durationMs = durationMs;
+    state.timer.remainingMs = durationMs;
+    state.timer.running = false;
+    state.timer.lastTickAt = 0;
+
+    cancelAnimationFrame(timerRafId);
+    renderTimer();
+    saveTimerState();
   }
 
   function renderSelects() {
@@ -2051,6 +2450,7 @@
         : defaultCategories
     );
     state.showLabels = initial.showLabels !== false;
+    state.mobileUiHidden = Boolean(initial.mobileUiHidden);
     state.hideGuide = Boolean(initial.hideGuide);
     state.hideCandidates = Boolean(initial.hideCandidates);
     state.candidateOpen = state.hideCandidates ? false : initial.candidateOpen !== false;
@@ -2071,6 +2471,16 @@
     chooseFirstMatchingLayout();
   }
 
+  function readPersistedMobileUiHidden() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      const parsed = raw ? JSON.parse(raw) : {};
+      return Boolean(parsed.mobileUiHidden);
+    } catch {
+      return false;
+    }
+  }
+
   function readInitialState() {
     const query = new URLSearchParams(window.location.search);
     const hasQueryState = ["layout", "nightlord", "earth", "spawn", "labels", "cats", "lm", "lang", "exact"].some((key) => query.has(key));
@@ -2088,6 +2498,7 @@
         exactLayout: query.get("exact") === "1",
         hideGuide: localStorage.getItem(GUIDE_KEY) === "1",
         hideCandidates: localStorage.getItem(CANDIDATE_HIDE_KEY) === "1",
+        mobileUiHidden: readPersistedMobileUiHidden(),
       };
     }
 
@@ -2103,6 +2514,7 @@
       return {
         hideGuide: localStorage.getItem(GUIDE_KEY) === "1",
         hideCandidates: localStorage.getItem(CANDIDATE_HIDE_KEY) === "1",
+        mobileUiHidden: false,
       };
     }
   }
@@ -2115,6 +2527,7 @@
       spawnPoint: state.spawnPoint,
       exactLayout: state.exactLayout,
       showLabels: state.showLabels,
+      mobileUiHidden: state.mobileUiHidden,
       categories: [...state.categories],
       selectedLandmarks: [...state.selectedLandmarks],
       language: state.language,

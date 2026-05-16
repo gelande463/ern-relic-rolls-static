@@ -820,7 +820,7 @@
 .nr-label-toggle {
   position: absolute;
   left: 16px;
-  bottom: calc(96px + env(safe-area-inset-bottom, 0px));
+  bottom: calc(140px + env(safe-area-inset-bottom, 0px));
   z-index: 29;
   display: inline-flex;
   align-items: center;
@@ -863,6 +863,308 @@
 .nr-label-toggle.is-on .nr-label-toggle__state {
   background: rgba(241, 199, 78, 0.96);
   color: #16110a;
+}
+
+.nr-timer-toggle {
+  position: absolute;
+  left: 16px;
+  bottom: calc(96px + env(safe-area-inset-bottom, 0px));
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 7px 10px;
+  color: #fff;
+  border: 1px solid rgba(110, 120, 146, 0.88);
+  border-radius: 999px;
+  background: rgba(18, 22, 34, 0.92);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(14px);
+  cursor: pointer;
+}
+
+.nr-timer-toggle.is-active {
+  border-color: rgba(241, 199, 78, 0.95);
+  box-shadow:
+    0 0 0 1px rgba(241, 199, 78, 0.28),
+    0 12px 28px rgba(0, 0, 0, 0.34),
+    0 0 18px rgba(241, 199, 78, 0.26);
+}
+
+.nr-timer-toggle__text {
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.nr-timer-toggle__state {
+  min-width: 32px;
+  padding: 3px 7px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 1000;
+  line-height: 1;
+  text-align: center;
+  border-radius: 999px;
+  background: rgba(72, 82, 110, 0.86);
+}
+
+.nr-timer-toggle.is-active .nr-timer-toggle__state {
+  color: #16110a;
+  background: rgba(241, 199, 78, 0.96);
+}
+
+.nr-mobile-ui-toggle {
+  position: absolute;
+  left: 16px;
+  bottom: calc(52px + env(safe-area-inset-bottom, 0px));
+  z-index: 30;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 7px 10px;
+  color: #fff;
+  border: 1px solid rgba(110, 120, 146, 0.88);
+  border-radius: 999px;
+  background: rgba(18, 22, 34, 0.92);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(14px);
+  cursor: pointer;
+}
+
+.nr-mobile-ui-toggle.is-on {
+  border-color: rgba(137, 208, 255, 0.92);
+  box-shadow:
+    0 0 0 1px rgba(137, 208, 255, 0.28),
+    0 12px 28px rgba(0, 0, 0, 0.34);
+}
+
+.nr-mobile-ui-toggle__text {
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.nr-mobile-ui-toggle__state {
+  min-width: 32px;
+  padding: 3px 7px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 1000;
+  line-height: 1;
+  text-align: center;
+  border-radius: 999px;
+  background: rgba(72, 82, 110, 0.86);
+}
+
+.nr-mobile-ui-toggle.is-on .nr-mobile-ui-toggle__state {
+  color: #08111f;
+  background: rgba(137, 208, 255, 0.96);
+}
+
+.nr-map-timer {
+  position: absolute;
+  left: 16px;
+  top: 96px;
+  z-index: 42;
+  width: min(420px, max(340px, calc(50vw - 500px)));
+  padding: 14px;
+  color: #fff;
+  border: 2px solid rgba(74, 205, 232, 0.95);
+  border-radius: 6px;
+  background:
+    linear-gradient(145deg, rgba(74, 205, 232, 0.12), transparent 42%),
+    rgba(0, 0, 0, 0.9);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.45),
+    0 0 24px rgba(74, 205, 232, 0.22);
+}
+
+.nr-map-timer[hidden] {
+  display: none;
+}
+
+.nr-map-timer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.nr-map-timer__title {
+  color: #9ee9ff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.nr-map-timer__picker-button {
+  min-height: 30px;
+  padding: 4px 10px;
+  color: #fff;
+  border: 1px solid rgba(110, 120, 146, 0.9);
+  border-radius: 8px;
+  background: rgba(24, 32, 48, 0.92);
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.nr-map-timer__display {
+  display: block;
+  width: 100%;
+  padding: 0;
+  color: #fff;
+  border: 0;
+  background: transparent;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 72px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+}
+
+.nr-map-timer__controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.nr-map-timer__controls button {
+  min-height: 38px;
+  color: #fff;
+  border: 1px solid rgba(110, 120, 146, 0.9);
+  border-radius: 8px;
+  background: rgba(18, 24, 36, 0.95);
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.nr-map-timer__controls button:hover,
+.nr-map-timer__controls button:focus-visible,
+.nr-map-timer__picker-button:hover,
+.nr-map-timer__picker-button:focus-visible {
+  border-color: rgba(241, 199, 78, 0.95);
+  outline: none;
+}
+
+.nr-map-timer.is-running {
+  border-color: rgba(241, 199, 78, 0.95);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(241, 199, 78, 0.35),
+    0 0 26px rgba(241, 199, 78, 0.24);
+}
+
+.nr-map-timer.is-warning .nr-map-timer__display {
+  color: #ff4f69;
+  text-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.85),
+    0 0 20px rgba(255, 79, 105, 0.55);
+}
+
+.nr-timer-picker-panel {
+  left: 16px;
+  top: 284px;
+  z-index: 43;
+  width: min(360px, calc(100% - 32px));
+}
+
+.nr-timer-wheel {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  max-height: 240px;
+  padding: 12px 8px;
+  overflow-y: auto;
+  border-radius: 14px;
+  background:
+    linear-gradient(to bottom, rgba(10, 14, 22, 0.98), rgba(10, 14, 22, 0.66) 18%, rgba(10, 14, 22, 0.66) 82%, rgba(10, 14, 22, 0.98));
+  scroll-snap-type: y mandatory;
+}
+
+.nr-timer-wheel__item {
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 54px;
+  padding: 10px 12px;
+  color: #fff;
+  border: 1px solid rgba(110, 120, 146, 0.8);
+  border-radius: 12px;
+  background: rgba(22, 28, 42, 0.9);
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.nr-timer-wheel__item strong {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.nr-timer-wheel__item.is-active {
+  border-color: rgba(241, 199, 78, 0.95);
+  background: rgba(72, 62, 28, 0.95);
+  box-shadow: 0 0 0 1px rgba(241, 199, 78, 0.35);
+}
+
+.nr-timer-wheel__item.is-auto-current:not(.is-active) {
+  border-color: rgba(74, 205, 232, 0.9);
+  box-shadow: 0 0 0 1px rgba(74, 205, 232, 0.28);
+}
+
+.nr-timer-free {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: end;
+  margin-top: 12px;
+}
+
+.nr-timer-free[hidden] {
+  display: none;
+}
+
+.nr-timer-free label {
+  display: grid;
+  gap: 4px;
+  color: #dbe7ff;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.nr-timer-free input {
+  min-width: 0;
+  min-height: 36px;
+  padding: 0 8px;
+  color: #111827;
+  border: 1px solid rgba(110, 120, 146, 0.9);
+  border-radius: 8px;
+  background: #f8fafc;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.nr-timer-free button {
+  min-height: 36px;
+  padding: 0 10px;
+  color: #111827;
+  border: 1px solid rgba(241, 199, 78, 0.95);
+  border-radius: 8px;
+  background: rgba(241, 199, 78, 0.95);
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
 }
 
 .nr-crystal-fab {
@@ -1811,6 +2113,74 @@
     padding: 7px 10px;
   }
 
+  .nr-timer-toggle {
+    left: 12px;
+    bottom: calc(94px + env(safe-area-inset-bottom, 0px));
+    min-height: 36px;
+    padding: 7px 10px;
+  }
+
+  .nr-map-timer {
+    top: 10px;
+    left: 8px;
+    right: 8px;
+    z-index: 80;
+    width: auto;
+    padding: 10px 12px;
+    border-width: 2px;
+    border-radius: 6px;
+    background:
+      linear-gradient(145deg, rgba(74, 205, 232, 0.12), transparent 42%),
+      rgba(0, 0, 0, 0.92);
+  }
+
+  .nr-map-timer__header {
+    margin-bottom: 4px;
+  }
+
+  .nr-map-timer__title {
+    font-size: 10px;
+  }
+
+  .nr-map-timer__picker-button {
+    min-height: 28px;
+    font-size: 11px;
+  }
+
+  .nr-map-timer__display {
+    font-size: 66px;
+  }
+
+  .nr-map-timer__controls {
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .nr-map-timer__controls button {
+    min-height: 34px;
+    font-size: 12px;
+  }
+
+  .nr-timer-picker-panel {
+    top: 220px;
+    left: 10px;
+    right: 10px;
+    z-index: 90;
+    width: auto;
+  }
+
+  .nr-timer-wheel {
+    max-height: 220px;
+  }
+
+  .nr-timer-free {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .nr-timer-free button {
+    grid-column: 1 / -1;
+  }
+
   .nr-dlc-map-panel {
     top: auto;
     left: auto;
@@ -1885,6 +2255,89 @@
     min-height: 28px;
     padding: 5px 8px;
     font-size: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nr-map-timer__display {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nr-label-toggle,
+  .nr-timer-toggle,
+  .nr-mobile-ui-toggle {
+    z-index: 82;
+  }
+
+  .nr-label-toggle {
+    bottom: calc(178px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .nr-timer-toggle {
+    bottom: calc(136px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .nr-mobile-ui-toggle {
+    display: inline-flex;
+    left: 12px;
+    bottom: calc(94px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .nr-mobile-ui-hidden .nr-nightlord-orb,
+  .nr-mobile-ui-hidden .nr-map-orb,
+  .nr-mobile-ui-hidden .nr-dlc-fab,
+  .nr-mobile-ui-hidden .nr-crystal-fab,
+  .nr-mobile-ui-hidden .nr-shift-orbs,
+  .nr-mobile-ui-hidden .nr-zoom-controls,
+  .nr-mobile-ui-hidden .nr-language-switch,
+  .nr-mobile-ui-hidden .nr-top-status {
+    display: none !important;
+  }
+
+  .nr-mobile-ui-hidden .nr-choice-panel,
+  .nr-mobile-ui-hidden .nr-guide-panel {
+    display: none !important;
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1540px) {
+  .nr-map-timer {
+    top: 214px;
+    width: 340px;
+  }
+
+  .nr-map-timer__display {
+    font-size: 62px;
+  }
+
+  .nr-timer-picker-panel {
+    top: 404px;
+  }
+}
+
+@media (max-width: 920px) {
+  .nr-timer-priority-mode .nr-nightlord-orb,
+  .nr-timer-priority-mode .nr-map-orb,
+  .nr-timer-priority-mode .nr-shift-orbs,
+  .nr-timer-priority-mode .nr-dlc-fab,
+  .nr-timer-priority-mode .nr-crystal-fab,
+  .nr-timer-priority-mode .nr-zoom-controls,
+  .nr-timer-priority-mode .nr-language-switch,
+  .nr-timer-priority-mode .nr-top-status,
+  .nr-timer-priority-mode .nr-mobile-ui-toggle,
+  .nr-timer-priority-mode .nr-guide-panel {
+    display: none !important;
+  }
+
+  .nr-timer-priority-mode .nr-choice-panel:not(.nr-timer-picker-panel) {
+    display: none !important;
+  }
+
+  .nr-timer-priority-mode .nr-map-timer:not([hidden]),
+  .nr-timer-priority-mode .nr-timer-picker-panel:not([hidden]) {
+    display: block !important;
   }
 }
 
