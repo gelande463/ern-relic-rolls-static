@@ -1,0 +1,15 @@
+{
+  "id": "great_hollow_underground",
+  "mapLayout": "great_hollow_shifted",
+  "label": "Great Hollow Underground",
+  "asset": "maps/great_hollow_underground/great_hollow_underground.webp",
+  "placement": {
+    "x": 620,
+    "y": 560,
+    "width": 380,
+    "height": 345
+  },
+  "zIndex": 4,
+  "opacity": 1,
+  "notes": "Right-bottom lower layer beneath the castle. Placement is in the existing 1000x1000 Great Hollow coordinate space."
+}

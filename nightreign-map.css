@@ -63,6 +63,7 @@
 }
 
 .nr-map-tiles,
+.nr-map-overlay-layer,
 .nr-poi-layer,
 .nr-crystal-layer {
   position: absolute;
@@ -97,12 +98,39 @@
 }
 
 .nr-poi-layer {
+  z-index: 8;
   pointer-events: none;
 }
 
 .nr-crystal-layer {
-  z-index: 4;
+  z-index: 9;
   pointer-events: none;
+}
+
+.nr-map-overlay-layer {
+  z-index: 3;
+  pointer-events: none;
+}
+
+.nr-gh-underground-overlay {
+  position: absolute;
+  left: var(--nr-gh-underground-x);
+  top: var(--nr-gh-underground-y);
+  width: var(--nr-gh-underground-width);
+  height: var(--nr-gh-underground-height);
+  opacity: var(--nr-gh-underground-opacity, 1);
+  background-image: var(--nr-gh-underground-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
+}
+
+.nr-labels-hidden .nr-gh-underground-overlay {
+  opacity: calc(var(--nr-gh-underground-opacity, 1) * 0.96);
 }
 
 .nr-top-status {

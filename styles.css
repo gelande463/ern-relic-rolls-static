@@ -846,6 +846,37 @@ input:disabled {
   line-height: 1.75;
 }
 
+.site-about {
+  width: min(100%, 960px);
+  margin: 48px auto 24px;
+  padding: 20px;
+  color: #dbe7ff;
+  border: 1px solid rgba(110, 120, 146, 0.35);
+  border-radius: 16px;
+  background: rgba(18, 22, 34, 0.72);
+}
+
+.site-about h2 {
+  margin: 0 0 10px;
+  color: #f1c74e;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.site-about p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.site-about--compact {
+  margin-top: 28px;
+  margin-bottom: 20px;
+  opacity: 0.92;
+}
+
 .topbar {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;

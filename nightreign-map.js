@@ -568,6 +568,7 @@
     viewport: app.querySelector("[data-nr-map-viewport]"),
     world: app.querySelector("[data-nr-map-world]"),
     tiles: app.querySelector("[data-nr-map-tiles]"),
+    mapOverlayLayer: app.querySelector("[data-nr-map-overlay-layer]"),
     poiLayer: app.querySelector("[data-nr-poi-layer]"),
     status: app.querySelector("[data-nr-status]"),
     guide: app.querySelector("[data-nr-guide]"),
@@ -622,6 +623,7 @@
     pattern: null,
     poiCoordinates: new Map(),
     staticPoiCache: new Map(),
+    mapOverlayCache: new Map(),
     staticPois: [],
     aggregateMarkers: new Map(),
     poiChoice: null,
@@ -1103,6 +1105,7 @@
       renderMapPreview(mapInfo);
     }
 
+    await renderMapOverlays();
     renderAllControls();
     renderPois();
     renderCandidatePanel();
@@ -1123,6 +1126,21 @@
     const pois = await fetchJson(`${DATA_BASE}/${file}`);
     state.staticPoiCache.set(mapLayout, pois);
     return pois;
+  }
+
+  async function loadMapOverlay(key, file) {
+    if (!file) return null;
+    if (state.mapOverlayCache.has(key)) return state.mapOverlayCache.get(key);
+
+    try {
+      const overlay = await fetchJson(`${DATA_BASE}/${file}`);
+      state.mapOverlayCache.set(key, overlay);
+      return overlay;
+    } catch (error) {
+      console.warn("Failed to load map overlay", key, error);
+      state.mapOverlayCache.set(key, null);
+      return null;
+    }
   }
 
   function renderStaticControls() {
@@ -1968,6 +1986,63 @@
     elements.poiLayer.innerHTML = validPois.map(renderPoi).join("") + renderPoiChoiceMenu();
     app.classList.toggle("nr-labels-hidden", !state.showLabels);
     renderCrystals();
+  }
+
+  async function renderMapOverlays() {
+    if (!elements.mapOverlayLayer) return;
+
+    elements.mapOverlayLayer.replaceChildren();
+    if (!isGreatHollowMap()) return;
+
+    const overlay = await loadMapOverlay(
+      "great_hollow_underground",
+      "overlays/great_hollow_underground.json"
+    );
+
+    if (!isGreatHollowMap()) return;
+    if (!overlay?.placement || !overlay.asset) return;
+
+    const debugOverlay = applyUndergroundDebugControls(overlay);
+    const placement = debugOverlay.placement || {};
+    const x = numericCssValue(placement.x, 0);
+    const y = numericCssValue(placement.y, 0);
+    const width = numericCssValue(placement.width, 0);
+    const height = numericCssValue(placement.height, 0);
+    const opacity = isFiniteNumber(Number(debugOverlay.opacity)) ? Number(debugOverlay.opacity) : 1;
+
+    if (width <= 0 || height <= 0) return;
+
+    const assetPath = String(debugOverlay.asset).replace(/^\.?\/*assets\//, "");
+    const assetUrl = new URL(`${ASSET_BASE}/${assetPath}`, document.baseURI).href.replace(/"/g, "%22");
+    const node = document.createElement("div");
+    node.className = "nr-gh-underground-overlay";
+    node.setAttribute("aria-hidden", "true");
+    node.style.setProperty("--nr-gh-underground-x", `${x}px`);
+    node.style.setProperty("--nr-gh-underground-y", `${y}px`);
+    node.style.setProperty("--nr-gh-underground-width", `${width}px`);
+    node.style.setProperty("--nr-gh-underground-height", `${height}px`);
+    node.style.setProperty("--nr-gh-underground-opacity", String(opacity));
+    node.style.setProperty("--nr-gh-underground-image", `url("${assetUrl}")`);
+    elements.mapOverlayLayer.replaceChildren(node);
+  }
+
+  function applyUndergroundDebugControls(overlay) {
+    if (!location.search.includes("debugUnderground=1")) return overlay;
+
+    const params = new URLSearchParams(location.search);
+    const placement = { ...(overlay.placement || {}) };
+    for (const key of ["x", "y", "width", "height"]) {
+      if (!params.has(key)) continue;
+      const value = Number(params.get(key));
+      if (Number.isFinite(value)) placement[key] = value;
+    }
+
+    return { ...overlay, placement };
+  }
+
+  function numericCssValue(value, fallback) {
+    const number = Number(value);
+    return Number.isFinite(number) ? number : fallback;
   }
 
   async function loadCrystalData() {
